@@ -1,0 +1,72 @@
+# questions.json 의 "source" 에 넣을 문자열 목록 (여기서 복사하세요)
+# gold.py 는 이 값을 정확히 일치 비교합니다 — 오타는 에러가 아니라 조용히 어긋납니다.
+# 청킹: 510token / overlap 100 / 기준 토크나이저 BAAI/bge-m3
+#
+# source                                                              tokens  chunks  questions
+
+## ch
+ch/1767528250552_B264D298D87D4A329BAAEE4DE23DFB2D.pdf                   860       4          2
+ch/2025_沪0115刑初1254号_刑事判决书.pdf                                          847       3          2
+ch/2025_沪0120刑初15号_刑事判决书.pdf                                            832       3          2
+ch/2025_沪0120刑初390号_刑事判决书.pdf                                          1407       5          2
+ch/四川省川谷坊酒业有限公司、曾庆芬非法吸收公众存款罪一审刑事判决书.pdf                                3122      12          6
+                                                                                 소계         14
+
+## en
+en/24-7435_5if6.pdf                                                    1350       5          2
+en/249799.pdf                                                           816       3          2
+en/25-524_0971.pdf                                                     1577       6          3
+en/25-821_e29g.pdf                                                      422       2          2
+en/25-851_ed9f.pdf                                                      396       1          1
+en/25-885_5h26.pdf                                                     1503       6          3
+en/gomez_albertocortes.pdf                                              748       3          2
+en/USCOURTS-caed-6_25-mj-00015-1.pdf                                   1659       5          2
+en/USCOURTS-mnd-0_06-cr-00130-1.pdf                                     841       3          2
+en/vae1_tetteh_0.pdf                                                    784       3          2
+                                                                                 소계         21
+
+## ko
+ko/140801_서부지검_보도자료.pdf                                                2197       8          4
+ko/2015고단7004_판결문.pdf                                                  2484       9          4
+ko/2015노4675_판결문.pdf                                                   2888       8          4
+ko/2025고정378_판결문.pdf                                                    445       2          2
+ko/2025고합394_판결문.pdf                                                   3628      14          7
+ko/231201_보도자료(360억_원_대출을_알선하고_억대_수수료를_취득한_대출_브로커_및_은행지점장_구속_기소)-통영지청.pdf   1744       6          3
+ko/250723_보도자료(유튜브_36주_태아_낙태살인_사건_구속_기소_등)-서울중앙지검.pdf                  2019       7          4
+ko/251223_보도자료(세계_1위_K반도체_국가핵심기술_유출사건_수사_결과)-서울중앙지검.pdf                3856      13          6
+ko/260120__보도자료(6776억_원_규모_한국전력공사_입찰_담합_사건_수사_결과)-서울중앙지검.pdf           3913      14          7
+                                                                                 소계         41
+
+## pil
+pil/AvoidImmigrationScamsGetHelp_Tagalog-508.pdf                       2465       9          4
+pil/empower-yourself-against-utility-scams_tl-508ftclogo.pdf            606       2          2
+pil/Government Imposter Scams poster_TL.pdf                              89       1          1
+pil/How-to-avoid-a-scam_Tagalog_August2023.pdf                         1056       4          2
+pil/scammers-intl-students-money_tl-508ftclogo.pdf                      614       2          2
+                                                                                 소계         11
+
+## ru
+ru/kamyzyak_prokuratura_telefonnye-moshenniki.pdf                       433       2          2
+ru/kbr_prokuratura_it-moshennichestvo.pdf                              1799       6          3
+ru/orenburg_prokuratura_moshennichestvo.pdf                            1086       3          2
+ru/pamyatka_ikt-prestupleniya.pdf                                       916       3          2
+ru/pamyatka_karta-skomprometirovana.pdf                                 621       2          2
+                                                                                 소계         11
+
+## uz
+uz/964-966.pdf                                                         2210       7          4
+uz/Abdugoniyev_firibgarlik_tendensiyasi.pdf                            3945      12          6
+uz/Nasimov+Umedjon+Ulugbekovich.pdf                                    2661       9          4
+uz/ZDIF+0701.pdf                                                       1656       5          2
+uz/ZDIF+0738.pdf                                                       2137       7          4
+                                                                                 소계         20
+
+## vn
+vn/04_2023_HSST_BRVT.pdf                                               2964      10          5
+vn/06_2023_HS-ST_HCM.pdf                                               3832      13          6
+vn/132_2020_HS-ST_HCM.pdf                                              3974      13          6
+vn/171_2018_HS-ST_HUE.pdf                                              2523       8          4
+vn/29_2018_HS-ST_THAI_NGUYEN[1].pdf                                    3307      11          6
+                                                                                 소계         27
+
+# 합계 문항 145  (문서 44개 / 청크 274개)

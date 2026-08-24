@@ -1,0 +1,149 @@
+# ─────────────────────────────────────────────────────────────
+# 임베딩 모델 비교 벤치마크 설정
+# ─────────────────────────────────────────────────────────────
+
+paths:
+  data_dir: data                       # 여기에 .docx 1개, .pdf 1개를 넣습니다
+  questions_file: questions/questions.json
+  results_dir: results
+
+chunking:
+  unit: token                          # token | char
+                                       # char 는 언어별 문자 밀도 차이(ch 1.42자/tok vs ru 3.96자/tok)
+                                       # 때문에 같은 500자라도 청크 크기가 2.8배 벌어진다. 언어 간 비교 불가.
+  tokenizer: BAAI/bge-m3               # unit=token 일 때 길이를 재는 '기준자'. 모든 모델 공통으로 하나만 쓴다.
+                                       # 모델별 토크나이저로 자르면 청크 경계가 모델마다 달라져 비교가 깨진다.
+  chunk_size: 510                      # overlap 포함 최종 청크 상한. e5 계열이 512 (특수토큰 2개 포함) 이므로 510.
+  chunk_overlap: 100                   # 청크 간 겹침. 본문은 510-100=410 까지 채우고 앞에 이전 꼬리를 붙인다.
+  min_chunk_chars: 30                  # 이보다 짧은 청크는 버림 (이 값만 항상 글자 수 기준)
+
+retrieval:
+  top_k: 10                            # 랭킹 상위 몇 개까지 볼지
+  ks: [1, 3]                           # Hit@k 를 계산할 k 목록. MRR·nDCG 는 최대값 기준
+                                       # 코퍼스가 작으면 k 를 키워도 전부 1.0 이라 변별력이 없다
+  scope: all                           # all      = 두 문서 청크를 모두 후보로 (권장, 더 어려움)
+                                       # own_doc  = 질문이 속한 문서 안에서만 검색
+
+# ─────────────────────────────────────────────────────────────
+# 색인 단위 변형. 모델마다 컨텍스트 상한이 달라 두 조건으로 나눠 잰다.
+#   512  : 510토큰 청크. 모든 모델이 문서 전문을 동등하게 본다.
+#   full : 문서 1개 = 벡터 1개. 상한 512 모델은 문서 뒤쪽을 못 보므로 자동 제외된다.
+#
+# 두 변형은 후보 수가 다르다(청크 207개 vs 문서 45개). 그래서 Hit@k 를 그냥
+# 비교하면 무작위 기준선부터 다르므로, 청크 점수를 문서로 max-pool 한
+# Doc-Hit@k 를 같이 뽑아 45개 문서 랭킹이라는 같은 무대에서 비교한다.
+# ─────────────────────────────────────────────────────────────
+index:
+  variants: [512, full]
+  full_max_seq_length: 8192            # full 에서 모델에 허용할 입력 길이 (모델 상한으로 자동 축소)
+  min_context_for_full: 1024           # 컨텍스트 상한이 이 값 미만인 모델은 full 을 건너뛴다
+  full_batch_size: 4                   # full 은 문서 1건이 최대 4,000 토큰이라 runtime.batch_size(16)
+                                       # 그대로 쓰면 어텐션 활성값이 커져 16GB 파드에서 OOM 이 난다.
+                                       # 512 변형은 runtime.batch_size 를 그대로 쓴다.
+
+runtime:
+  device: auto                         # auto | cuda | cpu
+  fp16: true                           # GPU에서 half precision 사용
+  batch_size: 16                       # OOM 나면 8 또는 4로 낮추세요
+  max_seq_length: 1024                 # 모델 입력 토큰 상한 (BGE-M3는 8192까지 가능)
+  hf_token: null                       # gated 모델이 있으면 토큰 입력 (보통 null로 충분)
+
+  # ── 속도 측정 ────────────────────────────────────────────────
+  # 청크가 몇십 개뿐이면 CUDA 초기화 같은 고정 비용이 연산 시간을 압도해서
+  # 먼저 실행된 모델만 손해를 본다. 아래 설정으로 그 왜곡을 제거한다.
+  speed_min_texts: 512                 # 이 개수가 될 때까지 텍스트를 복제해 측정 (작업량 확보)
+  speed_warmup: 1                      # 측정 전 버리는 실행 횟수 (초기화 비용 제외)
+  speed_repeat: 3                      # 측정 횟수 — 최소 시간을 채택. 0 이면 속도 측정 생략
+
+# ─────────────────────────────────────────────────────────────
+# 비교할 모델들
+#   prefix_style:
+#     none    : 프리픽스 없음                    (KURE-v1, BGE-M3)
+#     e5      : "query: " / "passage: "          (multilingual-e5-small-ko)
+#     e5_inst : "Instruct: {task}\nQuery: {q}"   (multilingual-e5-large-instruct, harrier)
+#   backend:
+#     sentence-transformers : 일반 dense 검색
+#     bge-m3                : dense + sparse 하이브리드까지 평가
+# ─────────────────────────────────────────────────────────────
+models:
+  - key: kure-v1
+    hf_id: nlpai-lab/KURE-v1
+    max_context: 8194
+    backend: sentence-transformers
+    prefix_style: none
+    dim: 1024
+
+  - key: e5-large-instruct
+    hf_id: intfloat/multilingual-e5-large-instruct
+    max_context: 512
+    backend: sentence-transformers
+    prefix_style: e5_inst
+    dim: 1024
+    instruction: "Given a question in Korean, retrieve the passage that answers it"
+
+  - key: e5-small-ko
+    hf_id: dragonkue/multilingual-e5-small-ko
+    max_context: 512
+    backend: sentence-transformers
+    prefix_style: e5
+    dim: 384
+
+  - key: bge-m3
+    hf_id: BAAI/bge-m3
+    max_context: 8192
+    backend: bge-m3
+    prefix_style: none
+    dim: 1024
+    hybrid:
+      enabled: true                    # dense 단독 + 하이브리드 둘 다 리포트
+      dense_weight: 1.0
+      sparse_weight: 0.3
+
+  # mGTE 논문의 dense 검색 모델. 305M / 8192 토큰까지 지원.
+  # 다운로드 ~0.6GB, VRAM ~1GB 로 이 목록에서 가장 가볍다.
+  - key: gte-multilingual-base
+    hf_id: Alibaba-NLP/gte-multilingual-base
+    max_context: 8192
+    backend: sentence-transformers
+    prefix_style: none
+    dim: 768
+
+  # ── Harrier (Microsoft) ──────────────────────────────────────
+  # Qwen3 기반 decoder-only 임베딩. last-token pooling + L2 정규화.
+  # 94개 언어 지원(한국어 포함), 컨텍스트 32768 토큰, MIT 라이선스.
+  #
+  # instruction 은 모델이 실제로 학습한 프롬프트를 그대로 쓴다
+  # (config_sentence_transformers.json 의 "web_search_query").
+  # 다른 모델처럼 한국어 지시문으로 바꾸면 학습 분포에서 벗어나 손해를 본다.
+  #
+  # ⚠ 이 두 모델만 transformers>=4.51 이 필요하다 (Qwen3 아키텍처).
+  #   requirements-runpod.txt 는 FlagEmbedding 때문에 4.44.2 에 묶여 있어
+  #   그 환경에서는 "model type qwen3 를 모른다" 로 로드가 실패한다.
+  #   → requirements-runpod-harrier.txt 로 별도 환경에서 돌릴 것.
+  - key: harrier-0.6b
+    hf_id: microsoft/harrier-oss-v1-0.6b
+    max_context: 32768
+    dtype: bfloat16      # 이 모델은 bf16 로 학습됐다. fp16 이면 NaN 위험
+    backend: sentence-transformers
+    prefix_style: e5_inst
+    dim: 1024
+    instruction: "Given a web search query, retrieve relevant passages that answer the query"
+
+  # 경량판. dim 640 으로 index_MB 가 가장 작다 — 정확도 대비 비용 비교용.
+  - key: harrier-270m
+    hf_id: microsoft/harrier-oss-v1-270m
+    max_context: 32768
+    dtype: bfloat16      # 이 모델은 bf16 로 학습됐다. fp16 이면 NaN 위험
+    backend: sentence-transformers
+    prefix_style: e5_inst
+    dim: 640
+    instruction: "Given a web search query, retrieve relevant passages that answer the query"
+
+  # harrier-oss-v1-27b (dim 5376) 는 bf16 로도 약 54GB 라 16GB 파드에서 못 돌린다.
+  # A100 80GB 급을 쓸 때만 아래 주석을 푸세요.
+  # - key: harrier-27b
+  #   hf_id: microsoft/harrier-oss-v1-27b
+  #   backend: sentence-transformers
+  #   prefix_style: e5_inst
+  #   dim: 5376
+  #   instruction: "Given a web search query, retrieve relevant passages that answer the query"
