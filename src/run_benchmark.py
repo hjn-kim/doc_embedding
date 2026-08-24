@@ -284,6 +284,55 @@ def run_model(spec: ModelSpec, cfg: dict, chunks, questions, gold,
     return summaries, details
 
 
+def merge_previous(results_dir: Path, rows: list, details: list,
+                   questions, corpora) -> tuple[list, list]:
+    """--resume: 이전 실행 결과 위에 이번 실행 결과를 덮어 얹는다.
+
+    결과 파일은 매 실행마다 통째로 덮어써진다. 그래서 --models 로 한 모델만 다시
+    돌리면 나머지 모델의 행이 전부 사라진다. 이 함수는 이전 summary.csv/details.json
+    을 읽어 **이번에 돌린 모델의 행만** 교체하고 나머지는 살려둔다.
+    """
+    prev_csv, prev_json = results_dir / "summary.csv", results_dir / "details.json"
+    if not prev_csv.exists() or not prev_json.exists():
+        print("  [resume] 이어받을 이전 결과가 없습니다 — 새로 시작합니다")
+        return rows, details
+
+    prev_rows = pd.read_csv(prev_csv, encoding="utf-8-sig").to_dict("records")
+    prev_details = json.loads(prev_json.read_text(encoding="utf-8"))
+
+    # 이전 결과가 '같은 무대'에서 나온 것인지 확인한다. 질문이나 청킹 설정이 바뀐 뒤
+    # 이어붙이면 한 표 안에 서로 다른 조건의 점수가 섞여 비교 자체가 무의미해진다.
+    now_qids = {q.id for q in questions}
+    prev_qids = {d["qid"] for d in prev_details}
+    if prev_qids != now_qids:
+        raise SystemExit(
+            f"[resume] 질문 집합이 이전 실행과 다릅니다 (이전 {len(prev_qids)}개 / "
+            f"지금 {len(now_qids)}개). 이어붙이면 비교가 깨집니다 — "
+            "--resume 없이 전체를 다시 돌리세요."
+        )
+    sizes = {str(v): len(cs) for v, cs in corpora.items()}
+    for r in prev_rows:
+        want = sizes.get(str(r["색인"]))
+        if want is not None and int(r["후보수"]) != want:
+            raise SystemExit(
+                f"[resume] 색인 [{r['색인']}] 의 후보 수가 다릅니다 "
+                f"(이전 {r['후보수']}개 / 지금 {want}개). 청킹 설정이 바뀐 것 같습니다 "
+                "— --resume 없이 전체를 다시 돌리세요."
+            )
+
+    fresh = {r["model"] for r in rows}
+    prev_names = {str(r["model"]) for r in prev_rows}
+    kept = [r for r in prev_rows if r["model"] not in fresh]
+    kept_details = [d for d in prev_details if d["model"] not in fresh]
+    if kept:
+        print(f"  [resume] 이전 런 {len(kept)}개를 이어받습니다: "
+              + ", ".join(str(r["model"]) for r in kept))
+    replaced = sorted(fresh & prev_names)
+    if replaced:
+        print("  [resume] 이번 실행 결과로 교체: " + ", ".join(replaced))
+    return kept + rows, kept_details + details
+
+
 def build_miss_report(misses: dict, questions, gold, ks: list[int]) -> str:
     """모델별로 못 맞힌 질문을 나열한다.
 
@@ -332,6 +381,9 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--config", default=str(ROOT / "config.yaml"))
     ap.add_argument("--models", nargs="*", default=None, help="평가할 모델 key (기본: 전체)")
+    ap.add_argument("--resume", action="store_true",
+                    help="이전 results/ 를 읽어 이번에 돌린 모델의 행만 교체하고 "
+                         "나머지는 그대로 이어붙인다 (--models 로 일부만 재실행할 때)")
     args = ap.parse_args()
 
     cfg = yaml.safe_load(Path(args.config).read_text(encoding="utf-8"))
@@ -401,7 +453,7 @@ def main() -> None:
 
     print(f"[4/4] 모델 평가 — {len(runs)}개 런 "
           f"(device={resolve_device(cfg['runtime']['device'])})")
-    all_rows, all_details = [], []
+    all_rows, all_details, failed = [], [], []
     for spec, variant, seq, bsz in runs:
         print(f"\n── {spec.key} [{variant}]  ({spec.hf_id}, max_seq={seq}, batch={bsz})")
         try:
@@ -409,6 +461,7 @@ def main() -> None:
                                       golds[variant], variant, seq, bsz)
         except Exception as e:  # 한 런이 죽어도 나머지는 계속
             print(f"  [실패] {type(e).__name__}: {e}")
+            failed.append((f"{spec.key} [{variant}]", f"{type(e).__name__}: {e}"))
             continue
         all_rows.extend(rows)
         all_details.extend(details)
@@ -420,14 +473,32 @@ def main() -> None:
                   f"(정답 {r[f'정답@{lo}']}/{len(questions)}) | "
                   f"{r['chunks_per_s']} chunks/s")
 
+    if args.resume:
+        all_rows, all_details = merge_previous(
+            results_dir, all_rows, all_details, questions, corpora
+        )
+
     if not all_rows:
         raise SystemExit("성공한 모델이 없습니다.")
 
     ks = cfg["retrieval"]["ks"]
     lo, hi = min(ks), max(ks)
 
-    # 틀린 문제 목록은 표에 넣기엔 길어서 별도 리포트로 뺀다
-    misses = {r["model"]: r.pop("_misses", {}) for r in all_rows}
+    # 틀린 문제 목록은 표에 넣기엔 길어서 별도 리포트로 뺀다.
+    # --resume 으로 이어받은 행에는 _misses 가 없으므로(summary.csv 에 안 들어간다)
+    # details 에서 다시 만든다 — 새 런과 이어받은 런을 같은 방식으로 다룬다.
+    for r in all_rows:
+        r.pop("_misses", None)
+    by_model: dict = {}
+    for d in all_details:
+        by_model.setdefault(d["model"], []).append(d)
+    misses = {
+        r["model"]: {
+            k: [d["qid"] for d in by_model.get(r["model"], []) if not d[f"Hit@{k}"]]
+            for k in ks
+        }
+        for r in all_rows
+    }
 
     # 색인 단위가 다르면 후보 수가 달라(512: 청크 274개 / full: 문서 44개) 무작위 기준선부터
     # 다르다. 그래서 가로로 비교하지 않도록 색인별로 묶고, 그 안에서만 nDCG 내림차순으로 세운다.
@@ -489,6 +560,19 @@ def main() -> None:
         worst = m.get(max(ks), [])
         print(f"  {model:32s} " + " / ".join(parts)
               + (f"  →  {', '.join(worst)}" if worst else ""))
+
+    # 실패한 런은 표에 행이 아예 안 생긴다. 그대로 두면 "이 모델들만 비교했다"로
+    # 읽히므로 마지막에 다시 한 번 눈에 띄게 보여준다.
+    if failed:
+        print("\n── 실패한 런 " + "─" * 60)
+        for name, err in failed:
+            print(f"  ✗ {name:28s} {err.splitlines()[0]}")
+        print("  ↑ 이 런들은 summary.csv 에 행이 없습니다.")
+        if any("device-side assert" in e for _, e in failed):
+            print("  · CUDA device-side assert 는 한 번 터지면 프로세스의 CUDA "
+                  "컨텍스트가 오염돼 뒤의 모든 런이 같은 에러로 죽습니다.")
+            print("    첫 번째 실패만이 진짜 원인입니다 — 그 모델을 단독으로, "
+                  "CUDA_LAUNCH_BLOCKING=1 을 걸고 다시 돌려보세요.")
 
     print(f"\n결과 저장: {results_dir}/summary.csv, summary.md, misses.md, details.json")
     print("  · misses.md    질문별로 어느 모델이 틀렸는지 전체 목록")

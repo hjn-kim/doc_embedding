@@ -99,14 +99,21 @@ models:
       dense_weight: 1.0
       sparse_weight: 0.3
 
+  # ── gte-multilingual-base — 제외됨 ────────────────────────────
   # mGTE 논문의 dense 검색 모델. 305M / 8192 토큰까지 지원.
-  # 다운로드 ~0.6GB, VRAM ~1GB 로 이 목록에서 가장 가볍다.
-  - key: gte-multilingual-base
-    hf_id: Alibaba-NLP/gte-multilingual-base
-    max_context: 8192
-    backend: sentence-transformers
-    prefix_style: none
-    dim: 768
+  # 다운로드 ~0.6GB, VRAM ~1GB 로 이 목록에서 가장 가벼웠다.
+  #
+  # 2026-08-24 실행에서 [512] 런부터 CUDA device-side assert 로 죽었다.
+  # 한 번 터진 assert 는 프로세스의 CUDA 컨텍스트를 오염시켜서, 뒤에 오던
+  # harrier 4개 런까지 같은 에러로 전부 몰살당했다 (harrier 는 무죄일 수 있다).
+  # 원인을 규명하기 전까지 목록에서 뺀다.
+  #   재현: CUDA_LAUNCH_BLOCKING=1 python -m src.run_benchmark --models gte-multilingual-base
+  # - key: gte-multilingual-base
+  #   hf_id: Alibaba-NLP/gte-multilingual-base
+  #   max_context: 8192
+  #   backend: sentence-transformers
+  #   prefix_style: none
+  #   dim: 768
 
   # ── Harrier (Microsoft) ──────────────────────────────────────
   # Qwen3 기반 decoder-only 임베딩. last-token pooling + L2 정규화.

@@ -159,7 +159,20 @@ python -m src.run_benchmark
 
 # 특정 모델만
 python -m src.run_benchmark --models kure-v1 bge-m3
+
+# 특정 모델만 다시 돌리되 나머지 모델의 이전 결과는 살려두기
+python -m src.run_benchmark --models harrier-0.6b --resume
 ```
+
+`results/` 는 매 실행마다 통째로 덮어써집니다. `--models` 로 일부만 재실행하면
+나머지 모델의 행이 사라지므로, 이어붙이려면 `--resume` 을 함께 주세요.
+질문 집합이나 청크 수가 이전 실행과 다르면 `--resume` 은 거부합니다 —
+서로 다른 조건의 점수가 한 표에 섞이면 비교가 깨지기 때문입니다.
+
+한 런이 실패해도 나머지는 계속 돌지만, **실패한 런은 요약표에 행이 아예 생기지
+않습니다.** 실행 마지막의 `── 실패한 런` 목록을 꼭 확인하세요. 특히 CUDA
+device-side assert 는 한 번 터지면 프로세스의 CUDA 컨텍스트를 오염시켜 뒤의 모든
+런이 같은 에러로 죽습니다 — 이때는 **첫 번째 실패만이 진짜 원인**입니다.
 
 결과:
 
