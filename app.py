@@ -83,6 +83,15 @@ INDEX_DESC = {
 }
 
 
+# config.yaml 의 prefix_style 을 화면 문구로. 모델마다 질문·문서에 붙이는 접두사가
+# 다른데, 이걸 모르면 같은 계열 모델의 점수 차이를 엉뚱하게 읽는다.
+PREFIX_DESC = {
+    "none": "없음",
+    "e5": "query: / passage:",
+    "e5_inst": "Instruct+Query (질문에만)",
+}
+
+
 # 상태 색은 고정 — 계열 색으로 재사용하지 않는다. 항상 숫자/기호와 함께 쓴다.
 RANK_TINT = {
     1: "rgba(12,163,12,0.20)",     # good     — 1등으로 맞힘
@@ -150,6 +159,41 @@ def load_results(results_dir: str, stamp: float):
     return summary, details, chunks
 
 
+@st.cache_data(show_spinner=False)
+def load_model_specs(config_path: str, stamp: float) -> pd.DataFrame:
+    """config.yaml 의 모델 정의를 읽어 hf_id 로 붙일 수 있는 표로 만든다.
+
+    summary.csv 에는 점수만 있고 '어떤 조건으로 쟀는지'(프리픽스·백엔드·컨텍스트
+    상한·dtype)가 없다. 그 조건이 곧 점수 차이의 원인인 경우가 많아서 함께 보여준다.
+    config 가 없거나 깨져도 대시보드는 그대로 떠야 하므로 실패하면 빈 표를 준다.
+    """
+    try:
+        import yaml
+    except ImportError:
+        return pd.DataFrame()
+    f = Path(config_path)
+    if not f.exists():
+        return pd.DataFrame()
+    try:
+        cfg = yaml.safe_load(f.read_text(encoding="utf-8")) or {}
+    except Exception:
+        return pd.DataFrame()
+    rows = []
+    for m in cfg.get("models") or []:
+        if not isinstance(m, dict) or not m.get("hf_id"):
+            continue
+        style = str(m.get("prefix_style", "none"))
+        rows.append({
+            "hf_id": m["hf_id"],
+            "백엔드": m.get("backend", "-"),
+            "프리픽스": PREFIX_DESC.get(style, style),
+            "컨텍스트 상한": m.get("max_context"),
+            "dtype": m.get("dtype") or "fp16 (기본)",
+            "instruction": m.get("instruction") or "",
+        })
+    return pd.DataFrame(rows)
+
+
 def index_sort_key(v: str):
     """색인 단위 정렬 — 숫자 변형(512, 1024…)이 먼저, full 같은 이름이 뒤."""
     return (0, int(v)) if str(v).isdigit() else (1, str(v))
@@ -197,6 +241,10 @@ if not (rdir / "summary.csv").exists():
     st.stop()
 
 summary_all, details, chunks_all = load_results(str(rdir), results_stamp(rdir))
+
+# 모델 조건표용 config. results 폴더 옆이 아니라 프로젝트 루트에 있다.
+cfg_path = ROOT / "config.yaml"
+cfg_stamp = cfg_path.stat().st_mtime if cfg_path.exists() else 0.0
 qdf_all = build_question_frame(
     details, dict(zip(summary_all["model"], summary_all["색인"]))
 )
@@ -312,6 +360,24 @@ with tab_overview:
         f"**nDCG@{hi}** — 정답을 상위에 몰아놓은 정도를 0~1 로 정규화한 값으로, "
         f"첫 정답만 보는 MRR 과 달리 정답이 여러 개일 때 나머지 정답의 위치까지 반영한다."
     )
+
+    specs = load_model_specs(str(cfg_path), cfg_stamp)
+    if not specs.empty and "hf_id" in summary.columns:
+        with st.expander("모델 조건 — 어떤 설정으로 쟀는지 (config.yaml)"):
+            cols = [c for c in ("model", "hf_id", "dim", "max_seq") if c in summary.columns]
+            info = summary[cols].merge(specs, on="hf_id", how="left")
+            st.dataframe(info.set_index("model"), width="stretch")
+            st.caption(
+                "**프리픽스** — 모델이 학습 때 보던 문장 형태로 맞춰 주는 접두사입니다. "
+                "`query:/passage:` 계열은 질문과 문서에 각각 다른 접두사를 붙이고, "
+                "`Instruct+Query` 계열은 **질문에만** 지시문을 붙입니다(문서는 그대로).  \n"
+                "**컨텍스트 상한 vs max_seq** — 앞은 모델이 원리상 받을 수 있는 길이, "
+                "뒤는 이 색인에서 실제로 준 길이입니다. 둘이 다르면 문서 뒷부분은 "
+                "모델이 보지 못한 채 측정된 것입니다.  \n"
+                "같은 프리픽스 계열인데 점수가 크게 벌어진다면 프리픽스 문구 자체가 "
+                "모델이 학습한 것과 다를 가능성을 먼저 의심하세요 — 지시문을 임의로 "
+                "바꾸면 학습 분포에서 벗어나 손해를 봅니다."
+            )
 
     st.subheader("정확도")
     melted = summary.melt(
