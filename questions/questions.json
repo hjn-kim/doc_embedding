@@ -2,7 +2,7 @@
  "questions": [
   {
    "id": "ko-01",
-   "question": "서울서부지방검찰청 정부합동 의약품 리베이트 수사단이 「ᄀ제약」 사건에서 적발·기소·행정처분 의뢰한 인원은 각각 몇 명인가요?",
+   "question": "형사2부장 이성희가 이끈 정부합동 의약품 리베이트 수사단이 적발·기소·행정처분 의뢰한 인원을 찾아주세요",
    "source": "ko/140801_서부지검_보도자료.pdf",
    "gold_chunks": [
     64,
@@ -12,7 +12,7 @@
   },
   {
    "id": "ko-02",
-   "question": "「ᄀ제약」이 전국 379개 병·의원 의사·약사에게 제공한 의약품 불법리베이트 총액은 얼마인가요?",
+   "question": "서울서부지방검찰청이 적발한, 전국 379개 병·의원 의사·약사에게 제공된 의약품 불법리베이트 총액을 찾아주세요",
    "source": "ko/140801_서부지검_보도자료.pdf",
    "gold_chunks": [
     65
@@ -21,7 +21,7 @@
   },
   {
    "id": "ko-03",
-   "question": "「ᄀ제약」으로부터 리베이트를 수수한 ‘〇〇의원’의 실질적 대표의사 J모씨가 타인의 의사 면허를 빌려 의료기관을 운영한 기간은 얼마인가요?",
+   "question": "‘〇〇의원’의 실질적 대표의사 J모씨가 타인의 의사 면허를 빌려 의료기관을 운영한 기간을 찾아주세요",
    "source": "ko/140801_서부지검_보도자료.pdf",
    "gold_chunks": [
     66,
@@ -31,7 +31,7 @@
   },
   {
    "id": "ko-04",
-   "question": "서울중앙지방법원 2015고단7004 공인중개사법위반 사건에서 피고인에게 선고된 벌금액은 얼마인가요?",
+   "question": "검사 이순옥이 기소하고 윤효선이 공판에 관여한 공인중개사법위반 사건에서 피고인에게 선고된 벌금액을 찾아주세요",
    "source": "ko/2015고단7004_판결문.pdf",
    "gold_chunks": [
     70
@@ -40,7 +40,7 @@
   },
   {
    "id": "ko-05",
-   "question": "2015고단7004 사건에서 피고인이 인터넷 네이버 카페 ‘C’에 중개대상물을 광고한 횟수는 몇 차례인가요?",
+   "question": "피고인이 인터넷 네이버 카페 ‘C’에 ‘단독주택’이라는 제목의 글을 비롯해 중개대상물을 광고한 횟수를 찾아주세요",
    "source": "ko/2015고단7004_판결문.pdf",
    "gold_chunks": [
     70,
@@ -50,7 +50,7 @@
   },
   {
    "id": "ko-06",
-   "question": "2015고단7004 사건에서 피고인의 게재행위 당시 네이버 카페 ‘C’를 ‘즐겨 찾는 멤버’로 등록한 회원 수는 몇 명인가요?",
+   "question": "게재행위 당시 인터넷 네이버 카페 ‘C’를 ‘즐겨 찾는 멤버’로 등록한 회원 수를 찾아주세요",
    "source": "ko/2015고단7004_판결문.pdf",
    "gold_chunks": [
     75,
@@ -60,7 +60,7 @@
   },
   {
    "id": "ko-07",
-   "question": "서울중앙지방법원 2015노4675 건조물침입·업무방해 항소심에서 피고인에게 선고된 벌금액은 얼마인가요?",
+   "question": "재판장 신광렬이 선고한 건조물침입·업무방해 항소심에서 피고인에게 정해진 벌금액을 찾아주세요",
    "source": "ko/2015노4675_판결문.pdf",
    "gold_chunks": [
     77
@@ -69,7 +69,7 @@
   },
   {
    "id": "ko-08",
-   "question": "2015노4675 사건에서 피고인이 침입한 C산후조리원이 있던 건물의 층수와 침입 날짜는 어떻게 되나요?",
+   "question": "피고인이 비밀번호를 눌러 침입한 C산후조리원이 있던 고양시 일산동구 건물의 층수와 침입 날짜를 찾아주세요",
    "source": "ko/2015노4675_판결문.pdf",
    "gold_chunks": [
     78,
@@ -79,7 +79,7 @@
   },
   {
    "id": "ko-09",
-   "question": "2015노4675 사건에서 피고인이 가처분에 따라 C산후조리원에서 퇴거한 날짜는 언제인가요?",
+   "question": "피고인이 매매계약 해제를 통보한 2013. 3. 6. 이후, 피해자가 제기한 영업금지 등 가처분에 의해 산후조리원에서 퇴거한 날짜를 찾아주세요",
    "source": "ko/2015노4675_판결문.pdf",
    "gold_chunks": [
     80
@@ -88,7 +88,7 @@
   },
   {
    "id": "ko-10",
-   "question": "2015노4675 사건에서 피고인이 C산후조리원의 대표 전화번호 명의를 임의로 바꾼 장소는 어디인가요?",
+   "question": "피고인이 C산후조리원의 대표 전화번호 명의를 임의로 바꾼 장소를 찾아주세요",
    "source": "ko/2015노4675_판결문.pdf",
    "gold_chunks": [
     83,
@@ -98,7 +98,7 @@
   },
   {
    "id": "ko-11",
-   "question": "서울북부지방법원 2023고단2541 횡령 사건에서 피고인에게 선고된 형과 사회봉사 시간은 어떻게 되나요?",
+   "question": "국선변호인 유무곤이 변호한 서울북부지방법원 횡령 사건에서 피고인에게 선고된 형과 사회봉사 시간을 찾아주세요",
    "source": "ko/2023고단2541_판결문_검수완료.pdf",
    "gold_chunks": [
     86
@@ -107,7 +107,7 @@
   },
   {
    "id": "ko-12",
-   "question": "2023고단2541 사건에서 피고인이 2022년 1월부터 9월까지 받은 임대료 수익금 합계와 피해자에게 분배하지 않은 금액은 각각 얼마인가요?",
+   "question": "서울북부지방법원이 채권압류 및 추심명령을 발령한 사건에서, 피고인이 2022년 1월부터 9월까지 받은 임대료 수익금 합계와 피해자에게 분배하지 않은 금액을 찾아주세요",
    "source": "ko/2023고단2541_판결문_검수완료.pdf",
    "gold_chunks": [
     87,
@@ -117,7 +117,7 @@
   },
   {
    "id": "ko-13",
-   "question": "2023고단2541 사건에서 피고인과 피해자의 이혼 조정을 담당한 법원과 그 사건번호는 무엇인가요?",
+   "question": "서울 성동구 공장용지와 그 지상 건물의 재산분할을 정한 이혼 조정을 담당한 법원과 그 사건번호를 찾아주세요",
    "source": "ko/2023고단2541_판결문_검수완료.pdf",
    "gold_chunks": [
     86,
@@ -128,7 +128,7 @@
   },
   {
    "id": "ko-14",
-   "question": "제주지방법원 2025고정378 문화재보호법위반 사건에서 피고인이 무단 출입한 산방산의 국가지정문화재 지정 번호는 무엇인가요?",
+   "question": "서귀포시 안덕면 사계리에 있는 산방산의 국가지정문화재 지정 번호를 찾아주세요",
    "source": "ko/2025고정378_판결문.pdf",
    "gold_chunks": [
     93
@@ -137,7 +137,7 @@
   },
   {
    "id": "ko-15",
-   "question": "제주지방법원 2025고합394 마약류관리에관한법률위반(향정) 사건의 선고 결과는 무엇인가요?",
+   "question": "제주지방법원 제2형사부가 마약류관리에관한법률위반(향정) 혐의로 심리한 피고인에게 내린 선고 결과를 찾아주세요",
    "source": "ko/2025고합394_판결문.pdf",
    "gold_chunks": [
     95
@@ -146,7 +146,7 @@
   },
   {
    "id": "ko-16",
-   "question": "2025고합394 사건에서 라오스에서 발송된 액상 필로폰의 양과 위장에 사용된 용기 이름은 무엇인가요?",
+   "question": "라오스에서 발송된 액상 필로폰의 양과 위장에 사용된 용기 이름을 찾아주세요",
    "source": "ko/2025고합394_판결문.pdf",
    "gold_chunks": [
     96
@@ -155,7 +155,7 @@
   },
   {
    "id": "ko-17",
-   "question": "2025고합394 사건에서 문제된 항공특송화물이 인천국제공항에 도착한 일시는 언제인가요?",
+   "question": "라오스에서 발송된 항공특송화물이 인천국제공항에 도착한 일시를 찾아주세요",
    "source": "ko/2025고합394_판결문.pdf",
    "gold_chunks": [
     96,
@@ -167,7 +167,7 @@
   },
   {
    "id": "ko-18",
-   "question": "2025고합394 사건에서 B가 피고인의 계좌로 입금한 사례금은 얼마인가요?",
+   "question": "카카오톡으로 연락해 화물 수령을 부탁한 B가 피고인의 계좌로 입금한 사례금을 찾아주세요",
    "source": "ko/2025고합394_판결문.pdf",
    "gold_chunks": [
     103
@@ -176,7 +176,7 @@
   },
   {
    "id": "ko-19",
-   "question": "창원지방검찰청 통영지청이 발표한 대출 브로커 사건에서 360억 원 대출 알선 수수료와 은행지점장이 수수한 현금은 각각 얼마인가요?",
+   "question": "창원지방검찰청 통영지청이 발표한 대출 브로커 사건에서 360억 원 대출 알선 수수료와 은행지점장이 수수한 현금을 찾아주세요",
    "source": "ko/231201_보도자료(360억_원_대출을_알선하고_억대_수수료를_취득한_대출_브로커_및_은행지점장_구속_기소)-통영지청.pdf",
    "gold_chunks": [
     105,
@@ -186,7 +186,7 @@
   },
   {
    "id": "ko-20",
-   "question": "통영지청 대출 브로커 사건에서 360억 원 대출이 이루어진 개발사업의 명칭은 무엇인가요?",
+   "question": "대출브로커 A·B가 D○○에게 금융회사 8곳으로부터 360억 원 대출을 알선한 개발사업의 명칭을 찾아주세요",
    "source": "ko/231201_보도자료(360억_원_대출을_알선하고_억대_수수료를_취득한_대출_브로커_및_은행지점장_구속_기소)-통영지청.pdf",
    "gold_chunks": [
     106,
@@ -196,7 +196,7 @@
   },
   {
    "id": "ko-21",
-   "question": "서울중앙지검이 발표한 유튜브 36주 태아 낙태살인 사건에서 의사 A가 알선받은 산모 수와 취득한 수술비 합계는 얼마인가요?",
+   "question": "서울중앙지검이 발표한 유튜브 36주 태아 낙태살인 사건에서 의사 A가 알선받은 산모 수와 취득한 수술비 합계를 찾아주세요",
    "source": "ko/250723_보도자료(유튜브_36주_태아_낙태살인_사건_구속_기소_등)-서울중앙지검.pdf",
    "gold_chunks": [
     110,
@@ -206,7 +206,7 @@
   },
   {
    "id": "ko-22",
-   "question": "유튜브 36주 태아 낙태살인 사건에서 서울시경이 의사 A와 브로커 D에 대해 신청한 추징보전 금액은 각각 얼마인가요?",
+   "question": "서울시경이 2025. 7. 9. 의사 A와 브로커 D에 대해 신청해 법원이 인용한 추징보전 금액을 찾아주세요",
    "source": "ko/250723_보도자료(유튜브_36주_태아_낙태살인_사건_구속_기소_등)-서울중앙지검.pdf",
    "gold_chunks": [
     113
@@ -215,7 +215,7 @@
   },
   {
    "id": "ko-23",
-   "question": "세계 1위 K반도체 국가핵심기술 유출사건에서 국내 A社가 10나노대 D램 공정기술 개발에 투입한 기간과 금액은 얼마인가요?",
+   "question": "세계 1위 K반도체 국가핵심기술 유출사건에서 국내 A社가 10나노대 D램 공정기술 개발에 투입한 기간과 금액을 찾아주세요",
    "source": "ko/251223_보도자료(세계_1위_K반도체_국가핵심기술_유출사건_수사_결과)-서울중앙지검.pdf",
    "gold_chunks": [
     116,
@@ -225,7 +225,7 @@
   },
   {
    "id": "ko-24",
-   "question": "K반도체 국가핵심기술 유출사건에서 압수물 분석 결과 중국 C社 자료와 A社 자료의 일치율은 몇 %에서 몇 %로 상승했나요?",
+   "question": "K반도체 국가핵심기술 유출사건에서 압수물 분석 결과 중국 C社 자료와 A社 자료의 일치율을 찾아주세요",
    "source": "ko/251223_보도자료(세계_1위_K반도체_국가핵심기술_유출사건_수사_결과)-서울중앙지검.pdf",
    "gold_chunks": [
     118,
@@ -235,7 +235,7 @@
   },
   {
    "id": "ko-25",
-   "question": "K반도체 국가핵심기술 유출사건에서 중국 C社 관계자들이 출국금지·체포 시 전파하기로 정한 암호는 무엇인가요?",
+   "question": "중국 C社 관계자들이 위장회사를 통한 입사·중국 이메일 사용 등과 함께, 출국금지·체포 시 전파하기로 정한 암호를 찾아주세요",
    "source": "ko/251223_보도자료(세계_1위_K반도체_국가핵심기술_유출사건_수사_결과)-서울중앙지검.pdf",
    "gold_chunks": [
     120
@@ -244,7 +244,7 @@
   },
   {
    "id": "ko-26",
-   "question": "K반도체 국가핵심기술 유출사건에서 중국 C社 설립에 출자한 중국지방정부와 중국 반도체설계회사의 금액은 각각 얼마인가요?",
+   "question": "K반도체 국가핵심기술 유출사건에서 중국 C社 설립에 출자한 중국지방정부와 중국 반도체설계회사의 금액을 찾아주세요",
    "source": "ko/251223_보도자료(세계_1위_K반도체_국가핵심기술_유출사건_수사_결과)-서울중앙지검.pdf",
    "gold_chunks": [
     119,
@@ -254,7 +254,7 @@
   },
   {
    "id": "ko-27",
-   "question": "한국전력공사 가스절연개폐장치 입찰 담합 사건에서 담합이 확인된 입찰 건수와 담합 기간은 어떻게 되나요?",
+   "question": "한국전력공사 가스절연개폐장치 입찰 담합 사건에서 담합이 확인된 입찰 건수와 담합 기간을 찾아주세요",
    "source": "ko/260120__보도자료(6776억_원_규모_한국전력공사_입찰_담합_사건_수사_결과)-서울중앙지검.pdf",
    "gold_chunks": [
     125,
@@ -264,7 +264,7 @@
   },
   {
    "id": "ko-28",
-   "question": "한국전력공사 가스절연개폐장치 입찰 담합 사건에서 추산된 부당이득액은 얼마인가요?",
+   "question": "한국전력공사 가스절연개폐장치 입찰 담합 사건에서 추산된 부당이득액을 찾아주세요",
    "source": "ko/260120__보도자료(6776억_원_규모_한국전력공사_입찰_담합_사건_수사_결과)-서울중앙지검.pdf",
    "gold_chunks": [
     126
@@ -273,7 +273,7 @@
   },
   {
    "id": "ko-29",
-   "question": "한국전력공사 입찰 담합 사건에서 담합 기간 중 일반경쟁입찰 평균 낙찰률과 담합 종료 후 현재까지 평균 낙찰률은 각각 얼마인가요?",
+   "question": "한국전력공사 입찰 담합 사건에서 담합 기간 중 일반경쟁입찰 평균 낙찰률과 담합 종료 후 현재까지 평균 낙찰률을 찾아주세요",
    "source": "ko/260120__보도자료(6776억_원_규모_한국전력공사_입찰_담합_사건_수사_결과)-서울중앙지검.pdf",
    "gold_chunks": [
     129,
@@ -283,7 +283,7 @@
   },
   {
    "id": "ko-30",
-   "question": "한국전력공사 입찰 담합 사건과 관련해 진행 중인 공정거래위원회 행정소송과 한국전력공사 손해배상 민사소송의 소송가액은 각각 얼마인가요?",
+   "question": "한국전력공사 입찰 담합 사건과 관련해 진행 중인 공정거래위원회 행정소송과 한국전력공사 손해배상 민사소송의 소송가액을 찾아주세요",
    "source": "ko/260120__보도자료(6776억_원_규모_한국전력공사_입찰_담합_사건_수사_결과)-서울중앙지검.pdf",
    "gold_chunks": [
     130
@@ -292,7 +292,7 @@
   },
   {
    "id": "en-01",
-   "question": "Antonio Nathaniel Davenport 사건에서 정부가 합리적 의심 없이 입증해야 했던 살인죄는 어느 주 법에 따른 것인가요?",
+   "question": "Antonio Nathaniel Davenport 사건에서 정부가 합리적 의심 없이 입증해야 했던 살인죄를 찾아주세요",
    "source": "en/24-7435_5if6.pdf",
    "gold_chunks": [
     34,
@@ -302,7 +302,7 @@
   },
   {
    "id": "en-02",
-   "question": "Davenport 사건의 1심 법원이 reasonable doubt 정의 설시를 거부하며 내세운 잘못된 전제는 무엇인가요?",
+   "question": "Davenport 사건의 1심 법원이 reasonable doubt 정의 설시를 거부하며 내세운 잘못된 전제를 찾아주세요",
    "source": "en/24-7435_5if6.pdf",
    "gold_chunks": [
     35
@@ -311,7 +311,7 @@
   },
   {
    "id": "en-03",
-   "question": "Davenport 사건에서 배심원이 reasonable doubt 의미를 자주 혼동한다는 연구를 인용한 논문의 학술지와 권·면수는 무엇인가요?",
+   "question": "Ginsburg 대법관 의견이 인용한, 배심원이 reasonable doubt 의미를 자주 혼동한다는 연구의 학술지와 권·면수를 찾아주세요",
    "source": "en/24-7435_5if6.pdf",
    "gold_chunks": [
     36,
@@ -321,7 +321,7 @@
   },
   {
    "id": "en-04",
-   "question": "Bryan Lee Burrows가 기소된 킥백 요구 공모가 관련된 미국 정부 발주 사업의 명칭은 무엇인가요?",
+   "question": "Bryan Lee Burrows가 기소된 킥백 요구 공모가 관련된 미국 정부 발주 사업의 명칭을 찾아주세요",
    "source": "en/249799.pdf",
    "gold_chunks": [
     38,
@@ -331,7 +331,7 @@
   },
   {
    "id": "en-05",
-   "question": "Bryan Lee Burrows에게 적용된 Count 1의 죄명과 그 사건번호는 무엇인가요?",
+   "question": "Bryan Lee Burrows에게 적용된 Count 1의 죄명과 그 사건번호를 찾아주세요",
    "source": "en/249799.pdf",
    "gold_chunks": [
     38
@@ -340,7 +340,7 @@
   },
   {
    "id": "en-06",
-   "question": "Cedric Ray Jones 사건에서 1심 법원이 선고한 총 형기와 §924(c) 혐의에 대한 연속 형기는 각각 얼마인가요?",
+   "question": "Cedric Ray Jones 사건에서 1심 법원이 선고한 총 형기와 §924(c) 혐의에 대한 연속 형기를 찾아주세요",
    "source": "en/25-524_0971.pdf",
    "gold_chunks": [
     43
@@ -349,7 +349,7 @@
   },
   {
    "id": "en-07",
-   "question": "Cedric Ray Jones 사건에서 인용된 Hunter 판결이 항소포기 각서를 집행할 수 없다고 본 기준은 무엇인가요?",
+   "question": "Cedric Ray Jones 사건에서 인용된 Hunter 판결이 항소포기 각서를 집행할 수 없다고 본 기준을 찾아주세요",
    "source": "en/25-524_0971.pdf",
    "gold_chunks": [
     42
@@ -358,7 +358,7 @@
   },
   {
    "id": "en-08",
-   "question": "Cedric Ray Jones 사건에서 제5연방항소법원이 인정한 포기 각서의 두 가지 예외는 무엇인가요?",
+   "question": "Cedric Ray Jones 사건에서 제5연방항소법원이 인정한 포기 각서의 두 가지 예외를 찾아주세요",
    "source": "en/25-524_0971.pdf",
    "gold_chunks": [
     44
@@ -367,7 +367,7 @@
   },
   {
    "id": "en-09",
-   "question": "Michael Dewayne Lairy가 선고받은 총기 불법소지 형기는 법정 최고형보다 몇 년 더 길었나요?",
+   "question": "Michael Dewayne Lairy가 선고받은 총기 불법소지 형기가 법정 최고형보다 얼마나 더 길었는지를 찾아주세요",
    "source": "en/25-821_e29g.pdf",
    "gold_chunks": [
     45
@@ -376,7 +376,7 @@
   },
   {
    "id": "en-10",
-   "question": "Ashley Grayson 사건에서 ALITO 대법관이 FaceTime 녹음을 누적적 증거로 본 근거가 된 다른 녹음은 무엇인가요?",
+   "question": "Ashley Grayson 사건에서 ALITO 대법관이 FaceTime 녹음을 누적적 증거로 본 근거가 된 다른 녹음을 찾아주세요",
    "source": "en/25-851_ed9f.pdf",
    "gold_chunks": [
     47
@@ -385,7 +385,7 @@
   },
   {
    "id": "en-11",
-   "question": "Donte J. Carter 사건에서 경찰이 Carter의 압축 반바지 속에서 회수한 물건은 무엇인가요?",
+   "question": "Donte J. Carter 사건에서 경찰이 Carter의 압축 반바지 속에서 회수한 물건을 찾아주세요",
    "source": "en/25-885_5h26.pdf",
    "gold_chunks": [
     48,
@@ -395,7 +395,7 @@
   },
   {
    "id": "en-12",
-   "question": "Donte J. Carter 사건에서 D.C. 항소법원이 압수 여부를 판단하려면 반드시 보아야 한다고 한 추가 사실은 무엇인가요?",
+   "question": "Donte J. Carter 사건에서 D.C. 항소법원이 압수 여부를 판단하려면 반드시 보아야 한다고 한 추가 사실을 찾아주세요",
    "source": "en/25-885_5h26.pdf",
    "gold_chunks": [
     49
@@ -404,7 +404,7 @@
   },
   {
    "id": "en-13",
-   "question": "Donte J. Carter 사건에서 판결 결론에만 동조한 McLeese 판사가 다수의견에 대해 지적한 문제점은 무엇인가요?",
+   "question": "Judge McLeese 가 판결 결론에만 동조하면서, 다수의견이 Carter 의 인종에 부여했다고 지적한 것을 찾아주세요",
    "source": "en/25-885_5h26.pdf",
    "gold_chunks": [
     50
@@ -413,7 +413,7 @@
   },
   {
    "id": "en-14",
-   "question": "John Anthony O’Brien가 기소된 연방규정 조항과 그가 체포된 날짜는 어떻게 되나요?",
+   "question": "John Anthony O’Brien가 기소된 연방규정 조항과 그가 체포된 날짜를 찾아주세요",
    "source": "en/USCOURTS-caed-6_25-mj-00015-1.pdf",
    "gold_chunks": [
     52
@@ -422,7 +422,7 @@
   },
   {
    "id": "en-15",
-   "question": "John Anthony O’Brien 사건에서 응급구조 무선 호출이 그의 상태를 어떻게 묘사했나요?",
+   "question": "John Anthony O’Brien 사건에서 응급구조 무선 호출이 그의 상태를 묘사한 표현을 찾아주세요",
    "source": "en/USCOURTS-caed-6_25-mj-00015-1.pdf",
    "gold_chunks": [
     53,
@@ -432,7 +432,7 @@
   },
   {
    "id": "en-16",
-   "question": "John Anthony O’Brien 사건에서 공소기각 신청을 기각한 법원이 지정한 status conference 일시는 언제인가요?",
+   "question": "John Anthony O’Brien 사건에서 공소기각 신청을 기각한 법원이 지정한 status conference 일시를 찾아주세요",
    "source": "en/USCOURTS-caed-6_25-mj-00015-1.pdf",
    "gold_chunks": [
     56
@@ -441,7 +441,7 @@
   },
   {
    "id": "en-17",
-   "question": "Carlos Meza Guillermo 사건에서 법원이 채택한 보고·권고를 작성한 치안판사와 그 작성일은 언제인가요?",
+   "question": "Carlos Meza Guillermo 사건에서 법원이 채택한 보고·권고를 작성한 치안판사와 그 작성일을 찾아주세요",
    "source": "en/USCOURTS-mnd-0_06-cr-00130-1.pdf",
    "gold_chunks": [
     57
@@ -450,7 +450,7 @@
   },
   {
    "id": "en-18",
-   "question": "Carlos Meza Guillermo 사건에서 목격자 식별 증거 배제 신청에 대해 법원이 내린 결정은 무엇인가요?",
+   "question": "Docket No. 39 신청과 Docket No. 45 신청에 대해 법원이 각각 내린 결정을 찾아주세요",
    "source": "en/USCOURTS-mnd-0_06-cr-00130-1.pdf",
    "gold_chunks": [
     58,
@@ -460,7 +460,7 @@
   },
   {
    "id": "en-19",
-   "question": "Alberto Cortes Gomez가 가담한 wire fraud 공모의 범행 기간은 언제부터 언제까지인가요?",
+   "question": "Alberto Cortes Gomez가 가담한 wire fraud 공모의 범행 기간을 찾아주세요",
    "source": "en/gomez_albertocortes.pdf",
    "gold_chunks": [
     60
@@ -469,7 +469,7 @@
   },
   {
    "id": "en-20",
-   "question": "Tettey Leslie Nii Tetteh 자금세탁 공모 사건에서 몰수 대상으로 적시된 SunTrust 은행 계좌의 끝자리는 무엇인가요?",
+   "question": "Tettey Leslie Nii Tetteh 자금세탁 공모 사건에서 몰수 대상으로 적시된 SunTrust 은행 계좌의 끝자리를 찾아주세요",
    "source": "en/vae1_tetteh_0.pdf",
    "gold_chunks": [
     63
@@ -478,7 +478,7 @@
   },
   {
    "id": "ch-01",
-   "question": "孙晓龙 寻衅滋事 사건에서 선고된 징역 형량은 얼마인가요?",
+   "question": "孙晓龙 寻衅滋事 사건에서 선고된 징역 형량을 찾아주세요",
    "source": "ch/(2019)0113_.pdf",
    "gold_chunks": [
     1,
@@ -488,7 +488,7 @@
   },
   {
    "id": "ch-02",
-   "question": "(2019)辽0113刑初350号 판결문에 기재된 피고인 孙晓龙의 학력과 직업은 무엇인가요?",
+   "question": "沈阳市沈北新区人民检察院가 기소한 피고인 孙晓龙의 학력과 직업을 찾아주세요",
    "source": "ch/(2019)0113_.pdf",
    "gold_chunks": [
     0
@@ -497,7 +497,7 @@
   },
   {
    "id": "ch-03",
-   "question": "(2020)沪0109刑初488号 판결문에서 俞某2가 트위터에 등록한 닉네임·계정과 발송한 추문 수는 어떻게 되나요?",
+   "question": "上海市虹口区人民检察院가 기소한 俞某2가 트위터에 등록한 닉네임·계정과 발송한 추문 수를 찾아주세요",
    "source": "ch/(2020)_0109_488.pdf",
    "gold_chunks": [
     3
@@ -506,7 +506,7 @@
   },
   {
    "id": "ch-04",
-   "question": "俞某2 寻衅滋事 사건에서 선고된 징역 형량과 몰수된 범행 도구는 무엇인가요?",
+   "question": "俞某2 寻衅滋事 사건에서 선고된 징역 형량과 몰수된 범행 도구를 찾아주세요",
    "source": "ch/(2020)_0109_488.pdf",
    "gold_chunks": [
     5
@@ -515,7 +515,7 @@
   },
   {
    "id": "ch-05",
-   "question": "张树林 사건에서 문제가 된 QQ 대화방의 군 번호와 张树林이 사용한 QQ 이름은 무엇인가요?",
+   "question": "张树林 사건에서 문제가 된 QQ 대화방의 군 번호와 张树林이 사용한 QQ 이름을 찾아주세요",
    "source": "ch/(2020)_0381_884.pdf",
    "gold_chunks": [
     8,
@@ -525,7 +525,7 @@
   },
   {
    "id": "ch-06",
-   "question": "辽宁省精神卫生中心 법의감정에서 나온 张树林의 진단명과 그에게 선고된 형량은 어떻게 되나요?",
+   "question": "辽宁省精神卫生中心 법의감정에서 나온 张树林의 진단명과 그에게 선고된 형량을 찾아주세요",
    "source": "ch/(2020)_0381_884.pdf",
    "gold_chunks": [
     9
@@ -534,7 +534,7 @@
   },
   {
    "id": "ch-07",
-   "question": "文长安이 사용한 트위터 계정과 그 계정의 팔로워 수는 어떻게 되나요?",
+   "question": "文长安이 사용한 트위터 계정과 그 계정의 팔로워 수를 찾아주세요",
    "source": "ch/(2020)_1002_314_.pdf",
    "gold_chunks": [
     12,
@@ -544,7 +544,7 @@
   },
   {
    "id": "ch-08",
-   "question": "(2020)豫1002刑初314号 판결문에 기재된 文长安의 소속 학교와 직위는 무엇인가요?",
+   "question": "许昌市魏都区人民检察院가 기소한 文长安의 소속 학교와 직위를 찾아주세요",
    "source": "ch/(2020)_1002_314_.pdf",
    "gold_chunks": [
     11
@@ -553,7 +553,7 @@
   },
   {
    "id": "ch-09",
-   "question": "凉城县人民检察院가 张某某에 대해 내린 최종 처분은 무엇인가요?",
+   "question": "凉城县人民检察院가 张某某에 대해 내린 최종 처분을 찾아주세요",
    "source": "ch/1767528250552_B264D298D87D4A329BAAEE4DE23DFB2D.pdf",
    "gold_chunks": [
     16,
@@ -563,7 +563,7 @@
   },
   {
    "id": "ch-10",
-   "question": "张某某와 杨某某의 다툼을 촉발한 행동과 杨某某가 입은 골절 부위는 무엇인가요?",
+   "question": "凉城县人民检察院가 张某某에 대해 판단하며 적시한, 杨某某와의 다툼을 촉발한 행동과 杨某某가 입은 골절 부위를 찾아주세요",
    "source": "ch/1767528250552_B264D298D87D4A329BAAEE4DE23DFB2D.pdf",
    "gold_chunks": [
     15
@@ -572,7 +572,7 @@
   },
   {
    "id": "ch-11",
-   "question": "北京华业资本控股股份有限公司가 형사판결서 수령 사실을 알린 공고의 증권 코드와 공고 번호는 무엇인가요?",
+   "question": "北京华业资本控股股份有限公司의 증권 코드·주식 약칭과 그 공시 번호를 찾아주세요",
    "source": "ch/H2_AN202301191582160400_1.pdf",
    "gold_chunks": [
     18
@@ -581,7 +581,7 @@
   },
   {
    "id": "ch-12",
-   "question": "北京华业资本控股股份有限公司가 수령한 형사판결서를 선고한 법원과 두 건의 사건번호는 무엇인가요?",
+   "question": "北京华业资本控股股份有限公司에 형사 판단을 내린 법원과 두 건의 사건번호를 찾아주세요",
    "source": "ch/H2_AN202301191582160400_1.pdf",
    "gold_chunks": [
     18,
@@ -592,7 +592,7 @@
   },
   {
    "id": "ch-13",
-   "question": "重庆恒韵医药有限公司에 네 가지 죄로 병과되어 합산 집행되는 벌금 총액은 얼마인가요?",
+   "question": "重庆恒韵医药有限公司에 네 가지 죄로 병과되어 합산 집행되는 벌금 총액을 찾아주세요",
    "source": "ch/H2_AN202301191582160400_1.pdf",
    "gold_chunks": [
     22
@@ -601,7 +601,7 @@
   },
   {
    "id": "ch-14",
-   "question": "重庆恒韵医药有限公司의 실제 지배자 李仕林에게 최종적으로 합산 집행된 형은 무엇인가요?",
+   "question": "重庆恒韵医药有限公司의 실제 지배자 李仕林에게 최종적으로 합산 집행된 형을 찾아주세요",
    "source": "ch/H2_AN202301191582160400_1.pdf",
    "gold_chunks": [
     22,
@@ -611,7 +611,7 @@
   },
   {
    "id": "ch-15",
-   "question": "重庆恒韵医药有限公司 재무총괄 刘荣华에게 합산 집행된 징역형과 벌금은 얼마인가요?",
+   "question": "刘荣华·韦泽禹·白晓敏에게 각각 병합 선고된 형 가운데, 재무총괄 刘荣华의 징역형과 벌금을 찾아주세요",
    "source": "ch/H2_AN202301191582160400_1.pdf",
    "gold_chunks": [
     23
@@ -620,7 +620,7 @@
   },
   {
    "id": "ch-16",
-   "question": "四川省川谷坊酒业有限公司·曾庆芬 非法吸收公众存款 사건을 심리한 1심 법원과 사건번호는 무엇인가요?",
+   "question": "四川省川谷坊酒业有限公司·曾庆芬 非法吸收公众存款 사건을 심리한 1심 법원과 사건번호를 찾아주세요",
    "source": "ch/四川省川谷坊酒业有限公司、曾庆芬非法吸收公众存款罪一审刑事判决书.pdf",
    "gold_chunks": [
     26
@@ -629,7 +629,7 @@
   },
   {
    "id": "ch-17",
-   "question": "邛崃市人民检察院가 기소 단계에서 적시한 四川省川谷坊酒业有限公司의 불법 수신 총액과 관련 인원은 얼마인가요?",
+   "question": "邛崃市人民检察院가 기소 단계에서 적시한 四川省川谷坊酒业有限公司의 불법 수신 총액과 관련 인원을 찾아주세요",
    "source": "ch/四川省川谷坊酒业有限公司、曾庆芬非法吸收公众存款罪一审刑事判决书.pdf",
    "gold_chunks": [
     27
@@ -638,16 +638,17 @@
   },
   {
    "id": "ch-18",
-   "question": "법원이 심리 끝에 인정한 四川省川谷坊酒业有限公司의 非法吸收公众存款 금액과 피해자 수는 얼마인가요?",
+   "question": "법원이 심리 끝에 인정한 四川省川谷坊酒业有限公司의 非法吸收公众存款 금액과 피해자 수를 찾아주세요",
    "source": "ch/四川省川谷坊酒业有限公司、曾庆芬非法吸收公众存款罪一审刑事判决书.pdf",
    "gold_chunks": [
-    29
+    29,
+    30
    ],
    "note": "정답: 90 名被吸收人共计非法吸收公众存款42377.768 万元"
   },
   {
    "id": "ch-19",
-   "question": "曾庆芬에게 선고된 징역형과 벌금액은 얼마인가요?",
+   "question": "曾庆芬에게 선고된 징역형과 벌금액을 찾아주세요",
    "source": "ch/四川省川谷坊酒业有限公司、曾庆芬非法吸收公众存款罪一审刑事判决书.pdf",
    "gold_chunks": [
     31
@@ -656,7 +657,7 @@
   },
   {
    "id": "ch-20",
-   "question": "四川省川谷坊酒业有限公司가 불특정 다수에게 자금을 모으면서 약속한 월 이자율은 얼마인가요?",
+   "question": "四川省川谷坊酒业有限公司가 불특정 다수에게 자금을 모으면서 약속한 월 이자율을 찾아주세요",
    "source": "ch/四川省川谷坊酒业有限公司、曾庆芬非法吸收公众存款罪一审刑事判决书.pdf",
    "gold_chunks": [
     27,
@@ -666,7 +667,7 @@
   },
   {
    "id": "vn-01",
-   "question": "Bản án số 04/2023/HSST 사건의 재판장(Thẩm phán – Chủ tọa phiên tòa)은 누구인가요?",
+   "question": "Hội thẩm nhân dân Bùi Thị Kim Thủy·Dương Thị Được 와 함께 Võ Minh P 를 심리한 Thẩm phán – Chủ tọa phiên tòa 를 찾아주세요",
    "source": "vn/04_2023_HSST_BRVT.pdf",
    "gold_chunks": [
     220
@@ -675,25 +676,27 @@
   },
   {
    "id": "vn-02",
-   "question": "Bản án 04/2023/HSST에서 Võ Minh P가 훔친 알루미늄 사다리의 규격과 감정 잔존가액은 얼마인가요?",
+   "question": "Võ Minh P 가 Yamaha Sirius 오토바이로 옮기려 한 알루미늄 사다리의 규격과 감정 잔존가액을 찾아주세요",
    "source": "vn/04_2023_HSST_BRVT.pdf",
    "gold_chunks": [
-    223
+    222,
+    223,
+    225
    ],
-   "note": "정답: chiều dài 3,2m, bề rộng là 40cm, trọng lượng 10kg / giá trị còn lại là 400.000đ"
+   "note": "정답: chiều dài 3,2m, bề rộng là 40cm, trọng lượng 10kg"
   },
   {
    "id": "vn-03",
-   "question": "Bản án 04/2023/HSST에서 Võ Minh P에게 선고된 형량은 얼마인가요?",
+   "question": "Tòa án nhân dân tỉnh Bà Rịa - Vũng Tàu 에 항소할 수 있다고 고지받은 Võ Minh P 에게 확정된 형량과 형기 기산일을 찾아주세요",
    "source": "vn/04_2023_HSST_BRVT.pdf",
    "gold_chunks": [
     226
    ],
-   "note": "정답: Phạt bị cáo Võ Minh P 08 (Tám) tháng tù"
+   "note": "정답: Phạt bị cáo Võ Minh P 08 (Tám) tháng tù / Thời hạn tù tính từ ngày 18-11-2022"
   },
   {
    "id": "vn-04",
-   "question": "Bản án 04/2023/HSST에서 Võ Minh P가 절도에 사용한 오토바이의 기종과 번호판은 무엇인가요?",
+   "question": "Võ Minh P 가 Trần Văn H 를 태우고 thang nhôm 을 훔치러 갈 때 사용한 오토바이의 기종과 번호판을 찾아주세요",
    "source": "vn/04_2023_HSST_BRVT.pdf",
    "gold_chunks": [
     222,
@@ -705,7 +708,7 @@
   },
   {
    "id": "vn-05",
-   "question": "Bản án số 06/2023/HS-ST 사건의 재판장과 법정 서기는 각각 누구인가요?",
+   "question": "Hội thẩm nhân dân Vương Tấn Độ·Lê Văn Khanh 와 함께 Lại Văn P 를 심리한 재판장과 법정 서기를 찾아주세요",
    "source": "vn/06_2023_HS-ST_HCM.pdf",
    "gold_chunks": [
     228
@@ -714,17 +717,17 @@
   },
   {
    "id": "vn-06",
-   "question": "Bản án 06/2023/HS-ST에서 Lại Văn P가 절도를 저지른 일시와 장소는 어디인가요?",
+   "question": "Lại Văn P 가 Realme C2 휴대폰을 훔친 일시와 그 장소를 찾아주세요",
    "source": "vn/06_2023_HS-ST_HCM.pdf",
    "gold_chunks": [
     230,
     233
    ],
-   "note": "정답: 17 giờ 45 phút ngày 20/4/2022 / Nhà nghỉ T P"
+   "note": "정답: 17 giờ 45 phút ngày 20/4/2022"
   },
   {
    "id": "vn-07",
-   "question": "Bản án 06/2023/HS-ST에서 Lại Văn P가 훔친 휴대폰의 기종과 감정 가액은 얼마인가요?",
+   "question": "Lại Văn P 가 anh Nguyễn Đình V 로부터 훔친 휴대폰의 기종과 감정 가액을 찾아주세요",
    "source": "vn/06_2023_HS-ST_HCM.pdf",
    "gold_chunks": [
     231,
@@ -736,7 +739,7 @@
   },
   {
    "id": "vn-08",
-   "question": "Bản án 06/2023/HS-ST에서 법원이 Lại Văn P에게 벌금이라는 부가형을 적용하지 않은 이유는 무엇인가요?",
+   "question": "Lại Văn P 사건에서 법원이 5.000.000 đồng 에서 50.000.000 đồng 의 벌금이라는 부가형을 적용하지 않은 이유를 찾아주세요",
    "source": "vn/06_2023_HS-ST_HCM.pdf",
    "gold_chunks": [
     235
@@ -745,16 +748,16 @@
   },
   {
    "id": "vn-09",
-   "question": "Bản án 06/2023/HS-ST에서 Lại Văn P에게 선고된 형량과 형기 기산일은 언제인가요?",
+   "question": "Realme C2 휴대폰을 훔친 Lại Văn P 에게 선고된 형량과 형기 기산일, 그리고 국고 귀속된 오토바이의 번호판을 찾아주세요",
    "source": "vn/06_2023_HS-ST_HCM.pdf",
    "gold_chunks": [
     236
    ],
-   "note": "정답: 01 (một) năm 03 (ba) tháng tù, thời hạn tù tính từ ngày 26-5-2022"
+   "note": "정답: 01 (một) năm 03 (ba) tháng tù, thời hạn tù tính từ ngày 26-5-2022 / 49V5-2461"
   },
   {
    "id": "vn-10",
-   "question": "Bản án số 132/2020/HS-ST 사건의 재판장은 누구인가요?",
+   "question": "Hội thẩm nhân dân Phạm Thị Ngọc·Nguyễn Ngọc Cảnh 와 함께 Lâm Tuấn A 를 심리한 재판장을 찾아주세요",
    "source": "vn/132_2020_HS-ST_HCM.pdf",
    "gold_chunks": [
     238
@@ -763,26 +766,28 @@
   },
   {
    "id": "vn-11",
-   "question": "Bản án 132/2020/HS-ST에서 Lâm Tuấn A가 훔친 물품과 지갑 안의 현금은 각각 무엇인가요?",
+   "question": "Lâm Tuấn A 가 ông Nguyễn Thành P 의 집에서 훔친 물품과 지갑 안의 현금을 찾아주세요",
    "source": "vn/132_2020_HS-ST_HCM.pdf",
    "gold_chunks": [
-    240
+    240,
+    244
    ],
-   "note": "정답: Iphone X và 03 cái đồng hồ đeo tay / bên trong bóp có 6.000.000 đồng"
+   "note": "정답: Iphone X và 03 cái đồng hồ đeo tay"
   },
   {
    "id": "vn-12",
-   "question": "Bản án 132/2020/HS-ST에서 산정된 피해 재산의 총 가액은 얼마인가요?",
+   "question": "Viettinbank 와 BIDV 카드가 든 지갑을 도둑맞은 피해자의 재산에 대해 Hội đồng định giá tài sản 이 산정한 총 가액을 찾아주세요",
    "source": "vn/132_2020_HS-ST_HCM.pdf",
    "gold_chunks": [
     241,
-    242
+    242,
+    244
    ],
    "note": "정답: Tổng giá trị tài sản thiệt hại là 15.580.000 đồng"
   },
   {
    "id": "vn-13",
-   "question": "Bản án 132/2020/HS-ST에서 Lâm Tuấn A의 마약 관련 전과는 어느 법원에서 언제 몇 년 형이 선고되었나요?",
+   "question": "Tòa án nhân dân quận Gò Vấp 의 전과와 함께 기재된, Lâm Tuấn A 의 마약 관련 전과를 찾아주세요",
    "source": "vn/132_2020_HS-ST_HCM.pdf",
    "gold_chunks": [
     239,
@@ -792,17 +797,17 @@
   },
   {
    "id": "vn-14",
-   "question": "Bản án 132/2020/HS-ST에서 Lâm Tuấn A에게 선고된 형량과 형기 기산일은 언제인가요?",
+   "question": "Lâm Tuấn A 에게 선고된 형량과 형기 기산일, 그리고 국고 귀속된 자전거의 상표를 찾아주세요",
    "source": "vn/132_2020_HS-ST_HCM.pdf",
    "gold_chunks": [
     246,
     247
    ],
-   "note": "정답: 03 (ba) năm 06 (sáu) tháng tù, thời hạn tù tính từ ngày 08/4/2020"
+   "note": "정답: 03 (ba) năm 06 (sáu) tháng tù, thời hạn tù tính từ ngày 08/4/2020 / QueenBike"
   },
   {
    "id": "vn-15",
-   "question": "Bản án số 171/2018/HS-ST에서 Đỗ Văn Ph가 소지한 헤로인의 감정 중량과 그가 지불한 매수 가격은 얼마인가요?",
+   "question": "Đỗ Văn Ph 가 đường Đặng Huy T 에서 사들여 소지하다 적발된 헤로인의 감정 중량과 매수 가격을 찾아주세요",
    "source": "vn/171_2018_HS-ST_HUE.pdf",
    "gold_chunks": [
     250
@@ -811,7 +816,7 @@
   },
   {
    "id": "vn-16",
-   "question": "Bản án 171/2018/HS-ST에서 Đỗ Văn Ph가 현행범으로 체포된 일시와 장소는 어디인가요?",
+   "question": "Đỗ Văn Ph 가 Heroin 을 소지한 채 현행범으로 체포된 시각과 장소를 찾아주세요",
    "source": "vn/171_2018_HS-ST_HUE.pdf",
    "gold_chunks": [
     250,
@@ -821,7 +826,7 @@
   },
   {
    "id": "vn-17",
-   "question": "Bản án số 29/2018/HS-ST 사건의 재판장은 누구인가요?",
+   "question": "Hội thẩm nhân dân Vũ Văn Sơn·Phạm Thị Lan Hương 와 함께 Trần Xuân H 를 심리한 재판장을 찾아주세요",
    "source": "vn/29_2018_HS-ST_THAI_NGUYEN[1].pdf",
    "gold_chunks": [
     255
@@ -830,16 +835,17 @@
   },
   {
    "id": "vn-18",
-   "question": "Bản án 29/2018/HS-ST에서 Trần Xuân H가 훔친 알루미늄과 철재의 무게와 감정 총액은 얼마인가요?",
+   "question": "Trần Xuân H 가 anh Trần Văn G 의 집에서 훔친 알루미늄과 철재의 무게와 감정 총액을 찾아주세요",
    "source": "vn/29_2018_HS-ST_THAI_NGUYEN[1].pdf",
    "gold_chunks": [
-    257
+    257,
+    258
    ],
-   "note": "정답: 2,7kg / 36,4kg / tổng giá trị 236.000đ"
+   "note": "정답: 2,7kg"
   },
   {
    "id": "vn-19",
-   "question": "Bản án 29/2018/HS-ST에서 Trần Xuân H의 전과는 몇 건이며 마약 관련 판결은 언제 내려졌나요?",
+   "question": "Trần Xuân H 의 전과를 찾아주세요",
    "source": "vn/29_2018_HS-ST_THAI_NGUYEN[1].pdf",
    "gold_chunks": [
     256
@@ -848,7 +854,7 @@
   },
   {
    "id": "vn-20",
-   "question": "Bản án 29/2018/HS-ST에서 몰수·폐기 처분된 두 가지 물품은 무엇인가요?",
+   "question": "Trần Xuân H 사건에서 몰수·폐기 처분된 두 가지 물품을 찾아주세요",
    "source": "vn/29_2018_HS-ST_THAI_NGUYEN[1].pdf",
    "gold_chunks": [
     258,
@@ -859,7 +865,7 @@
   },
   {
    "id": "uz-01",
-   "question": "Azadov Mirjalol Bahodir o‘g‘li가 재학 중인 대학과 석사 과정의 방향 코드는 무엇인가요?",
+   "question": "Azadov Mirjalol Bahodir o‘g‘li가 재학 중인 대학과 석사 과정의 방향 코드를 찾아주세요",
    "source": "uz/964-966.pdf",
    "gold_chunks": [
     186
@@ -868,7 +874,7 @@
   },
   {
    "id": "uz-02",
-   "question": "Azadov Mirjalol의 논문이 부패 정의의 근거로 인용한 우즈베키스탄 반부패법의 제정일은 언제인가요?",
+   "question": "BMT Bosh Assambleyasi 행동강령과 Yevropa Kengashi 협약에 이어 부패의 정의로 인용된, 우즈베키스탄 반부패법의 제정일을 찾아주세요",
    "source": "uz/964-966.pdf",
    "gold_chunks": [
     187,
@@ -878,7 +884,7 @@
   },
   {
    "id": "uz-03",
-   "question": "Azadov Mirjalol의 논문이 부패 관련 범죄 목록의 근거로 인용한 내각 결정의 일자와 번호는 무엇인가요?",
+   "question": "O‘zbekiston Respublikasi Vazirlar Mahkamasi 결정 가운데 부패 관련 범죄 목록의 근거로 인용된 것의 일자와 번호를 찾아주세요",
    "source": "uz/964-966.pdf",
    "gold_chunks": [
     189
@@ -887,16 +893,16 @@
   },
   {
    "id": "uz-04",
-   "question": "Azadov Mirjalol의 논문에서 부패가 뇌물수수보다 훨씬 넓은 사회현상이라고 밝힌 학자는 누구인가요?",
+   "question": "Professor V.V. Luneev 가 korrupsiya 를 규정한 내용으로 인용된 문구를 찾아주세요",
    "source": "uz/964-966.pdf",
    "gold_chunks": [
     188
    ],
-   "note": "정답: Professor V.V. Luneev"
+   "note": "정답: korrupsiya - poraxo‘rlikdan ancha keng bo‘lgan ijtimoiy hodisadir"
   },
   {
    "id": "uz-05",
-   "question": "Abdug‘aniyev Akobir Akmaljon o‘g‘li의 소속 기관과 논문 지도교수는 누구인가요?",
+   "question": "Abdug‘aniyev Akobir Akmaljon o‘g‘li 의 소속 기관과 지도교수를 찾아주세요",
    "source": "uz/Abdug‘aniyev+Akobir+Akmaljon+o‘g‘li.pdf",
    "gold_chunks": [
     192
@@ -905,7 +911,7 @@
   },
   {
    "id": "uz-06",
-   "question": "우즈베키스탄 형법 168조에 따른 firibgarlik의 가장 무거운 형량 구간은 몇 년인가요?",
+   "question": "xavfli residivist 나 uyushgan guruh 이 저지른 경우까지 포함해, 우즈베키스탄 형법 168조 firibgarlik 의 가장 무거운 형량 구간을 찾아주세요",
    "source": "uz/Abdug‘aniyev+Akobir+Akmaljon+o‘g‘li.pdf",
    "gold_chunks": [
     195
@@ -914,7 +920,7 @@
   },
   {
    "id": "uz-07",
-   "question": "Abdug‘aniyev 논문에서 2019년과 2020년 1~7월에 등록된 firibgarlik 범죄 건수는 각각 몇 건인가요?",
+   "question": "IIV Jinoyat-qidiruv bosh boshqarmasi 가 집계한 2019년과 2020년 1~7월의 firibgarlik 범죄 건수를 찾아주세요",
    "source": "uz/Abdug‘aniyev+Akobir+Akmaljon+o‘g‘li.pdf",
    "gold_chunks": [
     200
@@ -923,7 +929,7 @@
   },
   {
    "id": "uz-08",
-   "question": "Abdug‘aniyev 논문이 사회의 정보 투명성 확보를 위해 만들자고 제안한 시스템의 이름은 무엇인가요?",
+   "question": "Shaffof tizimga o‘tish 을 주장하며 사회의 정보 투명성 확보를 위해 만들자고 제안한 시스템의 이름을 찾아주세요",
    "source": "uz/Abdug‘aniyev+Akobir+Akmaljon+o‘g‘li.pdf",
    "gold_chunks": [
     201
@@ -932,7 +938,7 @@
   },
   {
    "id": "uz-09",
-   "question": "Abdug‘aniyev 논문이 언급한 Qashqadaryo 위조 주식 사건에서 조직범죄단이 편취한 금액과 피해자 수는 얼마인가요?",
+   "question": "Qashqadaryo 에서 유명 기업의 위조 주식을 팔아 온 조직범죄단이 편취한 금액과 피해자 수를 찾아주세요",
    "source": "uz/Abdug‘aniyev+Akobir+Akmaljon+o‘g‘li.pdf",
    "gold_chunks": [
     199
@@ -941,7 +947,7 @@
   },
   {
    "id": "uz-10",
-   "question": "Abdug‘aniyev 논문이 인용한, 사기는 지능적인 범죄라고 말한 Termiz 시 법원 판사보좌관의 이름은 무엇인가요?",
+   "question": "사기는 지능적인 범죄라고 말한 Termiz 시 법원 판사보좌관의 이름을 찾아주세요",
    "source": "uz/Abdug‘aniyev+Akobir+Akmaljon+o‘g‘li.pdf",
    "gold_chunks": [
     198
@@ -950,7 +956,7 @@
   },
   {
    "id": "uz-11",
-   "question": "Nasimov Umedjon Ulugbekovich의 소속 대학은 어디인가요?",
+   "question": "Nasimov Umedjon Ulugbekovich의 소속 대학을 찾아주세요",
    "source": "uz/Nasimov+Umedjon+Ulugbekovich.pdf",
    "gold_chunks": [
     202
@@ -959,16 +965,17 @@
   },
   {
    "id": "uz-12",
-   "question": "Nasimov 논문이 우즈베키스탄의 사이버범죄 대응 근거로 든 법률 세 가지는 무엇인가요?",
+   "question": "Kiberjinoyat 의 정의와 함께 제시된, 우즈베키스탄의 사이버범죄 대응 근거 법률 세 가지를 찾아주세요",
    "source": "uz/Nasimov+Umedjon+Ulugbekovich.pdf",
    "gold_chunks": [
-    203
+    203,
+    208
    ],
    "note": "정답: “Axborotlashtirish to‘g‘risida”gi Qonun, “Elektron hukumat to‘g‘risida”gi Qonun, “Shaxsiy ma’lumotlar to‘g‘risida”gi Qonun"
   },
   {
    "id": "uz-13",
-   "question": "Nasimov 논문이 사이버범죄 대응의 핵심 국제 문서로 든 협약의 이름은 무엇인가요?",
+   "question": "Birlashgan Millatlar Tashkiloti·Yevropa Ittifoqi·Interpol 과 함께 언급된, 사이버범죄 대응의 핵심 국제 협약의 이름을 찾아주세요",
    "source": "uz/Nasimov+Umedjon+Ulugbekovich.pdf",
    "gold_chunks": [
     204,
@@ -978,7 +985,7 @@
   },
   {
    "id": "uz-14",
-   "question": "Nasimov 논문이 제시한 사이버범죄 피해 시 첫 번째와 두 번째 조치는 무엇인가요?",
+   "question": "Zaxira nusxalarni tiklash 까지 이어지는 사이버범죄 피해 대응 단계 가운데 첫 번째와 두 번째 조치를 찾아주세요",
    "source": "uz/Nasimov+Umedjon+Ulugbekovich.pdf",
    "gold_chunks": [
     206
@@ -987,7 +994,7 @@
   },
   {
    "id": "uz-15",
-   "question": "Qodirjonova Madina Ulug’bek qizi 논문의 DOI 번호는 무엇인가요?",
+   "question": "Qodirjonova Madina Ulug’bek qizi 가 밝힌 DOI 번호를 찾아주세요",
    "source": "uz/ZDIF+0701.pdf",
    "gold_chunks": [
     209
@@ -996,7 +1003,7 @@
   },
   {
    "id": "uz-16",
-   "question": "Qodirjonova Madina 논문이 청소년 교정시설의 성과가 더 좋은 이유로 든 규모상의 특징은 무엇인가요?",
+   "question": "Jinoyat-Ijroiya kodeksi 적용에서 청소년 교정시설이 성인 교도소보다 나은 성과를 낸 이유로 든 규모상의 특징을 찾아주세요",
    "source": "uz/ZDIF+0701.pdf",
    "gold_chunks": [
     211
@@ -1005,7 +1012,7 @@
   },
   {
    "id": "uz-17",
-   "question": "Kamolov Xayrulloxon Juraxon o‘g’li가 맡고 있는 직위는 무엇인가요?",
+   "question": "Kamolov Xayrulloxon Juraxon o‘g’li가 맡고 있는 직위를 찾아주세요",
    "source": "uz/ZDIF+0738.pdf",
    "gold_chunks": [
     214
@@ -1014,7 +1021,7 @@
   },
   {
    "id": "uz-18",
-   "question": "O‘zbekiston Respublikasi Oliy sudi가 발표한 공식 통계에서 2024년 형사법원이 처리한 사건 수와 그 대상 인원은 각각 얼마인가요?",
+   "question": "O‘zbekiston Respublikasi Oliy sudi가 발표한 공식 통계에서 2024년 형사법원이 처리한 사건 수와 그 대상 인원을 찾아주세요",
    "source": "uz/ZDIF+0738.pdf",
    "gold_chunks": [
     215
@@ -1023,7 +1030,7 @@
   },
   {
    "id": "uz-19",
-   "question": "우즈베키스탄에서 Yarashuv 제도의 적용으로 형사책임에서 벗어난 인원은 몇 명인가요?",
+   "question": "우즈베키스탄에서 Yarashuv 제도의 적용으로 형사책임에서 벗어난 인원을 찾아주세요",
    "source": "uz/ZDIF+0738.pdf",
    "gold_chunks": [
     216
@@ -1032,16 +1039,16 @@
   },
   {
    "id": "uz-20",
-   "question": "우즈베키스탄 형법 72조에 따른 집행유예의 시험기간(sinov muddati) 범위는 얼마인가요?",
+   "question": "shartli hukm 이 선고될 때 정해지는 sinov muddati 의 범위를 찾아주세요",
    "source": "uz/ZDIF+0738.pdf",
    "gold_chunks": [
     217
    ],
-   "note": "정답: Sinov muddati bir yildan uch yilgacha"
+   "note": "정답: Sinov muddati bir yildan uch yilgacha / hukm chiqarilgan kundan boshlab hisoblanadi"
   },
   {
    "id": "ru-01",
-   "question": "Прокуратура Кабардино-Балкарской Республики 안내문이 전화를 받지 말라고 지목한 발신 번호 대역은 무엇인가요?",
+   "question": "«SMS-просьба о помощи» 수법과 함께 설명된, 걸려온 전화를 받지 말라고 지목한 발신 번호 대역을 찾아주세요",
    "source": "ru/72lj3fbo7i1h83uotfpw88vvhj0s5nm8.pdf",
    "gold_chunks": [
     162
@@ -1050,7 +1057,7 @@
   },
   {
    "id": "ru-02",
-   "question": "Прокуратура Кабардино-Балкарской Республики 안내문이 설명한 오송금 수법에서 사기범이 두 번째로 돈을 받아내기 위해 이용하는 물건은 무엇인가요?",
+   "question": "Кабардино-Балкарская Республика 검찰이 설명한 오송금 수법에서, 사기범이 두 번째로 돈을 받아내기 위해 이용하는 물건을 찾아주세요",
    "source": "ru/72lj3fbo7i1h83uotfpw88vvhj0s5nm8.pdf",
    "gold_chunks": [
     161
@@ -1059,7 +1066,7 @@
   },
   {
    "id": "ru-03",
-   "question": "Прокуратура Омутинского района Тюменской области 안내문을 작성한 사람의 성명과 직위는 무엇인가요?",
+   "question": "Омутинский район Тюменской области 검찰청에서 정보통신 범죄 예방 자료를 준비한 사람의 성명과 직위를 찾아주세요",
    "source": "ru/acqyks51995vcas54buq9j8zjfcv52mq.pdf",
    "gold_chunks": [
     166
@@ -1068,7 +1075,7 @@
   },
   {
    "id": "ru-04",
-   "question": "Прокуратура Омутинского района Тюменской области 안내문이 인터넷 자원을 확인할 수 있다고 안내한 기관의 공식 등록부는 무엇인가요?",
+   "question": "Омутинский район Тюменской области 검찰이 인터넷 자원의 차단 여부를 확인할 수 있다고 안내한 기관의 공식 등록부를 찾아주세요",
    "source": "ru/acqyks51995vcas54buq9j8zjfcv52mq.pdf",
    "gold_chunks": [
     165
@@ -1077,16 +1084,16 @@
   },
   {
    "id": "ru-05",
-   "question": "Прокуратура Печенгского района Мурманской области 안내문에 적힌 무르만스크주 내무국 신뢰전화 번호는 무엇인가요?",
+   "question": "«Телефон доверия» УВМД России 번호와 당직실 번호를 찾아주세요",
    "source": "ru/c0bt6babub0mr9twu45skop5uqhh5ogk.pdf",
    "gold_chunks": [
     168
    ],
-   "note": "정답: Мурманской области: 40-57-31"
+   "note": "정답: Мурманской области: 40-57-31 / телефон дежурной части: 02"
   },
   {
    "id": "ru-06",
-   "question": "Прокуратура Печенгского района Мурманской области 안내문이 친척이 곤경에 빠졌다는 연락을 받았을 때 하라고 권고한 행동은 무엇인가요?",
+   "question": "Печенгский район Мурманской области 검찰이 친척이 곤경에 빠졌다는 연락을 받았을 때 하라고 권고한 행동을 찾아주세요",
    "source": "ru/c0bt6babub0mr9twu45skop5uqhh5ogk.pdf",
    "gold_chunks": [
     167
@@ -1095,7 +1102,7 @@
   },
   {
    "id": "ru-07",
-   "question": "Прокуратура Камызякского района 안내문이 밝힌 형법 159조·159.6조의 최고 징역형과 벌금 상한은 얼마인가요?",
+   "question": "Камызякский район 검찰이 밝힌 형법 159조·159.6조의 최고 징역형과 벌금 상한을 찾아주세요",
    "source": "ru/dvbffhvesi7atsug569xnrlpbgerzwcj.pdf",
    "gold_chunks": [
     169,
@@ -1105,7 +1112,7 @@
   },
   {
    "id": "ru-08",
-   "question": "Прокуратура Камызякского района 안내문이 인터넷 사기 수법으로 예시한 무료 광고 사이트 세 곳은 어디인가요?",
+   "question": "Камызякский район 검찰이 인터넷 사기 수법으로 예시한 무료 광고 사이트 세 곳을 찾아주세요",
    "source": "ru/dvbffhvesi7atsug569xnrlpbgerzwcj.pdf",
    "gold_chunks": [
     169
@@ -1114,7 +1121,7 @@
   },
   {
    "id": "ru-09",
-   "question": "Прокуратура Центрального района г.Оренбурга 안내문이 경찰에 신고하면 발급받는다고 안내한 서류는 무엇인가요?",
+   "question": "Оренбург Центральный район 검찰이 경찰에 신고하면 발급받는다고 안내한 서류를 찾아주세요",
    "source": "ru/voe12ehxmqpqsa3z1f3moe6e3fhfy14n.pdf",
    "gold_chunks": [
     171
@@ -1123,7 +1130,7 @@
   },
   {
    "id": "ru-10",
-   "question": "Прокуратура Центрального района г.Оренбурга 안내문에 적힌 해당 검찰청의 주소와 전화번호는 무엇인가요?",
+   "question": "Оренбург Центральный район 검찰청의 주소와 전화번호를 찾아주세요",
    "source": "ru/voe12ehxmqpqsa3z1f3moe6e3fhfy14n.pdf",
    "gold_chunks": [
     172
@@ -1132,7 +1139,7 @@
   },
   {
    "id": "ru-11",
-   "question": "Прокуратура Центрального района г.Оренбурга 안내문이 복제 쇼핑몰 사이트를 가려내기 위해 먼저 확인하라고 한 것은 무엇인가요?",
+   "question": "«Мошенники создают сайты-клоны торговых площадок» 라고 설명한 뒤, 가짜 여부를 가리기 위해 가장 먼저 확인하라고 한 것을 찾아주세요",
    "source": "ru/voe12ehxmqpqsa3z1f3moe6e3fhfy14n.pdf",
    "gold_chunks": [
     173
@@ -1141,7 +1148,7 @@
   },
   {
    "id": "ru-12",
-   "question": "Прокуратура Центрального района г.Оренбурга 안내문이 즉시 통화를 끊어야 할 문구로 든 것 중, 새 대출을 받아 직원에게 건네라는 요구는 어떻게 적혀 있나요?",
+   "question": "«Услышав данные фразы, прекратите разговор» 로 끝나는 목록에서, 새 대출을 받아 직원에게 건네라는 요구를 찾아주세요",
    "source": "ru/voe12ehxmqpqsa3z1f3moe6e3fhfy14n.pdf",
    "gold_chunks": [
     175
@@ -1150,7 +1157,7 @@
   },
   {
    "id": "ru-13",
-   "question": "Дело No 51-УД25-13-К8 사건에서 Конев Игорь Анатольевич에게 1심이 선고한 형벌은 무엇인가요?",
+   "question": "Конев Игорь Анатольевич 에게 и.о. мирового судьи 가 1심에서 선고한 형벌을 찾아주세요",
    "source": "ru/vsrfrulk2489670.pdf",
    "gold_chunks": [
     176
@@ -1159,7 +1166,7 @@
   },
   {
    "id": "ru-14",
-   "question": "Конев И.А. 사건에서 그가 베어 낸 자작나무의 부피와 산정된 피해 금액은 얼마인가요?",
+   "question": "Конев И.А. 사건에서 그가 베어 낸 자작나무의 부피와 산정된 피해 금액을 찾아주세요",
    "source": "ru/vsrfrulk2489670.pdf",
    "gold_chunks": [
     178
@@ -1168,7 +1175,7 @@
   },
   {
    "id": "ru-15",
-   "question": "Конев И.А. 사건에서 러시아 대법원이 몰수 결정을 취소한 차량의 차종은 무엇인가요?",
+   "question": "Конев И.А. 사건에서 러시아 대법원이 몰수 결정을 취소한 차량의 차종을 찾아주세요",
    "source": "ru/vsrfrulk2489670.pdf",
    "gold_chunks": [
     179
@@ -1177,7 +1184,7 @@
   },
   {
    "id": "ru-16",
-   "question": "Дело No 35-УД26-4-К2 사건에서 Емельянов Даниил Игоревич에게 Бежецкий межрайонный суд가 선고한 형벌은 무엇인가요?",
+   "question": "Емельянов Даниил Игоревич 에게 Бежецкий межрайонный суд Тверской области 가 선고한 형벌을 찾아주세요",
    "source": "ru/vsrfrulk2533930.pdf",
    "gold_chunks": [
     180
@@ -1186,7 +1193,7 @@
   },
   {
    "id": "ru-17",
-   "question": "Емельянов Д.И.가 АО «Р» 로부터 횡령·유용한 물자의 총액은 얼마인가요?",
+   "question": "Емельянов Д.И.가 АО «Р» 로부터 횡령·유용한 물자의 총액을 찾아주세요",
    "source": "ru/vsrfrulk2533930.pdf",
    "gold_chunks": [
     183
@@ -1195,7 +1202,7 @@
   },
   {
    "id": "ru-18",
-   "question": "Емельянов Д.И.의 범행이 저질러진 기간은 언제부터 언제까지인가요?",
+   "question": "Емельянов Д.И.의 범행이 저질러진 기간을 찾아주세요",
    "source": "ru/vsrfrulk2533930.pdf",
    "gold_chunks": [
     181,
@@ -1205,7 +1212,7 @@
   },
   {
    "id": "ru-19",
-   "question": "Емельянов Д.И. 사건에서 Тверской областной суд 항소심이 1심 판결에서 삭제한 결정은 무엇인가요?",
+   "question": "Емельянов Д.И. 사건에서 Тверской областной суд 항소심이 1심 판결에서 삭제한 결정을 찾아주세요",
    "source": "ru/vsrfrulk2533930.pdf",
    "gold_chunks": [
     180,
@@ -1215,7 +1222,7 @@
   },
   {
    "id": "ru-20",
-   "question": "Емельянов Д.И.에 대한 상고심에서 러시아 대법원이 변호인의 상고에 대해 내린 결론은 무엇인가요?",
+   "question": "Емельянов Д.И.에 대한 상고심에서 러시아 대법원이 변호인의 상고에 대해 내린 결론을 찾아주세요",
    "source": "ru/vsrfrulk2533930.pdf",
    "gold_chunks": [
     185
@@ -1224,7 +1231,7 @@
   },
   {
    "id": "pil-01",
-   "question": "「Paano Iiwasan ang mga Scam sa Imigrasyon」 안내문에 따르면, 미국에서 이민 관련 법률 자문을 할 수 있도록 권한을 부여하는 기관은 어디인가요?",
+   "question": "Latin Amerika 에서와 달리 미국에서는 notaryo 가 법률 자문을 할 수 없는데, 이민 관련 법률 자문 권한을 부여하는 기관을 찾아주세요",
    "source": "pil/AvoidImmigrationScamsGetHelp_Tagalog-508.pdf",
    "gold_chunks": [
     135
@@ -1233,7 +1240,7 @@
   },
   {
    "id": "pil-02",
-   "question": "「Mga pekeng website ng imigrasyon」 항목이 제시한, 가짜 이민 사이트를 가려내는 주소상의 기준은 무엇인가요?",
+   "question": "Statue of Liberty 사진을 내걸고 USCIS 와 연결된 것처럼 꾸민 가짜 사이트를 가려내는 주소상의 기준을 찾아주세요",
    "source": "pil/AvoidImmigrationScamsGetHelp_Tagalog-508.pdf",
    "gold_chunks": [
     136,
@@ -1243,7 +1250,7 @@
   },
   {
    "id": "pil-03",
-   "question": "Diversity Visa Program 응모 상태를 확인할 수 있는 유일한 사이트는 어디인가요?",
+   "question": "Diversity Visa Program 응모 상태를 확인할 수 있는 유일한 사이트를 찾아주세요",
    "source": "pil/AvoidImmigrationScamsGetHelp_Tagalog-508.pdf",
    "gold_chunks": [
     137,
@@ -1253,7 +1260,7 @@
   },
   {
    "id": "pil-04",
-   "question": "「Mga Scam Laban sa mga Refugee」 항목이 이민 관련 도움의 대가로 절대 쓰지 말라고 열거한 결제 수단은 무엇인가요?",
+   "question": "resettlement 기관의 case manager 와 먼저 상의하라고 권고하며, 난민에게 이민 도움 대가로 절대 쓰지 말라고 열거한 결제 수단을 찾아주세요",
    "source": "pil/AvoidImmigrationScamsGetHelp_Tagalog-508.pdf",
    "gold_chunks": [
     138
@@ -1262,7 +1269,7 @@
   },
   {
    "id": "pil-05",
-   "question": "이민사기 안내문에 적힌 USCIS Contact Center 전화번호와 청각장애인용 TTY 번호는 각각 무엇인가요?",
+   "question": "USCIS Contact Center 의 전화번호와 청각장애인용 TTY 번호를 찾아주세요",
    "source": "pil/AvoidImmigrationScamsGetHelp_Tagalog-508.pdf",
    "gold_chunks": [
     140
@@ -1271,7 +1278,7 @@
   },
   {
    "id": "pil-06",
-   "question": "「Bigyang kapangyarihan ang iyong sarili laban sa mga scam sa utilidad」 안내문이 사기범들이 요구한다고 예시한 현금충전카드 세 가지는 무엇인가요?",
+   "question": "iTunes 나 Amazon 같은 gift card 와 함께 사기범이 요구한다고 경고된 cash reload card 세 가지를 찾아주세요",
    "source": "pil/empower-yourself-against-utility-scams_tl-508ftclogo.pdf",
    "gold_chunks": [
     146,
@@ -1281,7 +1288,7 @@
   },
   {
    "id": "pil-07",
-   "question": "「Bigyang kapangyarihan ang iyong sarili laban sa mga scam sa utilidad」 안내문이 요금 미납이 걱정될 때 권고한 연락 방법은 무엇인가요?",
+   "question": "MoneyPak·Vanilla·Reloadit 요구를 경고한 뒤, 요금 미납이 걱정될 때 utility 회사에 연락하는 방법으로 권고한 것을 찾아주세요",
    "source": "pil/empower-yourself-against-utility-scams_tl-508ftclogo.pdf",
    "gold_chunks": [
     147
@@ -1290,7 +1297,7 @@
   },
   {
    "id": "pil-08",
-   "question": "정부 사칭 사기 포스터가 “Hindi ka tatawagan ng gobyerno para pagbantaan” 이라고 알리며 안내한 FTC 신고 웹사이트와 전화번호는 무엇인가요?",
+   "question": "gobyerno 가 pagbantaan 하거나 돈을 요구하지 않는다고 알리며 제시된 Federal Trade Commission 신고 웹사이트와 전화번호를 찾아주세요",
    "source": "pil/Government Imposter Scams poster_TL.pdf",
    "gold_chunks": [
     142
@@ -1299,7 +1306,7 @@
   },
   {
    "id": "pil-09",
-   "question": "「Apat na Palatandaan na Isa Itong Scam」 안내문이 제시한 네 가지 징후 중 세 번째는 무엇인가요?",
+   "question": "Social Security Administration·IRS·Medicare 사칭을 첫 번째로 든 네 가지 징후 가운데 세 번째를 찾아주세요",
    "source": "pil/How-to-avoid-a-scam_Tagalog_August2023.pdf",
    "gold_chunks": [
     143,
@@ -1309,7 +1316,7 @@
   },
   {
    "id": "pil-10",
-   "question": "「Apat na Palatandaan na Isa Itong Scam」 안내문에서 사기 신고 전화를 걸어 타갈로그어를 선택하려면 어떤 번호를 눌러야 하나요?",
+   "question": "MoneyGram 이나 Western Union 송금 요구를 경고한 뒤, 사기 신고 전화에서 타갈로그어를 선택하려면 눌러야 하는 번호를 찾아주세요",
    "source": "pil/How-to-avoid-a-scam_Tagalog_August2023.pdf",
    "gold_chunks": [
     145
@@ -1318,7 +1325,7 @@
   },
   {
    "id": "pil-11",
-   "question": "SHEILA MARTIR의 사법선서진술서에서 살인 혐의로 기소된 피고인과 사망한 피해자는 각각 누구인가요?",
+   "question": "SHEILA MARTIR 가 증언한 Makati 살인 사건에서 기소된 피고인과 사망한 피해자를 찾아주세요",
    "source": "pil/judicialaffidavitfilipino.pdf",
    "gold_chunks": [
     148,
@@ -1329,7 +1336,7 @@
   },
   {
    "id": "pil-12",
-   "question": "SHEILA MARTIR의 사법선서진술서가 근거로 삼은 대법원 행정규칙 번호는 무엇인가요?",
+   "question": "SHEILA MARTIR 의 증언이 직접신문 진술을 대신하도록 정한 대법원 행정규칙의 번호를 찾아주세요",
    "source": "pil/judicialaffidavitfilipino.pdf",
    "gold_chunks": [
     148,
@@ -1340,7 +1347,7 @@
   },
   {
    "id": "pil-13",
-   "question": "SHEILA MARTIR가 사건을 목격한 날짜와 대략의 시각은 언제인가요?",
+   "question": "SHEILA MARTIR가 사건을 목격한 날짜와 대략의 시각을 찾아주세요",
    "source": "pil/judicialaffidavitfilipino.pdf",
    "gold_chunks": [
     151
@@ -1349,7 +1356,7 @@
   },
   {
    "id": "pil-14",
-   "question": "SHEILA MARTIR의 진술에 따르면 Lito Bartolome은 몇 발의 총격을 어디에 맞았나요?",
+   "question": "«Raffy!» 와 «Pare!» 라고 외친 두 남자가 있던 현장에서 Lito Bartolome 이 맞은 총격의 횟수와 부위를 찾아주세요",
    "source": "pil/judicialaffidavitfilipino.pdf",
    "gold_chunks": [
     152
@@ -1358,7 +1365,7 @@
   },
   {
    "id": "pil-15",
-   "question": "SHEILA MARTIR의 진술서를 작성·통역한 Public Attorney’s Office 변호사의 이름과 Roll 번호는 무엇인가요?",
+   "question": "Sheila Martir 의 진술을 자신의 사무실에서 직접 수행하고 필리핀어로 기록·번역했다고 선서한 Public Attorney’s Office 변호사의 이름과 Roll 번호를 찾아주세요",
    "source": "pil/judicialaffidavitfilipino.pdf",
    "gold_chunks": [
     154
@@ -1367,7 +1374,7 @@
   },
   {
    "id": "pil-16",
-   "question": "SHEILA MARTIR의 진술서를 공증한 공증인의 이름과 위임 번호는 무엇인가요?",
+   "question": "Sheila Martir 와 Michael A. Bautista 의 신원을 확인하고 선서를 받은 공증인의 이름과 위임 번호를 찾아주세요",
    "source": "pil/judicialaffidavitfilipino.pdf",
    "gold_chunks": [
     155
@@ -1376,7 +1383,7 @@
   },
   {
    "id": "pil-17",
-   "question": "「Habol ng mga scammer ang pera ng mga estudyanteng mula sa ibang bansa」 안내문이 특히 표적이 되고 있다고 밝힌 학생들의 출신 지역은 어디인가요?",
+   "question": "Google Play·iTunes 기프트카드나 Bitcoin 으로 지불하라고 요구하는 사기범이 특히 표적으로 삼는다고 밝힌 유학생들의 출신 지역을 찾아주세요",
    "source": "pil/scammers-intl-students-money_tl-508ftclogo.pdf",
    "gold_chunks": [
     156
@@ -1385,7 +1392,7 @@
   },
   {
    "id": "pil-18",
-   "question": "국제학생 대상 사기 안내문이 비자·이민 서류가 걱정될 때 전화하라고 안내한 USCIS 센터의 번호는 무엇인가요?",
+   "question": "FTC.gov/Complaint 로 신고하라고 안내한 곳에서, 비자·이민 서류가 걱정될 때 전화하라고 알린 USCIS 센터의 번호를 찾아주세요",
    "source": "pil/scammers-intl-students-money_tl-508ftclogo.pdf",
    "gold_chunks": [
     157
@@ -1394,7 +1401,7 @@
   },
   {
    "id": "pil-19",
-   "question": "JUVIC CADIAO와 FERNADO ROLLAN ROMERO의 합동진술서에서 Estafa로 고소한 사람과 고소당한 사람은 각각 누구인가요?",
+   "question": "JUVIC CADIAO 와 FERNADO ROLLAN ROMERO 가 함께 목격한 Estafa 사건에서 고소한 사람과 고소당한 사람을 찾아주세요",
    "source": "pil/toazinfo-pinagsamang.pdf",
    "gold_chunks": [
     158
@@ -1403,7 +1410,7 @@
   },
   {
    "id": "pil-20",
-   "question": "합동진술서에 따르면 Mr. REONAL이 대출로 지급받은 금액은 얼마인가요?",
+   "question": "Mr. REONAL 이 AMWSLAI 대출로 지급받은 금액을 찾아주세요",
    "source": "pil/toazinfo-pinagsamang.pdf",
    "gold_chunks": [
     159
