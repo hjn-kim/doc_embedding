@@ -184,6 +184,26 @@ def index_sort_key(v: str):
     return (0, int(v)) if str(v).isdigit() else (1, str(v))
 
 
+# 언어별 탭 모델 나열 순서 — 점수와 무관하게 계열끼리 붙여 고정한다.
+# (기본명, 하이브리드 여부) 로 구분한다: bge-m3 는 dense 와 hybrid 가 따로 있다.
+LANG_MODEL_ORDER = [
+    ("kure-v1", False),
+    ("bge-m3", True),
+    ("bge-m3", False),
+    ("harrier-0.6b", False),
+    ("harrier-270m", False),
+    ("e5-small-ko", False),
+    ("e5-large-instruct", False),
+]
+
+
+def lang_model_key(m: str):
+    """`bge-m3 [512] [hybrid(dense+sparse)]` 같은 라벨을 고정 순서 위치로."""
+    key = (m.split(" [")[0], "hybrid" in m)
+    return (LANG_MODEL_ORDER.index(key) if key in LANG_MODEL_ORDER
+            else len(LANG_MODEL_ORDER), m)
+
+
 def build_question_frame(details: list[dict], unit_of: dict[str, str]) -> pd.DataFrame:
     """질문 × 모델 단위 표. gold_rank = 정답 단위가 몇 등으로 올라왔는지(없으면 NaN).
 
@@ -414,9 +434,13 @@ with tab_lang:
     lang_metrics = hit_cols + [
         c for c in (f"MRR@{hi}", f"nDCG@{hi}") if c in qdf.columns
     ]
-    klang = st.radio("기준", lang_metrics, horizontal=True, index=0, key="lang_k")
+    lang_default = (lang_metrics.index(f"nDCG@{hi}")
+                    if f"nDCG@{hi}" in lang_metrics else 0)
+    klang = st.radio("기준", lang_metrics, horizontal=True, index=lang_default,
+                     key="lang_k")
     is_hit = klang.startswith("Hit@")   # 이때만 "맞힌 문항 수"가 말이 된다
 
+    lang_models = sorted(order, key=lang_model_key)
     lang_order = [l for l in LANG_LABEL if l in set(qdf["lang"])]
     label_order = [LANG_LABEL[l] for l in lang_order]
 
@@ -432,13 +456,24 @@ with tab_lang:
     hi_ink = p["on_weak"] if dark else p["on_strong"]
     lo_ink = p["on_strong"] if dark else p["on_weak"]
 
+    # 히트맵 맨 끝 평균 칸 — 표와 같은 매크로 평균(언어별 값의 합 / 언어 수).
+    mean_rows = (
+        g.groupby("model")
+        .agg(**{"값": ("값", "mean"), "문항수": ("문항수", "sum"),
+                **({"맞힌수": ("맞힌수", "sum")} if is_hit else {})})
+        .reset_index()
+        .assign(lang="__mean__", 언어="평균")
+    )
+    gh = pd.concat([g, mean_rows], ignore_index=True)
+    heat_order = label_order + ["평균"]
+
     cells = (
-        alt.Chart(g)
+        alt.Chart(gh)
         .mark_rect(stroke=p["surface"], strokeWidth=2)   # 셀 사이 2px 표면 간격
         .encode(
-            x=alt.X("언어:N", sort=label_order, title=None,
+            x=alt.X("언어:N", sort=heat_order, title=None,
                     axis=alt.Axis(labelAngle=0)),
-            y=alt.Y("model:N", sort=order, title=None),
+            y=alt.Y("model:N", sort=lang_models, title=None),
             color=alt.Color(
                 "값:Q",
                 scale=alt.Scale(range=p["seq"], domain=[0, 1]),
@@ -456,7 +491,7 @@ with tab_lang:
         color=alt.condition(alt.datum["값"] >= 0.5, alt.value(hi_ink), alt.value(lo_ink)),
     )
     st.altair_chart(
-        themed((cells + cell_labels).properties(height=44 * len(order) + 20), p),
+        themed((cells + cell_labels).properties(height=44 * len(lang_models) + 20), p),
         width="stretch",
     )
 
@@ -475,11 +510,14 @@ with tab_lang:
 
     st.subheader("표로 보기")
     pivot = g.pivot(index="model", columns="언어", values="값")
-    pivot = pivot.reindex(index=[m for m in order if m in pivot.index],
+    pivot = pivot.reindex(index=[m for m in lang_models if m in pivot.index],
                           columns=[c for c in label_order if c in pivot.columns])
+    # 맨 끝 평균 열 — 화면에 보이는 언어 칸들의 단순 평균(언어당 가중치 동일).
+    # 문항 수가 언어마다 달라서 전체 문항 평균(개요 탭 값)과는 일치하지 않는다.
+    pivot["평균"] = pivot.mean(axis=1)
     counts = g.drop_duplicates("lang").set_index("언어")["문항수"]
     st.dataframe(
-        pivot.style.format("{:.3f}").background_gradient(cmap="Blues", vmin=0, vmax=1),
+        pivot.style.format("{:.3f}"),
         width="stretch",
     )
     st.caption(
@@ -503,7 +541,7 @@ with tab_lang:
 
     st.subheader("모델 하나의 언어별 성적")
     st.caption("한 모델이 어떤 언어에서 강하고 어디서 무너지는지 한 줄로 봅니다.")
-    mpick = st.selectbox("모델", order, key="lang_model")
+    mpick = st.selectbox("모델", lang_models, key="lang_model")
     one = g[g["model"] == mpick].sort_values("값", ascending=False)
     obars = (
         alt.Chart(one)

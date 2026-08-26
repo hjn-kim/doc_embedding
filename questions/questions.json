@@ -787,13 +787,13 @@
   },
   {
    "id": "vn-13",
-   "question": "Tòa án nhân dân quận Gò Vấp 의 전과와 함께 기재된, Lâm Tuấn A 의 마약 관련 전과를 찾아주세요",
+   "question": "Lâm Tuấn A 가 훔친 Iphone X 를 팔아넘긴 휴대폰 가게의 상호와 그 가게 주인의 이름을 찾아주세요",
    "source": "vn/132_2020_HS-ST_HCM.pdf",
    "gold_chunks": [
-    239,
-    245
+    240,
+    243
    ],
-   "note": "정답: Ngày 30/9/2010 / 08 năm tù về tội “Mua bán trái phép chất ma túy”"
+   "note": "정답: cửa hàng điện thoại di động Nhật Khang / ông Trần Hà T"
   },
   {
    "id": "vn-14",
@@ -816,22 +816,21 @@
   },
   {
    "id": "vn-16",
-   "question": "Đỗ Văn Ph 가 Heroin 을 소지한 채 현행범으로 체포된 시각과 장소를 찾아주세요",
+   "question": "Đỗ Văn Ph 가 “Tàng trữ trái phép chất ma túy” 죄로 선고받은 형량과 형기 기산일을 찾아주세요",
    "source": "vn/171_2018_HS-ST_HUE.pdf",
    "gold_chunks": [
-    250,
-    251
+    253
    ],
-   "note": "정답: 10 giờ 10 phút / cầu Trường Tiền"
+   "note": "정답: 01 (một) năm 09 (chín) tháng tù / tính từ ngày bắt tạm giữ 30/4/2018"
   },
   {
    "id": "vn-17",
-   "question": "Hội thẩm nhân dân Vũ Văn Sơn·Phạm Thị Lan Hương 와 함께 Trần Xuân H 를 심리한 재판장을 찾아주세요",
+   "question": "Trần Xuân H 에게 적용된 Điều 173 BLHS 제1항이 정한 두 가지 형벌과 그 상·하한을 찾아주세요",
    "source": "vn/29_2018_HS-ST_THAI_NGUYEN[1].pdf",
    "gold_chunks": [
-    255
+    260
    ],
-   "note": "정답: Chủ tọa phiên tòa: Ông Đỗ Hữu Nhường"
+   "note": "정답: phạt cải tạo không giam giữ đến 03 năm hoặc phạt tù từ 06 tháng đến 03 năm"
   },
   {
    "id": "vn-18",
@@ -1129,12 +1128,13 @@
   },
   {
    "id": "ru-10",
-   "question": "Оренбург Центральный район 검찰청의 주소와 전화번호를 찾아주세요",
+   "question": "Оренбург Центральный район 검찰이 사회관계망에 물건 판매 광고를 올렸을 때, 사기범이 대금을 보내주겠다며 알려달라고 한다고 경고한 정보를 찾아주세요",
    "source": "ru/voe12ehxmqpqsa3z1f3moe6e3fhfy14n.pdf",
    "gold_chunks": [
-    172
+    173,
+    174
    ],
-   "note": "정답: ул.Гая, 23 тел. 44-07-23"
+   "note": "정답: просят сообщить данные вашей банковской карты — никому не сообщайте"
   },
   {
    "id": "ru-11",
@@ -1324,14 +1324,12 @@
   },
   {
    "id": "pil-11",
-   "question": "SHEILA MARTIR 가 증언한 Makati 살인 사건에서 기소된 피고인과 사망한 피해자를 찾아주세요",
+   "question": "Sheila Martir 의 집을 총격 이튿날 찾아와 진술을 받아 간 조사관의 이름을 찾아주세요",
    "source": "pil/judicialaffidavitfilipino.pdf",
    "gold_chunks": [
-    148,
-    149,
     153
    ],
-   "note": "정답: PO2 RAFFY MAGALING / Lito Bartolome"
+   "note": "정답: isang imbestigador na nagpakilalang si Oscar Cuz"
   },
   {
    "id": "pil-12",
