@@ -104,13 +104,18 @@ def load_documents(data_dir: Path) -> list[Block]:
     source 는 파일명이 아니라 data_dir 기준 상대경로다 ("ko/2015고단7004_판결문.pdf").
     언어 폴더가 다르면 파일명이 같아도 구분되고, 첫 경로 조각이 곧 언어 코드가 된다.
     """
+    # 정렬 기준을 상대경로 문자열로 고정한다 (Path 정렬은 OS 마다 대소문자 취급이 달라
+    # 문서 순서가 바뀌고, 그러면 청크 id 가 통째로 밀린다)
     files = sorted(
-        p
-        for p in data_dir.rglob("*")
-        if p.is_file()
-        and p.suffix.lower() in {".docx", ".pdf"}
-        and not p.name.startswith("~$")
-        and not any(part.startswith(SKIP_DIR_PREFIXES) for part in p.relative_to(data_dir).parts[:-1])
+        (
+            p
+            for p in data_dir.rglob("*")
+            if p.is_file()
+            and p.suffix.lower() in {".docx", ".pdf"}
+            and not p.name.startswith("~$")
+            and not any(part.startswith(SKIP_DIR_PREFIXES) for part in p.relative_to(data_dir).parts[:-1])
+        ),
+        key=lambda p: p.relative_to(data_dir).as_posix(),
     )
     if not files:
         raise FileNotFoundError(
@@ -169,7 +174,13 @@ def load_gt(gt_dir: Path, doc_dir: Path | None = None) -> list[Block]:
                 if not any(part.startswith(SKIP_DIR_PREFIXES) for part in rel.split("/")[:-1]):
                     stem_to_doc[rel.rsplit(".", 1)[0]] = rel
 
-    files = sorted(p for p in gt_dir.rglob("*.txt") if p.is_file())
+    # Path 객체를 그대로 정렬하면 Windows 는 대소문자를 무시하고 POSIX 는 구분해서
+    # 문서 순서가 OS 마다 달라진다. 청크 id 는 이 순서로 매겨지므로, gold_chunks 를
+    # 쓰는 questions.json 이 다른 OS 에서 통째로 어긋난다. 상대경로 문자열로 고정한다.
+    files = sorted(
+        (p for p in gt_dir.rglob("*.txt") if p.is_file()),
+        key=lambda p: p.relative_to(gt_dir).as_posix(),
+    )
     if not files:
         raise FileNotFoundError(f"{gt_dir} 안에 .txt 가 없습니다.")
 
