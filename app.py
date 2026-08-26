@@ -1,18 +1,3 @@
-"""results/ 의 벤치마크 결과를 모델별로 비교하는 대시보드.
-
-    pip install streamlit
-    streamlit run app.py
-
-로컬에서 띄운다. GPU 파드에는 streamlit 을 설치하지 않는다 (requirements.txt 주석 참고).
-
-results/summary.csv, details.json, chunks.json 을 읽는다.
-먼저 `python -m src.run_benchmark` 를 돌려서 그 파일들을 만들어야 한다.
-
-이 대시보드의 대전제 — **색인 단위가 다르면 비교하지 않는다.**
-`512` 는 청크 274개 중에서 정답 청크를 찾는 문제이고 `full` 은 문서 44개 중에서
-정답 문서를 찾는 문제라, 무작위로 찍었을 때의 기준선부터 다르다 (1/274 vs 1/44).
-그래서 화면 전체가 색인 단위 하나로 잠긴다. 512 는 512끼리, full 은 full끼리만 나온다.
-"""
 
 from __future__ import annotations
 
@@ -334,10 +319,6 @@ c3.metric(f"정답@{lo}", f"{int(best[f'정답@{lo}'])} / {n_questions}")
 c4.metric("인코딩 속도", f"{best['chunks_per_s']:,.0f} chunks/s")
 
 st.caption(
-    f"**색인 [{unit}]** — {INDEX_DESC.get(unit, '')}  \n"
-    f"후보가 {n_units}개이므로 무작위로 찍었을 때의 기준선은 "
-    f"Hit@{lo} ≈ {baseline:.3f} 입니다. 다른 색인 단위의 숫자와는 같은 무대가 아니니 "
-    f"**가로로 비교하지 마세요** (사이드바에서 단위를 바꿔 따로 보세요). "
     f"표 정렬 기준 **{sort_col}**."
 )
 
@@ -450,28 +431,12 @@ with tab_overview:
         themed((dots + names).properties(height=380), p), width="stretch"
     )
 
-    with st.expander("다른 색인 단위는 왜 같이 안 보여주나요?"):
-        st.markdown(
-            "\n".join(
-                f"- **[{u}]** 후보 {int(n_cand[u])}개 — 무작위 기준선 "
-                f"Hit@{lo} ≈ {1 / int(n_cand[u]):.3f}"
-                for u in units if n_cand.get(u)
-            )
-            + "\n\n색인 단위가 다르면 **푸는 문제 자체가 다릅니다.** 청크 색인은 청크 "
-            "수백 개 중에서 정답 청크를, 문서 색인은 문서 수십 개 중에서 정답 문서를 "
-            "고릅니다. 후보가 적은 쪽이 그냥 더 높게 나오므로 두 단위의 Hit@k 를 나란히 "
-            "놓으면 '문서 색인이 더 좋다'는 잘못된 결론이 납니다. 그래서 이 대시보드는 "
-            "한 번에 한 단위만 그립니다 — 사이드바에서 바꿔 가며 보세요."
-        )
-
 
 # ── 2. 언어별 ─────────────────────────────────────────────────
 with tab_lang:
     st.subheader(f"언어별 정확도 — 색인 [{unit}]")
     st.caption(
         "질문은 전부 한국어이고 문서만 언어가 다릅니다. 즉 이 탭은 교차 언어 검색 성능입니다. "
-        f"모든 값이 색인 [{unit}] 안에서만 계산되므로 다른 색인 단위의 언어별 표와 "
-        "섞어 읽지 마세요."
     )
 
     # Hit 은 "맞혔나", MRR·nDCG 는 "얼마나 위에 올렸나"를 본다.
@@ -565,46 +530,6 @@ with tab_lang:
         .style.format({klang: "{:.3f}"}),
         width="stretch",
     )
-
-    if len(order) >= 2:
-        st.subheader("언어별 모델 간 격차")
-        st.caption(
-            "그 언어에서 1위 모델과 꼴찌 모델의 점수 차이입니다. 막대가 길수록 "
-            "**모델 선택이 결과를 크게 바꾸는 언어**이고, 짧으면 어느 모델을 써도 "
-            "비슷하다는 뜻입니다."
-        )
-        gap = (
-            g.groupby(["lang", "언어"])["값"]
-            .agg(["max", "min", "idxmax", "idxmin"]).reset_index()
-        )
-        gap["격차"] = gap["max"] - gap["min"]
-        gap["1위"] = g.loc[gap["idxmax"], "model"].values
-        gap["꼴찌"] = g.loc[gap["idxmin"], "model"].values
-        gap = gap.sort_values("격차", ascending=False)
-        gap_order = gap["언어"].tolist()
-
-        gbars = (
-            alt.Chart(gap)
-            .mark_bar(cornerRadiusEnd=4, size=20, color=p["series1"])
-            .encode(
-                y=alt.Y("언어:N", sort=gap_order, title=None),
-                x=alt.X("격차:Q", title=None, scale=alt.Scale(domain=[0, 1]),
-                        axis=alt.Axis(format=".0%")),
-                tooltip=[alt.Tooltip("언어:N"),
-                         alt.Tooltip("격차:Q", format=".3f"),
-                         alt.Tooltip("1위:N", title="1위 모델"),
-                         alt.Tooltip("max:Q", format=".3f", title="1위 점수"),
-                         alt.Tooltip("꼴찌:N", title="꼴찌 모델"),
-                         alt.Tooltip("min:Q", format=".3f", title="꼴찌 점수")],
-            )
-        )
-        glabels = gbars.mark_text(align="left", dx=6, fontSize=11).encode(
-            text=alt.Text("격차:Q", format=".3f"), color=alt.value(p["muted"])
-        )
-        st.altair_chart(
-            themed((gbars + glabels).properties(height=36 * len(gap) + 20), p),
-            width="stretch",
-        )
 
     st.subheader("모델 하나의 언어별 성적")
     st.caption("한 모델이 어떤 언어에서 강하고 어디서 무너지는지 한 줄로 봅니다.")

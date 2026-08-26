@@ -3,16 +3,37 @@
 # ─────────────────────────────────────────────────────────────
 
 paths:
-  data_dir: data                       # 여기에 .docx 1개, .pdf 1개를 넣습니다
+  data_dir: data                       # 원본 문서(.pdf/.docx) 폴더. 언어별 하위 폴더로 나눈다
+  gt_dir: data/gt                      # 원본에서 뽑아 둔 본문 텍스트(.txt). 실제 색인 대상이다
   questions_file: questions/questions.json
   results_dir: results
 
 chunking:
+  source: gt                           # gt | document
+                                       # gt       = data/gt/*.txt 를 색인 (권장)
+                                       # document = data/*.pdf 에서 매번 추출해 색인
+                                       #
+                                       # 비교 대상 변수는 임베딩 모델이지 PDF 추출기가 아니다.
+                                       # 어느 쪽을 쓰든 모든 모델이 똑같은 청크를 보므로 공정성은 같다.
+                                       # gt 를 쓰면 (1) 다단 PDF 의 읽는 순서가 바로잡히고
+                                       # (2) 스캔 이미지 PDF 도 OCR 본문으로 들어오며
+                                       # (3) '색인 텍스트 = must_include 를 베끼는 텍스트' 가 되어
+                                       #     문구 불일치로 gold 를 못 찾는 사고가 사라진다.
+                                       # 대신 gt 파일이 곧 코퍼스다 — 손으로 고치면 대상이 바뀐다.
   unit: token                          # token | char
                                        # char 는 언어별 문자 밀도 차이(ch 1.42자/tok vs ru 3.96자/tok)
                                        # 때문에 같은 500자라도 청크 크기가 2.8배 벌어진다. 언어 간 비교 불가.
   tokenizer: BAAI/bge-m3               # unit=token 일 때 길이를 재는 '기준자'. 모든 모델 공통으로 하나만 쓴다.
                                        # 모델별 토크나이저로 자르면 청크 경계가 모델마다 달라져 비교가 깨진다.
+  block_boundary: soft                 # soft | hard
+                                       # 블록(=원본 PDF 의 페이지) 경계를 어떻게 다룰지.
+                                       # soft = 문서를 이어 붙여 자른다. 청크 크기가 균일하고
+                                       #        페이지가 몇 장이든 청크 수가 안 늘어난다.
+                                       #        원래 위치는 locator 에 "블록.2~3" 으로 남는다.
+                                       # hard = 페이지마다 끊는다. 청크가 페이지를 안 넘는 대신
+                                       #        페이지 끝마다 짧은 청크가 생겨 20% 더 잘게 쪼개진다.
+                                       # 청크 경계가 '원본 페이지가 어디서 끊겼는지' 에 좌우되면
+                                       # 문서마다 조건이 달라지므로 soft 를 쓴다.
   chunk_size: 510                      # overlap 포함 최종 청크 상한. e5 계열이 512 (특수토큰 2개 포함) 이므로 510.
   chunk_overlap: 100                   # 청크 간 겹침. 본문은 510-100=410 까지 채우고 앞에 이전 꼬리를 붙인다.
   min_chunk_chars: 30                  # 이보다 짧은 청크는 버림 (이 값만 항상 글자 수 기준)

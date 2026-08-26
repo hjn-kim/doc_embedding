@@ -11,7 +11,7 @@ from pathlib import Path
 
 import yaml
 
-from .run_benchmark import ROOT, build_corpus
+from .run_benchmark import ROOT, build_corpora
 
 
 def main() -> None:
@@ -22,7 +22,7 @@ def main() -> None:
     args = ap.parse_args()
 
     cfg = yaml.safe_load(Path(args.config).read_text(encoding="utf-8"))
-    chunks = build_corpus(cfg)
+    chunks = build_corpora(cfg)["512"]
 
     if args.grep:
         needle = args.grep.replace(" ", "").lower()

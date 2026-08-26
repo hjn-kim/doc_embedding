@@ -41,6 +41,7 @@ ravishda qoʼyilgan moddalar ayblovdan chiqarib tashlandi yoki qayta malakalandi
 shaxsga (yoshlar, ayollar va boshqalar) kafolat xatlari asosida ozodlikdan mahrum qilish bilan
 bogʼliq boʼlmagan jazolar tayinlangan. 33146 nafar shaxs jazoni oʼtashdan muddatidan ilgari
 shartli ozod qilinib, 11581 nafar shaxsning jazosi yengilrogʼi bilan almashtirilgan. Yarashuv
+
 163
 institutining samarali qoʼllanilishi natijasida 13434 nafar shaxs jinoiy javobgarlikdan ozod
 etilgan.
@@ -86,6 +87,7 @@ Jinoyat qonunchiligiga asosan jazo shaxsni muayyan huquq va erkinliklardan mahru
 qilish yoki ulardan cheklash dan iborat majburlov chorasi hisoblanib, muayyan muddat
 davomida shaxsda sudlanganlik holatining mavjud bo‘lishiga sabab bo‘ladi, shartli hukm qilish
 esa shaxs tomonidan sinov muddati davomida sud tomonidan unga yuklatilgan majburiyatlar
+
 164
 bajarilsa u axloqan tuzalganligidan dalolat beradi hamda shartli hukm bekor qilinib
 sudlanganlik tugatiladi.

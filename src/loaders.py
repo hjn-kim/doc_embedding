@@ -134,3 +134,59 @@ def load_documents(data_dir: Path) -> list[Block]:
         blocks.extend(loaded)
 
     return blocks
+
+
+def load_gt(gt_dir: Path, doc_dir: Path | None = None) -> list[Block]:
+    """data/gt/<언어>/<파일명>.txt 를 읽어 Block 리스트로 반환. 색인 대상 본문이다.
+
+    PDF 에서 직접 뽑지 않고 gt 텍스트를 색인하는 이유:
+      - 비교 대상 변수는 임베딩 모델이지 PDF 추출기가 아니다. 텍스트 출처를 바꿔도
+        모든 모델이 똑같은 청크를 보므로 모델 간 공정성은 그대로다.
+      - gt 는 다단 편집 PDF 의 읽는 순서가 바로잡혀 있고, 스캔 이미지 PDF 도 OCR 돼 있다.
+        (PyMuPDF 로는 ch/(2020)_0109_488 처럼 한 글자도 못 뽑는 문서가 있다)
+      - 무엇보다 '색인하는 텍스트 = must_include 를 베끼는 텍스트' 가 되어,
+        문구가 원문과 미세하게 달라 gold 를 못 찾는 사고가 원천적으로 사라진다.
+
+    그 대가로 gt 파일이 곧 코퍼스다. gt 를 손으로 고치면 벤치마크 대상이 바뀐다.
+
+    source 는 gt 파일명이 아니라 원본 문서명이다 ("ko/2015고단7004_판결문.pdf").
+    questions.json 의 source 표기를 그대로 유지하기 위해서다.
+
+    블록은 빈 줄(\n\n) 단위로 나눈다. 빈 줄이 없는 gt 는 문서 전체가 한 블록이 되고,
+    청킹은 chunker.SEPARATORS 가 "\n" → 문장부호 순으로 알아서 쪼갠다.
+    """
+    if not gt_dir.is_dir():
+        raise FileNotFoundError(
+            f"{gt_dir} 가 없습니다. 먼저 `python -m src.make_gt` 로 gt 를 만드세요."
+        )
+
+    # 원본 문서 확장자를 되찾기 위한 표: "ko/2015고단7004_판결문" → "ko/2015고단7004_판결문.pdf"
+    stem_to_doc: dict[str, str] = {}
+    if doc_dir and doc_dir.is_dir():
+        for p in doc_dir.rglob("*"):
+            if p.is_file() and p.suffix.lower() in {".docx", ".pdf"}:
+                rel = p.relative_to(doc_dir).as_posix()
+                if not any(part.startswith(SKIP_DIR_PREFIXES) for part in rel.split("/")[:-1]):
+                    stem_to_doc[rel.rsplit(".", 1)[0]] = rel
+
+    files = sorted(p for p in gt_dir.rglob("*.txt") if p.is_file())
+    if not files:
+        raise FileNotFoundError(f"{gt_dir} 안에 .txt 가 없습니다.")
+
+    blocks: list[Block] = []
+    for path in files:
+        key = path.relative_to(gt_dir).as_posix().rsplit(".", 1)[0]
+        source = stem_to_doc.get(key, f"{key}.txt")
+        lang = key.split("/")[0] if "/" in key else "(root)"
+
+        text = normalize_text(path.read_text(encoding="utf-8"))
+        parts = [p.strip() for p in re.split(r"\n\s*\n", text) if p.strip()]
+        if not parts:
+            print(f"  [경고] {key}.txt 가 비어 있습니다.")
+            continue
+
+        for i, part in enumerate(parts, start=1):
+            blocks.append(Block(part, source, f"블록.{i}", {"lang": lang}))
+        print(f"  {source}: {len(parts)} blocks ({len(text):,}자)")
+
+    return blocks

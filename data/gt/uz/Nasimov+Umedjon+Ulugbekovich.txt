@@ -39,6 +39,7 @@ Kompyuter firibgarligi — soxta saytlar, yolg‘on elektron xatlar orqali
 foydalanuvchini aldash.
 Ma’lumotlarni buzish va yo‘q qilish — serverlarga zarar yetkazish, maxfiy
 •
+
 fayllarni yo‘q qilish.
 Kiberterrorizm — davlat muassasalari va strategik obyektlarga qarshi
 •
@@ -99,6 +100,7 @@ Yoshlar orasida internet madaniyatini oshirish;
 Maxsus qonunlarni yanada takomillashtirish.
 Kiberjinoyatlar nafaqat individual foydalanuvchilarga, balki biznes va davlat
 muassasalariga ham katta zarar yetkazadi. Ular iqtisodiy yo‘qotishlar, shaxsiy
+
 ma’lumotlarning oshkor bo‘lishi, jamoat xavfsizligiga tahdid solishi mumkin. Ushbu
 jinoyatlar turli darajalarda jamiyatga salbiy ta’sir ko‘rsatadi:
 Iqtisodiy yo‘qotishlar – kompaniyalar va davlat muassasalari kiberjinoyatlar tufayli
@@ -161,6 +163,7 @@ huquq-tartibot organlariga xabar bering va dalillarni taqdim eting.
 5. Shubhali akkauntlarni tiklash va zararli dasturlarni o‘chirish – hujumga
 uchragan ijtimoiy tarmoqlar, elektron pochta va boshqa akkauntlarni tiklash uchun rasmiy
 yordam xizmatlariga murojaat qiling.
+
 6. Kiberjinoyatchilarning keyingi hujumlaridan saqlanish – kelgusida fishing
 xabarlariga aldanmaslik, shubhali havolalardan ehtiyot bo‘lish va xavfsizlik choralarini
 kuchaytirish muhim.
@@ -207,6 +210,7 @@ Kiberjinoyatlar zamonaviy jamiyat uchun jiddiy muammolardan biridir. Ularning
 oldini olish uchun davlat, jamiyat va shaxs darajasida kompleks yondashuv zarur.
 Qonunchilikni kuchaytirish, xalqaro hamkorlikni rivojlantirish va fuqarolarning axborot
 savodxonligini oshirish orqali kiberjinoyatlarga qarshi samarali kurashish mumkin.
+
 FOYDALANILGAN ADABIYOTLAR:
 1.
 O‘zbekiston Respublikasi Jinoyat kodeksi.

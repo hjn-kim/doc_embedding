@@ -140,6 +140,27 @@ def _apply_overlap(pieces: list[str], overlap: int, mz: Measure) -> list[str]:
     return out
 
 
+def _block_span(starts: list[int], locs: list[str], a: int, b: int) -> tuple[int, str]:
+    """[a, b) 구간이 걸치는 블록 범위 → (시작 블록 index, locator 문자열)."""
+    first = 0
+    for i, st in enumerate(starts):
+        if st <= a:
+            first = i
+        else:
+            break
+    last = first
+    for i in range(first, len(starts)):
+        if starts[i] < b:
+            last = i
+        else:
+            break
+    if first == last:
+        return first, locs[first]
+    # "블록.1~블록.3" 은 길기만 하므로 뒤쪽은 번호만 남긴다 → "블록.1~3"
+    tail = locs[last].rsplit(".", 1)[-1]
+    return first, f"{locs[first]}~{tail}"
+
+
 def chunk_blocks(
     blocks: list[Block],
     chunk_size: int = 500,
@@ -147,13 +168,27 @@ def chunk_blocks(
     min_chunk_chars: int = 30,
     unit: str = "char",
     tokenizer: str | None = None,
+    block_boundary: str = "soft",
 ) -> list[Chunk]:
     """Block 리스트 → Chunk 리스트.
 
     chunk_size 는 overlap 을 붙인 '최종' 청크 크기의 상한이다.
     그래서 본문은 chunk_size - chunk_overlap 까지만 채우고 앞에 이전 청크 꼬리를 붙인다.
     (이렇게 하지 않으면 512 로 맞춰도 실제 청크가 610 토큰이 되어 e5 에서 조용히 잘린다)
+
+    block_boundary 는 블록(=페이지/문단) 경계를 어떻게 다룰지다.
+      soft : 문서 전체를 이어 붙여 자른다. 청크 크기가 균일해지고, 페이지가 몇 장이든
+             청크 수가 늘지 않는다. 원래 위치는 locator 에 "블록.2~3" 으로 남긴다.
+      hard : 블록마다 끊는다. 청크가 페이지를 넘지 않는 대신, 페이지 끝마다 짧은
+             청크가 생겨 청크 수가 20% 늘고 크기가 들쭉날쭉해진다.
+
+    soft 가 기본이다. 청크 경계가 '원본 PDF 의 페이지가 어디서 끊겼는지' 에 좌우되면
+    문서마다 조건이 달라져 언어 간 비교가 흔들리기 때문이다.
     """
+    if block_boundary not in ("soft", "hard"):
+        raise ValueError(
+            f"chunking.block_boundary 는 soft 또는 hard 여야 합니다: {block_boundary!r}"
+        )
     mz = Measure(unit, tokenizer)
     body_size = max(1, chunk_size - max(chunk_overlap, 0))
     chunks: list[Chunk] = []
@@ -194,15 +229,55 @@ def chunk_blocks(
                 next_id += 1
             buf_text, buf_locators, buf_metas = "", [], []
 
-        for b in group:
-            if mz(buf_text) + mz(b.text) + 1 > body_size and buf_text:
-                flush()
-            buf_text = f"{buf_text}\n{b.text}" if buf_text else b.text
-            buf_locators.append(b.locator)
-            buf_metas.append(b.meta)
-            if mz(buf_text) >= body_size:
-                flush()
-        flush()
+        if block_boundary == "hard":
+            for b in group:
+                if mz(buf_text) + mz(b.text) + 1 > body_size and buf_text:
+                    flush()
+                buf_text = f"{buf_text}\n{b.text}" if buf_text else b.text
+                buf_locators.append(b.locator)
+                buf_metas.append(b.meta)
+                if mz(buf_text) >= body_size:
+                    flush()
+            flush()
+            continue
+
+        # ── soft: 문서 전체를 이어 붙여 한 번에 자르고, 조각마다 원래 블록을 되짚는다 ──
+        full = "\n".join(b.text for b in group)
+        if not full.strip():
+            continue
+        starts, off = [], 0
+        for b in group:                      # 각 블록이 full 의 몇 번째 글자에서 시작하는지
+            starts.append(off)
+            off += len(b.text) + 1           # +1 은 이어 붙일 때 넣은 개행
+        locs = [b.locator for b in group]
+
+        pieces = _split_recursive(full, body_size, SEPARATORS, mz)
+        # 조각은 full 에서 그대로 잘라낸 것이라 순서대로 위치를 되찾을 수 있다.
+        piece_at, cursor = [], 0
+        for piece in pieces:
+            found = full.find(piece, cursor)
+            if found == -1:                  # 이론상 없지만, 어긋나면 커서를 그대로 쓴다
+                found = cursor
+            piece_at.append(found)
+            cursor = found + len(piece)
+
+        for i, piece in enumerate(pieces):
+            if i == 0 or chunk_overlap <= 0:
+                text, begin = piece, piece_at[i]
+            else:
+                tail = mz.tail(pieces[i - 1], chunk_overlap)
+                text, begin = tail + piece, max(0, piece_at[i] - len(tail))
+            end = piece_at[i] + len(piece)
+
+            text = re.sub(r"\s+", " ", text).strip()
+            if len(text) < min_chunk_chars:
+                continue
+            if mz(text) > chunk_size:
+                text = mz.hard_split(text, chunk_size)[0]
+
+            bi, locator = _block_span(starts, locs, begin, end)
+            chunks.append(Chunk(next_id, text, source, locator, dict(group[bi].meta)))
+            next_id += 1
 
     return chunks
 

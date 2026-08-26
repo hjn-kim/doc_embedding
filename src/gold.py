@@ -24,6 +24,7 @@ class Question:
     must_include: list[str] = None  # 전부 포함되어야 gold
     any_include: list[str] = None   # 하나라도 포함되면 gold
     must_exclude: list[str] = None  # 하나라도 있으면 gold 에서 제외 (must_include 의 반대)
+    gold_chunks: list[int] = None   # 정답 청크 id 를 직접 지정 (지정하면 위 문구 조건을 대신한다)
     note: str = ""
 
 
@@ -31,7 +32,7 @@ class Question:
 ALLOWED_KEYS = {
     "id", "question", "source",
     "must_include", "any_include", "must_exclude",
-    "note",
+    "gold_chunks", "note",
 }
 
 
@@ -68,6 +69,7 @@ def load_questions(path: Path) -> list[Question]:
                 must_include=item.get("must_include") or [],
                 any_include=item.get("any_include") or [],
                 must_exclude=item.get("must_exclude") or [],
+                gold_chunks=item.get("gold_chunks") or [],
                 note=item.get("note", ""),
             )
         )
@@ -122,13 +124,54 @@ def label_gold(
     unmatched: list[str] = []
     too_broad: list[tuple[str, int]] = []
 
+    valid_ids = {c.id for c in chunks}
+    # 문서 단위 색인(변형 full)은 청크 id 체계가 512 와 다르다. whole_documents 가
+    # locator 를 "전체" 로 찍어두므로 그것으로 구분하고, 이때 gold_chunks 는
+    # 'source 문서 전체' 로 해석한다 (문서 1개 = 청크 1개이므로 정확히 그 문서가 정답).
+    doc_level = bool(chunks) and all(c.locator == "전체" for c in chunks)
+
     for q in questions:
+        # gold_chunks 를 적어 두면 문구 매칭 대신 그 청크 id 를 그대로 정답으로 쓴다.
+        # 문구가 원문과 미세하게 달라 못 찾는 사고가 없는 대신, 청크 id 는 청킹 설정이
+        # 바뀌면 어긋나므로 chunks.json 을 다시 만들면 반드시 재검증해야 한다.
+        if q.gold_chunks:
+            if doc_level:
+                if not q.source:
+                    raise ValueError(
+                        f"질문 {q.id}: gold_chunks 만 있고 source 가 없어 문서 단위 색인에서 "
+                        f"정답 문서를 정할 수 없습니다. source 를 적어주세요."
+                    )
+                matched = {c.id for c in chunks if c.source == q.source}
+                if not matched:
+                    raise ValueError(
+                        f"질문 {q.id}: source({q.source}) 문서가 코퍼스에 없습니다."
+                    )
+                gold[q.id] = matched
+                continue
+            missing = [i for i in q.gold_chunks if i not in valid_ids]
+            if missing:
+                raise ValueError(
+                    f"질문 {q.id}: gold_chunks 에 없는 청크 id {missing}. "
+                    f"청킹 설정을 바꿨다면 questions.json 의 정답 id 를 다시 매겨야 합니다."
+                )
+            if q.source:
+                wrong = [c.id for c in chunks
+                         if c.id in set(q.gold_chunks) and c.source != q.source]
+                if wrong:
+                    raise ValueError(
+                        f"질문 {q.id}: gold_chunks {wrong} 가 source({q.source}) 가 아닌 "
+                        f"다른 문서의 청크입니다."
+                    )
+            gold[q.id] = set(q.gold_chunks)
+            continue
+
         must = [_key(s) for s in q.must_include if s.strip()]
         any_ = [_key(s) for s in q.any_include if s.strip()]
         excl = [_key(s) for s in q.must_exclude if s.strip()]
         if not must and not any_:
             raise ValueError(
-                f"질문 {q.id}: must_include 또는 any_include 중 하나는 반드시 필요합니다. "
+                f"질문 {q.id}: gold_chunks / must_include / any_include 중 하나는 "
+                f"반드시 필요합니다. "
                 f"(must_exclude 는 단독으로 쓸 수 없습니다 — 제외 조건일 뿐이라 "
                 f"'답이 없는 모든 청크'가 정답이 되어버립니다)"
             )

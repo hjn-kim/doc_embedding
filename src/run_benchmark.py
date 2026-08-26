@@ -21,7 +21,7 @@ import yaml
 
 from .chunker import chunk_blocks, whole_documents
 from .gold import label_gold, load_questions, match_context
-from .loaders import load_documents
+from .loaders import load_documents, load_gt
 from .metadata import attach_metadata
 from .metrics import evaluate_ranking
 from .models import ModelSpec, load_encoder, resolve_device
@@ -48,8 +48,17 @@ METRIC_NOTE = (
 
 def build_corpora(cfg: dict) -> dict[str, list]:
     """색인 변형별 코퍼스를 만든다. {"512": [청크...], "full": [문서...]}"""
-    print("[1/4] 문서 로드")
-    blocks = load_documents(ROOT / cfg["paths"]["data_dir"])
+    src = cfg["chunking"].get("source", "gt")
+    if src not in ("gt", "document"):
+        raise ValueError(f"chunking.source 는 gt 또는 document 여야 합니다: {src!r}")
+    data_dir = ROOT / cfg["paths"]["data_dir"]
+    if src == "gt":
+        gt_dir = ROOT / cfg["paths"].get("gt_dir", "data/gt")
+        print(f"[1/4] 본문 로드 (gt: {gt_dir.relative_to(ROOT).as_posix()})")
+        blocks = load_gt(gt_dir, data_dir)
+    else:
+        print("[1/4] 본문 로드 (document: 원본에서 매번 추출)")
+        blocks = load_documents(data_dir)
 
     # 메타데이터는 기록 전용이다. 검색 후보를 거르는 데 쓰지 않으므로
     # 모델 간 비교 조건은 그대로 유지된다.
@@ -74,6 +83,7 @@ def build_corpora(cfg: dict) -> dict[str, list]:
                 min_chunk_chars=ck["min_chunk_chars"],
                 unit=unit,
                 tokenizer=ck.get("tokenizer"),
+                block_boundary=ck.get("block_boundary", "soft"),
             )
         n_src = len({c.source for c in corpora[variant]})
         desc = ("문서 1개 = 벡터 1개" if variant == "full"
