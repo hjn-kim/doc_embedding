@@ -180,11 +180,9 @@
    "source": "ko/231201_보도자료(360억_원_대출을_알선하고_억대_수수료를_취득한_대출_브로커_및_은행지점장_구속_기소)-통영지청.pdf",
    "gold_chunks": [
     105,
-    106,
-    107,
-    108
+    106
    ],
-   "note": "정답: 360억 원 대출 / 60억 원 / 현금 2억 원"
+   "note": "정답: 360억 원 대출 실행 후 60억 원을 수수료로 받고 / 현금 2억 원"
   },
   {
    "id": "ko-20",
@@ -1173,11 +1171,9 @@
    "question": "Конев И.А. 사건에서 러시아 대법원이 몰수 결정을 취소한 차량의 차종은 무엇인가요?",
    "source": "ru/vsrfrulk2489670.pdf",
    "gold_chunks": [
-    176,
-    178,
     179
    ],
-   "note": "정답: «Тойота Лит Айс HOAX»"
+   "note": "정답: в части конфискации вещественных доказательств автомобиля марки «Тойота Лит Айс HOAX»"
   },
   {
    "id": "ru-16",
@@ -1275,7 +1271,7 @@
   },
   {
    "id": "pil-06",
-   "question": "FTC의 공공요금 사기 안내문이 사기범들이 요구한다고 예시한 현금충전카드 세 가지는 무엇인가요?",
+   "question": "「Bigyang kapangyarihan ang iyong sarili laban sa mga scam sa utilidad」 안내문이 사기범들이 요구한다고 예시한 현금충전카드 세 가지는 무엇인가요?",
    "source": "pil/empower-yourself-against-utility-scams_tl-508ftclogo.pdf",
    "gold_chunks": [
     142,
@@ -1285,7 +1281,7 @@
   },
   {
    "id": "pil-07",
-   "question": "FTC의 공공요금 사기 안내문이 요금 미납이 걱정될 때 권고한 연락 방법은 무엇인가요?",
+   "question": "「Bigyang kapangyarihan ang iyong sarili laban sa mga scam sa utilidad」 안내문이 요금 미납이 걱정될 때 권고한 연락 방법은 무엇인가요?",
    "source": "pil/empower-yourself-against-utility-scams_tl-508ftclogo.pdf",
    "gold_chunks": [
     143
@@ -1294,7 +1290,7 @@
   },
   {
    "id": "pil-08",
-   "question": "정부 사칭 사기 포스터에 적힌 FTC 신고 웹사이트와 전화번호는 무엇인가요?",
+   "question": "정부 사칭 사기 포스터가 “Hindi ka tatawagan ng gobyerno para pagbantaan” 이라고 알리며 안내한 FTC 신고 웹사이트와 전화번호는 무엇인가요?",
    "source": "pil/Government Imposter Scams poster_TL.pdf",
    "gold_chunks": [
     144
@@ -1303,7 +1299,7 @@
   },
   {
    "id": "pil-09",
-   "question": "FTC의 사기 판별 안내문이 제시한 네 가지 징후 중 세 번째는 무엇인가요?",
+   "question": "「Apat na Palatandaan na Isa Itong Scam」 안내문이 제시한 네 가지 징후 중 세 번째는 무엇인가요?",
    "source": "pil/How-to-avoid-a-scam_Tagalog_August2023.pdf",
    "gold_chunks": [
     145,
@@ -1313,7 +1309,7 @@
   },
   {
    "id": "pil-10",
-   "question": "FTC의 사기 판별 안내문에서 사기 신고 전화를 걸어 타갈로그어를 선택하려면 어떤 번호를 눌러야 하나요?",
+   "question": "「Apat na Palatandaan na Isa Itong Scam」 안내문에서 사기 신고 전화를 걸어 타갈로그어를 선택하려면 어떤 번호를 눌러야 하나요?",
    "source": "pil/How-to-avoid-a-scam_Tagalog_August2023.pdf",
    "gold_chunks": [
     147
