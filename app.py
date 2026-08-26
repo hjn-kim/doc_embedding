@@ -254,10 +254,6 @@ unit = st.sidebar.radio(
     help="후보 수가 달라 무작위 기준선부터 다르므로 색인 단위를 섞어서 비교하지 않습니다. "
          "한 번에 한 단위만 봅니다.",
 )
-st.sidebar.caption(
-    "아래의 모든 표·차트는 선택한 색인 단위 **안에서만** 계산됩니다. "
-    "512 는 512끼리, full 은 full끼리."
-)
 
 summary = summary_all[summary_all["색인"] == unit].copy()
 qdf = qdf_all[qdf_all["색인"] == unit].copy()
@@ -342,24 +338,6 @@ with tab_overview:
         f"첫 정답만 보는 MRR 과 달리 정답이 여러 개일 때 나머지 정답의 위치까지 반영한다."
     )
 
-    specs = load_model_specs(str(cfg_path), cfg_stamp)
-    if not specs.empty and "hf_id" in summary.columns:
-        with st.expander("모델 조건 — 어떤 설정으로 쟀는지 (config.yaml)"):
-            cols = [c for c in ("model", "hf_id", "dim", "max_seq") if c in summary.columns]
-            info = summary[cols].merge(specs, on="hf_id", how="left")
-            st.dataframe(info.set_index("model"), width="stretch")
-            st.caption(
-                "**프리픽스** — 모델이 학습 때 보던 문장 형태로 맞춰 주는 접두사입니다. "
-                "`query:/passage:` 계열은 질문과 문서에 각각 다른 접두사를 붙이고, "
-                "`Instruct+Query` 계열은 **질문에만** 지시문을 붙입니다(문서는 그대로).  \n"
-                "**컨텍스트 상한 vs max_seq** — 앞은 모델이 원리상 받을 수 있는 길이, "
-                "뒤는 이 색인에서 실제로 준 길이입니다. 둘이 다르면 문서 뒷부분은 "
-                "모델이 보지 못한 채 측정된 것입니다.  \n"
-                "같은 프리픽스 계열인데 점수가 크게 벌어진다면 프리픽스 문구 자체가 "
-                "모델이 학습한 것과 다를 가능성을 먼저 의심하세요 — 지시문을 임의로 "
-                "바꾸면 학습 분포에서 벗어나 손해를 봅니다."
-            )
-
     st.subheader("정확도")
     melted = summary.melt(
         id_vars="model", value_vars=hit_cols, var_name="지표", value_name="값"
@@ -396,16 +374,8 @@ with tab_overview:
         ),
         width="stretch",
     )
-    st.caption(
-        f"기준선 하나만 기억하면 됩니다 — 후보 {n_units}개에서 무작위로 찍으면 "
-        f"Hit@{lo} 가 {baseline:.3f} 입니다. 막대는 그 위에서 읽으세요."
-    )
 
     st.subheader("정확도 대비 비용")
-    st.caption(
-        "오른쪽 위가 좋습니다. 점 크기는 인덱스 용량 — 작은 모델이 큰 모델과 비슷한 "
-        "정확도를 낸다면 서비스에서는 그쪽이 정답일 수 있습니다."
-    )
     scat = summary.copy()
     base = alt.Chart(scat).encode(
         x=alt.X("chunks_per_s:Q", title="chunks/s (클수록 빠름)",
