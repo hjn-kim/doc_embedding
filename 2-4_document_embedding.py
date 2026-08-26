@@ -1,26 +1,24 @@
-"""results/ 의 벤치마크 결과를 모델별로 비교하는 대시보드.
-
-    pip install streamlit
-    streamlit run app.py
-
-로컬에서 띄운다. GPU 파드에는 streamlit 을 설치하지 않는다 (requirements.txt 주석 참고).
-
-results/summary.csv, details.json, chunks.json 을 읽는다.
-먼저 `python -m src.run_benchmark` 를 돌려서 그 파일들을 만들어야 한다.
-"""
 
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 
 import altair as alt
 import pandas as pd
 import streamlit as st
 
-ROOT = Path(__file__).resolve().parent
+from shared_utils import apply_common_styles
 
+# 결과·설정 파일은 앱 파일 옆이 아니라 서버 공용 폴더에 둔다. 2-1 이
+# ../document_lab 에서 rag_api 를 찾는 것과 같은 자리이고, 임베딩 벤치마크
+# 몫으로 그 아래 embedding/ 하나를 쓴다.
+DATA_DIR = Path(__file__).resolve().parent.parent / "document_lab" / "embedding"
+
+# set_page_config 는 다른 st 호출보다 먼저여야 해서 공통 스타일보다 위에 둔다.
 st.set_page_config(page_title="임베딩 모델 비교", page_icon="📊", layout="wide")
+apply_common_styles()
 
 
 # ── 색 ────────────────────────────────────────────────────────
@@ -65,6 +63,24 @@ LANG_LABEL = {
     "ru": "러시아어",
     "uz": "우즈베크어",
     "vn": "베트남어",
+}
+
+
+# 색인 단위 설명. run_benchmark 의 index.variants 와 같은 이름을 쓴다.
+INDEX_DESC = {
+    "512": "510토큰 청크 1개 = 벡터 1개. 정답 **청크**를 찾는 문제이고, "
+           "모든 모델이 문서 전문을 동등하게 본다.",
+    "full": "문서 1개 = 벡터 1개. 정답 **문서**를 찾는 문제이고, "
+            "컨텍스트 상한이 짧은 모델은 애초에 이 색인에서 빠진다.",
+}
+
+
+# config.yaml 의 prefix_style 을 화면 문구로. 모델마다 질문·문서에 붙이는 접두사가
+# 다른데, 이걸 모르면 같은 계열 모델의 점수 차이를 엉뚱하게 읽는다.
+PREFIX_DESC = {
+    "none": "없음",
+    "e5": "query: / passage:",
+    "e5_inst": "Instruct+Query (질문에만)",
 }
 
 
@@ -119,22 +135,100 @@ def load_results(results_dir: str, stamp: float):
     """stamp 는 캐시 키 용도로만 받는다 (본문에서 쓰지 않는 게 정상)."""
     d = Path(results_dir)
     summary = pd.read_csv(d / "summary.csv")
-    details = json.loads((d / "details.json").read_text(encoding="utf-8"))
-    chunks_path = d / "chunks.json"
-    chunks = (
-        json.loads(chunks_path.read_text(encoding="utf-8")) if chunks_path.exists() else []
+    # 색인 값은 512(숫자)와 full(문자)이 섞여 있다. 문자열로 통일해야 비교·groupby 가 안전하다.
+    summary["색인"] = (
+        summary["색인"].astype(str) if "색인" in summary.columns else "-"
     )
+
+    details = json.loads((d / "details.json").read_text(encoding="utf-8"))
+
+    # chunks.json 은 색인 변형별 dict — {"512": [청크...], "full": [문서...]}
+    chunks_path = d / "chunks.json"
+    raw = json.loads(chunks_path.read_text(encoding="utf-8")) if chunks_path.exists() else {}
+    if isinstance(raw, list):          # 색인 변형이 없던 시절 결과 호환
+        raw = {"-": raw}
+    chunks = {str(k): v for k, v in raw.items()}
     return summary, details, chunks
 
 
-def build_question_frame(details: list[dict]) -> pd.DataFrame:
-    """질문 × 모델 단위 표. gold_rank = 정답 청크가 몇 등으로 올라왔는지(없으면 NaN)."""
+@st.cache_data(show_spinner=False)
+def load_model_specs(config_path: str, stamp: float) -> pd.DataFrame:
+    """config.yaml 의 모델 정의를 읽어 hf_id 로 붙일 수 있는 표로 만든다.
+
+    summary.csv 에는 점수만 있고 '어떤 조건으로 쟀는지'(프리픽스·백엔드·컨텍스트
+    상한·dtype)가 없다. 그 조건이 곧 점수 차이의 원인인 경우가 많아서 함께 보여준다.
+    config 가 없거나 깨져도 대시보드는 그대로 떠야 하므로 실패하면 빈 표를 준다.
+    """
+    try:
+        import yaml
+    except ImportError:
+        return pd.DataFrame()
+    f = Path(config_path)
+    if not f.exists():
+        return pd.DataFrame()
+    try:
+        cfg = yaml.safe_load(f.read_text(encoding="utf-8")) or {}
+    except Exception:
+        return pd.DataFrame()
+    rows = []
+    for m in cfg.get("models") or []:
+        if not isinstance(m, dict) or not m.get("hf_id"):
+            continue
+        style = str(m.get("prefix_style", "none"))
+        rows.append({
+            "hf_id": m["hf_id"],
+            "백엔드": m.get("backend", "-"),
+            "프리픽스": PREFIX_DESC.get(style, style),
+            "컨텍스트 상한": m.get("max_context"),
+            "dtype": m.get("dtype") or "fp16 (기본)",
+            "instruction": m.get("instruction") or "",
+        })
+    return pd.DataFrame(rows)
+
+
+def index_sort_key(v: str):
+    """색인 단위 정렬 — 숫자 변형(512, 1024…)이 먼저, full 같은 이름이 뒤."""
+    return (0, int(v)) if str(v).isdigit() else (1, str(v))
+
+
+# 언어별 탭 모델 나열 순서 — 점수와 무관하게 계열끼리 붙여 고정한다.
+# (기본명, 하이브리드 여부) 로 구분한다: bge-m3 는 dense 와 hybrid 가 따로 있다.
+LANG_MODEL_ORDER = [
+    ("kure-v1", False),
+    ("bge-m3", True),
+    ("bge-m3", False),
+    ("harrier-0.6b", False),
+    ("harrier-270m", False),
+    ("e5-small-ko", False),
+    ("e5-large-instruct", False),
+]
+
+
+def lang_model_key(m: str):
+    """`bge-m3 [512] [hybrid(dense+sparse)]` 같은 라벨을 고정 순서 위치로."""
+    key = (m.split(" [")[0], "hybrid" in m)
+    return (LANG_MODEL_ORDER.index(key) if key in LANG_MODEL_ORDER
+            else len(LANG_MODEL_ORDER), m)
+
+
+def build_question_frame(details: list[dict], unit_of: dict[str, str]) -> pd.DataFrame:
+    """질문 × 모델 단위 표. gold_rank = 정답 단위가 몇 등으로 올라왔는지(없으면 NaN).
+
+    details.json 에는 색인 컬럼이 없다. 모델 라벨이 `kure-v1 [512]` 꼴이라
+    summary 의 model→색인 매핑으로 붙이고, 매핑에 없으면 라벨에서 직접 뽑는다.
+    """
     rows = []
     for d in details:
+        model = d["model"]
         rank = next((i for i, t in enumerate(d["top5"], start=1) if t["is_gold"]), None)
+        unit = unit_of.get(model)
+        if unit is None:
+            m = re.search(r"\[([^\[\]]+)\]", model)
+            unit = m.group(1) if m else "-"
         rows.append(
             {
-                "model": d["model"],
+                "model": model,
+                "색인": str(unit),
                 "qid": d["qid"],
                 "lang": d["qid"].split("-")[0],
                 "question": d["question"],
@@ -148,18 +242,49 @@ def build_question_frame(details: list[dict]) -> pd.DataFrame:
 
 # ── 사이드바 ──────────────────────────────────────────────────
 st.sidebar.header("설정")
-results_dir = st.sidebar.text_input("results 폴더", value=str(ROOT / "results"))
+results_dir = st.sidebar.text_input("results 폴더", value=str(DATA_DIR / "results"))
 
 rdir = Path(results_dir)
 if not (rdir / "summary.csv").exists():
-    st.title("임베딩 모델 비교")
+    st.markdown('<h1 class="main-title">임베딩 모델 비교</h1>', unsafe_allow_html=True)
     st.warning(f"`{rdir / 'summary.csv'}` 가 없습니다.")
-    st.code("python -m src.run_benchmark", language="bash")
+    st.code(f"cd {DATA_DIR}\npython -m src.run_benchmark", language="bash")
     st.caption("먼저 벤치마크를 돌려 결과 파일을 만든 뒤 새로고침하세요.")
     st.stop()
 
-summary, details, chunks = load_results(str(rdir), results_stamp(rdir))
-qdf = build_question_frame(details)
+summary_all, details, chunks_all = load_results(str(rdir), results_stamp(rdir))
+
+# 모델 조건표용 config. results 폴더 옆이 아니라 공용 폴더 바로 밑에 있다.
+cfg_path = DATA_DIR / "config.yaml"
+cfg_stamp = cfg_path.stat().st_mtime if cfg_path.exists() else 0.0
+qdf_all = build_question_frame(
+    details, dict(zip(summary_all["model"], summary_all["색인"]))
+)
+
+# ── 색인 단위 선택 — 화면 전체가 여기에 잠긴다 ────────────────
+units = sorted(summary_all["색인"].unique(), key=index_sort_key)
+if "후보수" in summary_all.columns:
+    n_cand = summary_all.groupby("색인")["후보수"].max().to_dict()
+else:
+    n_cand = {u: len(chunks_all.get(u, [])) for u in units}
+
+
+def unit_caption(u: str) -> str:
+    n = n_cand.get(u)
+    return f"{u}  (후보 {int(n)}개)" if n else str(u)
+
+
+unit = st.sidebar.radio(
+    "색인 단위",
+    units,
+    format_func=unit_caption,
+    help="후보 수가 달라 무작위 기준선부터 다르므로 색인 단위를 섞어서 비교하지 않습니다. "
+         "한 번에 한 단위만 봅니다.",
+)
+
+summary = summary_all[summary_all["색인"] == unit].copy()
+qdf = qdf_all[qdf_all["색인"] == unit].copy()
+chunks = chunks_all.get(unit) or chunks_all.get("-") or []
 
 hit_cols = sorted([c for c in summary.columns if c.startswith("Hit@")],
                   key=lambda c: int(c.split("@")[1]))
@@ -196,25 +321,29 @@ dark = (
 p = palette(dark)
 
 n_questions = qdf["qid"].nunique()
-n_chunks = int(summary["청크수"].iloc[0]) if "청크수" in summary.columns else len(chunks)
+n_units = int(n_cand.get(unit) or len(chunks))
+baseline = 1 / n_units if n_units else 0.0
 
 st.sidebar.divider()
-st.sidebar.caption(f"질문 {n_questions}개 · 청크 {n_chunks}개 · 모델 {len(order)}개")
+st.sidebar.caption(
+    f"[{unit}] · 질문 {n_questions}개 · 후보 {n_units}개 · 모델 {len(order)}개"
+)
 
 
 # ── 헤더 ──────────────────────────────────────────────────────
-st.title("임베딩 모델 검색 성능 비교")
+st.markdown('<h1 class="main-title">임베딩 모델 검색 성능 비교</h1>',
+            unsafe_allow_html=True)
 
 best = summary.sort_values(sort_col, ascending=False).iloc[0]
 c1, c2, c3, c4 = st.columns(4)
-c1.metric("1위 모델", best["model"])
+c1.metric(f"1위 모델 [{unit}]", best["model"])
 c2.metric(f"Hit@{lo}", f"{best[f'Hit@{lo}']:.3f}",
           help=f"상위 {lo}개 안에 정답이 있던 질문 비율")
 c3.metric(f"정답@{lo}", f"{int(best[f'정답@{lo}'])} / {n_questions}")
 c4.metric("인코딩 속도", f"{best['chunks_per_s']:,.0f} chunks/s")
 
 st.caption(
-    f"표 정렬 기준 **{sort_col}**. "
+    f"표 정렬 기준 **{sort_col}**."
 )
 
 tab_overview, tab_lang, tab_questions, tab_misses, tab_chunks = st.tabs(
@@ -224,13 +353,13 @@ tab_overview, tab_lang, tab_questions, tab_misses, tab_chunks = st.tabs(
 
 # ── 1. 개요 ───────────────────────────────────────────────────
 with tab_overview:
-    st.subheader("요약")
+    st.subheader(f"요약 — 색인 [{unit}]")
     st.dataframe(
-        summary.set_index("model").drop(columns=["hf_id"], errors="ignore"),
+        summary.set_index("model").drop(columns=["hf_id", "색인"], errors="ignore"),
         width="stretch",
     )
     st.caption(
-        f"**MRR@{hi}** — 정답 청크가 몇 등으로 올라왔는지의 역수를 평균한 값 "
+        f"**MRR@{hi}** — 정답이 몇 등으로 올라왔는지의 역수를 평균한 값 "
         f"(1등 1.0 · 2등 0.5 · 3등 0.33 · {hi}등 밖 0)으로, 맞혔는지와 얼마나 위에 "
         f"올렸는지를 한 숫자로 묶은 지표.  \n"
         f"**nDCG@{hi}** — 정답을 상위에 몰아놓은 정도를 0~1 로 정규화한 값으로, "
@@ -275,10 +404,6 @@ with tab_overview:
     )
 
     st.subheader("정확도 대비 비용")
-    st.caption(
-        "오른쪽 위가 좋습니다. 점 크기는 인덱스 용량 — 작은 모델이 큰 모델과 비슷한 "
-        "정확도를 낸다면 서비스에서는 그쪽이 정답일 수 있습니다."
-    )
     scat = summary.copy()
     base = alt.Chart(scat).encode(
         x=alt.X("chunks_per_s:Q", title="chunks/s (클수록 빠름)",
@@ -307,9 +432,9 @@ with tab_overview:
 
 # ── 2. 언어별 ─────────────────────────────────────────────────
 with tab_lang:
-    st.subheader("언어별 정확도")
+    st.subheader(f"언어별 정확도 — 색인 [{unit}]")
     st.caption(
-        "질문은 전부 한국어이고 문서만 언어가 다릅니다. 다음은 교차 언어 검색 성능입니다"
+        "질문은 전부 한국어이고 문서만 언어가 다릅니다. 즉 이 탭은 교차 언어 검색 성능입니다. "
     )
 
     # Hit 은 "맞혔나", MRR·nDCG 는 "얼마나 위에 올렸나"를 본다.
@@ -317,9 +442,13 @@ with tab_lang:
     lang_metrics = hit_cols + [
         c for c in (f"MRR@{hi}", f"nDCG@{hi}") if c in qdf.columns
     ]
-    klang = st.radio("기준", lang_metrics, horizontal=True, index=0, key="lang_k")
+    lang_default = (lang_metrics.index(f"nDCG@{hi}")
+                    if f"nDCG@{hi}" in lang_metrics else 0)
+    klang = st.radio("기준", lang_metrics, horizontal=True, index=lang_default,
+                     key="lang_k")
     is_hit = klang.startswith("Hit@")   # 이때만 "맞힌 문항 수"가 말이 된다
 
+    lang_models = sorted(order, key=lang_model_key)
     lang_order = [l for l in LANG_LABEL if l in set(qdf["lang"])]
     label_order = [LANG_LABEL[l] for l in lang_order]
 
@@ -335,13 +464,24 @@ with tab_lang:
     hi_ink = p["on_weak"] if dark else p["on_strong"]
     lo_ink = p["on_strong"] if dark else p["on_weak"]
 
+    # 히트맵 맨 끝 평균 칸 — 표와 같은 매크로 평균(언어별 값의 합 / 언어 수).
+    mean_rows = (
+        g.groupby("model")
+        .agg(**{"값": ("값", "mean"), "문항수": ("문항수", "sum"),
+                **({"맞힌수": ("맞힌수", "sum")} if is_hit else {})})
+        .reset_index()
+        .assign(lang="__mean__", 언어="평균")
+    )
+    gh = pd.concat([g, mean_rows], ignore_index=True)
+    heat_order = label_order + ["평균"]
+
     cells = (
-        alt.Chart(g)
+        alt.Chart(gh)
         .mark_rect(stroke=p["surface"], strokeWidth=2)   # 셀 사이 2px 표면 간격
         .encode(
-            x=alt.X("언어:N", sort=label_order, title=None,
+            x=alt.X("언어:N", sort=heat_order, title=None,
                     axis=alt.Axis(labelAngle=0)),
-            y=alt.Y("model:N", sort=order, title=None),
+            y=alt.Y("model:N", sort=lang_models, title=None),
             color=alt.Color(
                 "값:Q",
                 scale=alt.Scale(range=p["seq"], domain=[0, 1]),
@@ -359,14 +499,14 @@ with tab_lang:
         color=alt.condition(alt.datum["값"] >= 0.5, alt.value(hi_ink), alt.value(lo_ink)),
     )
     st.altair_chart(
-        themed((cells + cell_labels).properties(height=44 * len(order) + 20), p),
+        themed((cells + cell_labels).properties(height=44 * len(lang_models) + 20), p),
         width="stretch",
     )
 
     meaning = (
-        f"{klang} — 상위 {klang.split('@')[1]}개 안에 정답 청크가 들어온 질문 비율"
+        f"{klang} — 상위 {klang.split('@')[1]}개 안에 정답이 들어온 질문 비율"
         if is_hit else
-        (f"{klang} — 정답 청크가 몇 등으로 올라왔는지의 역수 평균 (1등 1.0 · 2등 0.5)"
+        (f"{klang} — 정답이 몇 등으로 올라왔는지의 역수 평균 (1등 1.0 · 2등 0.5)"
          if klang.startswith("MRR@") else
          f"{klang} — 정답을 얼마나 위쪽에 몰아놨는지 (정답이 여러 개일 때도 반영)")
     )
@@ -378,11 +518,14 @@ with tab_lang:
 
     st.subheader("표로 보기")
     pivot = g.pivot(index="model", columns="언어", values="값")
-    pivot = pivot.reindex(index=[m for m in order if m in pivot.index],
+    pivot = pivot.reindex(index=[m for m in lang_models if m in pivot.index],
                           columns=[c for c in label_order if c in pivot.columns])
+    # 맨 끝 평균 열 — 화면에 보이는 언어 칸들의 단순 평균(언어당 가중치 동일).
+    # 문항 수가 언어마다 달라서 전체 문항 평균(개요 탭 값)과는 일치하지 않는다.
+    pivot["평균"] = pivot.mean(axis=1)
     counts = g.drop_duplicates("lang").set_index("언어")["문항수"]
     st.dataframe(
-        pivot.style.format("{:.3f}").background_gradient(cmap="Blues", vmin=0, vmax=1),
+        pivot.style.format("{:.3f}"),
         width="stretch",
     )
     st.caption(
@@ -404,16 +547,50 @@ with tab_lang:
         width="stretch",
     )
 
+    st.subheader("모델 하나의 언어별 성적")
+    st.caption("한 모델이 어떤 언어에서 강하고 어디서 무너지는지 한 줄로 봅니다.")
+    mpick = st.selectbox("모델", lang_models, key="lang_model")
+    one = g[g["model"] == mpick].sort_values("값", ascending=False)
+    obars = (
+        alt.Chart(one)
+        .mark_bar(cornerRadiusEnd=4, size=20, color=p["series1"])
+        .encode(
+            y=alt.Y("언어:N", sort=one["언어"].tolist(), title=None),
+            x=alt.X("값:Q", title=klang, scale=alt.Scale(domain=[0, 1]),
+                    axis=alt.Axis(format=".0%")),
+            tooltip=[alt.Tooltip("언어:N"),
+                     alt.Tooltip("값:Q", format=".3f", title=klang)]
+                    + ([alt.Tooltip("맞힌수:Q", title="맞힌 문항")] if is_hit else [])
+                    + [alt.Tooltip("문항수:Q", title="전체 문항")],
+        )
+    )
+    olabels = obars.mark_text(align="left", dx=6, fontSize=11).encode(
+        text=alt.Text("값:Q", format=".3f"), color=alt.value(p["muted"])
+    )
+    st.altair_chart(
+        themed((obars + olabels).properties(height=36 * len(one) + 20), p),
+        width="stretch",
+    )
 
-# ── 2. 질문별 비교 ────────────────────────────────────────────
+
+# ── 3. 질문별 비교 ────────────────────────────────────────────
+qmap = qdf.drop_duplicates("qid").set_index("qid")["question"].to_dict()
+
 with tab_questions:
-    st.subheader("질문 × 모델")
+    st.subheader(f"질문 × 모델 — 색인 [{unit}]")
     st.caption(
-        "칸의 숫자는 **정답 청크가 몇 등으로 올라왔는지**입니다. "
+        "칸의 숫자는 **정답이 몇 등으로 올라왔는지**입니다. "
         "`1` 이면 1등으로 맞힌 것, `—` 는 상위 5개 안에 못 넣은 것입니다."
     )
 
-    matrix = qdf.pivot(index="qid", columns="model", values="gold_rank")
+    lang_filter = st.multiselect(
+        "언어로 좁히기", [LANG_LABEL[l] for l in LANG_LABEL if l in set(qdf["lang"])],
+        default=[], help="비우면 전체 언어를 봅니다.",
+    )
+    picked_langs = {l for l, lab in LANG_LABEL.items() if lab in lang_filter}
+    qview = qdf[qdf["lang"].isin(picked_langs)] if picked_langs else qdf
+
+    matrix = qview.pivot(index="qid", columns="model", values="gold_rank")
     matrix = matrix[[m for m in order if m in matrix.columns]]
 
     def tint(v):
@@ -430,13 +607,16 @@ with tab_questions:
     st.divider()
     st.subheader("질문 하나 뜯어보기")
 
-    qmap = qdf.drop_duplicates("qid").set_index("qid")["question"].to_dict()
     qid = st.selectbox(
         "질문", list(qmap), format_func=lambda q: f"{q} — {qmap.get(q, '')}"
     )
 
     st.info(qmap[qid])
-    detail_by_model = {d["model"]: d for d in details if d["qid"] == qid}
+    # 색인 단위를 섞지 않도록 지금 보고 있는 단위의 모델만 편다
+    detail_by_model = {
+        d["model"]: d for d in details
+        if d["qid"] == qid and d["model"] in set(order)
+    }
 
     for m in order:
         d = detail_by_model.get(m)
@@ -452,6 +632,7 @@ with tab_questions:
                         "순위": i,
                         "정답": "●" if t["is_gold"] else "",
                         "유사도": round(t["score"], 4),
+                        "문서": t["source"],
                         "위치": t["locator"],
                         "섹션": t.get("섹션") or "",
                         # gold 청크는 정답 근거 문구 주변을, 나머지는 앞부분을 보여준다
@@ -462,7 +643,7 @@ with tab_questions:
                          width="stretch")
 
 
-# ── 3. 오답 분석 ──────────────────────────────────────────────
+# ── 4. 오답 분석 ──────────────────────────────────────────────
 with tab_misses:
     k = st.radio("기준", hit_cols, horizontal=True, index=0)
 
@@ -472,7 +653,7 @@ with tab_misses:
         .rename("틀린 문제 수").reset_index()
     )
 
-    st.subheader(f"모델별 {k} 오답 수")
+    st.subheader(f"모델별 {k} 오답 수 — 색인 [{unit}]")
     mbars = (
         alt.Chart(per_model)
         .mark_bar(cornerRadiusEnd=4, size=20, color=p["series1"])
@@ -508,6 +689,26 @@ with tab_misses:
             width="stretch",
         )
 
+    st.subheader(f"언어별 {k} 오답 수")
+    st.caption(
+        "오답이 어느 언어에서 나오는지. 괄호 안은 그 언어의 전체 문항 수입니다 — "
+        "문항 수가 언어마다 다르므로 개수만 보고 판단하면 안 됩니다 "
+        "(비율은 **언어별** 탭에서 봅니다)."
+    )
+    totals = qdf.groupby("lang")["qid"].nunique()
+    lang_cols = [l for l in LANG_LABEL if l in totals.index]
+    mtab = (
+        miss.groupby(["model", "lang"]).size().rename("틀린 수").reset_index()
+        .pivot(index="model", columns="lang", values="틀린 수")
+        .reindex(index=order, columns=lang_cols)
+        .fillna(0).astype(int)
+    )
+    mtab.columns = [f"{LANG_LABEL[l]} ({int(totals[l])})" for l in lang_cols]
+    st.dataframe(
+        mtab.style.background_gradient(cmap="Reds", axis=None).format("{:d}"),
+        width="stretch",
+    )
+
     st.subheader("문제별 난이도")
     st.caption(f"{k} 기준으로 몇 개 모델이 틀렸는지. 위쪽이 어려운 문제입니다.")
     hardness = (
@@ -517,15 +718,24 @@ with tab_misses:
     if hardness.empty:
         st.caption("오답이 없습니다.")
     else:
+        hardness["언어"] = hardness["qid"].str.split("-").str[0].map(LANG_LABEL)
         hardness["question"] = hardness["qid"].map(qmap)
         st.dataframe(hardness.set_index("qid"), width="stretch")
 
 
-# ── 4. 청크 탐색 ──────────────────────────────────────────────
+# ── 5. 청크 탐색 ──────────────────────────────────────────────
 with tab_chunks:
     if not chunks:
-        st.info("`results/chunks.json` 이 없습니다. 벤치마크를 다시 돌리면 생성됩니다.")
+        st.info(
+            f"`results/chunks.json` 에 색인 [{unit}] 항목이 없습니다. "
+            "벤치마크를 다시 돌리면 생성됩니다."
+        )
     else:
+        st.caption(
+            f"색인 [{unit}] 의 실제 검색 후보입니다 — "
+            + ("문서 1건이 곧 후보 1개입니다." if unit == "full"
+               else "문서를 잘라 만든 청크 하나가 후보 1개입니다.")
+        )
         cdf = pd.json_normalize(chunks)
         cdf["글자수"] = cdf["text"].str.len()
 
@@ -559,10 +769,12 @@ with tab_chunks:
         if sec != "전체":
             view = view[view["meta.섹션"] == sec]
 
-        st.caption(f"{len(view)} / {len(cdf)} 청크")
-        cols = [c for c in ["id", "locator", "meta.섹션", "글자수", "text"] if c in view.columns]
+        st.caption(f"{len(view)} / {len(cdf)} 후보")
+        cols = [c for c in ["id", "source", "locator", "meta.섹션", "글자수", "text"]
+                if c in view.columns]
         st.dataframe(
-            view[cols].rename(columns={"meta.섹션": "섹션", "text": "본문"}).set_index("id"),
+            view[cols].rename(columns={"meta.섹션": "섹션", "text": "본문",
+                                       "source": "문서"}).set_index("id"),
             width="stretch",
             height=520,
         )
