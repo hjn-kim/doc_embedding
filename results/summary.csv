@@ -1,4 +1,4 @@
-﻿model,색인,hf_id,dim,후보수,max_seq,Hit@1,Hit@3,MRR@3,nDCG@3,정답@1,정답@3,VRAM_MB,index_MB,chunks_per_s,query_ms
+﻿model,검색,hf_id,dim,후보수,max_seq,Hit@1,Hit@3,MRR@3,nDCG@3,정답@1,정답@3,VRAM_MB,index_MB,chunks_per_s,query_ms
 kure-v1 [512],512,nlpai-lab/KURE-v1,1024,264,512,0.8467,0.9867,0.9111,0.894,127,148,1287.0,1.03,148.9,1.43
 bge-m3 [512] [hybrid(dense+sparse)],512,BAAI/bge-m3,1024,264,512,0.82,0.9867,0.8956,0.8699,123,148,1273.0,1.03,158.2,1.09
 bge-m3 [512],512,BAAI/bge-m3,1024,264,512,0.7867,0.9733,0.8733,0.8495,118,146,1273.0,1.03,158.2,1.09

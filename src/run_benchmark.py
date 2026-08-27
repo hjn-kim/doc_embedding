@@ -29,7 +29,7 @@ from .models import ModelSpec, load_encoder, resolve_device
 ROOT = Path(__file__).resolve().parent.parent
 
 METRIC_NOTE = (
-    "- 모든 지표는 **그 행의 색인 단위에서** 잰 값이다. `512` 행은 청크 랭킹, "
+    "- 모든 지표는 **그 행의 검색 단위에서** 잰 값이다. `512` 행은 청크 랭킹, "
     "`full` 행은 문서 랭킹 기준이다.\n"
     "- 후보 수가 다르므로(512: 청크 274개 / full: 문서 44개) **512 행끼리, full 행끼리만 "
     "비교할 것.** 무작위로 찍었을 때의 기준선부터 다르다 (1/274 vs 1/44).\n"
@@ -47,7 +47,7 @@ METRIC_NOTE = (
 
 
 def build_corpora(cfg: dict) -> dict[str, list]:
-    """색인 변형별 코퍼스를 만든다. {"512": [청크...], "full": [문서...]}"""
+    """검색 변형별 코퍼스를 만든다. {"512": [청크...], "full": [문서...]}"""
     src = cfg["chunking"].get("source", "gt")
     if src not in ("gt", "document"):
         raise ValueError(f"chunking.source 는 gt 또는 document 여야 합니다: {src!r}")
@@ -172,7 +172,7 @@ def measure_throughput(fn, texts: list[str], batch_size: int,
 
 def run_model(spec: ModelSpec, cfg: dict, chunks, questions, gold,
               index_unit: str, max_seq_length: int, batch_size: int | None = None):
-    """모델 × 색인단위 하나를 평가하고 (요약 행 리스트, 질문별 상세 리스트) 반환."""
+    """모델 × 검색단위 하나를 평가하고 (요약 행 리스트, 질문별 상세 리스트) 반환."""
     runtime = cfg["runtime"]
     ret = cfg["retrieval"]
     bs = batch_size or runtime["batch_size"]
@@ -268,7 +268,7 @@ def run_model(spec: ModelSpec, cfg: dict, chunks, questions, gold,
 
         row = {
             "model": label,
-            "색인": index_unit,
+            "검색": index_unit,
             "hf_id": spec.hf_id,
             "dim": int(doc_vecs.shape[1]),
             "후보수": len(chunks),
@@ -308,6 +308,10 @@ def merge_previous(out: dict[str, Path], rows: list, details: list,
         return rows, details
 
     prev_rows = pd.read_csv(prev_csv, encoding="utf-8-sig").to_dict("records")
+    # 옛 결과는 이 열 이름이 "색인" 이었다. 이어붙일 때만 조용히 맞춰 준다.
+    for r in prev_rows:
+        if "색인" in r and "검색" not in r:
+            r["검색"] = r.pop("색인")
     prev_details = json.loads(prev_json.read_text(encoding="utf-8"))
 
     # 이전 결과가 '같은 무대'에서 나온 것인지 확인한다. 질문이나 청킹 설정이 바뀐 뒤
@@ -322,10 +326,10 @@ def merge_previous(out: dict[str, Path], rows: list, details: list,
         )
     sizes = {str(v): len(cs) for v, cs in corpora.items()}
     for r in prev_rows:
-        want = sizes.get(str(r["색인"]))
+        want = sizes.get(str(r["검색"]))
         if want is not None and int(r["후보수"]) != want:
             raise SystemExit(
-                f"[resume] 색인 [{r['색인']}] 의 후보 수가 다릅니다 "
+                f"[resume] 검색 [{r['검색']}] 의 후보 수가 다릅니다 "
                 f"(이전 {r['후보수']}개 / 지금 {want}개). 청킹 설정이 바뀐 것 같습니다 "
                 "— --resume 없이 전체를 다시 돌리세요."
             )
@@ -485,12 +489,12 @@ def main() -> None:
             print("           → must_include 문구가 문서 원문과 정확히 일치하는지 확인하세요.")
             print("           → results/chunks.json 에서 실제 텍스트를 볼 수 있습니다.")
 
-    # 모든 색인 변형에서 정답을 찾은 질문만 평가한다.
+    # 모든 검색 변형에서 정답을 찾은 질문만 평가한다.
     # 한쪽에서만 평가하면 512 와 full 이 서로 다른 문제를 푼 셈이 되어 비교가 성립하지 않는다.
     keep = [q for q in questions if all(golds[v][q.id] for v in corpora)]
     dropped = sorted({q.id for q in questions} - {q.id for q in keep})
     if dropped:
-        print(f"  [제외] 일부 색인에서 정답을 못 찾아 제외한 질문 {len(dropped)}개: {dropped}")
+        print(f"  [제외] 일부 검색에서 정답을 못 찾아 제외한 질문 {len(dropped)}개: {dropped}")
     questions = keep
     if not questions:
         raise SystemExit("평가 가능한 질문이 없습니다. questions.json 을 수정해주세요.")
@@ -501,7 +505,7 @@ def main() -> None:
     if not specs:
         raise SystemExit("평가할 모델이 없습니다.")
 
-    # 색인 변형 × 모델 매트릭스. 컨텍스트 상한이 짧은 모델은 full 에서 문서 뒷부분을
+    # 검색 변형 × 모델 매트릭스. 컨텍스트 상한이 짧은 모델은 full 에서 문서 뒷부분을
     # 못 보므로 (임베딩 품질이 아니라 컨텍스트 길이를 재게 된다) 자동으로 뺀다.
     idx = cfg["index"]
     full_seq = idx.get("full_max_seq_length", 8192)
@@ -569,23 +573,23 @@ def main() -> None:
         for r in all_rows
     }
 
-    # 색인 단위가 다르면 후보 수가 달라(512: 청크 274개 / full: 문서 44개) 무작위 기준선부터
-    # 다르다. 그래서 가로로 비교하지 않도록 색인별로 묶고, 그 안에서만 nDCG 내림차순으로 세운다.
+    # 검색 단위가 다르면 후보 수가 달라(512: 청크 274개 / full: 문서 44개) 무작위 기준선부터
+    # 다르다. 그래서 가로로 비교하지 않도록 검색별로 묶고, 그 안에서만 nDCG 내림차순으로 세운다.
     df = pd.DataFrame(all_rows).sort_values(
-        ["색인", f"nDCG@{hi}"], ascending=[True, False]
+        ["검색", f"nDCG@{hi}"], ascending=[True, False]
     )
     num_cols = df.select_dtypes("number").columns
     df[num_cols] = df[num_cols].round(4)
 
     # 화면에는 hf_id 를 빼고(폭이 넓어져 읽기 나빠짐), summary.csv·summary.md 에는 넣는다.
-    display_cols = ["model", "색인", "dim", "후보수"]
+    display_cols = ["model", "검색", "dim", "후보수"]
     display_cols += [f"Hit@{k}" for k in ks]
     display_cols += [f"MRR@{hi}", f"nDCG@{hi}"]
     display_cols += [f"정답@{k}" for k in ks]
     display_cols += ["VRAM_MB", "index_MB", "chunks_per_s", "query_ms"]
     view = df[[c for c in display_cols if c in df.columns]]
 
-    # gold 청크 수는 색인마다 다르므로 첫 변형 기준으로 보여준다
+    # gold 청크 수는 검색마다 다르므로 첫 변형 기준으로 보여준다
     miss_report = build_miss_report(misses, questions, golds[next(iter(corpora))], ks)
     out["misses"].write_text(miss_report, encoding="utf-8")
 
@@ -595,7 +599,7 @@ def main() -> None:
     )
     out["summary_md"].write_text(
         "# 임베딩 모델 비교 결과\n\n"
-        + "".join(f"- 색인 [{v}]: 후보 {len(cs)}개\n" for v, cs in corpora.items())
+        + "".join(f"- 검색 [{v}]: 후보 {len(cs)}개\n" for v, cs in corpora.items())
         + f"- 질문 수: {len(questions)}  (정답@k 는 이 중 몇 개를 맞혔는지)\n"
         f"- scope: {cfg['retrieval']['scope']}\n"
         f"- 청킹: {cfg['chunking']['chunk_size']}{cfg['chunking'].get('unit','char')} / "
