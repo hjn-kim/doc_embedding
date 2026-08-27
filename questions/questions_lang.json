@@ -1,0 +1,1418 @@
+{
+ "questions": [
+  {
+   "id": "ko-01",
+   "question": "형사2부장 이성희가 이끈 정부합동 의약품 리베이트 수사단이 적발·기소·행정처분 의뢰한 인원을 찾아주세요",
+   "source": "ko/140801_서부지검_보도자료.pdf",
+   "gold_chunks": [
+    64,
+    65
+   ],
+   "note": "정답: 227명 적발, 46명 기소[1명 구속], 222명 행정처분 의뢰"
+  },
+  {
+   "id": "ko-02",
+   "question": "서울서부지방검찰청이 적발한, 전국 379개 병·의원 의사·약사에게 제공된 의약품 불법리베이트 총액을 찾아주세요",
+   "source": "ko/140801_서부지검_보도자료.pdf",
+   "gold_chunks": [
+    65
+   ],
+   "note": "정답: 379개 / 15억 6,000만원"
+  },
+  {
+   "id": "ko-03",
+   "question": "‘〇〇의원’의 실질적 대표의사 J모씨가 타인의 의사 면허를 빌려 의료기관을 운영한 기간을 찾아주세요",
+   "source": "ko/140801_서부지검_보도자료.pdf",
+   "gold_chunks": [
+    66,
+    67
+   ],
+   "note": "정답: 면허를 빌려 약 10년 동안 의료 기관을 운영"
+  },
+  {
+   "id": "ko-04",
+   "question": "검사 이순옥이 기소하고 윤효선이 공판에 관여한 공인중개사법위반 사건에서 피고인에게 선고된 벌금액을 찾아주세요",
+   "source": "ko/2015고단7004_판결문.pdf",
+   "gold_chunks": [
+    70
+   ],
+   "note": "정답: 2015고단7004 / 벌금 150만 원"
+  },
+  {
+   "id": "ko-05",
+   "question": "피고인이 인터넷 네이버 카페 ‘C’에 ‘단독주택’이라는 제목의 글을 비롯해 중개대상물을 광고한 횟수를 찾아주세요",
+   "source": "ko/2015고단7004_판결문.pdf",
+   "gold_chunks": [
+    70,
+    71
+   ],
+   "note": "정답: 총 9차례에 걸쳐 중개대상물을 광고"
+  },
+  {
+   "id": "ko-06",
+   "question": "게재행위 당시 인터넷 네이버 카페 ‘C’를 ‘즐겨 찾는 멤버’로 등록한 회원 수를 찾아주세요",
+   "source": "ko/2015고단7004_판결문.pdf",
+   "gold_chunks": [
+    75,
+    76
+   ],
+   "note": "정답: 약 4만 명"
+  },
+  {
+   "id": "ko-07",
+   "question": "재판장 신광렬이 선고한 건조물침입·업무방해 항소심에서 피고인에게 정해진 벌금액을 찾아주세요",
+   "source": "ko/2015노4675_판결문.pdf",
+   "gold_chunks": [
+    77
+   ],
+   "note": "정답: 2015노4675 / 벌금 300만 원"
+  },
+  {
+   "id": "ko-08",
+   "question": "피고인이 비밀번호를 눌러 침입한 C산후조리원이 있던 고양시 일산동구 건물의 층수와 침입 날짜를 찾아주세요",
+   "source": "ko/2015노4675_판결문.pdf",
+   "gold_chunks": [
+    78,
+    82
+   ],
+   "note": "정답: E빌딩 8층 / 2013. 3. 6."
+  },
+  {
+   "id": "ko-09",
+   "question": "판사 정재우·이영제가 함께 심리한 항소심에서, 양형 이유로 건조물침입죄의 침입 태양에 비추어 건조물의 평온이 어느 정도 침해되었다고 본 판단을 찾아주세요",
+   "source": "ko/2015노4675_판결문.pdf",
+   "gold_chunks": [
+    85
+   ],
+   "note": "정답: 위 건조물의 평온은 심각하게 침해하였다고 보기는 어렵다"
+  },
+  {
+   "id": "ko-10",
+   "question": "피고인이 C산후조리원의 대표 전화번호 명의를 임의로 바꾼 장소를 찾아주세요",
+   "source": "ko/2015노4675_판결문.pdf",
+   "gold_chunks": [
+    83,
+    84
+   ],
+   "note": "정답: H 고양점"
+  },
+  {
+   "id": "ko-11",
+   "question": "국선변호인 유무곤이 변호한 서울북부지방법원 횡령 사건에서 피고인에게 선고된 형과 사회봉사 시간을 찾아주세요",
+   "source": "ko/2023고단2541_판결문_검수완료.pdf",
+   "gold_chunks": [
+    86
+   ],
+   "note": "정답: 징역 6개월 / 80시간의 사회봉사"
+  },
+  {
+   "id": "ko-12",
+   "question": "서울북부지방법원이 채권압류 및 추심명령을 발령한 사건에서, 피고인이 2022년 1월부터 9월까지 받은 임대료 수익금 합계와 피해자에게 분배하지 않은 금액을 찾아주세요",
+   "source": "ko/2023고단2541_판결문_검수완료.pdf",
+   "gold_chunks": [
+    87,
+    90
+   ],
+   "note": "정답: 165,600,000원 / 55,098,900원"
+  },
+  {
+   "id": "ko-13",
+   "question": "서울 성동구 공장용지와 그 지상 건물의 재산분할을 정한 이혼 조정을 담당한 법원과 그 사건번호를 찾아주세요",
+   "source": "ko/2023고단2541_판결문_검수완료.pdf",
+   "gold_chunks": [
+    86,
+    88,
+    89
+   ],
+   "note": "정답: 2017드합35526"
+  },
+  {
+   "id": "ko-14",
+   "question": "서귀포시 안덕면 사계리에 있는 산방산의 국가지정문화재 지정 번호를 찾아주세요",
+   "source": "ko/2025고정378_판결문.pdf",
+   "gold_chunks": [
+    93
+   ],
+   "note": "정답: 명승 제77호"
+  },
+  {
+   "id": "ko-15",
+   "question": "제주지방법원 제2형사부가 마약류관리에관한법률위반(향정) 혐의로 심리한 피고인에게 내린 선고 결과를 찾아주세요",
+   "source": "ko/2025고합394_판결문.pdf",
+   "gold_chunks": [
+    95
+   ],
+   "note": "정답: 2025고합394 / 피고인은 무죄"
+  },
+  {
+   "id": "ko-16",
+   "question": "라오스에서 발송된 액상 필로폰의 양과 위장에 사용된 용기 이름을 찾아주세요",
+   "source": "ko/2025고합394_판결문.pdf",
+   "gold_chunks": [
+    96
+   ],
+   "note": "정답: 4,778ml / 두리안에센스"
+  },
+  {
+   "id": "ko-17",
+   "question": "라오스에서 발송된 항공특송화물이 인천국제공항에 도착한 일시를 찾아주세요",
+   "source": "ko/2025고합394_판결문.pdf",
+   "gold_chunks": [
+    96,
+    97,
+    98,
+    101
+   ],
+   "note": "정답: 2025. 11. 18. 07:49"
+  },
+  {
+   "id": "ko-18",
+   "question": "카카오톡으로 연락해 화물 수령을 부탁한 B가 피고인의 계좌로 입금한 사례금을 찾아주세요",
+   "source": "ko/2025고합394_판결문.pdf",
+   "gold_chunks": [
+    103
+   ],
+   "note": "정답: 5만 원을 입금"
+  },
+  {
+   "id": "ko-19",
+   "question": "창원지방검찰청 통영지청이 발표한 대출 브로커 사건에서 360억 원 대출 알선 수수료와 은행지점장이 수수한 현금을 찾아주세요",
+   "source": "ko/231201_보도자료(360억_원_대출을_알선하고_억대_수수료를_취득한_대출_브로커_및_은행지점장_구속_기소)-통영지청.pdf",
+   "gold_chunks": [
+    105,
+    106
+   ],
+   "note": "정답: 360억 원 대출 실행 후 60억 원을 수수료로 받고 / 현금 2억 원"
+  },
+  {
+   "id": "ko-20",
+   "question": "대출브로커 A·B가 D○○에게 금융회사 8곳으로부터 360억 원 대출을 알선한 개발사업의 명칭을 찾아주세요",
+   "source": "ko/231201_보도자료(360억_원_대출을_알선하고_억대_수수료를_취득한_대출_브로커_및_은행지점장_구속_기소)-통영지청.pdf",
+   "gold_chunks": [
+    106,
+    107
+   ],
+   "note": "정답: 용인신갈지구 주상복합 개발사업"
+  },
+  {
+   "id": "ko-21",
+   "question": "서울중앙지검이 발표한 유튜브 36주 태아 낙태살인 사건에서 의사 A가 알선받은 산모 수와 취득한 수술비 합계를 찾아주세요",
+   "source": "ko/250723_보도자료(유튜브_36주_태아_낙태살인_사건_구속_기소_등)-서울중앙지검.pdf",
+   "gold_chunks": [
+    110,
+    112
+   ],
+   "note": "정답: 527명 / 14억 6,000만 원"
+  },
+  {
+   "id": "ko-22",
+   "question": "서울시경이 2025. 7. 9. 의사 A와 브로커 D에 대해 신청해 법원이 인용한 추징보전 금액을 찾아주세요",
+   "source": "ko/250723_보도자료(유튜브_36주_태아_낙태살인_사건_구속_기소_등)-서울중앙지검.pdf",
+   "gold_chunks": [
+    113
+   ],
+   "note": "정답: 5억 8,015만 원 / 1억 6,610만 원"
+  },
+  {
+   "id": "ko-23",
+   "question": "세계 1위 K반도체 국가핵심기술 유출사건에서 국내 A社가 10나노대 D램 공정기술 개발에 투입한 기간과 금액을 찾아주세요",
+   "source": "ko/251223_보도자료(세계_1위_K반도체_국가핵심기술_유출사건_수사_결과)-서울중앙지검.pdf",
+   "gold_chunks": [
+    116,
+    120
+   ],
+   "note": "정답: 5년간 1.6조원"
+  },
+  {
+   "id": "ko-24",
+   "question": "K반도체 국가핵심기술 유출사건에서 압수물 분석 결과 중국 C社 자료와 A社 자료의 일치율을 찾아주세요",
+   "source": "ko/251223_보도자료(세계_1위_K반도체_국가핵심기술_유출사건_수사_결과)-서울중앙지검.pdf",
+   "gold_chunks": [
+    118,
+    119
+   ],
+   "note": "정답: 56.7% / 98.2%"
+  },
+  {
+   "id": "ko-25",
+   "question": "중국 C社 관계자들이 위장회사를 통한 입사·중국 이메일 사용 등과 함께, 출국금지·체포 시 전파하기로 정한 암호를 찾아주세요",
+   "source": "ko/251223_보도자료(세계_1위_K반도체_국가핵심기술_유출사건_수사_결과)-서울중앙지검.pdf",
+   "gold_chunks": [
+    120
+   ],
+   "note": "정답: 하트 네개"
+  },
+  {
+   "id": "ko-26",
+   "question": "K반도체 국가핵심기술 유출사건에서 중국 C社 설립에 출자한 중국지방정부와 중국 반도체설계회사의 금액을 찾아주세요",
+   "source": "ko/251223_보도자료(세계_1위_K반도체_국가핵심기술_유출사건_수사_결과)-서울중앙지검.pdf",
+   "gold_chunks": [
+    119,
+    120
+   ],
+   "note": "정답: 중국지방정부(2.6조원) / 반도체설계회사(9천억원)"
+  },
+  {
+   "id": "ko-27",
+   "question": "한국전력공사 가스절연개폐장치 입찰 담합 사건에서 담합이 확인된 입찰 건수와 담합 기간을 찾아주세요",
+   "source": "ko/260120__보도자료(6776억_원_규모_한국전력공사_입찰_담합_사건_수사_결과)-서울중앙지검.pdf",
+   "gold_chunks": [
+    125,
+    126
+   ],
+   "note": "정답: 145건 / ’15. 3."
+  },
+  {
+   "id": "ko-28",
+   "question": "한국전력공사 가스절연개폐장치 입찰 담합 사건에서 추산된 부당이득액을 찾아주세요",
+   "source": "ko/260120__보도자료(6776억_원_규모_한국전력공사_입찰_담합_사건_수사_결과)-서울중앙지검.pdf",
+   "gold_chunks": [
+    126
+   ],
+   "note": "정답: 최소 1,600여억 원"
+  },
+  {
+   "id": "ko-29",
+   "question": "한국전력공사 입찰 담합 사건에서 담합 기간 중 일반경쟁입찰 평균 낙찰률과 담합 종료 후 현재까지 평균 낙찰률을 찾아주세요",
+   "source": "ko/260120__보도자료(6776억_원_규모_한국전력공사_입찰_담합_사건_수사_결과)-서울중앙지검.pdf",
+   "gold_chunks": [
+    129,
+    130
+   ],
+   "note": "정답: 96.33% / 67.03%"
+  },
+  {
+   "id": "ko-30",
+   "question": "한국전력공사 입찰 담합 사건과 관련해 진행 중인 공정거래위원회 행정소송과 한국전력공사 손해배상 민사소송의 소송가액을 찾아주세요",
+   "source": "ko/260120__보도자료(6776억_원_규모_한국전력공사_입찰_담합_사건_수사_결과)-서울중앙지검.pdf",
+   "gold_chunks": [
+    130
+   ],
+   "note": "정답: 351억 원 / 1,706억 원"
+  },
+  {
+   "id": "en-01",
+   "question": "In the Antonio Nathaniel Davenport case, find the murder offense the government had to prove beyond a reasonable doubt",
+   "source": "en/24-7435_5if6.pdf",
+   "gold_chunks": [
+    34,
+    35
+   ],
+   "note": "정답: committed murder under North Carolina state law"
+  },
+  {
+   "id": "en-02",
+   "question": "Find the mistaken premise the trial court relied on in the Davenport case when it refused to give an instruction defining reasonable doubt",
+   "source": "en/24-7435_5if6.pdf",
+   "gold_chunks": [
+    35
+   ],
+   "note": "정답: specifically prohibited from giving a definition of reasonable doubt"
+  },
+  {
+   "id": "en-03",
+   "question": "Find the journal and the volume and page number of the study, cited in Justice Ginsburg's opinion, showing that jurors frequently misunderstand the meaning of reasonable doubt",
+   "source": "en/24-7435_5if6.pdf",
+   "gold_chunks": [
+    36,
+    37
+   ],
+   "note": "정답: 90 Colum. L. Rev. 1716"
+  },
+  {
+   "id": "en-04",
+   "question": "Find the name of the U.S. government project involved in the conspiracy to solicit kickbacks with which Bryan Lee Burrows was charged",
+   "source": "en/249799.pdf",
+   "gold_chunks": [
+    38,
+    39
+   ],
+   "note": "정답: Afghanistan Infrastructure Rehabilitation Project"
+  },
+  {
+   "id": "en-05",
+   "question": "Find the offense charged in Count 1 against Bryan Lee Burrows and the case number",
+   "source": "en/249799.pdf",
+   "gold_chunks": [
+    38
+   ],
+   "note": "정답: Conspiracy to Solicit Kickbacks / 1:09-cr-00392-LMB"
+  },
+  {
+   "id": "en-06",
+   "question": "In the Cedric Ray Jones case, find the total sentence imposed by the trial court and the consecutive sentence for the §924(c) count",
+   "source": "en/25-524_0971.pdf",
+   "gold_chunks": [
+    43
+   ],
+   "note": "정답: nearly 48 years’ imprisonment / 7-year consecutive sentence"
+  },
+  {
+   "id": "en-07",
+   "question": "Find the standard under which the Hunter decision, cited in the Cedric Ray Jones case, held that an appeal waiver could not be enforced",
+   "source": "en/25-524_0971.pdf",
+   "gold_chunks": [
+    42
+   ],
+   "note": "정답: would result in a miscarriage of justice"
+  },
+  {
+   "id": "en-08",
+   "question": "Find the context of the waiver addressed in Hunter, unlike the Cedric Ray Jones petition, and the type of waiver this petition concerns",
+   "source": "en/25-524_0971.pdf",
+   "gold_chunks": [
+    41
+   ],
+   "note": "정답: in the sentencing context"
+  },
+  {
+   "id": "en-09",
+   "question": "Find how much longer than the applicable statutory maximum the sentence Michael Dewayne Lairy received for unlawful firearm possession was",
+   "source": "en/25-821_e29g.pdf",
+   "gold_chunks": [
+    45
+   ],
+   "note": "정답: five years longer than the applicable statutory maximum"
+  },
+  {
+   "id": "en-10",
+   "question": "In the Ashley Grayson case, find the other recording on which Justice ALITO relied in treating the FaceTime recording as cumulative evidence",
+   "source": "en/25-851_ed9f.pdf",
+   "gold_chunks": [
+    47
+   ],
+   "note": "정답: a recording of a separate call petitioner made to the Federal Bureau of Investigation"
+  },
+  {
+   "id": "en-11",
+   "question": "In the Donte J. Carter case, find the item the police recovered from inside Carter's compression shorts",
+   "source": "en/25-885_5h26.pdf",
+   "gold_chunks": [
+    48,
+    49
+   ],
+   "note": "정답: a stolen firearm hidden among Carter’s multiple pairs of compression shorts"
+  },
+  {
+   "id": "en-12",
+   "question": "In the Donte J. Carter case, find the additional fact the D.C. Court of Appeals said must be considered in deciding whether a seizure occurred",
+   "source": "en/25-885_5h26.pdf",
+   "gold_chunks": [
+    49
+   ],
+   "note": "정답: must look / defendant’s race"
+  },
+  {
+   "id": "en-13",
+   "question": "Find what Judge McLeese, concurring only in the judgment, said the majority opinion had given to Carter's race",
+   "source": "en/25-885_5h26.pdf",
+   "gold_chunks": [
+    50
+   ],
+   "note": "정답: dispositive weight"
+  },
+  {
+   "id": "en-14",
+   "question": "Find the federal regulation under which John Anthony O'Brien was charged and the date he was arrested",
+   "source": "en/USCOURTS-caed-6_25-mj-00015-1.pdf",
+   "gold_chunks": [
+    52
+   ],
+   "note": "정답: 36 C.F.R. §2.35(c) / arrested on April 28, 2025"
+  },
+  {
+   "id": "en-15",
+   "question": "In the John Anthony O'Brien case, find the words the emergency radio call used to describe his condition",
+   "source": "en/USCOURTS-caed-6_25-mj-00015-1.pdf",
+   "gold_chunks": [
+    53,
+    54
+   ],
+   "note": "정답: unresponsive male in the back of a"
+  },
+  {
+   "id": "en-16",
+   "question": "In the John Anthony O'Brien case, find the date and time of the status conference set by the court that denied the motion to dismiss",
+   "source": "en/USCOURTS-caed-6_25-mj-00015-1.pdf",
+   "gold_chunks": [
+    56
+   ],
+   "note": "정답: status conference on March 10, 2026 at 10:00 A.M."
+  },
+  {
+   "id": "en-17",
+   "question": "In the Carlos Meza Guillermo case, find the magistrate judge who wrote the report and recommendation adopted by the court and the date it was written",
+   "source": "en/USCOURTS-mnd-0_06-cr-00130-1.pdf",
+   "gold_chunks": [
+    57
+   ],
+   "note": "정답: Jeanne J. Graham, dated June 22, 2006"
+  },
+  {
+   "id": "en-18",
+   "question": "Find the rulings the court made on the motion at Docket No. 39 and on the motion at Docket No. 45",
+   "source": "en/USCOURTS-mnd-0_06-cr-00130-1.pdf",
+   "gold_chunks": [
+    58,
+    59
+   ],
+   "note": "정답: motion to suppress eyewitness identifications [Docket No. 39] is denied as moot"
+  },
+  {
+   "id": "en-19",
+   "question": "Find the time period of the wire fraud conspiracy in which Alberto Cortes Gomez participated",
+   "source": "en/gomez_albertocortes.pdf",
+   "gold_chunks": [
+    60
+   ],
+   "note": "정답: April 2011 and continuing thereafter through in or about June 2018"
+  },
+  {
+   "id": "en-20",
+   "question": "In the Tettey Leslie Nii Tetteh money laundering conspiracy case, find the last digits of the SunTrust bank account identified as subject to forfeiture",
+   "source": "en/vae1_tetteh_0.pdf",
+   "gold_chunks": [
+    63
+   ],
+   "note": "정답: SunTrust Bank account ending in 6136"
+  },
+  {
+   "id": "ch-01",
+   "question": "请找出孙晓龙寻衅滋事案中判处的有期徒刑刑期",
+   "source": "ch/(2019)0113_.pdf",
+   "gold_chunks": [
+    1,
+    2
+   ],
+   "note": "정답: 孙晓龙犯寻衅滋事罪,判处有期徒刑十个月"
+  },
+  {
+   "id": "ch-02",
+   "question": "请找出沈阳市沈北新区人民检察院起诉的被告人孙晓龙的文化程度和职业",
+   "source": "ch/(2019)0113_.pdf",
+   "gold_chunks": [
+    0
+   ],
+   "note": "정답: 硕士研究生文 / 系医生"
+  },
+  {
+   "id": "ch-03",
+   "question": "请找出上海市虹口区人民检察院起诉的俞某2在推特上注册的昵称、账号以及发送的推文数量",
+   "source": "ch/(2020)_0109_488.pdf",
+   "gold_chunks": [
+    3
+   ],
+   "note": "정답: andelie / @wptOfWGWjlsW1dx / 推文4万余条"
+  },
+  {
+   "id": "ch-04",
+   "question": "请找出俞某2寻衅滋事案中判处的有期徒刑刑期和被没收的犯罪工具",
+   "source": "ch/(2020)_0109_488.pdf",
+   "gold_chunks": [
+    5
+   ],
+   "note": "정답: 俞某2犯寻衅滋事罪,判处有期徒刑一年 / 缴获的犯罪工具手机一部予以没收"
+  },
+  {
+   "id": "ch-05",
+   "question": "请找出张树林案中涉案QQ群的群号以及张树林使用的QQ名称",
+   "source": "ch/(2020)_0381_884.pdf",
+   "gold_chunks": [
+    8,
+    9
+   ],
+   "note": "정답: 243616917 / 东北宰人帮豹爷"
+  },
+  {
+   "id": "ch-06",
+   "question": "请找出审判长李凤波宣判时没收并上缴国库的犯罪工具，以及不服判决时可以上诉的上级法院",
+   "source": "ch/(2020)_0381_884.pdf",
+   "gold_chunks": [
+    10
+   ],
+   "note": "정답: 犯罪工具华为平板电脑一部,予以没收,上缴国库 / 辽宁省鞍山市中级人民法院"
+  },
+  {
+   "id": "ch-07",
+   "question": "请找出文长安使用的推特账号及该账号的关注者人数",
+   "source": "ch/(2020)_1002_314_.pdf",
+   "gold_chunks": [
+    12,
+    13
+   ],
+   "note": "정답: @malakamala / 关注者达527人"
+  },
+  {
+   "id": "ch-08",
+   "question": "请找出许昌市魏都区人民检察院起诉的文长安所在的学校和职务",
+   "source": "ch/(2020)_1002_314_.pdf",
+   "gold_chunks": [
+    11
+   ],
+   "note": "정답: 许昌市电气职业技术学院机电工程系高级讲师"
+  },
+  {
+   "id": "ch-09",
+   "question": "请找出凉城县人民检察院对张某某作出的最终处理决定",
+   "source": "ch/1767528250552_B264D298D87D4A329BAAEE4DE23DFB2D.pdf",
+   "gold_chunks": [
+    16,
+    17
+   ],
+   "note": "정답: 决定对张二全不起诉"
+  },
+  {
+   "id": "ch-10",
+   "question": "请找出凉城县人民检察院对张某某作出认定时指出的、引发与杨某某争执的行为以及杨某某所受的骨折部位",
+   "source": "ch/1767528250552_B264D298D87D4A329BAAEE4DE23DFB2D.pdf",
+   "gold_chunks": [
+    15
+   ],
+   "note": "정답: 踩了杨某某种植的葱地 / 盆骨骨折"
+  },
+  {
+   "id": "ch-11",
+   "question": "请找出北京华业资本控股股份有限公司的证券代码、股票简称及其公告编号",
+   "source": "ch/H2_AN202301191582160400_1.pdf",
+   "gold_chunks": [
+    18
+   ],
+   "note": "정답: 证券代码:400080 / 编号:临2023-011"
+  },
+  {
+   "id": "ch-12",
+   "question": "请找出对北京华业资本控股股份有限公司作出刑事裁判的法院和两个案号",
+   "source": "ch/H2_AN202301191582160400_1.pdf",
+   "gold_chunks": [
+    18,
+    19,
+    25
+   ],
+   "note": "정답: 重庆市第五中级人民法院 / (2020)渝05 刑初1 号"
+  },
+  {
+   "id": "ch-13",
+   "question": "请找出重庆恒韵医药有限公司因四项罪名并罚而合并执行的罚金总额",
+   "source": "ch/H2_AN202301191582160400_1.pdf",
+   "gold_chunks": [
+    22
+   ],
+   "note": "정답: 合并执行罚金人民币十亿八千万元"
+  },
+  {
+   "id": "ch-14",
+   "question": "请找出重庆恒韵医药有限公司的实际控制人李仕林最终被合并执行的刑罚",
+   "source": "ch/H2_AN202301191582160400_1.pdf",
+   "gold_chunks": [
+    22,
+    23
+   ],
+   "note": "정답: 合并执行无期徒刑,剥夺政治权利终身"
+  },
+  {
+   "id": "ch-15",
+   "question": "请找出对刘荣华、韦泽禹、白晓敏分别数罪并罚宣告的刑罚中，财务总监刘荣华的有期徒刑和罚金",
+   "source": "ch/H2_AN202301191582160400_1.pdf",
+   "gold_chunks": [
+    23
+   ],
+   "note": "정답: 刘荣华 / 合并执行有期徒刑九年六个月,并处罚金人民币九十万元"
+  },
+  {
+   "id": "ch-16",
+   "question": "请找出审理四川省川谷坊酒业有限公司、曾庆芬非法吸收公众存款案的一审法院和案号",
+   "source": "ch/四川省川谷坊酒业有限公司、曾庆芬非法吸收公众存款罪一审刑事判决书.pdf",
+   "gold_chunks": [
+    26
+   ],
+   "note": "정답: 邛崃市人民法院 / (2018)川0183 刑初565 号"
+  },
+  {
+   "id": "ch-17",
+   "question": "请找出辩护人谢宇主张应从非法吸收公众存款金额中扣除的人数及其金额",
+   "source": "ch/四川省川谷坊酒业有限公司、曾庆芬非法吸收公众存款罪一审刑事判决书.pdf",
+   "gold_chunks": [
+    28
+   ],
+   "note": "정답: 36 人吸收的存款金额205123500 元"
+  },
+  {
+   "id": "ch-18",
+   "question": "请找出法院经审理认定的四川省川谷坊酒业有限公司非法吸收公众存款的金额和被吸收人人数",
+   "source": "ch/四川省川谷坊酒业有限公司、曾庆芬非法吸收公众存款罪一审刑事判决书.pdf",
+   "gold_chunks": [
+    29,
+    30
+   ],
+   "note": "정답: 90 名被吸收人共计非法吸收公众存款42377.768 万元"
+  },
+  {
+   "id": "ch-19",
+   "question": "请找出对曾庆芬判处的有期徒刑和罚金数额",
+   "source": "ch/四川省川谷坊酒业有限公司、曾庆芬非法吸收公众存款罪一审刑事判决书.pdf",
+   "gold_chunks": [
+    31
+   ],
+   "note": "정답: 曾庆芬犯非法吸收公众存款罪,判处有期徒刑五年六个月,并处罚金人民币三 十万元"
+  },
+  {
+   "id": "ch-20",
+   "question": "请找出四川省川谷坊酒业有限公司向不特定多数人集资时承诺的月利率",
+   "source": "ch/四川省川谷坊酒业有限公司、曾庆芬非法吸收公众存款罪一审刑事判决书.pdf",
+   "gold_chunks": [
+    27,
+    29
+   ],
+   "note": "정답: 月息3%"
+  },
+  {
+   "id": "vn-01",
+   "question": "Hãy tìm Thẩm phán – Chủ tọa phiên tòa đã xét xử Võ Minh P cùng với các Hội thẩm nhân dân Bùi Thị Kim Thủy, Dương Thị Được",
+   "source": "vn/04_2023_HSST_BRVT.pdf",
+   "gold_chunks": [
+    220
+   ],
+   "note": "정답: Chủ tọa phiên tòa: Ông Lê Qúy Cường"
+  },
+  {
+   "id": "vn-02",
+   "question": "Hãy tìm kích thước và giá trị còn lại theo định giá của chiếc thang nhôm mà Võ Minh P định chở đi bằng xe máy Yamaha Sirius",
+   "source": "vn/04_2023_HSST_BRVT.pdf",
+   "gold_chunks": [
+    222,
+    223,
+    225
+   ],
+   "note": "정답: chiều dài 3,2m, bề rộng là 40cm, trọng lượng 10kg"
+  },
+  {
+   "id": "vn-03",
+   "question": "Hãy tìm mức án và ngày bắt đầu tính thời hạn tù đối với Võ Minh P, người được thông báo có quyền kháng cáo lên Tòa án nhân dân tỉnh Bà Rịa - Vũng Tàu",
+   "source": "vn/04_2023_HSST_BRVT.pdf",
+   "gold_chunks": [
+    226
+   ],
+   "note": "정답: Phạt bị cáo Võ Minh P 08 (Tám) tháng tù / Thời hạn tù tính từ ngày 18-11-2022"
+  },
+  {
+   "id": "vn-04",
+   "question": "Hãy tìm loại xe và biển số chiếc xe máy mà Võ Minh P chở Trần Văn H đi trộm thang nhôm",
+   "source": "vn/04_2023_HSST_BRVT.pdf",
+   "gold_chunks": [
+    222,
+    223,
+    224,
+    225
+   ],
+   "note": "정답: xe mô tô hiệu Yamaha Sirius / 72K1-356.06"
+  },
+  {
+   "id": "vn-05",
+   "question": "Hãy tìm chủ tọa phiên tòa và thư ký phiên tòa đã xét xử Lại Văn P cùng với các Hội thẩm nhân dân Vương Tấn Độ, Lê Văn Khanh",
+   "source": "vn/06_2023_HS-ST_HCM.pdf",
+   "gold_chunks": [
+    228
+   ],
+   "note": "정답: Chủ tọa phiên tòa: Ông Huỳnh Văn Ái / Chiêm Tiền Quí Nhân"
+  },
+  {
+   "id": "vn-06",
+   "question": "Hãy tìm thời gian và địa điểm Lại Văn P trộm chiếc điện thoại Realme C2",
+   "source": "vn/06_2023_HS-ST_HCM.pdf",
+   "gold_chunks": [
+    230,
+    233
+   ],
+   "note": "정답: 17 giờ 45 phút ngày 20/4/2022"
+  },
+  {
+   "id": "vn-07",
+   "question": "Hãy tìm loại điện thoại và giá trị định giá của chiếc điện thoại mà Lại Văn P đã trộm của anh Nguyễn Đình V",
+   "source": "vn/06_2023_HS-ST_HCM.pdf",
+   "gold_chunks": [
+    231,
+    232,
+    233,
+    234
+   ],
+   "note": "정답: Realme C2 / trị giá 800.000 đồng"
+  },
+  {
+   "id": "vn-08",
+   "question": "Hãy tìm lý do Tòa án không áp dụng hình phạt bổ sung là phạt tiền từ 5.000.000 đồng đến 50.000.000 đồng trong vụ án Lại Văn P",
+   "source": "vn/06_2023_HS-ST_HCM.pdf",
+   "gold_chunks": [
+    235
+   ],
+   "note": "정답: bị cáo không có nghề nghiệp và không có điều kiện kinh tế"
+  },
+  {
+   "id": "vn-09",
+   "question": "Hãy tìm mức án mà Lại Văn P phải chịu về tội cướp tài sản tiếp sau tiền án tại Tòa án nhân dân huyện Bình Chánh, và số tiền xử phạt vi phạm hành chính năm 2021",
+   "source": "vn/06_2023_HS-ST_HCM.pdf",
+   "gold_chunks": [
+    229
+   ],
+   "note": "정답: 09 năm tù về “Tội cướp tài sản” / xử phạt vi phạm hành chính 750.000 đồng"
+  },
+  {
+   "id": "vn-10",
+   "question": "Hãy tìm chủ tọa phiên tòa đã xét xử Lâm Tuấn A cùng với các Hội thẩm nhân dân Phạm Thị Ngọc, Nguyễn Ngọc Cảnh",
+   "source": "vn/132_2020_HS-ST_HCM.pdf",
+   "gold_chunks": [
+    238
+   ],
+   "note": "정답: Chủ tọa phiên tòa: Bà Châu Thị Thanh Thà"
+  },
+  {
+   "id": "vn-11",
+   "question": "Hãy tìm tài sản mà Lâm Tuấn A đã trộm tại nhà ông Nguyễn Thành P và số tiền trong chiếc bóp",
+   "source": "vn/132_2020_HS-ST_HCM.pdf",
+   "gold_chunks": [
+    240,
+    244
+   ],
+   "note": "정답: Iphone X và 03 cái đồng hồ đeo tay"
+  },
+  {
+   "id": "vn-12",
+   "question": "Hãy tìm tổng giá trị tài sản do Hội đồng định giá tài sản xác định đối với bị hại bị mất chiếc bóp có thẻ Viettinbank và BIDV",
+   "source": "vn/132_2020_HS-ST_HCM.pdf",
+   "gold_chunks": [
+    241,
+    242,
+    244
+   ],
+   "note": "정답: Tổng giá trị tài sản thiệt hại là 15.580.000 đồng"
+  },
+  {
+   "id": "vn-13",
+   "question": "Hãy tìm tên cửa hàng điện thoại nơi Lâm Tuấn A bán chiếc Iphone X đã trộm và tên chủ cửa hàng đó",
+   "source": "vn/132_2020_HS-ST_HCM.pdf",
+   "gold_chunks": [
+    240,
+    243
+   ],
+   "note": "정답: cửa hàng điện thoại di động Nhật Khang / ông Trần Hà T"
+  },
+  {
+   "id": "vn-14",
+   "question": "Hãy tìm mức án và ngày bắt đầu tính thời hạn tù đối với Lâm Tuấn A, cùng nhãn hiệu chiếc xe đạp bị tịch thu nộp ngân sách Nhà nước",
+   "source": "vn/132_2020_HS-ST_HCM.pdf",
+   "gold_chunks": [
+    246,
+    247
+   ],
+   "note": "정답: 03 (ba) năm 06 (sáu) tháng tù, thời hạn tù tính từ ngày 08/4/2020 / QueenBike"
+  },
+  {
+   "id": "vn-15",
+   "question": "Hãy tìm khối lượng giám định và giá mua của gói Heroin mà Đỗ Văn Ph đã mua tại đường Đặng Huy T và bị phát hiện khi đang tàng trữ",
+   "source": "vn/171_2018_HS-ST_HUE.pdf",
+   "gold_chunks": [
+    250
+   ],
+   "note": "정답: khối lượng 0,3669 gam / Heroin với giá 800.000 đồng"
+  },
+  {
+   "id": "vn-16",
+   "question": "Hãy tìm mức án và ngày bắt đầu tính thời hạn tù mà Đỗ Văn Ph phải chịu về tội “Tàng trữ trái phép chất ma túy”",
+   "source": "vn/171_2018_HS-ST_HUE.pdf",
+   "gold_chunks": [
+    253
+   ],
+   "note": "정답: 01 (một) năm 09 (chín) tháng tù / tính từ ngày bắt tạm giữ 30/4/2018"
+  },
+  {
+   "id": "vn-17",
+   "question": "Hãy tìm hai loại hình phạt cùng mức tối thiểu và tối đa được quy định tại khoản 1 Điều 173 BLHS áp dụng đối với Trần Xuân H",
+   "source": "vn/29_2018_HS-ST_THAI_NGUYEN[1].pdf",
+   "gold_chunks": [
+    260
+   ],
+   "note": "정답: phạt cải tạo không giam giữ đến 03 năm hoặc phạt tù từ 06 tháng đến 03 năm"
+  },
+  {
+   "id": "vn-18",
+   "question": "Hãy tìm trọng lượng và tổng giá trị định giá của số nhôm và sắt mà Trần Xuân H đã trộm tại nhà anh Trần Văn G",
+   "source": "vn/29_2018_HS-ST_THAI_NGUYEN[1].pdf",
+   "gold_chunks": [
+    257,
+    258
+   ],
+   "note": "정답: 2,7kg"
+  },
+  {
+   "id": "vn-19",
+   "question": "Hãy tìm tiền án của Trần Xuân H",
+   "source": "vn/29_2018_HS-ST_THAI_NGUYEN[1].pdf",
+   "gold_chunks": [
+    256
+   ],
+   "note": "정답: Có 03 tiền án / Ngày 23/01/2013"
+  },
+  {
+   "id": "vn-20",
+   "question": "Hãy tìm hai vật bị tịch thu tiêu hủy trong vụ án Trần Xuân H",
+   "source": "vn/29_2018_HS-ST_THAI_NGUYEN[1].pdf",
+   "gold_chunks": [
+    258,
+    261,
+    262
+   ],
+   "note": "정답: Tịch thu tiêu hủy 01 then chốt cửa bằng kim loại bị cong gãy tại phần móc khóa; 01 cờ lê bằng sắt dài 32 cm"
+  },
+  {
+   "id": "uz-01",
+   "question": "Azadov Mirjalol Bahodir o‘g‘li tahsil olayotgan universitet va magistratura yo‘nalishi shifrini toping",
+   "source": "uz/964-966.pdf",
+   "gold_chunks": [
+    186
+   ],
+   "note": "정답: Toshkent davlat yuridik universiteti / 70420123-Korrupsiyaga qarshi kurashish"
+  },
+  {
+   "id": "uz-02",
+   "question": "BMT Bosh Assambleyasi xulq-atvor kodeksi va Yevropa Kengashi konvensiyasidan keyin korrupsiya ta’rifi sifatida keltirilgan O‘zbekistonning korrupsiyaga qarshi kurashish to‘g‘risidagi qonuni qabul qilingan sanani toping",
+   "source": "uz/964-966.pdf",
+   "gold_chunks": [
+    187,
+    191
+   ],
+   "note": "정답: O‘zbekiston Respublikasining 2017-yil 3-yanvardagi"
+  },
+  {
+   "id": "uz-03",
+   "question": "Korrupsiyaga oid jinoyatlar ro‘yxati uchun asos sifatida keltirilgan O‘zbekiston Respublikasi Vazirlar Mahkamasi qarorining sanasi va raqamini toping",
+   "source": "uz/964-966.pdf",
+   "gold_chunks": [
+    189
+   ],
+   "note": "정답: 2020-yil 31-dekabrdagi / 829-sonli qarori"
+  },
+  {
+   "id": "uz-04",
+   "question": "Professor V.V. Luneev korrupsiyaga bergan ta’rif sifatida keltirilgan iborani toping",
+   "source": "uz/964-966.pdf",
+   "gold_chunks": [
+    188
+   ],
+   "note": "정답: korrupsiya - poraxo‘rlikdan ancha keng bo‘lgan ijtimoiy hodisadir"
+  },
+  {
+   "id": "uz-05",
+   "question": "Abdug‘aniyev Akobir Akmaljon o‘g‘lining muassasasi va ilmiy rahbarini toping",
+   "source": "uz/Abdug‘aniyev+Akobir+Akmaljon+o‘g‘li.pdf",
+   "gold_chunks": [
+    192
+   ],
+   "note": "정답: IIV Akademiyasi kursanti O.U.Ashurov"
+  },
+  {
+   "id": "uz-06",
+   "question": "Xavfli residivist yoki uyushgan guruh tomonidan sodir etilgan hollarni ham qo‘shib, O‘zbekiston Jinoyat kodeksining 168-moddasidagi firibgarlik uchun eng og‘ir jazo muddatini toping",
+   "source": "uz/Abdug‘aniyev+Akobir+Akmaljon+o‘g‘li.pdf",
+   "gold_chunks": [
+    195
+   ],
+   "note": "정답: sakkiz yildan o‘n yilgacha ozodlikdan mahrum qilish"
+  },
+  {
+   "id": "uz-07",
+   "question": "IIV Jinoyat-qidiruv bosh boshqarmasi qayd etgan 2019-yil va 2020-yilning 1-7 oylaridagi firibgarlik jinoyatlari sonini toping",
+   "source": "uz/Abdug‘aniyev+Akobir+Akmaljon+o‘g‘li.pdf",
+   "gold_chunks": [
+    200
+   ],
+   "note": "정답: 1954ta firibgarlik jinoyati / 3881tani tashkil etgan"
+  },
+  {
+   "id": "uz-08",
+   "question": "Shaffof tizimga o‘tishni ilgari surib, jamiyatda axborot shaffofligini ta’minlash uchun yaratish taklif etilgan tizim nomini toping",
+   "source": "uz/Abdug‘aniyev+Akobir+Akmaljon+o‘g‘li.pdf",
+   "gold_chunks": [
+    201
+   ],
+   "note": "정답: “Ochiq olam” tizimini yaratish lozim"
+  },
+  {
+   "id": "uz-09",
+   "question": "Qashqadaryoda mashhur kompaniyaning soxta aksiyalarini sotgan uyushgan jinoiy guruh o‘zlashtirgan mablag‘ miqdori va jabrlanuvchilar sonini toping",
+   "source": "uz/Abdug‘aniyev+Akobir+Akmaljon+o‘g‘li.pdf",
+   "gold_chunks": [
+    199
+   ],
+   "note": "정답: 2 mingga yaqin kishini 9 mln AQSh dollariga"
+  },
+  {
+   "id": "uz-10",
+   "question": "Firibgarlik aqlli jinoyat ekanini aytgan Termiz shahar sudi sudyasi yordamchisining ismini toping",
+   "source": "uz/Abdug‘aniyev+Akobir+Akmaljon+o‘g‘li.pdf",
+   "gold_chunks": [
+    198
+   ],
+   "note": "정답: Termiz shahar sudining sudya yordamchisi N.Xasanova"
+  },
+  {
+   "id": "uz-11",
+   "question": "Nasimov Umedjon Ulugbekovich tahsil olayotgan universitetni toping",
+   "source": "uz/Nasimov+Umedjon+Ulugbekovich.pdf",
+   "gold_chunks": [
+    202
+   ],
+   "note": "정답: Toshkend Davlat Yuridik Unuversiteti"
+  },
+  {
+   "id": "uz-12",
+   "question": "Kiberjinoyat ta’rifi bilan birga keltirilgan, O‘zbekistonda kiberjinoyatchilikka qarshi kurashish asosi bo‘lgan uchta qonunni toping",
+   "source": "uz/Nasimov+Umedjon+Ulugbekovich.pdf",
+   "gold_chunks": [
+    203,
+    208
+   ],
+   "note": "정답: “Axborotlashtirish to‘g‘risida”gi Qonun, “Elektron hukumat to‘g‘risida”gi Qonun, “Shaxsiy ma’lumotlar to‘g‘risida”gi Qonun"
+  },
+  {
+   "id": "uz-13",
+   "question": "Birlashgan Millatlar Tashkiloti, Yevropa Ittifoqi va Interpol bilan birga tilga olingan, kiberjinoyatchilikka qarshi kurashdagi asosiy xalqaro konvensiya nomini toping",
+   "source": "uz/Nasimov+Umedjon+Ulugbekovich.pdf",
+   "gold_chunks": [
+    204,
+    208
+   ],
+   "note": "정답: Budapesht konvensiyasi"
+  },
+  {
+   "id": "uz-14",
+   "question": "Zaxira nusxalarni tiklashgacha davom etadigan kiberjinoyatdan zarar ko‘rganda ko‘riladigan choralarning birinchisi va ikkinchisini toping",
+   "source": "uz/Nasimov+Umedjon+Ulugbekovich.pdf",
+   "gold_chunks": [
+    206
+   ],
+   "note": "정답: Parollarni darhol o‘zgartirish / Bank kartalarini bloklash"
+  },
+  {
+   "id": "uz-15",
+   "question": "Qodirjonova Madina Ulug’bek qizi keltirgan DOI raqamini toping",
+   "source": "uz/ZDIF+0701.pdf",
+   "gold_chunks": [
+    209
+   ],
+   "note": "정답: 10.5281/zenodo.11500930"
+  },
+  {
+   "id": "uz-16",
+   "question": "Jinoyat-Ijroiya kodeksini qo‘llashda voyaga yetmaganlar koloniyalari kattalar muassasalariga qaraganda yaxshiroq natija berganining sababi sifatida ko‘rsatilgan miqyosga oid xususiyatni toping",
+   "source": "uz/ZDIF+0701.pdf",
+   "gold_chunks": [
+    211
+   ],
+   "note": "정답: miqyosi jihatidan kichikroq"
+  },
+  {
+   "id": "uz-17",
+   "question": "Kamolov Xayrulloxon Juraxon o’g’li egallab turgan lavozimni toping",
+   "source": "uz/ZDIF+0738.pdf",
+   "gold_chunks": [
+    214
+   ],
+   "note": "정답: Chirchiq shahar sudining raisi"
+  },
+  {
+   "id": "uz-18",
+   "question": "O‘zbekiston Respublikasi Oliy sudi e’lon qilgan rasmiy statistikada 2024-yilda jinoyat sudlari ko‘rib chiqqan ishlar soni va ular tegishli bo‘lgan shaxslar sonini toping",
+   "source": "uz/ZDIF+0738.pdf",
+   "gold_chunks": [
+    215
+   ],
+   "note": "정답: 77995 nafar shaxsga nisbatan 61481 ta jinoyat ishi"
+  },
+  {
+   "id": "uz-19",
+   "question": "O‘zbekistonda Yarashuv instituti qo‘llanilishi natijasida jinoiy javobgarlikdan ozod etilgan shaxslar sonini toping",
+   "source": "uz/ZDIF+0738.pdf",
+   "gold_chunks": [
+    216
+   ],
+   "note": "정답: 13434 nafar shaxs jinoiy javobgarlikdan ozod etilgan"
+  },
+  {
+   "id": "uz-20",
+   "question": "Shartli hukm chiqarilganda belgilanadigan sinov muddati doirasini toping",
+   "source": "uz/ZDIF+0738.pdf",
+   "gold_chunks": [
+    217
+   ],
+   "note": "정답: Sinov muddati bir yildan uch yilgacha / hukm chiqarilgan kundan boshlab hisoblanadi"
+  },
+  {
+   "id": "ru-01",
+   "question": "Найдите диапазон номеров, звонки с которых рекомендовано не принимать, указанный вместе со способом «SMS-просьба о помощи»",
+   "source": "ru/72lj3fbo7i1h83uotfpw88vvhj0s5nm8.pdf",
+   "gold_chunks": [
+    162
+   ],
+   "note": "정답: начинающегося на 495 или 499"
+  },
+  {
+   "id": "ru-02",
+   "question": "Найдите предмет, который мошенник использует, чтобы получить деньги во второй раз, в схеме ошибочного перевода, описанной прокуратурой Кабардино-Балкарской Республики",
+   "source": "ru/72lj3fbo7i1h83uotfpw88vvhj0s5nm8.pdf",
+   "gold_chunks": [
+    161
+   ],
+   "note": "정답: мошенник использует чек, выданный при переводе денег"
+  },
+  {
+   "id": "ru-03",
+   "question": "Найдите фамилию, имя, отчество и должность сотрудника прокуратуры Омутинского района Тюменской области, подготовившего материал о профилактике преступлений в сфере информационных технологий",
+   "source": "ru/acqyks51995vcas54buq9j8zjfcv52mq.pdf",
+   "gold_chunks": [
+    166
+   ],
+   "note": "정답: Фролов Сергей Сергеевич, заместитель прокурора Омутинского района"
+  },
+  {
+   "id": "ru-04",
+   "question": "Найдите официальный реестр органа, в котором, по разъяснению прокуратуры Омутинского района Тюменской области, можно проверить, заблокирован ли интернет-ресурс",
+   "source": "ru/acqyks51995vcas54buq9j8zjfcv52mq.pdf",
+   "gold_chunks": [
+    165
+   ],
+   "note": "정답: официальном сайте Роскомнадзора в Едином реестре доменных имен"
+  },
+  {
+   "id": "ru-05",
+   "question": "Найдите номер «Телефона доверия» УВМД России и номер дежурной части",
+   "source": "ru/c0bt6babub0mr9twu45skop5uqhh5ogk.pdf",
+   "gold_chunks": [
+    168
+   ],
+   "note": "정답: Мурманской области: 40-57-31 / телефон дежурной части: 02"
+  },
+  {
+   "id": "ru-06",
+   "question": "Найдите действие, которое рекомендует совершить прокуратура Печенгского района Мурманской области при получении сообщения о том, что родственник попал в беду",
+   "source": "ru/c0bt6babub0mr9twu45skop5uqhh5ogk.pdf",
+   "gold_chunks": [
+    167
+   ],
+   "note": "정답: срочно свяжитесь с ним напрямую"
+  },
+  {
+   "id": "ru-07",
+   "question": "Найдите срок ограничения свободы и период удержания заработной платы или иного дохода осуждённого, которые могут быть назначены за мошенничество, в разделе о фишинге, нацеленном в том числе на услуги интернет-банкинга",
+   "source": "ru/dvbffhvesi7atsug569xnrlpbgerzwcj.pdf",
+   "gold_chunks": [
+    170
+   ],
+   "note": "정답: ограничением свободы на срок до двух лет / дохода осужденного за период до трех лет"
+  },
+  {
+   "id": "ru-08",
+   "question": "Найдите три сайта бесплатных объявлений, приведённые прокуратурой Камызякского района в качестве примера интернет-мошенничества",
+   "source": "ru/dvbffhvesi7atsug569xnrlpbgerzwcj.pdf",
+   "gold_chunks": [
+    169
+   ],
+   "note": "정답: «Авито», «Дром», «Фарпост»"
+  },
+  {
+   "id": "ru-09",
+   "question": "Найдите документ, который, по разъяснению прокуратуры Центрального района города Оренбурга, выдают при обращении с заявлением в полицию",
+   "source": "ru/voe12ehxmqpqsa3z1f3moe6e3fhfy14n.pdf",
+   "gold_chunks": [
+    171
+   ],
+   "note": "정답: выдать талон-уведомление"
+  },
+  {
+   "id": "ru-10",
+   "question": "Найдите сведения, которые, как предупреждает прокуратура Центрального района города Оренбурга, мошенники просят сообщить под предлогом перевода денег за товар, объявление о продаже которого вы разместили в социальных сетях",
+   "source": "ru/voe12ehxmqpqsa3z1f3moe6e3fhfy14n.pdf",
+   "gold_chunks": [
+    173,
+    174
+   ],
+   "note": "정답: просят сообщить данные вашей банковской карты — никому не сообщайте"
+  },
+  {
+   "id": "ru-11",
+   "question": "Найдите то, что рекомендовано проверить в первую очередь для распознавания подделки после слов «Мошенники создают сайты-клоны торговых площадок»",
+   "source": "ru/voe12ehxmqpqsa3z1f3moe6e3fhfy14n.pdf",
+   "gold_chunks": [
+    173
+   ],
+   "note": "정답: правильно ли указано доменное имя сайта"
+  },
+  {
+   "id": "ru-12",
+   "question": "Найдите в списке, завершающемся словами «Услышав данные фразы, прекратите разговор», требование взять новый кредит и передать полученные деньги сотруднику",
+   "source": "ru/voe12ehxmqpqsa3z1f3moe6e3fhfy14n.pdf",
+   "gold_chunks": [
+    175
+   ],
+   "note": "정답: возьмите новый кредит и передайте полученные деньги нашему сотруднику"
+  },
+  {
+   "id": "ru-13",
+   "question": "Найдите наказание, назначенное Коневу Игорю Анатольевичу и.о. мирового судьи в суде первой инстанции",
+   "source": "ru/vsrfrulk2489670.pdf",
+   "gold_chunks": [
+    176
+   ],
+   "note": "정답: 180 часам обязательных работ"
+  },
+  {
+   "id": "ru-14",
+   "question": "Найдите объём срубленных берёз и сумму исчисленного ущерба по делу Конева И.А.",
+   "source": "ru/vsrfrulk2489670.pdf",
+   "gold_chunks": [
+    178
+   ],
+   "note": "정답: общим объемом 2,3 м 3 общей стоимостью 29769 рублей"
+  },
+  {
+   "id": "ru-15",
+   "question": "Найдите марку автомобиля, в части конфискации которого Верховный Суд России отменил решение по делу Конева И.А.",
+   "source": "ru/vsrfrulk2489670.pdf",
+   "gold_chunks": [
+    179
+   ],
+   "note": "정답: в части конфискации вещественных доказательств автомобиля марки «Тойота Лит Айс HOAX»"
+  },
+  {
+   "id": "ru-16",
+   "question": "Найдите наказание, назначенное Емельянову Даниилу Игоревичу Бежецким межрайонным судом Тверской области",
+   "source": "ru/vsrfrulk2533930.pdf",
+   "gold_chunks": [
+    180
+   ],
+   "note": "정답: осужден по ч. 3 ст. 160 УК РФ к штрафу в размере 150 000 руб."
+  },
+  {
+   "id": "ru-17",
+   "question": "Найдите общую сумму материальных ценностей, присвоенных и растраченных Емельяновым Д.И. в АО «Р»",
+   "source": "ru/vsrfrulk2533930.pdf",
+   "gold_chunks": [
+    183
+   ],
+   "note": "정답: на общую сумму 553390 руб.03 коп."
+  },
+  {
+   "id": "ru-18",
+   "question": "Найдите период, в течение которого совершено преступление Емельяновым Д.И.",
+   "source": "ru/vsrfrulk2533930.pdf",
+   "gold_chunks": [
+    181,
+    182
+   ],
+   "note": "정답: с 3 сентября по 10 октября 2024 года"
+  },
+  {
+   "id": "ru-19",
+   "question": "Найдите решение, исключённое апелляцией Тверского областного суда из приговора суда первой инстанции по делу Емельянова Д.И.",
+   "source": "ru/vsrfrulk2533930.pdf",
+   "gold_chunks": [
+    180,
+    181
+   ],
+   "note": "정답: исключено решение суда об изменении категории"
+  },
+  {
+   "id": "ru-20",
+   "question": "Найдите вывод Верховного Суда России по кассационной жалобе защитника по делу Емельянова Д.И.",
+   "source": "ru/vsrfrulk2533930.pdf",
+   "gold_chunks": [
+    185
+   ],
+   "note": "정답: кассационную жалобу защитника без удовлетворения"
+  },
+  {
+   "id": "pil-01",
+   "question": "Hanapin ang ahensyang nagbibigay ng awtoridad na magpayo tungkol sa batas sa imigrasyon, dahil hindi tulad sa Latin Amerika ay hindi maaaring magbigay ng payong legal ang notaryo sa Estados Unidos",
+   "source": "pil/AvoidImmigrationScamsGetHelp_Tagalog-508.pdf",
+   "gold_chunks": [
+    135
+   ],
+   "note": "정답: inawtorisahan ng U.S. Department of Justice"
+  },
+  {
+   "id": "pil-02",
+   "question": "Hanapin ang batayan sa address ng website para matukoy ang pekeng site na gumagamit ng larawan ng Statue of Liberty upang magmukhang konektado sa USCIS",
+   "source": "pil/AvoidImmigrationScamsGetHelp_Tagalog-508.pdf",
+   "gold_chunks": [
+    136,
+    137
+   ],
+   "note": "정답: hindi nagtatapos sa .gov"
+  },
+  {
+   "id": "pil-03",
+   "question": "Hanapin ang tanging website kung saan maaaring tingnan ang status ng entry sa Diversity Visa Program",
+   "source": "pil/AvoidImmigrationScamsGetHelp_Tagalog-508.pdf",
+   "gold_chunks": [
+    137,
+    138
+   ],
+   "note": "정답: dvprogram.state.gov"
+  },
+  {
+   "id": "pil-04",
+   "question": "Hanapin ang mga paraan ng pagbabayad na hinding-hindi dapat gamitin ng refugee kapalit ng tulong sa imigrasyon, na nakalista kasabay ng payong kumonsulta muna sa case manager ng resettlement agency",
+   "source": "pil/AvoidImmigrationScamsGetHelp_Tagalog-508.pdf",
+   "gold_chunks": [
+    138
+   ],
+   "note": "정답: gift card, money transfer, app sa pagbabayad, o cryptocurrency"
+  },
+  {
+   "id": "pil-05",
+   "question": "Hanapin ang numero ng telepono ng USCIS Contact Center at ang TTY na numero para sa mga may kapansanan sa pandinig",
+   "source": "pil/AvoidImmigrationScamsGetHelp_Tagalog-508.pdf",
+   "gold_chunks": [
+    140
+   ],
+   "note": "정답: 800-375-5283 / 800-767-1833"
+  },
+  {
+   "id": "pil-06",
+   "question": "Hanapin ang tatlong cash reload card na binabalaang hinihingi ng mga scammer kasama ng gift card tulad ng iTunes o Amazon",
+   "source": "pil/empower-yourself-against-utility-scams_tl-508ftclogo.pdf",
+   "gold_chunks": [
+    146,
+    147
+   ],
+   "note": "정답: MoneyPak, Vanilla, o Reloadit"
+  },
+  {
+   "id": "pil-07",
+   "question": "Hanapin ang inirekomendang paraan ng pakikipag-ugnayan sa kompanya ng utility kapag nag-aalala ka sa hindi nabayarang bill, matapos ang babala tungkol sa hinihinging MoneyPak, Vanilla, at Reloadit",
+   "source": "pil/empower-yourself-against-utility-scams_tl-508ftclogo.pdf",
+   "gold_chunks": [
+    147
+   ],
+   "note": "정답: gamit ang numero sa iyong papel na bill o sa website"
+  },
+  {
+   "id": "pil-08",
+   "question": "Hanapin ang website at numero ng telepono ng Federal Trade Commission para sa pagsusumbong, na ibinigay kasabay ng paalalang hindi nagbabanta o humihingi ng pera ang gobyerno",
+   "source": "pil/Government Imposter Scams poster_TL.pdf",
+   "gold_chunks": [
+    142
+   ],
+   "note": "정답: ReportFraud.ftc.gov o 1-877-382-4357"
+  },
+  {
+   "id": "pil-09",
+   "question": "Hanapin ang pangatlo sa apat na palatandaan kung saan unang binanggit ang pagpapanggap bilang Social Security Administration, IRS, at Medicare",
+   "source": "pil/How-to-avoid-a-scam_Tagalog_August2023.pdf",
+   "gold_chunks": [
+    143,
+    144
+   ],
+   "note": "정답: PINUPUWERSA ka ng mga scammer na kumilos kaagad"
+  },
+  {
+   "id": "pil-10",
+   "question": "Hanapin ang numerong dapat pindutin upang piliin ang Tagalog sa hotline ng pagsusumbong ng scam, matapos ang babala tungkol sa hinihinging padala sa MoneyGram o Western Union",
+   "source": "pil/How-to-avoid-a-scam_Tagalog_August2023.pdf",
+   "gold_chunks": [
+    145
+   ],
+   "note": "정답: pindutin ang 3 para sa iba pang mga / 2 para sa Tagalog"
+  },
+  {
+   "id": "pil-11",
+   "question": "Hanapin ang pangalan ng imbestigador na dumating sa bahay ni Sheila Martir kinabukasan ng pamamaril upang kunin ang kanyang salaysay",
+   "source": "pil/judicialaffidavitfilipino.pdf",
+   "gold_chunks": [
+    153
+   ],
+   "note": "정답: isang imbestigador na nagpakilalang si Oscar Cuz"
+  },
+  {
+   "id": "pil-12",
+   "question": "Hanapin ang numero ng administrative matter ng Korte Suprema na nagtatakdang pumalit ang salaysay ni SHEILA MARTIR sa direct examination",
+   "source": "pil/judicialaffidavitfilipino.pdf",
+   "gold_chunks": [
+    148,
+    149,
+    150
+   ],
+   "note": "정답: A.M. No. 12-8-8-SC"
+  },
+  {
+   "id": "pil-13",
+   "question": "Hanapin ang petsa at tinatayang oras kung kailan nasaksihan ni SHEILA MARTIR ang pangyayari",
+   "source": "pil/judicialaffidavitfilipino.pdf",
+   "gold_chunks": [
+    151
+   ],
+   "note": "정답: ika-14 ng Pebrero 2016 / alas nuwebe po ng gabi"
+  },
+  {
+   "id": "pil-14",
+   "question": "Hanapin kung ilang beses at saang bahagi tinamaan ng putok si Lito Bartolome sa lugar kung saan naroon ang dalawang lalaking sumigaw ng «Raffy!» at «Pare!»",
+   "source": "pil/judicialaffidavitfilipino.pdf",
+   "gold_chunks": [
+    152
+   ],
+   "note": "정답: pinaputukan si Lito ng dalawang (2) beses / tumama sa likod ni Lito"
+  },
+  {
+   "id": "pil-15",
+   "question": "Hanapin ang pangalan at Roll number ng abogado ng Public Attorney’s Office na sumumpang siya mismo ang kumuha ng salaysay ni Sheila Martir sa kanyang opisina at nagtala’t nagsalin nito sa Filipino",
+   "source": "pil/judicialaffidavitfilipino.pdf",
+   "gold_chunks": [
+    154
+   ],
+   "note": "정답: MICHAEL A. BAUTISTA / Roll No. 64321"
+  },
+  {
+   "id": "pil-16",
+   "question": "Hanapin ang pangalan at commission number ng notaryong nagpatunay sa pagkakakilanlan nina Sheila Martir at Michael A. Bautista at kumuha ng kanilang panunumpa",
+   "source": "pil/judicialaffidavitfilipino.pdf",
+   "gold_chunks": [
+    155
+   ],
+   "note": "정답: SAMUEL L. KARUNUNGAN / Commission No. 2016-231"
+  },
+  {
+   "id": "pil-17",
+   "question": "Hanapin ang rehiyong pinanggalingan ng mga dayuhang estudyanteng partikular na tinatarget ng mga scammer na naniningil sa pamamagitan ng Google Play o iTunes gift card o Bitcoin",
+   "source": "pil/scammers-intl-students-money_tl-508ftclogo.pdf",
+   "gold_chunks": [
+    156
+   ],
+   "note": "정답: sa mga bansa sa Timog Asya"
+  },
+  {
+   "id": "pil-18",
+   "question": "Hanapin ang numero ng sentro ng USCIS na dapat tawagan kapag may alalahanin sa visa o dokumento sa imigrasyon, sa bahaging nagtuturong magsumbong sa FTC.gov/Complaint",
+   "source": "pil/scammers-intl-students-money_tl-508ftclogo.pdf",
+   "gold_chunks": [
+    157
+   ],
+   "note": "정답: National Customer Service Center ng USCIS sa 800-375-5283"
+  },
+  {
+   "id": "pil-19",
+   "question": "Hanapin kung sino ang nagsampa ng reklamo at sino ang inireklamo sa kasong Estafa na magkasamang nasaksihan nina JUVIC CADIAO at FERNADO ROLLAN ROMERO",
+   "source": "pil/toazinfo-pinagsamang.pdf",
+   "gold_chunks": [
+    158
+   ],
+   "note": "정답: EDWIN LARA REONAL / ARLENE COQUIA ANDRES"
+  },
+  {
+   "id": "pil-20",
+   "question": "Hanapin ang halagang natanggap ni Mr. REONAL mula sa utang sa AMWSLAI",
+   "source": "pil/toazinfo-pinagsamang.pdf",
+   "gold_chunks": [
+    159
+   ],
+   "note": "정답: Php. 644,302.67"
+  }
+ ]
+}

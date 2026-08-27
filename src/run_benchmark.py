@@ -294,7 +294,7 @@ def run_model(spec: ModelSpec, cfg: dict, chunks, questions, gold,
     return summaries, details
 
 
-def merge_previous(results_dir: Path, rows: list, details: list,
+def merge_previous(out: dict[str, Path], rows: list, details: list,
                    questions, corpora) -> tuple[list, list]:
     """--resume: 이전 실행 결과 위에 이번 실행 결과를 덮어 얹는다.
 
@@ -302,7 +302,7 @@ def merge_previous(results_dir: Path, rows: list, details: list,
     돌리면 나머지 모델의 행이 전부 사라진다. 이 함수는 이전 summary.csv/details.json
     을 읽어 **이번에 돌린 모델의 행만** 교체하고 나머지는 살려둔다.
     """
-    prev_csv, prev_json = results_dir / "summary.csv", results_dir / "details.json"
+    prev_csv, prev_json = out["summary"], out["details"]
     if not prev_csv.exists() or not prev_json.exists():
         print("  [resume] 이어받을 이전 결과가 없습니다 — 새로 시작합니다")
         return rows, details
@@ -380,6 +380,50 @@ def build_miss_report(misses: dict, questions, gold, ks: list[int]) -> str:
     return "\n".join(lines) + "\n"
 
 
+# 결과로 나가는 파일 5종. --out 으로 이름·위치를 통째로 옮길 수 있다.
+OUT_NAMES = {
+    "summary": "summary.csv",
+    "details": "details.json",
+    "chunks": "chunks.json",
+    "summary_md": "summary.md",
+    "misses": "misses.md",
+}
+
+
+def output_paths(results_dir: Path, out: str | None) -> dict[str, Path]:
+    """저장할 파일 5개의 경로를 정한다.
+
+    --out 없음     config 의 results_dir 에 기본 이름으로.
+    --out 폴더     그 폴더에 기본 이름으로. 대시보드가 폴더에서 세 파일을 짝지어
+                   읽으므로 두 판을 견줄 때는 이쪽을 권한다.
+    --out *.csv    그 파일을 summary 로 삼고, 이름 끝의 꼬리표를 나머지 파일에도
+                   붙인다 (summary2.csv → details2.json, chunks2.json …).
+                   한 폴더 안에 두 판을 나란히 두고 싶을 때 쓴다.
+    """
+    names = dict(OUT_NAMES)
+    base = results_dir
+    if out:
+        p = Path(out)
+        if not p.is_absolute():
+            p = ROOT / p
+        if p.suffix.lower() == ".csv":
+            # "summary2.csv" 의 꼬리표는 "2". summary 로 시작하지 않는 이름이면
+            # 이름 전체를 꼬리표로 삼아 details_<이름>.json 처럼 붙인다.
+            tag = p.stem[len("summary"):] if p.stem.startswith("summary") else "_" + p.stem
+            base = p.parent
+            names = {
+                "summary": p.name,
+                "details": f"details{tag}.json",
+                "chunks": f"chunks{tag}.json",
+                "summary_md": f"summary{tag}.md",
+                "misses": f"misses{tag}.md",
+            }
+        else:
+            base = p
+    base.mkdir(parents=True, exist_ok=True)
+    return {k: base / v for k, v in names.items()}
+
+
 def main() -> None:
     # Windows 콘솔은 기본이 cp949 라 '—' 같은 기호에서 UnicodeEncodeError 로 죽는다.
     # (RunPod/Linux 는 원래 UTF-8 이라 무해)
@@ -391,6 +435,14 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--config", default=str(ROOT / "config.yaml"))
     ap.add_argument("--models", nargs="*", default=None, help="평가할 모델 key (기본: 전체)")
+    ap.add_argument("--questions", default=None,
+                    help="질문 파일 (기본: config 의 paths.questions_file). "
+                         "예) questions/questions_lang.json — 질문을 문서 언어로 옮긴 "
+                         "판본이라 '같은 언어로 물었을 때' 를 재게 된다")
+    ap.add_argument("--out", default=None,
+                    help="결과 저장 위치. 폴더면 그 폴더에 기본 이름으로, "
+                         "results/summary2.csv 처럼 .csv 면 그 꼬리표를 "
+                         "details·chunks·summary·misses 에도 붙여 나란히 저장한다")
     ap.add_argument("--resume", action="store_true",
                     help="이전 results/ 를 읽어 이번에 돌린 모델의 행만 교체하고 "
                          "나머지는 그대로 이어붙인다 (--models 로 일부만 재실행할 때)")
@@ -398,17 +450,24 @@ def main() -> None:
 
     cfg = yaml.safe_load(Path(args.config).read_text(encoding="utf-8"))
     results_dir = ROOT / cfg["paths"]["results_dir"]
-    results_dir.mkdir(parents=True, exist_ok=True)
+    out = output_paths(results_dir, args.out)
+    if out["summary"].name != "summary.csv":
+        print(f"[out] 대시보드는 폴더에서 summary.csv/details.json/chunks.json 이라는 "
+              f"이름만 읽습니다 — {out['summary'].name} 은 앱에서 바로 열리지 않습니다")
 
     corpora = build_corpora(cfg)
-    (results_dir / "chunks.json").write_text(
+    out["chunks"].write_text(
         json.dumps({v: [c.to_dict() for c in cs] for v, cs in corpora.items()},
                    ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
 
     print("[3/4] 질문 로드 및 정답 라벨링")
-    questions = load_questions(ROOT / cfg["paths"]["questions_file"])
+    q_file = Path(args.questions or cfg["paths"]["questions_file"])
+    if not q_file.is_absolute():
+        q_file = ROOT / q_file
+    print(f"  질문 파일: {q_file}")
+    questions = load_questions(q_file)
     golds: dict[str, dict] = {}
     for variant, chunks in corpora.items():
         gold, unmatched, too_broad = label_gold(questions, chunks)
@@ -485,7 +544,7 @@ def main() -> None:
 
     if args.resume:
         all_rows, all_details = merge_previous(
-            results_dir, all_rows, all_details, questions, corpora
+            out, all_rows, all_details, questions, corpora
         )
 
     if not all_rows:
@@ -528,13 +587,13 @@ def main() -> None:
 
     # gold 청크 수는 색인마다 다르므로 첫 변형 기준으로 보여준다
     miss_report = build_miss_report(misses, questions, golds[next(iter(corpora))], ks)
-    (results_dir / "misses.md").write_text(miss_report, encoding="utf-8")
+    out["misses"].write_text(miss_report, encoding="utf-8")
 
-    df.to_csv(results_dir / "summary.csv", index=False, encoding="utf-8-sig")
-    (results_dir / "details.json").write_text(
+    df.to_csv(out["summary"], index=False, encoding="utf-8-sig")
+    out["details"].write_text(
         json.dumps(all_details, ensure_ascii=False, indent=2), encoding="utf-8"
     )
-    (results_dir / "summary.md").write_text(
+    out["summary_md"].write_text(
         "# 임베딩 모델 비교 결과\n\n"
         + "".join(f"- 색인 [{v}]: 후보 {len(cs)}개\n" for v, cs in corpora.items())
         + f"- 질문 수: {len(questions)}  (정답@k 는 이 중 몇 개를 맞혔는지)\n"
@@ -584,7 +643,9 @@ def main() -> None:
             print("    첫 번째 실패만이 진짜 원인입니다 — 그 모델을 단독으로, "
                   "CUDA_LAUNCH_BLOCKING=1 을 걸고 다시 돌려보세요.")
 
-    print(f"\n결과 저장: {results_dir}/summary.csv, summary.md, misses.md, details.json")
+    print(f"\n결과 저장: {out['summary'].parent}/"
+          + ", ".join(out[k].name for k in
+                       ("summary", "summary_md", "misses", "details")))
     print("  · misses.md    질문별로 어느 모델이 틀렸는지 전체 목록")
     print("  · details.json 왜 틀렸는지 — 질문마다 실제로 뽑아온 상위 5개 청크")
 

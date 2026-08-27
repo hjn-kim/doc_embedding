@@ -16,6 +16,10 @@ from shared_utils import apply_common_styles
 # 몫으로 그 아래 embedding/ 하나를 쓴다.
 DATA_DIR = Path(__file__).resolve().parent.parent / "document_lab" / "embedding"
 
+# 결과2 탭이 보는 판. 같은 벤치마크를 질문 번역본으로 돌린 결과다.
+#   python -m src.run_benchmark --questions questions/questions_lang.json --out results_lang
+LANG_DIR = DATA_DIR / "results_lang"
+
 # set_page_config 는 다른 st 호출보다 먼저여야 해서 공통 스타일보다 위에 둔다.
 st.set_page_config(page_title="임베딩 모델 비교", page_icon="📊", layout="wide")
 apply_common_styles()
@@ -66,12 +70,12 @@ LANG_LABEL = {
 }
 
 
-# 색인 단위 설명. run_benchmark 의 index.variants 와 같은 이름을 쓴다.
+# 검색 단위 설명. run_benchmark 의 index.variants 와 같은 이름을 쓴다.
 INDEX_DESC = {
     "512": "510토큰 청크 1개 = 벡터 1개. 정답 **청크**를 찾는 문제이고, "
            "모든 모델이 문서 전문을 동등하게 본다.",
     "full": "문서 1개 = 벡터 1개. 정답 **문서**를 찾는 문제이고, "
-            "컨텍스트 상한이 짧은 모델은 애초에 이 색인에서 빠진다.",
+            "컨텍스트 상한이 짧은 모델은 애초에 이 검색에서 빠진다.",
 }
 
 
@@ -135,17 +139,17 @@ def load_results(results_dir: str, stamp: float):
     """stamp 는 캐시 키 용도로만 받는다 (본문에서 쓰지 않는 게 정상)."""
     d = Path(results_dir)
     summary = pd.read_csv(d / "summary.csv")
-    # 색인 값은 512(숫자)와 full(문자)이 섞여 있다. 문자열로 통일해야 비교·groupby 가 안전하다.
-    summary["색인"] = (
-        summary["색인"].astype(str) if "색인" in summary.columns else "-"
+    # 검색 값은 512(숫자)와 full(문자)이 섞여 있다. 문자열로 통일해야 비교·groupby 가 안전하다.
+    summary["검색"] = (
+        summary["검색"].astype(str) if "검색" in summary.columns else "-"
     )
 
     details = json.loads((d / "details.json").read_text(encoding="utf-8"))
 
-    # chunks.json 은 색인 변형별 dict — {"512": [청크...], "full": [문서...]}
+    # chunks.json 은 검색 변형별 dict — {"512": [청크...], "full": [문서...]}
     chunks_path = d / "chunks.json"
     raw = json.loads(chunks_path.read_text(encoding="utf-8")) if chunks_path.exists() else {}
-    if isinstance(raw, list):          # 색인 변형이 없던 시절 결과 호환
+    if isinstance(raw, list):          # 검색 변형이 없던 시절 결과 호환
         raw = {"-": raw}
     chunks = {str(k): v for k, v in raw.items()}
     return summary, details, chunks
@@ -187,7 +191,7 @@ def load_model_specs(config_path: str, stamp: float) -> pd.DataFrame:
 
 
 def index_sort_key(v: str):
-    """색인 단위 정렬 — 숫자 변형(512, 1024…)이 먼저, full 같은 이름이 뒤."""
+    """검색 단위 정렬 — 숫자 변형(512, 1024…)이 먼저, full 같은 이름이 뒤."""
     return (0, int(v)) if str(v).isdigit() else (1, str(v))
 
 
@@ -214,8 +218,8 @@ def lang_model_key(m: str):
 def build_question_frame(details: list[dict], unit_of: dict[str, str]) -> pd.DataFrame:
     """질문 × 모델 단위 표. gold_rank = 정답 단위가 몇 등으로 올라왔는지(없으면 NaN).
 
-    details.json 에는 색인 컬럼이 없다. 모델 라벨이 `kure-v1 [512]` 꼴이라
-    summary 의 model→색인 매핑으로 붙이고, 매핑에 없으면 라벨에서 직접 뽑는다.
+    details.json 에는 검색 컬럼이 없다. 모델 라벨이 `kure-v1 [512]` 꼴이라
+    summary 의 model→검색 매핑으로 붙이고, 매핑에 없으면 라벨에서 직접 뽑는다.
     """
     rows = []
     for d in details:
@@ -228,7 +232,7 @@ def build_question_frame(details: list[dict], unit_of: dict[str, str]) -> pd.Dat
         rows.append(
             {
                 "model": model,
-                "색인": str(unit),
+                "검색": str(unit),
                 "qid": d["qid"],
                 "lang": d["qid"].split("-")[0],
                 "question": d["question"],
@@ -258,13 +262,13 @@ summary_all, details, chunks_all = load_results(str(rdir), results_stamp(rdir))
 cfg_path = DATA_DIR / "config.yaml"
 cfg_stamp = cfg_path.stat().st_mtime if cfg_path.exists() else 0.0
 qdf_all = build_question_frame(
-    details, dict(zip(summary_all["model"], summary_all["색인"]))
+    details, dict(zip(summary_all["model"], summary_all["검색"]))
 )
 
-# ── 색인 단위 선택 — 화면 전체가 여기에 잠긴다 ────────────────
-units = sorted(summary_all["색인"].unique(), key=index_sort_key)
+# ── 검색 단위 선택 — 화면 전체가 여기에 잠긴다 ────────────────
+units = sorted(summary_all["검색"].unique(), key=index_sort_key)
 if "후보수" in summary_all.columns:
-    n_cand = summary_all.groupby("색인")["후보수"].max().to_dict()
+    n_cand = summary_all.groupby("검색")["후보수"].max().to_dict()
 else:
     n_cand = {u: len(chunks_all.get(u, [])) for u in units}
 
@@ -275,15 +279,15 @@ def unit_caption(u: str) -> str:
 
 
 unit = st.sidebar.radio(
-    "색인 단위",
+    "검색 단위",
     units,
     format_func=unit_caption,
-    help="후보 수가 달라 무작위 기준선부터 다르므로 색인 단위를 섞어서 비교하지 않습니다. "
+    help="후보 수가 달라 무작위 기준선부터 다르므로 검색 단위를 섞어서 비교하지 않습니다. "
          "한 번에 한 단위만 봅니다.",
 )
 
-summary = summary_all[summary_all["색인"] == unit].copy()
-qdf = qdf_all[qdf_all["색인"] == unit].copy()
+summary = summary_all[summary_all["검색"] == unit].copy()
+qdf = qdf_all[qdf_all["검색"] == unit].copy()
 chunks = chunks_all.get(unit) or chunks_all.get("-") or []
 
 hit_cols = sorted([c for c in summary.columns if c.startswith("Hit@")],
@@ -346,16 +350,16 @@ st.caption(
     f"표 정렬 기준 **{sort_col}**."
 )
 
-tab_overview, tab_lang, tab_questions, tab_misses, tab_chunks = st.tabs(
-    ["개요", "언어별", "질문별 비교", "오답 분석", "청크 탐색"]
+tab_overview, tab_res1, tab_res2, tab_data, tab_detail = st.tabs(
+    ["개요", "결과1", "결과2", "데이터셋", "상세세"]
 )
 
 
 # ── 1. 개요 ───────────────────────────────────────────────────
 with tab_overview:
-    st.subheader(f"요약 — 색인 [{unit}]")
+    st.subheader(f"요약 — 검색 [{unit}]")
     st.dataframe(
-        summary.set_index("model").drop(columns=["hf_id", "색인"], errors="ignore"),
+        summary.set_index("model").drop(columns=["hf_id", "검색"], errors="ignore"),
         width="stretch",
     )
     st.caption(
@@ -430,9 +434,9 @@ with tab_overview:
     )
 
 
-# ── 2. 언어별 ─────────────────────────────────────────────────
-with tab_lang:
-    st.subheader(f"언어별 정확도 — 색인 [{unit}]")
+# ── 2.결과1 ─────────────────────────
+with tab_res1:
+    st.subheader(f"언어별 정확도 — 검색 [{unit}]")
     st.caption(
         "질문은 전부 한국어이고 문서만 언어가 다릅니다. 즉 이 탭은 교차 언어 검색 성능입니다. "
     )
@@ -510,11 +514,6 @@ with tab_lang:
          if klang.startswith("MRR@") else
          f"{klang} — 정답을 얼마나 위쪽에 몰아놨는지 (정답이 여러 개일 때도 반영)")
     )
-    st.caption(
-        f"**{meaning}.**  진한 칸일수록 잘 찾은 언어입니다. 세로로 훑으면 "
-        "*어느 모델이 그 언어에 강한지*, 가로로 훑으면 *그 모델이 어떤 언어에서 "
-        "무너지는지* 보입니다."
-    )
 
     st.subheader("표로 보기")
     pivot = g.pivot(index="model", columns="언어", values="값")
@@ -573,11 +572,314 @@ with tab_lang:
     )
 
 
-# ── 3. 질문별 비교 ────────────────────────────────────────────
+
+# ── 3.결과2 ─────────────────────────
+def render_res2() -> None:
+    """결과2 탭 본문.
+
+    함수로 감싼 이유: 결과 폴더가 아직 없을 때 중간에 빠져나가야 하는데,
+    탭 블록 안에서 st.stop() 을 부르면 뒤따르는 탭들까지 그리다 만다.
+    """
+    st.subheader(f"언어별 정확도 — 검색 [{unit}]")
+    st.caption(
+        "질문과 문서는 같은 언어"
+    )
+
+    # 이 탭만 results_lang 을 읽는다. 다른 탭은 사이드바에서 고른 results 폴더를
+    # 그대로 쓰므로, 두 판을 한 화면에서 견줄 수 있다.
+    if not (LANG_DIR / "summary.csv").exists():
+        st.info(f"`{LANG_DIR / 'summary.csv'}` 가 없습니다.")
+        st.code(
+            f"cd {DATA_DIR}\npython -m src.run_benchmark "
+            f"--questions questions/questions_lang.json --out results_lang",
+            language="bash",
+        )
+        return
+
+    summary2_all, details2, _chunks2 = load_results(
+        str(LANG_DIR), results_stamp(LANG_DIR)
+    )
+    qdf2_all = build_question_frame(
+        details2, dict(zip(summary2_all["model"], summary2_all["검색"]))
+    )
+    # 검색 단위와 비교 모델은 사이드바 선택을 그대로 따른다 — 두 판을 같은 조건에서
+    # 나란히 놓기 위해서다. 언어판에 없는 모델은 조용히 빠진다.
+    qdf2 = qdf2_all[(qdf2_all["검색"] == unit) & (qdf2_all["model"].isin(picked))]
+    if qdf2.empty:
+        st.info(f"`{LANG_DIR.name}` 에 검색 [{unit}] · 선택한 모델의 결과가 없습니다.")
+        return
+
+    order2 = [m for m in order if m in set(qdf2["model"])]
+    hit_cols2 = sorted([c for c in qdf2.columns if c.startswith("Hit@")],
+                       key=lambda c: int(c.split("@")[1]))
+    hi2 = max(int(c.split("@")[1]) for c in hit_cols2)
+
+    # Hit 은 "맞혔나", MRR·nDCG 는 "얼마나 위에 올렸나"를 본다.
+    # 셋 다 0~1 범위라 같은 히트맵 색 눈금을 그대로 쓸 수 있다.
+    lang_metrics2 = hit_cols2 + [
+        c for c in (f"MRR@{hi2}", f"nDCG@{hi2}") if c in qdf2.columns
+    ]
+    lang_default2 = (lang_metrics2.index(f"nDCG@{hi2}")
+                     if f"nDCG@{hi2}" in lang_metrics2 else 0)
+    klang2 = st.radio("기준", lang_metrics2, horizontal=True, index=lang_default2,
+                      key="lang_k2")
+    is_hit2 = klang2.startswith("Hit@")   # 이때만 "맞힌 문항 수"가 말이 된다
+
+    lang_models2 = sorted(order2, key=lang_model_key)
+    lang_order2 = [l for l in LANG_LABEL if l in set(qdf2["lang"])]
+    label_order2 = [LANG_LABEL[l] for l in lang_order2]
+
+    g2 = qdf2.groupby(["model", "lang"])[klang2].agg(["mean", "size"]).reset_index()
+    g2.columns = ["model", "lang", "값", "문항수"]
+    # Hit@k 는 0/1 이라 평균 x 문항수 = 맞힌 개수지만, MRR·nDCG 는 부분점수라
+    # 같은 계산이 "맞힌 문항 수"를 뜻하지 않는다. 그래서 Hit 일 때만 만든다.
+    if is_hit2:
+        g2["맞힌수"] = (g2["값"] * g2["문항수"]).round().astype(int)
+    g2["언어"] = g2["lang"].map(LANG_LABEL)
+
+    # 램프가 테마에 따라 뒤집히므로 셀 글자색 조건도 함께 뒤집는다
+    hi_ink = p["on_weak"] if dark else p["on_strong"]
+    lo_ink = p["on_strong"] if dark else p["on_weak"]
+
+    # 히트맵 맨 끝 평균 칸 — 표와 같은 매크로 평균(언어별 값의 합 / 언어 수).
+    mean_rows2 = (
+        g2.groupby("model")
+        .agg(**{"값": ("값", "mean"), "문항수": ("문항수", "sum"),
+                **({"맞힌수": ("맞힌수", "sum")} if is_hit2 else {})})
+        .reset_index()
+        .assign(lang="__mean__", 언어="평균")
+    )
+    gh2 = pd.concat([g2, mean_rows2], ignore_index=True)
+    heat_order2 = label_order2 + ["평균"]
+
+    cells2 = (
+        alt.Chart(gh2)
+        .mark_rect(stroke=p["surface"], strokeWidth=2)   # 셀 사이 2px 표면 간격
+        .encode(
+            x=alt.X("언어:N", sort=heat_order2, title=None,
+                    axis=alt.Axis(labelAngle=0)),
+            y=alt.Y("model:N", sort=lang_models2, title=None),
+            color=alt.Color(
+                "값:Q",
+                scale=alt.Scale(range=p["seq"], domain=[0, 1]),
+                legend=alt.Legend(title=klang2, format=".0%", gradientLength=150),
+            ),
+            tooltip=[alt.Tooltip("model:N", title="모델"),
+                     alt.Tooltip("언어:N"),
+                     alt.Tooltip("값:Q", format=".3f", title=klang2)]
+                    + ([alt.Tooltip("맞힌수:Q", title="맞힌 문항")] if is_hit2 else [])
+                    + [alt.Tooltip("문항수:Q", title="전체 문항")],
+        )
+    )
+    cell_labels2 = cells2.mark_text(fontSize=11).encode(
+        text=alt.Text("값:Q", format=".2f"),
+        color=alt.condition(alt.datum["값"] >= 0.5, alt.value(hi_ink), alt.value(lo_ink)),
+    )
+    st.altair_chart(
+        themed((cells2 + cell_labels2).properties(height=44 * len(lang_models2) + 20), p),
+        width="stretch",
+    )
+
+    st.subheader("표로 보기")
+    pivot2 = g2.pivot(index="model", columns="언어", values="값")
+    pivot2 = pivot2.reindex(index=[m for m in lang_models2 if m in pivot2.index],
+                            columns=[c for c in label_order2 if c in pivot2.columns])
+    # 맨 끝 평균 열 — 화면에 보이는 언어 칸들의 단순 평균(언어당 가중치 동일).
+    # 문항 수가 언어마다 달라서 전체 문항 평균(개요 탭 값)과는 일치하지 않는다.
+    pivot2["평균"] = pivot2.mean(axis=1)
+    counts2 = g2.drop_duplicates("lang").set_index("언어")["문항수"]
+    st.dataframe(
+        pivot2.style.format("{:.3f}"),
+        width="stretch",
+    )
+    st.caption(
+        "언어별 문항 수 — "
+        + " · ".join(f"{c} {int(counts2[c])}개"
+                     for c in pivot2.columns if c in counts2.index)
+    )
+
+    st.subheader("언어별 1위")
+    winners2 = (
+        g2.loc[g2.groupby("lang")["값"].idxmax()]
+        .assign(순서=lambda x: x["lang"].map({l: i for i, l in enumerate(lang_order2)}))
+        .sort_values("순서")
+    )
+    st.dataframe(
+        winners2[["언어", "model", "값"] + (["맞힌수"] if is_hit2 else []) + ["문항수"]]
+        .rename(columns={"model": "1위 모델", "값": klang2})
+        .set_index("언어")
+        .style.format({klang2: "{:.3f}"}),
+        width="stretch",
+    )
+
+    st.subheader("모델 하나의 언어별 성적")
+    st.caption("한 모델이 어떤 언어에서 강하고 어디서 무너지는지 한 줄로 봅니다.")
+    mpick2 = st.selectbox("모델", lang_models2, key="lang_model2")
+    one2 = g2[g2["model"] == mpick2].sort_values("값", ascending=False)
+    obars2 = (
+        alt.Chart(one2)
+        .mark_bar(cornerRadiusEnd=4, size=20, color=p["series1"])
+        .encode(
+            y=alt.Y("언어:N", sort=one2["언어"].tolist(), title=None),
+            x=alt.X("값:Q", title=klang2, scale=alt.Scale(domain=[0, 1]),
+                    axis=alt.Axis(format=".0%")),
+            tooltip=[alt.Tooltip("언어:N"),
+                     alt.Tooltip("값:Q", format=".3f", title=klang2)]
+                    + ([alt.Tooltip("맞힌수:Q", title="맞힌 문항")] if is_hit2 else [])
+                    + [alt.Tooltip("문항수:Q", title="전체 문항")],
+        )
+    )
+    olabels2 = obars2.mark_text(align="left", dx=6, fontSize=11).encode(
+        text=alt.Text("값:Q", format=".3f"), color=alt.value(p["muted"])
+    )
+    st.altair_chart(
+        themed((obars2 + olabels2).properties(height=36 * len(one2) + 20), p),
+        width="stretch",
+    )
+
+with tab_res2:
+    render_res2()
+
+
+
+# ── 4. 데이터 ────────────────────────────────────────────
+with tab_data:
+    st.subheader("데이터")
+
+    # 지금 단위의 후보 목록이 chunks.json 에 없을 수도 있다(결과가 옛 판본이면
+    # 단위 이름이 어긋난다). 그때는 파일에 실제로 들어 있는 변형을 고르게 해서,
+    # 아래 통계와 표가 전부 같은 목록 하나를 보게 한다.
+    variants = [v for v in chunks_all if chunks_all.get(v)]
+    if chunks:
+        data_unit, data_chunks = unit, chunks
+    elif variants:
+        data_unit = st.selectbox(
+            "후보 목록", sorted(variants, key=index_sort_key), key="data_unit"
+        )
+        data_chunks = chunks_all[data_unit]
+    else:
+        data_unit, data_chunks = unit, []
+
+    if not data_chunks:
+        st.info(f"`chunks.json` 에 [{unit}] 후보 목록이 없습니다.")
+    else:
+        cdf = pd.json_normalize(data_chunks)
+        cdf["글자수"] = cdf["text"].str.len()
+        lang_col = "meta.lang" if "meta.lang" in cdf.columns else None
+        qmeta = qdf.drop_duplicates("qid")
+        lang_rank = {LANG_LABEL[l]: i for i, l in enumerate(LANG_LABEL)}
+
+        m1, m2, m3, m4 = st.columns(4)
+        m1.metric("문서", f"{cdf['source'].nunique():,}")
+        m2.metric(f"후보 [{data_unit}]", f"{len(cdf):,}")
+        m3.metric("질문", f"{n_questions:,}")
+        m4.metric("글자", f"{int(cdf['글자수'].sum()):,}")
+
+        st.subheader("언어별")
+        rows = []
+        for l in LANG_LABEL:
+            sub = cdf[cdf[lang_col] == l] if lang_col else cdf.iloc[0:0]
+            nq = int((qmeta["lang"] == l).sum())
+            if sub.empty and not nq:
+                continue
+            rows.append({
+                "언어": LANG_LABEL[l],
+                "문서": int(sub["source"].nunique()),
+                "후보": len(sub),
+                "질문": nq,
+                "평균 글자": int(sub["글자수"].mean()) if len(sub) else 0,
+            })
+        st.dataframe(pd.DataFrame(rows).set_index("언어"), width="stretch")
+
+        st.subheader("문서별")
+        doc = cdf.groupby("source").agg(후보=("id", "size"), 글자수=("글자수", "sum"))
+        if lang_col:
+            doc.insert(0, "언어", cdf.groupby("source")[lang_col].first().map(LANG_LABEL))
+        if "meta.doc_type" in cdf.columns:
+            doc.insert(1, "종류", cdf.groupby("source")["meta.doc_type"].first())
+        doc.index.name = "문서"
+        doc = doc.sort_index()
+        if lang_col:
+            # 언어 묶음 안에서는 문서명 순서를 유지해야 하므로 stable 정렬이다
+            doc = (doc.assign(_o=doc["언어"].map(lang_rank))
+                      .sort_values("_o", kind="stable").drop(columns="_o"))
+        st.dataframe(doc, width="stretch")
+
+        st.subheader("후보 길이 분포")
+        hist = (
+            alt.Chart(cdf[["글자수"]])
+            .mark_bar(color=p["series1"])
+            .encode(
+                x=alt.X("글자수:Q", bin=alt.Bin(maxbins=40)),
+                y=alt.Y("count():Q", title=None),
+                tooltip=[alt.Tooltip("count():Q", title="후보 수")],
+            )
+        )
+        st.altair_chart(themed(hist.properties(height=220), p), width="stretch")
+
+        st.subheader("질문")
+        qtab = qmeta[["qid", "lang", "question", "n_gold"]].copy()
+        qtab["언어"] = qtab["lang"].map(LANG_LABEL)
+        qtab = (qtab.assign(_o=qtab["언어"].map(lang_rank))
+                    .sort_values(["_o", "qid"]).drop(columns=["_o", "lang"]))
+        st.dataframe(
+            qtab.rename(columns={"question": "질문", "n_gold": "정답 후보"})
+                .set_index("qid"),
+            width="stretch",
+            height=420,
+        )
+
+        st.subheader("후보 탐색")
+        f0, f1, f2, f3 = st.columns(4)
+        if lang_col:
+            langs = [l for l in LANG_LABEL if l in set(cdf[lang_col].dropna())]
+            lang_pick = f0.selectbox(
+                "언어", ["전체"] + langs, key="data_lang",
+                format_func=lambda l: l if l == "전체" else f"{LANG_LABEL[l]} ({l})",
+            )
+        else:
+            lang_pick = "전체"
+        pool = cdf if lang_pick == "전체" else cdf[cdf[lang_col] == lang_pick]
+        src = f1.selectbox("문서", ["전체"] + sorted(pool["source"].unique()),
+                           key="data_src")
+        if "meta.doc_type" in cdf.columns:
+            dtypes = sorted(x for x in cdf["meta.doc_type"].dropna().unique())
+            dtype = f2.selectbox("종류", ["전체"] + dtypes, key="data_type")
+        else:
+            dtype = "전체"
+        if "meta.섹션" in cdf.columns:
+            secs = sorted(x for x in cdf["meta.섹션"].dropna().unique())
+            sec = f3.selectbox("섹션", ["전체"] + secs, key="data_sec")
+        else:
+            sec = "전체"
+
+        view = pool
+        if src != "전체":
+            view = view[view["source"] == src]
+        if dtype != "전체":
+            view = view[view["meta.doc_type"] == dtype]
+        if sec != "전체":
+            view = view[view["meta.섹션"] == sec]
+
+        cols = [c for c in ["id", "source", "locator", "meta.섹션", "글자수", "text"]
+                if c in view.columns]
+        st.dataframe(
+            view[cols].rename(columns={"meta.섹션": "섹션", "text": "본문",
+                                       "source": "문서"}).set_index("id"),
+            width="stretch",
+            height=520,
+        )
+
+
+
+
+
+# ── 5. 상세 ──────────────────────────────────
+
 qmap = qdf.drop_duplicates("qid").set_index("qid")["question"].to_dict()
 
-with tab_questions:
-    st.subheader(f"질문 × 모델 — 색인 [{unit}]")
+with tab_detail:
+    st.subheader(f"질문 × 모델 — 검색 [{unit}]")
     st.caption(
         "칸의 숫자는 **정답이 몇 등으로 올라왔는지**입니다. "
         "`1` 이면 1등으로 맞힌 것, `—` 는 상위 5개 안에 못 넣은 것입니다."
@@ -612,7 +914,7 @@ with tab_questions:
     )
 
     st.info(qmap[qid])
-    # 색인 단위를 섞지 않도록 지금 보고 있는 단위의 모델만 편다
+    # 검색 단위를 섞지 않도록 지금 보고 있는 단위의 모델만 편다
     detail_by_model = {
         d["model"]: d for d in details
         if d["qid"] == qid and d["model"] in set(order)
@@ -643,8 +945,6 @@ with tab_questions:
                          width="stretch")
 
 
-# ── 4. 오답 분석 ──────────────────────────────────────────────
-with tab_misses:
     k = st.radio("기준", hit_cols, horizontal=True, index=0)
 
     miss = qdf[qdf[k] == 0]
@@ -653,7 +953,7 @@ with tab_misses:
         .rename("틀린 문제 수").reset_index()
     )
 
-    st.subheader(f"모델별 {k} 오답 수 — 색인 [{unit}]")
+    st.subheader(f"모델별 {k} 오답 수 — 검색 [{unit}]")
     mbars = (
         alt.Chart(per_model)
         .mark_bar(cornerRadiusEnd=4, size=20, color=p["series1"])
@@ -679,7 +979,7 @@ with tab_misses:
     if not common:
         st.success("없습니다. 모든 문제를 최소 한 모델은 맞혔습니다.")
     else:
-        st.warning(
+        st.caption(
             f"{len(common)}개. **모델 성능 문제가 아닐 가능성이 높습니다** — "
             "질문 문장이나 `must_include` 라벨을 먼저 점검하세요."
         )
@@ -721,60 +1021,3 @@ with tab_misses:
         hardness["언어"] = hardness["qid"].str.split("-").str[0].map(LANG_LABEL)
         hardness["question"] = hardness["qid"].map(qmap)
         st.dataframe(hardness.set_index("qid"), width="stretch")
-
-
-# ── 5. 청크 탐색 ──────────────────────────────────────────────
-with tab_chunks:
-    if not chunks:
-        st.info(
-            f"`results/chunks.json` 에 색인 [{unit}] 항목이 없습니다. "
-            "벤치마크를 다시 돌리면 생성됩니다."
-        )
-    else:
-        st.caption(
-            f"색인 [{unit}] 의 실제 검색 후보입니다 — "
-            + ("문서 1건이 곧 후보 1개입니다." if unit == "full"
-               else "문서를 잘라 만든 청크 하나가 후보 1개입니다.")
-        )
-        cdf = pd.json_normalize(chunks)
-        cdf["글자수"] = cdf["text"].str.len()
-
-        f0, f1, f2, f3 = st.columns(4)
-        if "meta.lang" in cdf.columns:
-            langs = [l for l in LANG_LABEL if l in set(cdf["meta.lang"].dropna())]
-            lang_pick = f0.selectbox(
-                "언어", ["전체"] + langs,
-                format_func=lambda l: l if l == "전체" else f"{LANG_LABEL[l]} ({l})",
-            )
-        else:
-            lang_pick = "전체"
-        pool = cdf if lang_pick == "전체" else cdf[cdf["meta.lang"] == lang_pick]
-        src = f1.selectbox("문서", ["전체"] + sorted(pool["source"].unique()))
-        if "meta.doc_type" in cdf.columns:
-            dtypes = sorted(x for x in cdf["meta.doc_type"].dropna().unique())
-            dtype = f2.selectbox("종류", ["전체"] + dtypes)
-        else:
-            dtype = "전체"
-        if "meta.섹션" in cdf.columns:
-            secs = sorted(x for x in cdf["meta.섹션"].dropna().unique())
-            sec = f3.selectbox("섹션", ["전체"] + secs)
-        else:
-            sec = "전체"
-
-        view = pool
-        if src != "전체":
-            view = view[view["source"] == src]
-        if dtype != "전체":
-            view = view[view["meta.doc_type"] == dtype]
-        if sec != "전체":
-            view = view[view["meta.섹션"] == sec]
-
-        st.caption(f"{len(view)} / {len(cdf)} 후보")
-        cols = [c for c in ["id", "source", "locator", "meta.섹션", "글자수", "text"]
-                if c in view.columns]
-        st.dataframe(
-            view[cols].rename(columns={"meta.섹션": "섹션", "text": "본문",
-                                       "source": "문서"}).set_index("id"),
-            width="stretch",
-            height=520,
-        )
