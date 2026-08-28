@@ -1,28 +1,28 @@
 # 임베딩 모델 비교 결과
 
-- 색인 [512]: 후보 264개
-- 색인 [full]: 후보 51개
+- 검색 [512]: 후보 264개
+- 검색 [full]: 후보 51개
 - 질문 수: 150  (정답@k 는 이 중 몇 개를 맞혔는지)
 - scope: all
 - 청킹: 510token / overlap 100 / 기준 토크나이저 BAAI/bge-m3
 - chunks_per_s: 워밍업 후 최소 512개 텍스트를 3회 인코딩한 최고 기록
 
-| model                                | 색인   | hf_id                                   |   dim |   후보수 |   max_seq |   Hit@1 |   Hit@3 |   MRR@3 |   nDCG@3 |   정답@1 |   정답@3 |   VRAM_MB |   index_MB |   chunks_per_s |   query_ms |
+| model                                | 검색   | hf_id                                   |   dim |   후보수 |   max_seq |   Hit@1 |   Hit@3 |   MRR@3 |   nDCG@3 |   정답@1 |   정답@3 |   VRAM_MB |   index_MB |   chunks_per_s |   query_ms |
 |:-------------------------------------|:-------|:----------------------------------------|------:|---------:|----------:|--------:|--------:|--------:|---------:|---------:|---------:|----------:|-----------:|---------------:|-----------:|
-| bge-m3 [512] [hybrid(dense+sparse)]  | 512    | BAAI/bge-m3                             |  1024 |      264 |       512 |  0.8667 |  0.9933 |  0.9256 |   0.8992 |      130 |      149 |      1273 |       1.03 |          157.3 |       1.07 |
-| kure-v1 [512]                        | 512    | nlpai-lab/KURE-v1                       |  1024 |      264 |       512 |  0.84   |  0.98   |  0.9044 |   0.89   |      126 |      147 |      1287 |       1.03 |          149.7 |       1.48 |
-| bge-m3 [512]                         | 512    | BAAI/bge-m3                             |  1024 |      264 |       512 |  0.8133 |  0.9733 |  0.8878 |   0.8653 |      122 |      146 |      1273 |       1.03 |          157.3 |       1.07 |
-| e5-small-ko [512]                    | 512    | dragonkue/multilingual-e5-small-ko      |   384 |      264 |       512 |  0.8    |  0.9467 |  0.8689 |   0.8522 |      120 |      142 |       313 |       0.39 |          559.1 |       1.13 |
-| harrier-270m [512]                   | 512    | microsoft/harrier-oss-v1-270m           |   640 |      264 |       512 |  0.7067 |  0.9333 |  0.8133 |   0.7949 |      106 |      140 |       675 |       0.64 |          184.7 |       2.29 |
-| harrier-0.6b [512]                   | 512    | microsoft/harrier-oss-v1-0.6b           |  1024 |      264 |       512 |  0.7267 |  0.92   |  0.8167 |   0.7861 |      109 |      138 |      1382 |       1.03 |           64.9 |       2.95 |
-| e5-large-instruct [512]              | 512    | intfloat/multilingual-e5-large-instruct |  1024 |      264 |       512 |  0.7067 |  0.8867 |  0.7911 |   0.7703 |      106 |      133 |      1273 |       1.03 |          146.6 |       1.47 |
-| harrier-0.6b [full]                  | full   | microsoft/harrier-oss-v1-0.6b           |  1024 |       51 |      8192 |  0.94   |  0.9933 |  0.9622 |   0.9702 |      141 |      149 |      2440 |       0.2  |           10.3 |       8.05 |
-| bge-m3 [full] [hybrid(dense+sparse)] | full   | BAAI/bge-m3                             |  1024 |       51 |      8192 |  0.94   |  0.98   |  0.9578 |   0.9635 |      141 |      147 |      1536 |       0.2  |           27.6 |       3.44 |
-| kure-v1 [full]                       | full   | nlpai-lab/KURE-v1                       |  1024 |       51 |      8192 |  0.92   |  0.9667 |  0.9433 |   0.9494 |      138 |      145 |      1565 |       0.2  |           30   |       3.88 |
-| bge-m3 [full]                        | full   | BAAI/bge-m3                             |  1024 |       51 |      8192 |  0.9    |  0.9667 |  0.93   |   0.9394 |      135 |      145 |      1536 |       0.2  |           27.6 |       3.44 |
-| harrier-270m [full]                  | full   | microsoft/harrier-oss-v1-270m           |   640 |       51 |      8192 |  0.8933 |  0.9533 |  0.92   |   0.9286 |      134 |      143 |      1360 |       0.12 |           31.6 |       7.31 |
+| bge-m3 [512] [hybrid(dense+sparse)]  | 512    | BAAI/bge-m3                             |  1024 |      264 |       512 |  0.8867 |  0.9933 |  0.9367 |   0.9095 |      133 |      149 |      1273 |       1.03 |          157.4 |       1.11 |
+| kure-v1 [512]                        | 512    | nlpai-lab/KURE-v1                       |  1024 |      264 |       512 |  0.8467 |  0.98   |  0.9111 |   0.8971 |      127 |      147 |      1287 |       1.03 |          148.4 |       1.42 |
+| bge-m3 [512]                         | 512    | BAAI/bge-m3                             |  1024 |      264 |       512 |  0.8333 |  0.9733 |  0.9    |   0.8751 |      125 |      146 |      1273 |       1.03 |          157.4 |       1.11 |
+| e5-small-ko [512]                    | 512    | dragonkue/multilingual-e5-small-ko      |   384 |      264 |       512 |  0.8333 |  0.96   |  0.8922 |   0.8736 |      125 |      144 |       313 |       0.39 |          582.2 |       1.16 |
+| harrier-270m [512]                   | 512    | microsoft/harrier-oss-v1-270m           |   640 |      264 |       512 |  0.7333 |  0.94   |  0.8311 |   0.8105 |      110 |      141 |       675 |       0.64 |          182.4 |       2.27 |
+| harrier-0.6b [512]                   | 512    | microsoft/harrier-oss-v1-0.6b           |  1024 |      264 |       512 |  0.74   |  0.9333 |  0.83   |   0.801  |      111 |      140 |      1382 |       1.03 |           64.7 |       2.93 |
+| e5-large-instruct [512]              | 512    | intfloat/multilingual-e5-large-instruct |  1024 |      264 |       512 |  0.7333 |  0.9    |  0.81   |   0.7896 |      110 |      135 |      1273 |       1.03 |          146.1 |       1.52 |
+| harrier-0.6b [full]                  | full   | microsoft/harrier-oss-v1-0.6b           |  1024 |       51 |      8192 |  0.9533 |  0.9933 |  0.97   |   0.976  |      143 |      149 |      2440 |       0.2  |           10.4 |       9.15 |
+| bge-m3 [full] [hybrid(dense+sparse)] | full   | BAAI/bge-m3                             |  1024 |       51 |      8192 |  0.9467 |  0.98   |  0.9611 |   0.966  |      142 |      147 |      1536 |       0.2  |           27.9 |       3.52 |
+| kure-v1 [full]                       | full   | nlpai-lab/KURE-v1                       |  1024 |       51 |      8192 |  0.92   |  0.9667 |  0.9433 |   0.9494 |      138 |      145 |      1565 |       0.2  |           29.7 |       4.07 |
+| bge-m3 [full]                        | full   | BAAI/bge-m3                             |  1024 |       51 |      8192 |  0.9    |  0.9667 |  0.93   |   0.9394 |      135 |      145 |      1536 |       0.2  |           27.9 |       3.52 |
+| harrier-270m [full]                  | full   | microsoft/harrier-oss-v1-270m           |   640 |       51 |      8192 |  0.8933 |  0.9533 |  0.92   |   0.9286 |      134 |      143 |      1360 |       0.12 |           30.6 |       6.99 |
 
-- 모든 지표는 **그 행의 색인 단위에서** 잰 값이다. `512` 행은 청크 랭킹, `full` 행은 문서 랭킹 기준이다.
+- 모든 지표는 **그 행의 검색 단위에서** 잰 값이다. `512` 행은 청크 랭킹, `full` 행은 문서 랭킹 기준이다.
 - 후보 수가 다르므로(512: 청크 274개 / full: 문서 44개) **512 행끼리, full 행끼리만 비교할 것.** 무작위로 찍었을 때의 기준선부터 다르다 (1/274 vs 1/44).
 - **Hit@k**  상위 k개 안에 정답이 하나라도 있던 질문 비율. k 가 커지면 절대 낮아지지 않는다 (Hit@1 <= Hit@3)
 - **정답@k**  같은 값을 비율이 아니라 실제 맞힌 문제 개수로 센 것
@@ -48,7 +48,7 @@
 
 ## kure-v1 [512]
 
-### 틀린@1 — 24/150개
+### 틀린@1 — 23/150개
 
 - `ko-08`  피고인이 비밀번호를 눌러 침입한 C산후조리원이 있던 고양시 일산동구 건물의 층수와 침입 날짜를 찾아주세요
 - `ko-18`  카카오톡으로 연락해 화물 수령을 부탁한 B가 피고인의 계좌로 입금한 사례금을 찾아주세요
@@ -70,16 +70,15 @@
 - `ru-10`  Найдите сведения, которые, как предупреждает прокуратура Центрального района города Оренбурга, мошенники просят сообщить под предлогом перевода денег за товар, объявление о продаже которого вы разместили в социальных сетях
 - `ru-16`  Найдите наказание, назначенное Емельянову Даниилу Игоревичу Бежецким межрайонным судом Тверской области
 - `ru-19`  Найдите решение, исключённое апелляцией Тверского областного суда из приговора суда первой инстанции по делу Емельянова Д.И.
-- `pil-05`  Hanapin ang numero ng telepono ng USCIS Contact Center at ang TTY na numero para sa mga may kapansanan sa pandinig
-- `pil-11`  Hanapin ang pangalan ng imbestigador na dumating sa bahay ni Sheila Martir kinabukasan ng pamamaril upang kunin ang kanyang salaysay
-- `pil-15`  Hanapin ang pangalan at Roll number ng abogado ng Public Attorney’s Office na sumumpang siya mismo ang kumuha ng salaysay ni Sheila Martir sa kanyang opisina at nagtala’t nagsalin nito sa Filipino
-- `pil-18`  Hanapin ang numero ng sentro ng USCIS na dapat tawagan kapag may alalahanin sa visa o dokumento sa imigrasyon, sa bahaging nagtuturong magsumbong sa FTC.gov/Complaint
+- `pil-07`  Hanapin ang dalawang pinagkukunan ng numero na dapat gamitin sa pakikipag-ugnayan sa kompanya ng utilidad, sa halip na tumawag sa numerong ibinibigay ng caller
+- `pil-12`  Hanapin ang sangay at lungsod ng hukumang dumidinig sa kasong isinampa laban kay PO2 Raffy Magaling, at kung anong kaso ito
+- `pil-13`  Hanapin kung nasaan ang testigo at ano ang kanyang ginagawa noong gabi ng ika-14 ng Pebrero 2016 nang habulin si Lito Bartolome
 
 ### 틀린@3 — 3/150개
 
 - `ko-25`  중국 C社 관계자들이 위장회사를 통한 입사·중국 이메일 사용 등과 함께, 출국금지·체포 시 전파하기로 정한 암호를 찾아주세요
 - `uz-15`  Qodirjonova Madina Ulug’bek qizi keltirgan DOI raqamini toping
-- `pil-11`  Hanapin ang pangalan ng imbestigador na dumating sa bahay ni Sheila Martir kinabukasan ng pamamaril upang kunin ang kanyang salaysay
+- `pil-13`  Hanapin kung nasaan ang testigo at ano ang kanyang ginagawa noong gabi ng ika-14 ng Pebrero 2016 nang habulin si Lito Bartolome
 
 ## kure-v1 [full]
 
@@ -108,7 +107,7 @@
 
 ## e5-large-instruct [512]
 
-### 틀린@1 — 44/150개
+### 틀린@1 — 40/150개
 
 - `ko-08`  피고인이 비밀번호를 눌러 침입한 C산후조리원이 있던 고양시 일산동구 건물의 층수와 침입 날짜를 찾아주세요
 - `ko-09`  판사 정재우·이영제가 함께 심리한 항소심에서, 양형 이유로 건조물침입죄의 침입 태양에 비추어 건조물의 평온이 어느 정도 침해되었다고 본 판단을 찾아주세요
@@ -147,15 +146,11 @@
 - `ru-17`  Найдите общую сумму материальных ценностей, присвоенных и растраченных Емельяновым Д.И. в АО «Р»
 - `ru-19`  Найдите решение, исключённое апелляцией Тверского областного суда из приговора суда первой инстанции по делу Емельянова Д.И.
 - `ru-20`  Найдите вывод Верховного Суда России по кассационной жалобе защитника по делу Емельянова Д.И.
-- `pil-01`  Hanapin ang ahensyang nagbibigay ng awtoridad na magpayo tungkol sa batas sa imigrasyon, dahil hindi tulad sa Latin Amerika ay hindi maaaring magbigay ng payong legal ang notaryo sa Estados Unidos
-- `pil-05`  Hanapin ang numero ng telepono ng USCIS Contact Center at ang TTY na numero para sa mga may kapansanan sa pandinig
+- `pil-01`  Hanapin kung ano ang ibig sabihin ng salitang notaryo o notaryo publiko tungkol sa isang indibidwal sa mga bansa sa Latin Amerika
 - `pil-10`  Hanapin ang numerong dapat pindutin upang piliin ang Tagalog sa hotline ng pagsusumbong ng scam, matapos ang babala tungkol sa hinihinging padala sa MoneyGram o Western Union
-- `pil-11`  Hanapin ang pangalan ng imbestigador na dumating sa bahay ni Sheila Martir kinabukasan ng pamamaril upang kunin ang kanyang salaysay
-- `pil-13`  Hanapin ang petsa at tinatayang oras kung kailan nasaksihan ni SHEILA MARTIR ang pangyayari
-- `pil-15`  Hanapin ang pangalan at Roll number ng abogado ng Public Attorney’s Office na sumumpang siya mismo ang kumuha ng salaysay ni Sheila Martir sa kanyang opisina at nagtala’t nagsalin nito sa Filipino
-- `pil-18`  Hanapin ang numero ng sentro ng USCIS na dapat tawagan kapag may alalahanin sa visa o dokumento sa imigrasyon, sa bahaging nagtuturong magsumbong sa FTC.gov/Complaint
+- `pil-11`  Hanapin kung ano ang ibinigay sa testigo sa police station nang utusan siyang ituro kung sino ang bumaril kay Lito Bartolome
 
-### 틀린@3 — 17/150개
+### 틀린@3 — 15/150개
 
 - `en-01`  In the Antonio Nathaniel Davenport case, find the murder offense the government had to prove beyond a reasonable doubt
 - `en-05`  Find the offense charged in Count 1 against Bryan Lee Burrows and the case number
@@ -172,12 +167,10 @@
 - `uz-11`  Nasimov Umedjon Ulugbekovich tahsil olayotgan universitetni toping
 - `uz-17`  Kamolov Xayrulloxon Juraxon o’g’li egallab turgan lavozimni toping
 - `ru-20`  Найдите вывод Верховного Суда России по кассационной жалобе защитника по делу Емельянова Д.И.
-- `pil-11`  Hanapin ang pangalan ng imbestigador na dumating sa bahay ni Sheila Martir kinabukasan ng pamamaril upang kunin ang kanyang salaysay
-- `pil-18`  Hanapin ang numero ng sentro ng USCIS na dapat tawagan kapag may alalahanin sa visa o dokumento sa imigrasyon, sa bahaging nagtuturong magsumbong sa FTC.gov/Complaint
 
 ## e5-small-ko [512]
 
-### 틀린@1 — 30/150개
+### 틀린@1 — 25/150개
 
 - `ko-07`  재판장 신광렬이 선고한 건조물침입·업무방해 항소심에서 피고인에게 정해진 벌금액을 찾아주세요
 - `ko-08`  피고인이 비밀번호를 눌러 침입한 C산후조리원이 있던 고양시 일산동구 건물의 층수와 침입 날짜를 찾아주세요
@@ -203,14 +196,9 @@
 - `ru-10`  Найдите сведения, которые, как предупреждает прокуратура Центрального района города Оренбурга, мошенники просят сообщить под предлогом перевода денег за товар, объявление о продаже которого вы разместили в социальных сетях
 - `ru-15`  Найдите марку автомобиля, в части конфискации которого Верховный Суд России отменил решение по делу Конева И.А.
 - `ru-20`  Найдите вывод Верховного Суда России по кассационной жалобе защитника по делу Емельянова Д.И.
-- `pil-05`  Hanapin ang numero ng telepono ng USCIS Contact Center at ang TTY na numero para sa mga may kapansanan sa pandinig
-- `pil-11`  Hanapin ang pangalan ng imbestigador na dumating sa bahay ni Sheila Martir kinabukasan ng pamamaril upang kunin ang kanyang salaysay
-- `pil-12`  Hanapin ang numero ng administrative matter ng Korte Suprema na nagtatakdang pumalit ang salaysay ni SHEILA MARTIR sa direct examination
-- `pil-13`  Hanapin ang petsa at tinatayang oras kung kailan nasaksihan ni SHEILA MARTIR ang pangyayari
-- `pil-15`  Hanapin ang pangalan at Roll number ng abogado ng Public Attorney’s Office na sumumpang siya mismo ang kumuha ng salaysay ni Sheila Martir sa kanyang opisina at nagtala’t nagsalin nito sa Filipino
-- `pil-18`  Hanapin ang numero ng sentro ng USCIS na dapat tawagan kapag may alalahanin sa visa o dokumento sa imigrasyon, sa bahaging nagtuturong magsumbong sa FTC.gov/Complaint
+- `pil-07`  Hanapin ang dalawang pinagkukunan ng numero na dapat gamitin sa pakikipag-ugnayan sa kompanya ng utilidad, sa halip na tumawag sa numerong ibinibigay ng caller
 
-### 틀린@3 — 8/150개
+### 틀린@3 — 6/150개
 
 - `ko-25`  중국 C社 관계자들이 위장회사를 통한 입사·중국 이메일 사용 등과 함께, 출국금지·체포 시 전파하기로 정한 암호를 찾아주세요
 - `ko-26`  K반도체 국가핵심기술 유출사건에서 중국 C社 설립에 출자한 중국지방정부와 중국 반도체설계회사의 금액을 찾아주세요
@@ -218,12 +206,10 @@
 - `vn-08`  Hãy tìm lý do Tòa án không áp dụng hình phạt bổ sung là phạt tiền từ 5.000.000 đồng đến 50.000.000 đồng trong vụ án Lại Văn P
 - `uz-01`  Azadov Mirjalol Bahodir o‘g‘li tahsil olayotgan universitet va magistratura yo‘nalishi shifrini toping
 - `ru-20`  Найдите вывод Верховного Суда России по кассационной жалобе защитника по делу Емельянова Д.И.
-- `pil-11`  Hanapin ang pangalan ng imbestigador na dumating sa bahay ni Sheila Martir kinabukasan ng pamamaril upang kunin ang kanyang salaysay
-- `pil-13`  Hanapin ang petsa at tinatayang oras kung kailan nasaksihan ni SHEILA MARTIR ang pangyayari
 
 ## bge-m3 [512]
 
-### 틀린@1 — 28/150개
+### 틀린@1 — 25/150개
 
 - `ko-08`  피고인이 비밀번호를 눌러 침입한 C산후조리원이 있던 고양시 일산동구 건물의 층수와 침입 날짜를 찾아주세요
 - `ko-18`  카카오톡으로 연락해 화물 수령을 부탁한 B가 피고인의 계좌로 입금한 사례금을 찾아주세요
@@ -247,23 +233,20 @@
 - `ru-10`  Найдите сведения, которые, как предупреждает прокуратура Центрального района города Оренбурга, мошенники просят сообщить под предлогом перевода денег за товар, объявление о продаже которого вы разместили в социальных сетях
 - `ru-15`  Найдите марку автомобиля, в части конфискации которого Верховный Суд России отменил решение по делу Конева И.А.
 - `ru-19`  Найдите решение, исключённое апелляцией Тверского областного суда из приговора суда первой инстанции по делу Емельянова Д.И.
-- `pil-01`  Hanapin ang ahensyang nagbibigay ng awtoridad na magpayo tungkol sa batas sa imigrasyon, dahil hindi tulad sa Latin Amerika ay hindi maaaring magbigay ng payong legal ang notaryo sa Estados Unidos
-- `pil-05`  Hanapin ang numero ng telepono ng USCIS Contact Center at ang TTY na numero para sa mga may kapansanan sa pandinig
-- `pil-11`  Hanapin ang pangalan ng imbestigador na dumating sa bahay ni Sheila Martir kinabukasan ng pamamaril upang kunin ang kanyang salaysay
-- `pil-12`  Hanapin ang numero ng administrative matter ng Korte Suprema na nagtatakdang pumalit ang salaysay ni SHEILA MARTIR sa direct examination
-- `pil-15`  Hanapin ang pangalan at Roll number ng abogado ng Public Attorney’s Office na sumumpang siya mismo ang kumuha ng salaysay ni Sheila Martir sa kanyang opisina at nagtala’t nagsalin nito sa Filipino
-- `pil-18`  Hanapin ang numero ng sentro ng USCIS na dapat tawagan kapag may alalahanin sa visa o dokumento sa imigrasyon, sa bahaging nagtuturong magsumbong sa FTC.gov/Complaint
+- `pil-01`  Hanapin kung ano ang ibig sabihin ng salitang notaryo o notaryo publiko tungkol sa isang indibidwal sa mga bansa sa Latin Amerika
+- `pil-07`  Hanapin ang dalawang pinagkukunan ng numero na dapat gamitin sa pakikipag-ugnayan sa kompanya ng utilidad, sa halip na tumawag sa numerong ibinibigay ng caller
+- `pil-13`  Hanapin kung nasaan ang testigo at ano ang kanyang ginagawa noong gabi ng ika-14 ng Pebrero 2016 nang habulin si Lito Bartolome
 
 ### 틀린@3 — 4/150개
 
 - `ko-25`  중국 C社 관계자들이 위장회사를 통한 입사·중국 이메일 사용 등과 함께, 출국금지·체포 시 전파하기로 정한 암호를 찾아주세요
 - `ch-06`  请找出审判长李凤波宣判时没收并上缴国库的犯罪工具，以及不服判决时可以上诉的上级法院
-- `pil-05`  Hanapin ang numero ng telepono ng USCIS Contact Center at ang TTY na numero para sa mga may kapansanan sa pandinig
-- `pil-11`  Hanapin ang pangalan ng imbestigador na dumating sa bahay ni Sheila Martir kinabukasan ng pamamaril upang kunin ang kanyang salaysay
+- `pil-07`  Hanapin ang dalawang pinagkukunan ng numero na dapat gamitin sa pakikipag-ugnayan sa kompanya ng utilidad, sa halip na tumawag sa numerong ibinibigay ng caller
+- `pil-13`  Hanapin kung nasaan ang testigo at ano ang kanyang ginagawa noong gabi ng ika-14 ng Pebrero 2016 nang habulin si Lito Bartolome
 
 ## bge-m3 [512] [hybrid(dense+sparse)]
 
-### 틀린@1 — 20/150개
+### 틀린@1 — 17/150개
 
 - `ko-08`  피고인이 비밀번호를 눌러 침입한 C산후조리원이 있던 고양시 일산동구 건물의 층수와 침입 날짜를 찾아주세요
 - `ko-18`  카카오톡으로 연락해 화물 수령을 부탁한 B가 피고인의 계좌로 입금한 사례금을 찾아주세요
@@ -279,16 +262,13 @@
 - `ru-04`  Найдите официальный реестр органа, в котором, по разъяснению прокуратуры Омутинского района Тюменской области, можно проверить, заблокирован ли интернет-ресурс
 - `ru-10`  Найдите сведения, которые, как предупреждает прокуратура Центрального района города Оренбурга, мошенники просят сообщить под предлогом перевода денег за товар, объявление о продаже которого вы разместили в социальных сетях
 - `ru-19`  Найдите решение, исключённое апелляцией Тверского областного суда из приговора суда первой инстанции по делу Емельянова Д.И.
-- `pil-01`  Hanapin ang ahensyang nagbibigay ng awtoridad na magpayo tungkol sa batas sa imigrasyon, dahil hindi tulad sa Latin Amerika ay hindi maaaring magbigay ng payong legal ang notaryo sa Estados Unidos
-- `pil-05`  Hanapin ang numero ng telepono ng USCIS Contact Center at ang TTY na numero para sa mga may kapansanan sa pandinig
-- `pil-11`  Hanapin ang pangalan ng imbestigador na dumating sa bahay ni Sheila Martir kinabukasan ng pamamaril upang kunin ang kanyang salaysay
-- `pil-13`  Hanapin ang petsa at tinatayang oras kung kailan nasaksihan ni SHEILA MARTIR ang pangyayari
-- `pil-15`  Hanapin ang pangalan at Roll number ng abogado ng Public Attorney’s Office na sumumpang siya mismo ang kumuha ng salaysay ni Sheila Martir sa kanyang opisina at nagtala’t nagsalin nito sa Filipino
-- `pil-18`  Hanapin ang numero ng sentro ng USCIS na dapat tawagan kapag may alalahanin sa visa o dokumento sa imigrasyon, sa bahaging nagtuturong magsumbong sa FTC.gov/Complaint
+- `pil-07`  Hanapin ang dalawang pinagkukunan ng numero na dapat gamitin sa pakikipag-ugnayan sa kompanya ng utilidad, sa halip na tumawag sa numerong ibinibigay ng caller
+- `pil-12`  Hanapin ang sangay at lungsod ng hukumang dumidinig sa kasong isinampa laban kay PO2 Raffy Magaling, at kung anong kaso ito
+- `pil-13`  Hanapin kung nasaan ang testigo at ano ang kanyang ginagawa noong gabi ng ika-14 ng Pebrero 2016 nang habulin si Lito Bartolome
 
 ### 틀린@3 — 1/150개
 
-- `pil-11`  Hanapin ang pangalan ng imbestigador na dumating sa bahay ni Sheila Martir kinabukasan ng pamamaril upang kunin ang kanyang salaysay
+- `pil-13`  Hanapin kung nasaan ang testigo at ano ang kanyang ginagawa noong gabi ng ika-14 ng Pebrero 2016 nang habulin si Lito Bartolome
 
 ## bge-m3 [full]
 
@@ -308,7 +288,7 @@
 - `ru-05`  Найдите номер «Телефона доверия» УВМД России и номер дежурной части
 - `ru-12`  Найдите в списке, завершающемся словами «Услышав данные фразы, прекратите разговор», требование взять новый кредит и передать полученные деньги сотруднику
 - `pil-06`  Hanapin ang tatlong cash reload card na binabalaang hinihingi ng mga scammer kasama ng gift card tulad ng iTunes o Amazon
-- `pil-18`  Hanapin ang numero ng sentro ng USCIS na dapat tawagan kapag may alalahanin sa visa o dokumento sa imigrasyon, sa bahaging nagtuturong magsumbong sa FTC.gov/Complaint
+- `pil-18`  Hanapin ang tatlong uri ng taong maaaring makausap kung hindi ka kumbinsidong scam ang tawag, sa artikulong nagsasabing tawagan ang National Customer Service Center ng USCIS kapag may alalahanin sa visa
 
 ### 틀린@3 — 5/150개
 
@@ -320,7 +300,7 @@
 
 ## bge-m3 [full] [hybrid(dense+sparse)]
 
-### 틀린@1 — 9/150개
+### 틀린@1 — 8/150개
 
 - `en-18`  Find the rulings the court made on the motion at Docket No. 39 and on the motion at Docket No. 45
 - `ch-06`  请找出审判长李凤波宣判时没收并上缴国库的犯罪工具，以及不服判决时可以上诉的上级法院
@@ -330,7 +310,6 @@
 - `uz-18`  O‘zbekiston Respublikasi Oliy sudi e’lon qilgan rasmiy statistikada 2024-yilda jinoyat sudlari ko‘rib chiqqan ishlar soni va ular tegishli bo‘lgan shaxslar sonini toping
 - `ru-01`  Найдите диапазон номеров, звонки с которых рекомендовано не принимать, указанный вместе со способом «SMS-просьба о помощи»
 - `pil-06`  Hanapin ang tatlong cash reload card na binabalaang hinihingi ng mga scammer kasama ng gift card tulad ng iTunes o Amazon
-- `pil-18`  Hanapin ang numero ng sentro ng USCIS na dapat tawagan kapag may alalahanin sa visa o dokumento sa imigrasyon, sa bahaging nagtuturong magsumbong sa FTC.gov/Complaint
 
 ### 틀린@3 — 3/150개
 
@@ -340,7 +319,7 @@
 
 ## harrier-0.6b [512]
 
-### 틀린@1 — 41/150개
+### 틀린@1 — 39/150개
 
 - `ko-08`  피고인이 비밀번호를 눌러 침입한 C산후조리원이 있던 고양시 일산동구 건물의 층수와 침입 날짜를 찾아주세요
 - `ko-25`  중국 C社 관계자들이 위장회사를 통한 입사·중국 이메일 사용 등과 함께, 출국금지·체포 시 전파하기로 정한 암호를 찾아주세요
@@ -375,16 +354,14 @@
 - `ru-17`  Найдите общую сумму материальных ценностей, присвоенных и растраченных Емельяновым Д.И. в АО «Р»
 - `ru-18`  Найдите период, в течение которого совершено преступление Емельяновым Д.И.
 - `ru-20`  Найдите вывод Верховного Суда России по кассационной жалобе защитника по делу Емельянова Д.И.
-- `pil-01`  Hanapin ang ahensyang nagbibigay ng awtoridad na magpayo tungkol sa batas sa imigrasyon, dahil hindi tulad sa Latin Amerika ay hindi maaaring magbigay ng payong legal ang notaryo sa Estados Unidos
 - `pil-04`  Hanapin ang mga paraan ng pagbabayad na hinding-hindi dapat gamitin ng refugee kapalit ng tulong sa imigrasyon, na nakalista kasabay ng payong kumonsulta muna sa case manager ng resettlement agency
-- `pil-07`  Hanapin ang inirekomendang paraan ng pakikipag-ugnayan sa kompanya ng utility kapag nag-aalala ka sa hindi nabayarang bill, matapos ang babala tungkol sa hinihinging MoneyPak, Vanilla, at Reloadit
+- `pil-07`  Hanapin ang dalawang pinagkukunan ng numero na dapat gamitin sa pakikipag-ugnayan sa kompanya ng utilidad, sa halip na tumawag sa numerong ibinibigay ng caller
 - `pil-10`  Hanapin ang numerong dapat pindutin upang piliin ang Tagalog sa hotline ng pagsusumbong ng scam, matapos ang babala tungkol sa hinihinging padala sa MoneyGram o Western Union
-- `pil-11`  Hanapin ang pangalan ng imbestigador na dumating sa bahay ni Sheila Martir kinabukasan ng pamamaril upang kunin ang kanyang salaysay
-- `pil-13`  Hanapin ang petsa at tinatayang oras kung kailan nasaksihan ni SHEILA MARTIR ang pangyayari
-- `pil-15`  Hanapin ang pangalan at Roll number ng abogado ng Public Attorney’s Office na sumumpang siya mismo ang kumuha ng salaysay ni Sheila Martir sa kanyang opisina at nagtala’t nagsalin nito sa Filipino
-- `pil-18`  Hanapin ang numero ng sentro ng USCIS na dapat tawagan kapag may alalahanin sa visa o dokumento sa imigrasyon, sa bahaging nagtuturong magsumbong sa FTC.gov/Complaint
+- `pil-13`  Hanapin kung nasaan ang testigo at ano ang kanyang ginagawa noong gabi ng ika-14 ng Pebrero 2016 nang habulin si Lito Bartolome
+- `pil-15`  Hanapin ang pangalan at Roll number ng abogado ng Public Attorney’s Office na tumulong kay Sheila Martir na gumawa ng complaint-affidavit laban kay PO2 Raffy Magaling
+- `pil-18`  Hanapin ang tatlong uri ng taong maaaring makausap kung hindi ka kumbinsidong scam ang tawag, sa artikulong nagsasabing tawagan ang National Customer Service Center ng USCIS kapag may alalahanin sa visa
 
-### 틀린@3 — 12/150개
+### 틀린@3 — 10/150개
 
 - `ch-06`  请找出审判长李凤波宣判时没收并上缴国库的犯罪工具，以及不服判决时可以上诉的上级法院
 - `vn-01`  Hãy tìm Thẩm phán – Chủ tọa phiên tòa đã xét xử Võ Minh P cùng với các Hội thẩm nhân dân Bùi Thị Kim Thủy, Dương Thị Được
@@ -395,13 +372,11 @@
 - `ru-17`  Найдите общую сумму материальных ценностей, присвоенных и растраченных Емельяновым Д.И. в АО «Р»
 - `ru-20`  Найдите вывод Верховного Суда России по кассационной жалобе защитника по делу Емельянова Д.И.
 - `pil-10`  Hanapin ang numerong dapat pindutin upang piliin ang Tagalog sa hotline ng pagsusumbong ng scam, matapos ang babala tungkol sa hinihinging padala sa MoneyGram o Western Union
-- `pil-11`  Hanapin ang pangalan ng imbestigador na dumating sa bahay ni Sheila Martir kinabukasan ng pamamaril upang kunin ang kanyang salaysay
-- `pil-13`  Hanapin ang petsa at tinatayang oras kung kailan nasaksihan ni SHEILA MARTIR ang pangyayari
-- `pil-18`  Hanapin ang numero ng sentro ng USCIS na dapat tawagan kapag may alalahanin sa visa o dokumento sa imigrasyon, sa bahaging nagtuturong magsumbong sa FTC.gov/Complaint
+- `pil-13`  Hanapin kung nasaan ang testigo at ano ang kanyang ginagawa noong gabi ng ika-14 ng Pebrero 2016 nang habulin si Lito Bartolome
 
 ## harrier-0.6b [full]
 
-### 틀린@1 — 9/150개
+### 틀린@1 — 7/150개
 
 - `en-18`  Find the rulings the court made on the motion at Docket No. 39 and on the motion at Docket No. 45
 - `ch-06`  请找出审判长李凤波宣判时没收并上缴国库的犯罪工具，以及不服判决时可以上诉的上级法院
@@ -409,9 +384,7 @@
 - `uz-15`  Qodirjonova Madina Ulug’bek qizi keltirgan DOI raqamini toping
 - `ru-11`  Найдите то, что рекомендовано проверить в первую очередь для распознавания подделки после слов «Мошенники создают сайты-клоны торговых площадок»
 - `ru-12`  Найдите в списке, завершающемся словами «Услышав данные фразы, прекратите разговор», требование взять новый кредит и передать полученные деньги сотруднику
-- `pil-05`  Hanapin ang numero ng telepono ng USCIS Contact Center at ang TTY na numero para sa mga may kapansanan sa pandinig
 - `pil-10`  Hanapin ang numerong dapat pindutin upang piliin ang Tagalog sa hotline ng pagsusumbong ng scam, matapos ang babala tungkol sa hinihinging padala sa MoneyGram o Western Union
-- `pil-18`  Hanapin ang numero ng sentro ng USCIS na dapat tawagan kapag may alalahanin sa visa o dokumento sa imigrasyon, sa bahaging nagtuturong magsumbong sa FTC.gov/Complaint
 
 ### 틀린@3 — 1/150개
 
@@ -419,7 +392,7 @@
 
 ## harrier-270m [512]
 
-### 틀린@1 — 44/150개
+### 틀린@1 — 40/150개
 
 - `ko-12`  서울북부지방법원이 채권압류 및 추심명령을 발령한 사건에서, 피고인이 2022년 1월부터 9월까지 받은 임대료 수익금 합계와 피해자에게 분배하지 않은 금액을 찾아주세요
 - `ko-18`  카카오톡으로 연락해 화물 수령을 부탁한 B가 피고인의 계좌로 입금한 사례금을 찾아주세요
@@ -456,17 +429,13 @@
 - `ru-18`  Найдите период, в течение которого совершено преступление Емельяновым Д.И.
 - `ru-19`  Найдите решение, исключённое апелляцией Тверского областного суда из приговора суда первой инстанции по делу Емельянова Д.И.
 - `ru-20`  Найдите вывод Верховного Суда России по кассационной жалобе защитника по делу Емельянова Д.И.
-- `pil-01`  Hanapin ang ahensyang nagbibigay ng awtoridad na magpayo tungkol sa batas sa imigrasyon, dahil hindi tulad sa Latin Amerika ay hindi maaaring magbigay ng payong legal ang notaryo sa Estados Unidos
-- `pil-05`  Hanapin ang numero ng telepono ng USCIS Contact Center at ang TTY na numero para sa mga may kapansanan sa pandinig
-- `pil-07`  Hanapin ang inirekomendang paraan ng pakikipag-ugnayan sa kompanya ng utility kapag nag-aalala ka sa hindi nabayarang bill, matapos ang babala tungkol sa hinihinging MoneyPak, Vanilla, at Reloadit
+- `pil-01`  Hanapin kung ano ang ibig sabihin ng salitang notaryo o notaryo publiko tungkol sa isang indibidwal sa mga bansa sa Latin Amerika
+- `pil-07`  Hanapin ang dalawang pinagkukunan ng numero na dapat gamitin sa pakikipag-ugnayan sa kompanya ng utilidad, sa halip na tumawag sa numerong ibinibigay ng caller
 - `pil-10`  Hanapin ang numerong dapat pindutin upang piliin ang Tagalog sa hotline ng pagsusumbong ng scam, matapos ang babala tungkol sa hinihinging padala sa MoneyGram o Western Union
-- `pil-11`  Hanapin ang pangalan ng imbestigador na dumating sa bahay ni Sheila Martir kinabukasan ng pamamaril upang kunin ang kanyang salaysay
-- `pil-12`  Hanapin ang numero ng administrative matter ng Korte Suprema na nagtatakdang pumalit ang salaysay ni SHEILA MARTIR sa direct examination
-- `pil-13`  Hanapin ang petsa at tinatayang oras kung kailan nasaksihan ni SHEILA MARTIR ang pangyayari
-- `pil-15`  Hanapin ang pangalan at Roll number ng abogado ng Public Attorney’s Office na sumumpang siya mismo ang kumuha ng salaysay ni Sheila Martir sa kanyang opisina at nagtala’t nagsalin nito sa Filipino
-- `pil-18`  Hanapin ang numero ng sentro ng USCIS na dapat tawagan kapag may alalahanin sa visa o dokumento sa imigrasyon, sa bahaging nagtuturong magsumbong sa FTC.gov/Complaint
+- `pil-12`  Hanapin ang sangay at lungsod ng hukumang dumidinig sa kasong isinampa laban kay PO2 Raffy Magaling, at kung anong kaso ito
+- `pil-15`  Hanapin ang pangalan at Roll number ng abogado ng Public Attorney’s Office na tumulong kay Sheila Martir na gumawa ng complaint-affidavit laban kay PO2 Raffy Magaling
 
-### 틀린@3 — 10/150개
+### 틀린@3 — 9/150개
 
 - `ko-25`  중국 C社 관계자들이 위장회사를 통한 입사·중국 이메일 사용 등과 함께, 출국금지·체포 시 전파하기로 정한 암호를 찾아주세요
 - `ch-15`  请找出对刘荣华、韦泽禹、白晓敏分别数罪并罚宣告的刑罚中，财务总监刘荣华的有期徒刑和罚金
@@ -477,7 +446,6 @@
 - `uz-14`  Zaxira nusxalarni tiklashgacha davom etadigan kiberjinoyatdan zarar ko‘rganda ko‘riladigan choralarning birinchisi va ikkinchisini toping
 - `uz-15`  Qodirjonova Madina Ulug’bek qizi keltirgan DOI raqamini toping
 - `ru-20`  Найдите вывод Верховного Суда России по кассационной жалобе защитника по делу Емельянова Д.И.
-- `pil-11`  Hanapin ang pangalan ng imbestigador na dumating sa bahay ni Sheila Martir kinabukasan ng pamamaril upang kunin ang kanyang salaysay
 
 ## harrier-270m [full]
 
