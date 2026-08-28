@@ -1230,12 +1230,12 @@
   },
   {
    "id": "pil-01",
-   "question": "Hanapin ang ahensyang nagbibigay ng awtoridad na magpayo tungkol sa batas sa imigrasyon, dahil hindi tulad sa Latin Amerika ay hindi maaaring magbigay ng payong legal ang notaryo sa Estados Unidos",
+   "question": "Hanapin kung ano ang ibig sabihin ng salitang notaryo o notaryo publiko tungkol sa isang indibidwal sa mga bansa sa Latin Amerika",
    "source": "pil/AvoidImmigrationScamsGetHelp_Tagalog-508.pdf",
    "gold_chunks": [
     135
    ],
-   "note": "정답: inawtorisahan ng U.S. Department of Justice"
+   "note": "정답: ang indibidwal ay isang abogado o may legal na kasanayan"
   },
   {
    "id": "pil-02",
@@ -1268,12 +1268,12 @@
   },
   {
    "id": "pil-05",
-   "question": "Hanapin ang numero ng telepono ng USCIS Contact Center at ang TTY na numero para sa mga may kapansanan sa pandinig",
+   "question": "Hanapin ang pangalan ng seksyon sa website ng USCIS na dapat simulang repasuhin kapag pinili mong irepresenta ang iyong sarili sa mga paglilitis sa imigrasyon",
    "source": "pil/AvoidImmigrationScamsGetHelp_Tagalog-508.pdf",
    "gold_chunks": [
     140
    ],
-   "note": "정답: 800-375-5283 / 800-767-1833"
+   "note": "정답: Explore My Options (Siyasatin ang Aking Mga Pagpipilian)"
   },
   {
    "id": "pil-06",
@@ -1287,12 +1287,12 @@
   },
   {
    "id": "pil-07",
-   "question": "Hanapin ang inirekomendang paraan ng pakikipag-ugnayan sa kompanya ng utility kapag nag-aalala ka sa hindi nabayarang bill, matapos ang babala tungkol sa hinihinging MoneyPak, Vanilla, at Reloadit",
+   "question": "Hanapin ang dalawang pinagkukunan ng numero na dapat gamitin sa pakikipag-ugnayan sa kompanya ng utilidad, sa halip na tumawag sa numerong ibinibigay ng caller",
    "source": "pil/empower-yourself-against-utility-scams_tl-508ftclogo.pdf",
    "gold_chunks": [
     147
    ],
-   "note": "정답: gamit ang numero sa iyong papel na bill o sa website"
+   "note": "정답: numero sa iyong papel na bill o sa website"
   },
   {
    "id": "pil-08",
@@ -1324,32 +1324,30 @@
   },
   {
    "id": "pil-11",
-   "question": "Hanapin ang pangalan ng imbestigador na dumating sa bahay ni Sheila Martir kinabukasan ng pamamaril upang kunin ang kanyang salaysay",
+   "question": "Hanapin kung ano ang ibinigay sa testigo sa police station nang utusan siyang ituro kung sino ang bumaril kay Lito Bartolome",
    "source": "pil/judicialaffidavitfilipino.pdf",
    "gold_chunks": [
     153
    ],
-   "note": "정답: isang imbestigador na nagpakilalang si Oscar Cuz"
+   "note": "정답: mga larawang may pangalan sa ibaba"
   },
   {
    "id": "pil-12",
-   "question": "Hanapin ang numero ng administrative matter ng Korte Suprema na nagtatakdang pumalit ang salaysay ni SHEILA MARTIR sa direct examination",
+   "question": "Hanapin ang sangay at lungsod ng hukumang dumidinig sa kasong isinampa laban kay PO2 Raffy Magaling, at kung anong kaso ito",
    "source": "pil/judicialaffidavitfilipino.pdf",
    "gold_chunks": [
-    148,
-    149,
-    150
+    148
    ],
-   "note": "정답: A.M. No. 12-8-8-SC"
+   "note": "정답: Regional Trial Court Branch 65, Makati City / For: Murder"
   },
   {
    "id": "pil-13",
-   "question": "Hanapin ang petsa at tinatayang oras kung kailan nasaksihan ni SHEILA MARTIR ang pangyayari",
+   "question": "Hanapin kung nasaan ang testigo at ano ang kanyang ginagawa noong gabi ng ika-14 ng Pebrero 2016 nang habulin si Lito Bartolome",
    "source": "pil/judicialaffidavitfilipino.pdf",
    "gold_chunks": [
     151
    ],
-   "note": "정답: ika-14 ng Pebrero 2016 / alas nuwebe po ng gabi"
+   "note": "정답: sa taas ng building kung saan siya nakatira, kinukuha ang labadang pinatuyo niya nang umaga"
   },
   {
    "id": "pil-14",
@@ -1362,7 +1360,7 @@
   },
   {
    "id": "pil-15",
-   "question": "Hanapin ang pangalan at Roll number ng abogado ng Public Attorney’s Office na sumumpang siya mismo ang kumuha ng salaysay ni Sheila Martir sa kanyang opisina at nagtala’t nagsalin nito sa Filipino",
+   "question": "Hanapin ang pangalan at Roll number ng abogado ng Public Attorney’s Office na tumulong kay Sheila Martir na gumawa ng complaint-affidavit laban kay PO2 Raffy Magaling",
    "source": "pil/judicialaffidavitfilipino.pdf",
    "gold_chunks": [
     154
@@ -1389,12 +1387,12 @@
   },
   {
    "id": "pil-18",
-   "question": "Hanapin ang numero ng sentro ng USCIS na dapat tawagan kapag may alalahanin sa visa o dokumento sa imigrasyon, sa bahaging nagtuturong magsumbong sa FTC.gov/Complaint",
+   "question": "Hanapin ang tatlong uri ng taong maaaring makausap kung hindi ka kumbinsidong scam ang tawag, sa artikulong nagsasabing tawagan ang National Customer Service Center ng USCIS kapag may alalahanin sa visa",
    "source": "pil/scammers-intl-students-money_tl-508ftclogo.pdf",
    "gold_chunks": [
     157
    ],
-   "note": "정답: National Customer Service Center ng USCIS sa 800-375-5283"
+   "note": "정답: kamag-anak, lokal na pulisya, o opisyal ng paaralan"
   },
   {
    "id": "pil-19",

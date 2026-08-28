@@ -351,7 +351,7 @@ st.caption(
 )
 
 tab_overview, tab_res1, tab_res2, tab_data, tab_detail = st.tabs(
-    ["개요", "결과1", "결과2", "데이터셋", "상세세"]
+    ["개요", "결과1", "결과2", "데이터셋", "상세"]
 )
 
 

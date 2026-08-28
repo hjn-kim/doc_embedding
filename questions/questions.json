@@ -1230,12 +1230,12 @@
   },
   {
    "id": "pil-01",
-   "question": "Latin Amerika 에서와 달리 미국에서는 notaryo 가 법률 자문을 할 수 없는데, 이민 관련 법률 자문 권한을 부여하는 기관을 찾아주세요",
+   "question": "Latin Amerika 국가에서 notaryo 또는 notaryo publiko 라는 말이 그 사람에 대해 무엇을 뜻하는지 찾아주세요",
    "source": "pil/AvoidImmigrationScamsGetHelp_Tagalog-508.pdf",
    "gold_chunks": [
     135
    ],
-   "note": "정답: inawtorisahan ng U.S. Department of Justice"
+   "note": "정답: ang indibidwal ay isang abogado o may legal na kasanayan"
   },
   {
    "id": "pil-02",
@@ -1268,12 +1268,12 @@
   },
   {
    "id": "pil-05",
-   "question": "USCIS Contact Center 의 전화번호와 청각장애인용 TTY 번호를 찾아주세요",
+   "question": "이민 절차에서 본인이 스스로를 대리하기로 했을 때 가장 먼저 검토하라고 안내한 USCIS 웹사이트 섹션의 이름을 찾아주세요",
    "source": "pil/AvoidImmigrationScamsGetHelp_Tagalog-508.pdf",
    "gold_chunks": [
     140
    ],
-   "note": "정답: 800-375-5283 / 800-767-1833"
+   "note": "정답: Explore My Options (Siyasatin ang Aking Mga Pagpipilian)"
   },
   {
    "id": "pil-06",
@@ -1287,12 +1287,12 @@
   },
   {
    "id": "pil-07",
-   "question": "MoneyPak·Vanilla·Reloadit 요구를 경고한 뒤, 요금 미납이 걱정될 때 utility 회사에 연락하는 방법으로 권고한 것을 찾아주세요",
+   "question": "utilidad 회사에 연락할 때, 발신자가 알려주는 번호로는 절대 전화하지 말고 대신 쓰라고 안내한 두 가지 번호 출처를 찾아주세요",
    "source": "pil/empower-yourself-against-utility-scams_tl-508ftclogo.pdf",
    "gold_chunks": [
     147
    ],
-   "note": "정답: gamit ang numero sa iyong papel na bill o sa website"
+   "note": "정답: numero sa iyong papel na bill o sa website"
   },
   {
    "id": "pil-08",
@@ -1324,32 +1324,30 @@
   },
   {
    "id": "pil-11",
-   "question": "Sheila Martir 의 집을 총격 이튿날 찾아와 진술을 받아 간 조사관의 이름을 찾아주세요",
+   "question": "경찰서에서 Lito Bartolome 을 쏜 사람을 지목하라며 증인에게 건넨 자료가 무엇인지 찾아주세요",
    "source": "pil/judicialaffidavitfilipino.pdf",
    "gold_chunks": [
     153
    ],
-   "note": "정답: isang imbestigador na nagpakilalang si Oscar Cuz"
+   "note": "정답: mga larawang may pangalan sa ibaba"
   },
   {
    "id": "pil-12",
-   "question": "SHEILA MARTIR 의 증언이 직접신문 진술을 대신하도록 정한 대법원 행정규칙의 번호를 찾아주세요",
+   "question": "PO2 Raffy Magaling 이 기소된 사건을 심리하는 법원의 지부와 도시, 그리고 죄명을 찾아주세요",
    "source": "pil/judicialaffidavitfilipino.pdf",
    "gold_chunks": [
-    148,
-    149,
-    150
+    148
    ],
-   "note": "정답: A.M. No. 12-8-8-SC"
+   "note": "정답: Regional Trial Court Branch 65, Makati City / For: Murder"
   },
   {
    "id": "pil-13",
-   "question": "SHEILA MARTIR가 사건을 목격한 날짜와 대략의 시각을 찾아주세요",
+   "question": "2016년 2월 14일 밤 Lito Bartolome 이 쫓기던 무렵, 증인이 어디에서 무엇을 하고 있었는지 찾아주세요",
    "source": "pil/judicialaffidavitfilipino.pdf",
    "gold_chunks": [
     151
    ],
-   "note": "정답: ika-14 ng Pebrero 2016 / alas nuwebe po ng gabi"
+   "note": "정답: sa taas ng building kung saan siya nakatira, kinukuha ang labadang pinatuyo niya nang umaga"
   },
   {
    "id": "pil-14",
@@ -1362,7 +1360,7 @@
   },
   {
    "id": "pil-15",
-   "question": "Sheila Martir 의 진술을 자신의 사무실에서 직접 수행하고 필리핀어로 기록·번역했다고 선서한 Public Attorney’s Office 변호사의 이름과 Roll 번호를 찾아주세요",
+   "question": "Sheila Martir 이 PO2 Raffy Magaling 을 murder 로 고소하는 complaint-affidavit 을 작성하도록 도운 Public Attorney’s Office 변호사의 이름과 Roll 번호를 찾아주세요",
    "source": "pil/judicialaffidavitfilipino.pdf",
    "gold_chunks": [
     154
@@ -1389,12 +1387,12 @@
   },
   {
    "id": "pil-18",
-   "question": "FTC.gov/Complaint 로 신고하라고 안내한 곳에서, 비자·이민 서류가 걱정될 때 전화하라고 알린 USCIS 센터의 번호를 찾아주세요",
+   "question": "visa 나 이민 서류가 걱정되면 USCIS National Customer Service Center 로 전화하라고 안내한 글에서, 받은 전화가 사기라는 확신이 서지 않을 때 상의해 보라고 예로 든 세 부류의 사람을 찾아주세요",
    "source": "pil/scammers-intl-students-money_tl-508ftclogo.pdf",
    "gold_chunks": [
     157
    ],
-   "note": "정답: National Customer Service Center ng USCIS sa 800-375-5283"
+   "note": "정답: kamag-anak, lokal na pulisya, o opisyal ng paaralan"
   },
   {
    "id": "pil-19",
