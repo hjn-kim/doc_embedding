@@ -739,12 +739,12 @@
   },
   {
    "id": "vn-08",
-   "question": "Hãy tìm lý do Tòa án không áp dụng hình phạt bổ sung là phạt tiền từ 5.000.000 đồng đến 50.000.000 đồng trong vụ án Lại Văn P",
+   "question": "Hãy tìm mức án và ngày bắt đầu tính thời hạn tù đối với Lại Văn P, cùng biển số chiếc xe môtô do Chi cục Thi hành án dân sự quận Bình Tân đang tạm giữ",
    "source": "vn/06_2023_HS-ST_HCM.pdf",
    "gold_chunks": [
-    235
+    236
    ],
-   "note": "정답: bị cáo không có nghề nghiệp và không có điều kiện kinh tế"
+   "note": "정답: 01 (một) năm 03 (ba) tháng tù, tính từ ngày 26-5-2022 / xe môtô biển số 49V5-2461"
   },
   {
    "id": "vn-09",
@@ -776,24 +776,21 @@
   },
   {
    "id": "vn-12",
-   "question": "Hãy tìm tổng giá trị tài sản do Hội đồng định giá tài sản xác định đối với bị hại bị mất chiếc bóp có thẻ Viettinbank và BIDV",
+   "question": "Hãy tìm những tài sản mà Hội đồng định giá tài sản từ chối định giá trong vụ án Lâm Tuấn A và điều khoản làm căn cứ",
    "source": "vn/132_2020_HS-ST_HCM.pdf",
    "gold_chunks": [
-    241,
-    242,
-    244
+    241
    ],
-   "note": "정답: Tổng giá trị tài sản thiệt hại là 15.580.000 đồng"
+   "note": "정답: 03 cái đồng hồ đeo tay, 01 bóp da màu đen / điểm c khoản 1 Điều 10 Nghị định 30/2018/NĐ-CP"
   },
   {
    "id": "vn-13",
-   "question": "Hãy tìm tên cửa hàng điện thoại nơi Lâm Tuấn A bán chiếc Iphone X đã trộm và tên chủ cửa hàng đó",
+   "question": "Hãy tìm địa chỉ cửa hàng điện thoại di động Nhật Khang và tên người mua chiếc Iphone X từ Lâm Tuấn A",
    "source": "vn/132_2020_HS-ST_HCM.pdf",
    "gold_chunks": [
-    240,
-    243
+    240
    ],
-   "note": "정답: cửa hàng điện thoại di động Nhật Khang / ông Trần Hà T"
+   "note": "정답: số 02 Nguyễn Văn Khạ, ấp Phú An, xã Phú Hòa Đông, huyện Củ Chi / ông Trần Hà T"
   },
   {
    "id": "vn-14",
@@ -825,7 +822,7 @@
   },
   {
    "id": "vn-17",
-   "question": "Hãy tìm hai loại hình phạt cùng mức tối thiểu và tối đa được quy định tại khoản 1 Điều 173 BLHS áp dụng đối với Trần Xuân H",
+   "question": "Hãy tìm hai loại hình phạt và thời hạn mà bản án trích dẫn nguyên văn từ khoản 1 Điều 173 BLHS cho trường hợp trộm cắp tài sản trị giá dưới 2.000.000 đồng của Trần Xuân H",
    "source": "vn/29_2018_HS-ST_THAI_NGUYEN[1].pdf",
    "gold_chunks": [
     260
@@ -844,12 +841,12 @@
   },
   {
    "id": "vn-19",
-   "question": "Hãy tìm tiền án của Trần Xuân H",
+   "question": "Hãy tìm mức án về tội tàng trữ trái phép chất ma túy và tội trộm cắp tài sản mà Trần Xuân H phải nhận theo bản án ngày 23/01/2013 và tổng hợp hình phạt",
    "source": "vn/29_2018_HS-ST_THAI_NGUYEN[1].pdf",
    "gold_chunks": [
     256
    ],
-   "note": "정답: Có 03 tiền án / Ngày 23/01/2013"
+   "note": "정답: 30 tháng tù (Tàng trữ trái phép chất ma túy) + 30 tháng tù (Trộm cắp tài sản), tổng hợp hình phạt là 60 tháng tù"
   },
   {
    "id": "vn-20",
