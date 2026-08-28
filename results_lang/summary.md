@@ -9,18 +9,18 @@
 
 | model                                | 검색   | hf_id                                   |   dim |   후보수 |   max_seq |   Hit@1 |   Hit@3 |   MRR@3 |   nDCG@3 |   정답@1 |   정답@3 |   VRAM_MB |   index_MB |   chunks_per_s |   query_ms |
 |:-------------------------------------|:-------|:----------------------------------------|------:|---------:|----------:|--------:|--------:|--------:|---------:|---------:|---------:|----------:|-----------:|---------------:|-----------:|
-| bge-m3 [512] [hybrid(dense+sparse)]  | 512    | BAAI/bge-m3                             |  1024 |      264 |       512 |  0.8867 |  0.9933 |  0.9367 |   0.9095 |      133 |      149 |      1273 |       1.03 |          157.4 |       1.11 |
-| kure-v1 [512]                        | 512    | nlpai-lab/KURE-v1                       |  1024 |      264 |       512 |  0.8467 |  0.98   |  0.9111 |   0.8971 |      127 |      147 |      1287 |       1.03 |          148.4 |       1.42 |
-| bge-m3 [512]                         | 512    | BAAI/bge-m3                             |  1024 |      264 |       512 |  0.8333 |  0.9733 |  0.9    |   0.8751 |      125 |      146 |      1273 |       1.03 |          157.4 |       1.11 |
-| e5-small-ko [512]                    | 512    | dragonkue/multilingual-e5-small-ko      |   384 |      264 |       512 |  0.8333 |  0.96   |  0.8922 |   0.8736 |      125 |      144 |       313 |       0.39 |          582.2 |       1.16 |
-| harrier-270m [512]                   | 512    | microsoft/harrier-oss-v1-270m           |   640 |      264 |       512 |  0.7333 |  0.94   |  0.8311 |   0.8105 |      110 |      141 |       675 |       0.64 |          182.4 |       2.27 |
-| harrier-0.6b [512]                   | 512    | microsoft/harrier-oss-v1-0.6b           |  1024 |      264 |       512 |  0.74   |  0.9333 |  0.83   |   0.801  |      111 |      140 |      1382 |       1.03 |           64.7 |       2.93 |
-| e5-large-instruct [512]              | 512    | intfloat/multilingual-e5-large-instruct |  1024 |      264 |       512 |  0.7333 |  0.9    |  0.81   |   0.7896 |      110 |      135 |      1273 |       1.03 |          146.1 |       1.52 |
-| harrier-0.6b [full]                  | full   | microsoft/harrier-oss-v1-0.6b           |  1024 |       51 |      8192 |  0.9533 |  0.9933 |  0.97   |   0.976  |      143 |      149 |      2440 |       0.2  |           10.4 |       9.15 |
-| bge-m3 [full] [hybrid(dense+sparse)] | full   | BAAI/bge-m3                             |  1024 |       51 |      8192 |  0.9467 |  0.98   |  0.9611 |   0.966  |      142 |      147 |      1536 |       0.2  |           27.9 |       3.52 |
-| kure-v1 [full]                       | full   | nlpai-lab/KURE-v1                       |  1024 |       51 |      8192 |  0.92   |  0.9667 |  0.9433 |   0.9494 |      138 |      145 |      1565 |       0.2  |           29.7 |       4.07 |
-| bge-m3 [full]                        | full   | BAAI/bge-m3                             |  1024 |       51 |      8192 |  0.9    |  0.9667 |  0.93   |   0.9394 |      135 |      145 |      1536 |       0.2  |           27.9 |       3.52 |
-| harrier-270m [full]                  | full   | microsoft/harrier-oss-v1-270m           |   640 |       51 |      8192 |  0.8933 |  0.9533 |  0.92   |   0.9286 |      134 |      143 |      1360 |       0.12 |           30.6 |       6.99 |
+| bge-m3 [512] [hybrid(dense+sparse)]  | 512    | BAAI/bge-m3                             |  1024 |      264 |       512 |  0.9    |  0.9933 |  0.9433 |   0.9183 |      135 |      149 |      1273 |       1.03 |          156.7 |       1.12 |
+| kure-v1 [512]                        | 512    | nlpai-lab/KURE-v1                       |  1024 |      264 |       512 |  0.8667 |  0.98   |  0.9222 |   0.9102 |      130 |      147 |      1287 |       1.03 |          147.3 |       1.49 |
+| e5-small-ko [512]                    | 512    | dragonkue/multilingual-e5-small-ko      |   384 |      264 |       512 |  0.8467 |  0.9667 |  0.9022 |   0.8889 |      127 |      145 |       313 |       0.39 |          548.1 |       1.1  |
+| bge-m3 [512]                         | 512    | BAAI/bge-m3                             |  1024 |      264 |       512 |  0.84   |  0.9733 |  0.9044 |   0.8803 |      126 |      146 |      1273 |       1.03 |          156.7 |       1.12 |
+| harrier-270m [512]                   | 512    | microsoft/harrier-oss-v1-270m           |   640 |      264 |       512 |  0.7267 |  0.9267 |  0.8211 |   0.8031 |      109 |      139 |       675 |       0.64 |          180.8 |       2.41 |
+| harrier-0.6b [512]                   | 512    | microsoft/harrier-oss-v1-0.6b           |  1024 |      264 |       512 |  0.7267 |  0.9267 |  0.82   |   0.7979 |      109 |      139 |      1382 |       1.03 |           65   |       3    |
+| e5-large-instruct [512]              | 512    | intfloat/multilingual-e5-large-instruct |  1024 |      264 |       512 |  0.7333 |  0.8867 |  0.8044 |   0.7873 |      110 |      133 |      1273 |       1.03 |          146.6 |       1.57 |
+| harrier-0.6b [full]                  | full   | microsoft/harrier-oss-v1-0.6b           |  1024 |       51 |      8192 |  0.9533 |  0.9933 |  0.97   |   0.976  |      143 |      149 |      2440 |       0.2  |           10.3 |       8.09 |
+| bge-m3 [full] [hybrid(dense+sparse)] | full   | BAAI/bge-m3                             |  1024 |       51 |      8192 |  0.9467 |  0.98   |  0.9611 |   0.966  |      142 |      147 |      1536 |       0.2  |           27.8 |       3.52 |
+| kure-v1 [full]                       | full   | nlpai-lab/KURE-v1                       |  1024 |       51 |      8192 |  0.92   |  0.9667 |  0.9433 |   0.9494 |      138 |      145 |      1565 |       0.2  |           30   |       3.8  |
+| bge-m3 [full]                        | full   | BAAI/bge-m3                             |  1024 |       51 |      8192 |  0.9067 |  0.9667 |  0.9333 |   0.9419 |      136 |      145 |      1536 |       0.2  |           27.8 |       3.52 |
+| harrier-270m [full]                  | full   | microsoft/harrier-oss-v1-270m           |   640 |       51 |      8192 |  0.9    |  0.9533 |  0.9233 |   0.931  |      135 |      143 |      1360 |       0.12 |           32.2 |       7.17 |
 
 - 모든 지표는 **그 행의 검색 단위에서** 잰 값이다. `512` 행은 청크 랭킹, `full` 행은 문서 랭킹 기준이다.
 - 후보 수가 다르므로(512: 청크 274개 / full: 문서 44개) **512 행끼리, full 행끼리만 비교할 것.** 무작위로 찍었을 때의 기준선부터 다르다 (1/274 vs 1/44).
@@ -48,7 +48,7 @@
 
 ## kure-v1 [512]
 
-### 틀린@1 — 23/150개
+### 틀린@1 — 20/150개
 
 - `ko-08`  피고인이 비밀번호를 눌러 침입한 C산후조리원이 있던 고양시 일산동구 건물의 층수와 침입 날짜를 찾아주세요
 - `ko-18`  카카오톡으로 연락해 화물 수령을 부탁한 B가 피고인의 계좌로 입금한 사례금을 찾아주세요
@@ -58,9 +58,6 @@
 - `ch-09`  请找出凉城县人民检察院对张某某作出的最终处理决定
 - `ch-20`  请找出四川省川谷坊酒业有限公司向不特定多数人集资时承诺的月利率
 - `vn-06`  Hãy tìm thời gian và địa điểm Lại Văn P trộm chiếc điện thoại Realme C2
-- `vn-08`  Hãy tìm lý do Tòa án không áp dụng hình phạt bổ sung là phạt tiền từ 5.000.000 đồng đến 50.000.000 đồng trong vụ án Lại Văn P
-- `vn-12`  Hãy tìm tổng giá trị tài sản do Hội đồng định giá tài sản xác định đối với bị hại bị mất chiếc bóp có thẻ Viettinbank và BIDV
-- `vn-17`  Hãy tìm hai loại hình phạt cùng mức tối thiểu và tối đa được quy định tại khoản 1 Điều 173 BLHS áp dụng đối với Trần Xuân H
 - `uz-08`  Shaffof tizimga o‘tishni ilgari surib, jamiyatda axborot shaffofligini ta’minlash uchun yaratish taklif etilgan tizim nomini toping
 - `uz-14`  Zaxira nusxalarni tiklashgacha davom etadigan kiberjinoyatdan zarar ko‘rganda ko‘riladigan choralarning birinchisi va ikkinchisini toping
 - `uz-15`  Qodirjonova Madina Ulug’bek qizi keltirgan DOI raqamini toping
@@ -128,9 +125,9 @@
 - `vn-05`  Hãy tìm chủ tọa phiên tòa và thư ký phiên tòa đã xét xử Lại Văn P cùng với các Hội thẩm nhân dân Vương Tấn Độ, Lê Văn Khanh
 - `vn-06`  Hãy tìm thời gian và địa điểm Lại Văn P trộm chiếc điện thoại Realme C2
 - `vn-07`  Hãy tìm loại điện thoại và giá trị định giá của chiếc điện thoại mà Lại Văn P đã trộm của anh Nguyễn Đình V
-- `vn-08`  Hãy tìm lý do Tòa án không áp dụng hình phạt bổ sung là phạt tiền từ 5.000.000 đồng đến 50.000.000 đồng trong vụ án Lại Văn P
+- `vn-08`  Hãy tìm mức án và ngày bắt đầu tính thời hạn tù đối với Lại Văn P, cùng biển số chiếc xe môtô do Chi cục Thi hành án dân sự quận Bình Tân đang tạm giữ
 - `vn-11`  Hãy tìm tài sản mà Lâm Tuấn A đã trộm tại nhà ông Nguyễn Thành P và số tiền trong chiếc bóp
-- `vn-13`  Hãy tìm tên cửa hàng điện thoại nơi Lâm Tuấn A bán chiếc Iphone X đã trộm và tên chủ cửa hàng đó
+- `vn-13`  Hãy tìm địa chỉ cửa hàng điện thoại di động Nhật Khang và tên người mua chiếc Iphone X từ Lâm Tuấn A
 - `vn-20`  Hãy tìm hai vật bị tịch thu tiêu hủy trong vụ án Trần Xuân H
 - `uz-02`  BMT Bosh Assambleyasi xulq-atvor kodeksi va Yevropa Kengashi konvensiyasidan keyin korrupsiya ta’rifi sifatida keltirilgan O‘zbekistonning korrupsiyaga qarshi kurashish to‘g‘risidagi qonuni qabul qilingan sanani toping
 - `uz-05`  Abdug‘aniyev Akobir Akmaljon o‘g‘lining muassasasi va ilmiy rahbarini toping
@@ -150,7 +147,7 @@
 - `pil-10`  Hanapin ang numerong dapat pindutin upang piliin ang Tagalog sa hotline ng pagsusumbong ng scam, matapos ang babala tungkol sa hinihinging padala sa MoneyGram o Western Union
 - `pil-11`  Hanapin kung ano ang ibinigay sa testigo sa police station nang utusan siyang ituro kung sino ang bumaril kay Lito Bartolome
 
-### 틀린@3 — 15/150개
+### 틀린@3 — 17/150개
 
 - `en-01`  In the Antonio Nathaniel Davenport case, find the murder offense the government had to prove beyond a reasonable doubt
 - `en-05`  Find the offense charged in Count 1 against Bryan Lee Burrows and the case number
@@ -162,6 +159,8 @@
 - `ch-20`  请找出四川省川谷坊酒业有限公司向不特定多数人集资时承诺的月利率
 - `vn-06`  Hãy tìm thời gian và địa điểm Lại Văn P trộm chiếc điện thoại Realme C2
 - `vn-07`  Hãy tìm loại điện thoại và giá trị định giá của chiếc điện thoại mà Lại Văn P đã trộm của anh Nguyễn Đình V
+- `vn-08`  Hãy tìm mức án và ngày bắt đầu tính thời hạn tù đối với Lại Văn P, cùng biển số chiếc xe môtô do Chi cục Thi hành án dân sự quận Bình Tân đang tạm giữ
+- `vn-13`  Hãy tìm địa chỉ cửa hàng điện thoại di động Nhật Khang và tên người mua chiếc Iphone X từ Lâm Tuấn A
 - `vn-20`  Hãy tìm hai vật bị tịch thu tiêu hủy trong vụ án Trần Xuân H
 - `uz-05`  Abdug‘aniyev Akobir Akmaljon o‘g‘lining muassasasi va ilmiy rahbarini toping
 - `uz-11`  Nasimov Umedjon Ulugbekovich tahsil olayotgan universitetni toping
@@ -170,7 +169,7 @@
 
 ## e5-small-ko [512]
 
-### 틀린@1 — 25/150개
+### 틀린@1 — 23/150개
 
 - `ko-07`  재판장 신광렬이 선고한 건조물침입·업무방해 항소심에서 피고인에게 정해진 벌금액을 찾아주세요
 - `ko-08`  피고인이 비밀번호를 눌러 침입한 C산후조리원이 있던 고양시 일산동구 건물의 층수와 침입 날짜를 찾아주세요
@@ -185,10 +184,8 @@
 - `ch-18`  请找出法院经审理认定的四川省川谷坊酒业有限公司非法吸收公众存款的金额和被吸收人人数
 - `ch-20`  请找出四川省川谷坊酒业有限公司向不特定多数人集资时承诺的月利率
 - `vn-06`  Hãy tìm thời gian và địa điểm Lại Văn P trộm chiếc điện thoại Realme C2
-- `vn-08`  Hãy tìm lý do Tòa án không áp dụng hình phạt bổ sung là phạt tiền từ 5.000.000 đồng đến 50.000.000 đồng trong vụ án Lại Văn P
 - `vn-11`  Hãy tìm tài sản mà Lâm Tuấn A đã trộm tại nhà ông Nguyễn Thành P và số tiền trong chiếc bóp
 - `vn-16`  Hãy tìm mức án và ngày bắt đầu tính thời hạn tù mà Đỗ Văn Ph phải chịu về tội “Tàng trữ trái phép chất ma túy”
-- `vn-19`  Hãy tìm tiền án của Trần Xuân H
 - `uz-01`  Azadov Mirjalol Bahodir o‘g‘li tahsil olayotgan universitet va magistratura yo‘nalishi shifrini toping
 - `uz-08`  Shaffof tizimga o‘tishni ilgari surib, jamiyatda axborot shaffofligini ta’minlash uchun yaratish taklif etilgan tizim nomini toping
 - `uz-14`  Zaxira nusxalarni tiklashgacha davom etadigan kiberjinoyatdan zarar ko‘rganda ko‘riladigan choralarning birinchisi va ikkinchisini toping
@@ -198,18 +195,17 @@
 - `ru-20`  Найдите вывод Верховного Суда России по кассационной жалобе защитника по делу Емельянова Д.И.
 - `pil-07`  Hanapin ang dalawang pinagkukunan ng numero na dapat gamitin sa pakikipag-ugnayan sa kompanya ng utilidad, sa halip na tumawag sa numerong ibinibigay ng caller
 
-### 틀린@3 — 6/150개
+### 틀린@3 — 5/150개
 
 - `ko-25`  중국 C社 관계자들이 위장회사를 통한 입사·중국 이메일 사용 등과 함께, 출국금지·체포 시 전파하기로 정한 암호를 찾아주세요
 - `ko-26`  K반도체 국가핵심기술 유출사건에서 중국 C社 설립에 출자한 중국지방정부와 중국 반도체설계회사의 금액을 찾아주세요
 - `ch-18`  请找出法院经审理认定的四川省川谷坊酒业有限公司非法吸收公众存款的金额和被吸收人人数
-- `vn-08`  Hãy tìm lý do Tòa án không áp dụng hình phạt bổ sung là phạt tiền từ 5.000.000 đồng đến 50.000.000 đồng trong vụ án Lại Văn P
 - `uz-01`  Azadov Mirjalol Bahodir o‘g‘li tahsil olayotgan universitet va magistratura yo‘nalishi shifrini toping
 - `ru-20`  Найдите вывод Верховного Суда России по кассационной жалобе защитника по делу Емельянова Д.И.
 
 ## bge-m3 [512]
 
-### 틀린@1 — 25/150개
+### 틀린@1 — 24/150개
 
 - `ko-08`  피고인이 비밀번호를 눌러 침입한 C산후조리원이 있던 고양시 일산동구 건물의 층수와 침입 날짜를 찾아주세요
 - `ko-18`  카카오톡으로 연락해 화물 수령을 부탁한 B가 피고인의 계좌로 입금한 사례금을 찾아주세요
@@ -220,11 +216,10 @@
 - `ch-06`  请找出审判长李凤波宣判时没收并上缴国库的犯罪工具，以及不服判决时可以上诉的上级法院
 - `ch-15`  请找出对刘荣华、韦泽禹、白晓敏分别数罪并罚宣告的刑罚中，财务总监刘荣华的有期徒刑和罚金
 - `vn-01`  Hãy tìm Thẩm phán – Chủ tọa phiên tòa đã xét xử Võ Minh P cùng với các Hội thẩm nhân dân Bùi Thị Kim Thủy, Dương Thị Được
-- `vn-08`  Hãy tìm lý do Tòa án không áp dụng hình phạt bổ sung là phạt tiền từ 5.000.000 đồng đến 50.000.000 đồng trong vụ án Lại Văn P
-- `vn-12`  Hãy tìm tổng giá trị tài sản do Hội đồng định giá tài sản xác định đối với bị hại bị mất chiếc bóp có thẻ Viettinbank và BIDV
-- `vn-13`  Hãy tìm tên cửa hàng điện thoại nơi Lâm Tuấn A bán chiếc Iphone X đã trộm và tên chủ cửa hàng đó
+- `vn-12`  Hãy tìm những tài sản mà Hội đồng định giá tài sản từ chối định giá trong vụ án Lâm Tuấn A và điều khoản làm căn cứ
+- `vn-13`  Hãy tìm địa chỉ cửa hàng điện thoại di động Nhật Khang và tên người mua chiếc Iphone X từ Lâm Tuấn A
 - `vn-15`  Hãy tìm khối lượng giám định và giá mua của gói Heroin mà Đỗ Văn Ph đã mua tại đường Đặng Huy T và bị phát hiện khi đang tàng trữ
-- `vn-17`  Hãy tìm hai loại hình phạt cùng mức tối thiểu và tối đa được quy định tại khoản 1 Điều 173 BLHS áp dụng đối với Trần Xuân H
+- `vn-17`  Hãy tìm hai loại hình phạt và thời hạn mà bản án trích dẫn nguyên văn từ khoản 1 Điều 173 BLHS cho trường hợp trộm cắp tài sản trị giá dưới 2.000.000 đồng của Trần Xuân H
 - `uz-05`  Abdug‘aniyev Akobir Akmaljon o‘g‘lining muassasasi va ilmiy rahbarini toping
 - `uz-08`  Shaffof tizimga o‘tishni ilgari surib, jamiyatda axborot shaffofligini ta’minlash uchun yaratish taklif etilgan tizim nomini toping
 - `uz-14`  Zaxira nusxalarni tiklashgacha davom etadigan kiberjinoyatdan zarar ko‘rganda ko‘riladigan choralarning birinchisi va ikkinchisini toping
@@ -246,7 +241,7 @@
 
 ## bge-m3 [512] [hybrid(dense+sparse)]
 
-### 틀린@1 — 17/150개
+### 틀린@1 — 15/150개
 
 - `ko-08`  피고인이 비밀번호를 눌러 침입한 C산후조리원이 있던 고양시 일산동구 건물의 층수와 침입 날짜를 찾아주세요
 - `ko-18`  카카오톡으로 연락해 화물 수령을 부탁한 B가 피고인의 계좌로 입금한 사례금을 찾아주세요
@@ -254,10 +249,8 @@
 - `ko-26`  K반도체 국가핵심기술 유출사건에서 중국 C社 설립에 출자한 중국지방정부와 중국 반도체설계회사의 금액을 찾아주세요
 - `ch-15`  请找出对刘荣华、韦泽禹、白晓敏分别数罪并罚宣告的刑罚中，财务总监刘荣华的有期徒刑和罚金
 - `vn-06`  Hãy tìm thời gian và địa điểm Lại Văn P trộm chiếc điện thoại Realme C2
-- `vn-08`  Hãy tìm lý do Tòa án không áp dụng hình phạt bổ sung là phạt tiền từ 5.000.000 đồng đến 50.000.000 đồng trong vụ án Lại Văn P
-- `vn-12`  Hãy tìm tổng giá trị tài sản do Hội đồng định giá tài sản xác định đối với bị hại bị mất chiếc bóp có thẻ Viettinbank và BIDV
-- `vn-13`  Hãy tìm tên cửa hàng điện thoại nơi Lâm Tuấn A bán chiếc Iphone X đã trộm và tên chủ cửa hàng đó
-- `vn-17`  Hãy tìm hai loại hình phạt cùng mức tối thiểu và tối đa được quy định tại khoản 1 Điều 173 BLHS áp dụng đối với Trần Xuân H
+- `vn-12`  Hãy tìm những tài sản mà Hội đồng định giá tài sản từ chối định giá trong vụ án Lâm Tuấn A và điều khoản làm căn cứ
+- `vn-13`  Hãy tìm địa chỉ cửa hàng điện thoại di động Nhật Khang và tên người mua chiếc Iphone X từ Lâm Tuấn A
 - `uz-08`  Shaffof tizimga o‘tishni ilgari surib, jamiyatda axborot shaffofligini ta’minlash uchun yaratish taklif etilgan tizim nomini toping
 - `ru-04`  Найдите официальный реестр органа, в котором, по разъяснению прокуратуры Омутинского района Тюменской области, можно проверить, заблокирован ли интернет-ресурс
 - `ru-10`  Найдите сведения, которые, как предупреждает прокуратура Центрального района города Оренбурга, мошенники просят сообщить под предлогом перевода денег за товар, объявление о продаже которого вы разместили в социальных сетях
@@ -272,13 +265,12 @@
 
 ## bge-m3 [full]
 
-### 틀린@1 — 15/150개
+### 틀린@1 — 14/150개
 
 - `ko-13`  서울 성동구 공장용지와 그 지상 건물의 재산분할을 정한 이혼 조정을 담당한 법원과 그 사건번호를 찾아주세요
 - `en-18`  Find the rulings the court made on the motion at Docket No. 39 and on the motion at Docket No. 45
 - `ch-06`  请找出审判长李凤波宣判时没收并上缴国库的犯罪工具，以及不服判决时可以上诉的上级法院
 - `vn-01`  Hãy tìm Thẩm phán – Chủ tọa phiên tòa đã xét xử Võ Minh P cùng với các Hội thẩm nhân dân Bùi Thị Kim Thủy, Dương Thị Được
-- `vn-12`  Hãy tìm tổng giá trị tài sản do Hội đồng định giá tài sản xác định đối với bị hại bị mất chiếc bóp có thẻ Viettinbank và BIDV
 - `uz-01`  Azadov Mirjalol Bahodir o‘g‘li tahsil olayotgan universitet va magistratura yo‘nalishi shifrini toping
 - `uz-05`  Abdug‘aniyev Akobir Akmaljon o‘g‘lining muassasasi va ilmiy rahbarini toping
 - `uz-08`  Shaffof tizimga o‘tishni ilgari surib, jamiyatda axborot shaffofligini ta’minlash uchun yaratish taklif etilgan tizim nomini toping
@@ -319,7 +311,7 @@
 
 ## harrier-0.6b [512]
 
-### 틀린@1 — 39/150개
+### 틀린@1 — 41/150개
 
 - `ko-08`  피고인이 비밀번호를 눌러 침입한 C산후조리원이 있던 고양시 일산동구 건물의 층수와 침입 날짜를 찾아주세요
 - `ko-25`  중국 C社 관계자들이 위장회사를 통한 입사·중국 이메일 사용 등과 함께, 출국금지·체포 시 전파하기로 정한 암호를 찾아주세요
@@ -339,7 +331,9 @@
 - `vn-01`  Hãy tìm Thẩm phán – Chủ tọa phiên tòa đã xét xử Võ Minh P cùng với các Hội thẩm nhân dân Bùi Thị Kim Thủy, Dương Thị Được
 - `vn-06`  Hãy tìm thời gian và địa điểm Lại Văn P trộm chiếc điện thoại Realme C2
 - `vn-07`  Hãy tìm loại điện thoại và giá trị định giá của chiếc điện thoại mà Lại Văn P đã trộm của anh Nguyễn Đình V
+- `vn-08`  Hãy tìm mức án và ngày bắt đầu tính thời hạn tù đối với Lại Văn P, cùng biển số chiếc xe môtô do Chi cục Thi hành án dân sự quận Bình Tân đang tạm giữ
 - `vn-11`  Hãy tìm tài sản mà Lâm Tuấn A đã trộm tại nhà ông Nguyễn Thành P và số tiền trong chiếc bóp
+- `vn-12`  Hãy tìm những tài sản mà Hội đồng định giá tài sản từ chối định giá trong vụ án Lâm Tuấn A và điều khoản làm căn cứ
 - `vn-16`  Hãy tìm mức án và ngày bắt đầu tính thời hạn tù mà Đỗ Văn Ph phải chịu về tội “Tàng trữ trái phép chất ma túy”
 - `vn-20`  Hãy tìm hai vật bị tịch thu tiêu hủy trong vụ án Trần Xuân H
 - `uz-02`  BMT Bosh Assambleyasi xulq-atvor kodeksi va Yevropa Kengashi konvensiyasidan keyin korrupsiya ta’rifi sifatida keltirilgan O‘zbekistonning korrupsiyaga qarshi kurashish to‘g‘risidagi qonuni qabul qilingan sanani toping
@@ -361,10 +355,11 @@
 - `pil-15`  Hanapin ang pangalan at Roll number ng abogado ng Public Attorney’s Office na tumulong kay Sheila Martir na gumawa ng complaint-affidavit laban kay PO2 Raffy Magaling
 - `pil-18`  Hanapin ang tatlong uri ng taong maaaring makausap kung hindi ka kumbinsidong scam ang tawag, sa artikulong nagsasabing tawagan ang National Customer Service Center ng USCIS kapag may alalahanin sa visa
 
-### 틀린@3 — 10/150개
+### 틀린@3 — 11/150개
 
 - `ch-06`  请找出审判长李凤波宣判时没收并上缴国库的犯罪工具，以及不服判决时可以上诉的上级法院
 - `vn-01`  Hãy tìm Thẩm phán – Chủ tọa phiên tòa đã xét xử Võ Minh P cùng với các Hội thẩm nhân dân Bùi Thị Kim Thủy, Dương Thị Được
+- `vn-08`  Hãy tìm mức án và ngày bắt đầu tính thời hạn tù đối với Lại Văn P, cùng biển số chiếc xe môtô do Chi cục Thi hành án dân sự quận Bình Tân đang tạm giữ
 - `uz-08`  Shaffof tizimga o‘tishni ilgari surib, jamiyatda axborot shaffofligini ta’minlash uchun yaratish taklif etilgan tizim nomini toping
 - `uz-14`  Zaxira nusxalarni tiklashgacha davom etadigan kiberjinoyatdan zarar ko‘rganda ko‘riladigan choralarning birinchisi va ikkinchisini toping
 - `uz-18`  O‘zbekiston Respublikasi Oliy sudi e’lon qilgan rasmiy statistikada 2024-yilda jinoyat sudlari ko‘rib chiqqan ishlar soni va ular tegishli bo‘lgan shaxslar sonini toping
@@ -392,7 +387,7 @@
 
 ## harrier-270m [512]
 
-### 틀린@1 — 40/150개
+### 틀린@1 — 41/150개
 
 - `ko-12`  서울북부지방법원이 채권압류 및 추심명령을 발령한 사건에서, 피고인이 2022년 1월부터 9월까지 받은 임대료 수익금 합계와 피해자에게 분배하지 않은 금액을 찾아주세요
 - `ko-18`  카카오톡으로 연락해 화물 수령을 부탁한 B가 피고인의 계좌로 입금한 사례금을 찾아주세요
@@ -407,10 +402,11 @@
 - `ch-14`  请找出重庆恒韵医药有限公司的实际控制人李仕林最终被合并执行的刑罚
 - `ch-15`  请找出对刘荣华、韦泽禹、白晓敏分别数罪并罚宣告的刑罚中，财务总监刘荣华的有期徒刑和罚金
 - `vn-06`  Hãy tìm thời gian và địa điểm Lại Văn P trộm chiếc điện thoại Realme C2
+- `vn-08`  Hãy tìm mức án và ngày bắt đầu tính thời hạn tù đối với Lại Văn P, cùng biển số chiếc xe môtô do Chi cục Thi hành án dân sự quận Bình Tân đang tạm giữ
 - `vn-10`  Hãy tìm chủ tọa phiên tòa đã xét xử Lâm Tuấn A cùng với các Hội thẩm nhân dân Phạm Thị Ngọc, Nguyễn Ngọc Cảnh
 - `vn-11`  Hãy tìm tài sản mà Lâm Tuấn A đã trộm tại nhà ông Nguyễn Thành P và số tiền trong chiếc bóp
-- `vn-12`  Hãy tìm tổng giá trị tài sản do Hội đồng định giá tài sản xác định đối với bị hại bị mất chiếc bóp có thẻ Viettinbank và BIDV
-- `vn-13`  Hãy tìm tên cửa hàng điện thoại nơi Lâm Tuấn A bán chiếc Iphone X đã trộm và tên chủ cửa hàng đó
+- `vn-12`  Hãy tìm những tài sản mà Hội đồng định giá tài sản từ chối định giá trong vụ án Lâm Tuấn A và điều khoản làm căn cứ
+- `vn-13`  Hãy tìm địa chỉ cửa hàng điện thoại di động Nhật Khang và tên người mua chiếc Iphone X từ Lâm Tuấn A
 - `vn-16`  Hãy tìm mức án và ngày bắt đầu tính thời hạn tù mà Đỗ Văn Ph phải chịu về tội “Tàng trữ trái phép chất ma túy”
 - `vn-20`  Hãy tìm hai vật bị tịch thu tiêu hủy trong vụ án Trần Xuân H
 - `uz-07`  IIV Jinoyat-qidiruv bosh boshqarmasi qayd etgan 2019-yil va 2020-yilning 1-7 oylaridagi firibgarlik jinoyatlari sonini toping
@@ -435,12 +431,14 @@
 - `pil-12`  Hanapin ang sangay at lungsod ng hukumang dumidinig sa kasong isinampa laban kay PO2 Raffy Magaling, at kung anong kaso ito
 - `pil-15`  Hanapin ang pangalan at Roll number ng abogado ng Public Attorney’s Office na tumulong kay Sheila Martir na gumawa ng complaint-affidavit laban kay PO2 Raffy Magaling
 
-### 틀린@3 — 9/150개
+### 틀린@3 — 11/150개
 
 - `ko-25`  중국 C社 관계자들이 위장회사를 통한 입사·중국 이메일 사용 등과 함께, 출국금지·체포 시 전파하기로 정한 암호를 찾아주세요
 - `ch-15`  请找出对刘荣华、韦泽禹、白晓敏分别数罪并罚宣告的刑罚中，财务总监刘荣华的有期徒刑和罚金
 - `vn-06`  Hãy tìm thời gian và địa điểm Lại Văn P trộm chiếc điện thoại Realme C2
+- `vn-08`  Hãy tìm mức án và ngày bắt đầu tính thời hạn tù đối với Lại Văn P, cùng biển số chiếc xe môtô do Chi cục Thi hành án dân sự quận Bình Tân đang tạm giữ
 - `vn-10`  Hãy tìm chủ tọa phiên tòa đã xét xử Lâm Tuấn A cùng với các Hội thẩm nhân dân Phạm Thị Ngọc, Nguyễn Ngọc Cảnh
+- `vn-12`  Hãy tìm những tài sản mà Hội đồng định giá tài sản từ chối định giá trong vụ án Lâm Tuấn A và điều khoản làm căn cứ
 - `vn-16`  Hãy tìm mức án và ngày bắt đầu tính thời hạn tù mà Đỗ Văn Ph phải chịu về tội “Tàng trữ trái phép chất ma túy”
 - `uz-08`  Shaffof tizimga o‘tishni ilgari surib, jamiyatda axborot shaffofligini ta’minlash uchun yaratish taklif etilgan tizim nomini toping
 - `uz-14`  Zaxira nusxalarni tiklashgacha davom etadigan kiberjinoyatdan zarar ko‘rganda ko‘riladigan choralarning birinchisi va ikkinchisini toping
@@ -449,7 +447,7 @@
 
 ## harrier-270m [full]
 
-### 틀린@1 — 16/150개
+### 틀린@1 — 15/150개
 
 - `ko-02`  서울서부지방검찰청이 적발한, 전국 379개 병·의원 의사·약사에게 제공된 의약품 불법리베이트 총액을 찾아주세요
 - `ch-11`  请找出北京华业资本控股股份有限公司的证券代码、股票简称及其公告编号
@@ -459,7 +457,6 @@
 - `ch-15`  请找出对刘荣华、韦泽禹、白晓敏分别数罪并罚宣告的刑罚中，财务总监刘荣华的有期徒刑和罚金
 - `vn-05`  Hãy tìm chủ tọa phiên tòa và thư ký phiên tòa đã xét xử Lại Văn P cùng với các Hội thẩm nhân dân Vương Tấn Độ, Lê Văn Khanh
 - `vn-07`  Hãy tìm loại điện thoại và giá trị định giá của chiếc điện thoại mà Lại Văn P đã trộm của anh Nguyễn Đình V
-- `vn-12`  Hãy tìm tổng giá trị tài sản do Hội đồng định giá tài sản xác định đối với bị hại bị mất chiếc bóp có thẻ Viettinbank và BIDV
 - `uz-06`  Xavfli residivist yoki uyushgan guruh tomonidan sodir etilgan hollarni ham qo‘shib, O‘zbekiston Jinoyat kodeksining 168-moddasidagi firibgarlik uchun eng og‘ir jazo muddatini toping
 - `uz-09`  Qashqadaryoda mashhur kompaniyaning soxta aksiyalarini sotgan uyushgan jinoiy guruh o‘zlashtirgan mablag‘ miqdori va jabrlanuvchilar sonini toping
 - `uz-11`  Nasimov Umedjon Ulugbekovich tahsil olayotgan universitetni toping
