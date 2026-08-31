@@ -714,12 +714,12 @@
   },
   {
    "id": "vn-06",
-   "question": "Hãy tìm loại chứng cứ hình ảnh thu được từ Nhà nghỉ T P dùng để chứng minh lời khai nhận tội của Lại Văn P",
+   "question": "Hãy tìm ngày ra quyết định, thời hạn và ngày chấp hành xong quyết định đưa bị cáo Lại Văn P vào Cơ sở giáo dục, trong vụ án tại quận Bình Tân",
    "source": "vn/06_2023_HS-ST_HCM.pdf",
    "gold_chunks": [
-    234
+    230
    ],
-   "note": "정답: hình ảnh trích xuất từ camera của Nhà nghỉ T P (được bị cáo thừa nhận)"
+   "note": "정답: Ngày 23/01/2003, đưa vào Cơ sở giáo dục 24 tháng, đã chấp hành xong ngày 07/02/2005"
   },
   {
    "id": "vn-07",
@@ -759,12 +759,12 @@
   },
   {
    "id": "vn-11",
-   "question": "Hãy tìm ngày, mức án và tội danh của ba bản án tiền án của bị cáo Đỗ Văn Ph, trú tại tỉnh Thừa Thiên Huế",
+   "question": "Hãy tìm tên, năm sinh và địa chỉ của hai người làm chứng trong vụ án Đỗ Văn Ph tại Thừa Thiên Huế",
    "source": "vn/171_2018_HS-ST_HUE.pdf",
    "gold_chunks": [
     249
    ],
-   "note": "정답: 16/7/2002 15 tháng tù (Trộm cắp tài sản) / 24/4/2014 02 năm tù (Cưỡng đoạt tài sản) / 24/3/2017 06 tháng tù (Trộm cắp tài sản)"
+   "note": "정답: Anh Kiều Công L, sinh năm 1974, trú tại 181 Trần Hưng Đ, phường Phú Hòa / Anh Trần B, sinh năm 1970, trú tại 101 Trần Huy L, phường Phú Hòa"
   },
   {
    "id": "vn-12",
@@ -777,12 +777,12 @@
   },
   {
    "id": "vn-13",
-   "question": "Hãy tìm tài sản mà Lâm Tuấn A đã ném bỏ ở khu vực rừng cây cách nhà 50m và không thu giữ được",
+   "question": "Hãy tìm tên và năm sinh của bị hại và của người có quyền lợi, nghĩa vụ liên quan trong vụ án Lâm Tuấn A",
    "source": "vn/132_2020_HS-ST_HCM.pdf",
    "gold_chunks": [
-    240
+    239
    ],
-   "note": "정답: 03 chiếc đồng hồ đeo tay"
+   "note": "정답: Bị hại: Ông Nguyễn Thành P, sinh năm 1967 / Người có quyền lợi, nghĩa vụ liên quan: Ông Trần Hà T, sinh năm 1988"
   },
   {
    "id": "vn-14",
