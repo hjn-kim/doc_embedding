@@ -696,15 +696,12 @@
   },
   {
    "id": "vn-04",
-   "question": "Võ Minh P 가 Trần Văn H 를 태우고 thang nhôm 을 훔치러 갈 때 사용한 오토바이의 기종과 번호판을 찾아주세요",
+   "question": "Võ Minh P 가 마약 사용으로 강제 재활시설(cơ sở cai nghiện bắt buộc)에 보내진 두 번의 결정 날짜와 각 기간을 찾아주세요",
    "source": "vn/04_2023_HSST_BRVT.pdf",
    "gold_chunks": [
-    222,
-    223,
-    224,
-    225
+    221
    ],
-   "note": "정답: xe mô tô hiệu Yamaha Sirius / 72K1-356.06"
+   "note": "정답: 26-01-2011 (12 tháng) / 09-3-2018 (16 tháng)"
   },
   {
    "id": "vn-05",
@@ -717,34 +714,30 @@
   },
   {
    "id": "vn-06",
-   "question": "Lại Văn P 가 Realme C2 휴대폰을 훔친 일시와 그 장소를 찾아주세요",
+   "question": "Realme C2 휴대폰을 도둑맞은 피해자 Nguyễn Đình V 의 출생연도와 상주 등록 주소를 찾아주세요",
    "source": "vn/06_2023_HS-ST_HCM.pdf",
    "gold_chunks": [
-    230,
-    233
+    230
    ],
-   "note": "정답: 17 giờ 45 phút ngày 20/4/2022"
+   "note": "정답: sinh năm 1995 / Nhà số 44/119G, đường T T, Phường MB, Quận MM, Thành phố Hồ Chí Minh"
   },
   {
    "id": "vn-07",
-   "question": "Lại Văn P 가 anh Nguyễn Đình V 로부터 훔친 휴대폰의 기종과 감정 가액을 찾아주세요",
+   "question": "Lại Văn P 가 훔친 Realme C2 를 계속 쓰다가 연행된 날짜와, 그를 데려간 순찰조 및 당시의 혐의를 찾아주세요",
    "source": "vn/06_2023_HS-ST_HCM.pdf",
    "gold_chunks": [
-    231,
-    232,
-    233,
-    234
+    231
    ],
-   "note": "정답: Realme C2 / trị giá 800.000 đồng"
+   "note": "정답: ngày 25/5/2022 / Tổ tuần tra - Công an phường Tân Tạo A / nghi vấn “hành vi sử dụng trái phép chất ma túy”"
   },
   {
    "id": "vn-08",
-   "question": "Lại Văn P 에게 선고된 형량과 형기 기산일, 그리고 Chi cục Thi hành án dân sự quận Bình Tân 이 보관 중인 오토바이의 번호판을 찾아주세요",
+   "question": "Cáo trạng số 261/CT-VKS 로 기소된 Lại Văn P 에게 Kiểm sát viên 이 구형한 형량의 하한과 상한을 찾아주세요",
    "source": "vn/06_2023_HS-ST_HCM.pdf",
    "gold_chunks": [
-    236
+    232
    ],
-   "note": "정답: 01 (một) năm 03 (ba) tháng tù, tính từ ngày 26-5-2022 / xe môtô biển số 49V5-2461"
+   "note": "정답: từ 01 năm 03 tháng đến 01 năm 09 tháng tù"
   },
   {
    "id": "vn-09",
@@ -766,31 +759,30 @@
   },
   {
    "id": "vn-11",
-   "question": "Lâm Tuấn A 가 ông Nguyễn Thành P 의 집에서 훔친 물품과 지갑 안의 현금을 찾아주세요",
+   "question": "Trần Hà T 가 Lâm Tuấn A 에게서 Iphone X 를 사들이며 지불한 금액을 찾아주세요",
    "source": "vn/132_2020_HS-ST_HCM.pdf",
    "gold_chunks": [
-    240,
-    244
+    246
    ],
-   "note": "정답: Iphone X và 03 cái đồng hồ đeo tay"
+   "note": "정답: 3.000.000 đồng"
   },
   {
    "id": "vn-12",
-   "question": "Lâm Tuấn A 사건에서 Hội đồng định giá tài sản 이 정가를 거부한 물품과 그 근거 조항을 찾아주세요",
+   "question": "Lâm Tuấn A 사건의 감정 결론에 적힌 Iphone X 의 저장용량·구입연도와, Viettien 긴바지의 사이즈·구입연도를 찾아주세요",
    "source": "vn/132_2020_HS-ST_HCM.pdf",
    "gold_chunks": [
     241
    ],
-   "note": "정답: 03 cái đồng hồ đeo tay, 01 bóp da màu đen / điểm c khoản 1 Điều 10 Nghị định 30/2018/NĐ-CP"
+   "note": "정답: Iphone X 64GB mua năm 2018 / quần Viettien size 82 mua năm 2019"
   },
   {
    "id": "vn-13",
-   "question": "Lâm Tuấn A 가 Iphone X 를 판 Nhật Khang 가게의 주소와 그 휴대폰을 사들인 사람의 이름을 찾아주세요",
+   "question": "Lâm Tuấn A 가 훔친 뒤 버린 지갑(bóp)과 손목시계 3개를 각각 어디에 버렸는지 찾아주세요",
    "source": "vn/132_2020_HS-ST_HCM.pdf",
    "gold_chunks": [
     240
    ],
-   "note": "정답: số 02 Nguyễn Văn Khạ, ấp Phú An, xã Phú Hòa Đông, huyện Củ Chi / ông Trần Hà T"
+   "note": "정답: bóp — phía sau nhà (thu giữ được) / 03 chiếc đồng hồ — khu vực rừng cây cách nhà 50m (không thu giữ được)"
   },
   {
    "id": "vn-14",
@@ -841,23 +833,21 @@
   },
   {
    "id": "vn-19",
-   "question": "Trần Xuân H 이 2013년 1월 23일 판결에서 마약 소지죄와 절도죄로 각각 받은 형과 합산된 총 형기를 찾아주세요",
+   "question": "Trần Xuân H 의 배우자 이름과 혼인 상태, 그리고 자녀 수를 찾아주세요",
    "source": "vn/29_2018_HS-ST_THAI_NGUYEN[1].pdf",
    "gold_chunks": [
     256
    ],
-   "note": "정답: 30 tháng tù (Tàng trữ trái phép chất ma túy) + 30 tháng tù (Trộm cắp tài sản), tổng hợp hình phạt là 60 tháng tù"
+   "note": "정답: có vợ Hà Thị Nh (đã ly hôn) và có 01 con"
   },
   {
    "id": "vn-20",
-   "question": "Trần Xuân H 사건에서 몰수·폐기 처분된 두 가지 물품을 찾아주세요",
+   "question": "Trần Xuân H 에게 선고된 형량과 형기 기산일, 그리고 선고일부터 며칠간 구금하도록 한 결정을 찾아주세요",
    "source": "vn/29_2018_HS-ST_THAI_NGUYEN[1].pdf",
    "gold_chunks": [
-    258,
-    261,
     262
    ],
-   "note": "정답: Tịch thu tiêu hủy 01 then chốt cửa bằng kim loại bị cong gãy tại phần móc khóa; 01 cờ lê bằng sắt dài 32 cm"
+   "note": "정답: 15 tháng tù, tính từ ngày 23/4/2018 / tạm giam 45 ngày kể từ ngày tuyên án theo Điều 329 BLTTHS"
   },
   {
    "id": "uz-01",
