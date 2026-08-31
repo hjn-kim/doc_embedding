@@ -41,7 +41,7 @@ python-docx>=1.1.0          # .docx
 PyMuPDF>=1.24.0             # .pdf (주 파서)
 pypdf>=4.2.0                # .pdf (fallback)
 
-# ── 대시보드 (app.py) ─────────────────────────────────────────
+# ── 대시보드 (2-4_document_embedding.py) ─────────────────────
 # 로컬 실행용. Streamlit Community Cloud 는 저장소 루트의 requirements.txt 를
 # 자동 설치하는데, 이 파일에는 torch 까지 들어 있어 리소스 한도를 넘겨
 # 배포가 실패합니다. Cloud 에 올릴 거면 대시보드 전용 저장소를 따로 두고
