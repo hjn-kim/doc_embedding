@@ -4652,16 +4652,16 @@
   {
     "model": "kure-v1 [512]",
     "qid": "vn-06",
-    "question": "Hãy tìm loại chứng cứ hình ảnh thu được từ Nhà nghỉ T P dùng để chứng minh lời khai nhận tội của Lại Văn P",
+    "question": "Hãy tìm ngày ra quyết định, thời hạn và ngày chấp hành xong quyết định đưa bị cáo Lại Văn P vào Cơ sở giáo dục, trong vụ án tại quận Bình Tân",
     "n_gold": 1,
     "Hit@1": 0.0,
-    "Hit@3": 0.0,
-    "MRR@3": 0.0,
-    "nDCG@3": 0.0,
+    "Hit@3": 1.0,
+    "MRR@3": 0.5,
+    "nDCG@3": 0.6309,
     "top5": [
       {
         "chunk_id": 229,
-        "score": 0.5934,
+        "score": 0.6911,
         "is_gold": false,
         "source": "vn/06_2023_HS-ST_HCM.pdf",
         "locator": "블록.1",
@@ -4670,29 +4670,9 @@
         "preview": ": Lại Văn P (tên gọi khác: Lé); sinh năm: 1983, tại Thành phố Hồ Chí Minh. Nơi đăng ký hộ khẩu thường trú: Không có; nơi ở: Không ổn định; nghề nghiệp: Không có; trình độ văn hóa: 2/12; dân tộc: Kinh;"
       },
       {
-        "chunk_id": 231,
-        "score": 0.5814,
-        "is_gold": false,
-        "source": "vn/06_2023_HS-ST_HCM.pdf",
-        "locator": "블록.2",
-        "섹션": null,
-        "match": null,
-        "preview": "cửa phòng nghỉ của nhân viên tiếp tân phía sau bàn ra thì thấy có chiếc điện thoại di động hiệu Realme C2, màu xanh của anh Nguyễn Đình V đang để trên nệm sạc pin và trong phòng cũng không có người nà"
-      },
-      {
-        "chunk_id": 233,
-        "score": 0.5587,
-        "is_gold": false,
-        "source": "vn/06_2023_HS-ST_HCM.pdf",
-        "locator": "블록.3",
-        "섹션": null,
-        "match": null,
-        "preview": "sản”. Về trách nhiệm dân sự, do bị hại là anh V chỉ yêu cầu được nhận lại chiếc điện thoại bị chiếm đoạt mà không yêu cầu gì thêm nên không có ý kiến. Còn về vật chứng, đề nghị tịch thu sung quỹ Nhà n"
-      },
-      {
         "chunk_id": 230,
-        "score": 0.5533,
-        "is_gold": false,
+        "score": 0.6369,
+        "is_gold": true,
         "source": "vn/06_2023_HS-ST_HCM.pdf",
         "locator": "블록.1~2",
         "섹션": null,
@@ -4700,14 +4680,34 @@
         "preview": "Quyết định xử phạt vi phạm hành chính 750.000 đồng về hành vi “say rượu, bia gây mất trật tự công cộng” (chưa chấp hành Quyết định nên chưa được coi là chưa bị xử phạt vi phạm hành chính); nhân thân: "
       },
       {
-        "chunk_id": 234,
-        "score": 0.5504,
-        "is_gold": true,
+        "chunk_id": 228,
+        "score": 0.6087,
+        "is_gold": false,
         "source": "vn/06_2023_HS-ST_HCM.pdf",
-        "locator": "블록.3~4",
+        "locator": "블록.1",
         "섹션": null,
         "match": null,
-        "preview": "di động hiệu Realme C2, màu xanh của anh Nguyễn Đình V để tại Nhà nghỉ T P, số 26 Đường Số 3, Khu phố B, phường T T A, quận B T. Theo Kết luận định giá tài sản số: 270/KL- HĐĐGTS, ngày 30/5/2022 của H"
+        "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM QUẬN BÌNH TÂN Độc lập – Tự do – Hạnh phúc THÀNH PHỐ HỒ CHÍ MINH Bản án số: 06/2023/HS-ST Ngày 13-01-2023 NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆ"
+      },
+      {
+        "chunk_id": 221,
+        "score": 0.551,
+        "is_gold": false,
+        "source": "vn/04_2023_HSST_BRVT.pdf",
+        "locator": "블록.1~2",
+        "섹션": null,
+        "match": null,
+        "preview": ": Việt Nam; Dân tộc: Kinh. Trình độ văn hóa: 5/12; Nghề nghiệp: Không. Con ông Võ Văn X và bà Phạm Thị M. B/c có vợ Trương Thị Tâm L và 01 người con sinh năm 2017. Tiền sự: Không. Tiền án: Ngày 06-02-"
+      },
+      {
+        "chunk_id": 237,
+        "score": 0.5464,
+        "is_gold": false,
+        "source": "vn/06_2023_HS-ST_HCM.pdf",
+        "locator": "블록.4~5",
+        "섹션": null,
+        "match": null,
+        "preview": "cái điện thoại di động Realme C2, màu xanh (đã qua sử dụng). Tịch thu tiêu hủy 01 cái áo thun dài tay màu đỏ sọc xanh, phía trước áo có in dòng chữ màu trắng Rakuten (đã qua sử dụng) và 01 cái nón vải"
       }
     ]
   },
@@ -4962,26 +4962,16 @@
   {
     "model": "kure-v1 [512]",
     "qid": "vn-11",
-    "question": "Hãy tìm ngày, mức án và tội danh của ba bản án tiền án của bị cáo Đỗ Văn Ph, trú tại tỉnh Thừa Thiên Huế",
+    "question": "Hãy tìm tên, năm sinh và địa chỉ của hai người làm chứng trong vụ án Đỗ Văn Ph tại Thừa Thiên Huế",
     "n_gold": 1,
-    "Hit@1": 0.0,
+    "Hit@1": 1.0,
     "Hit@3": 1.0,
-    "MRR@3": 0.5,
-    "nDCG@3": 0.6309,
+    "MRR@3": 1.0,
+    "nDCG@3": 1.0,
     "top5": [
       {
-        "chunk_id": 254,
-        "score": 0.6844,
-        "is_gold": false,
-        "source": "vn/171_2018_HS-ST_HUE.pdf",
-        "locator": "블록.4~5",
-        "섹션": "2. Bà Nguyễn Thị Tuyết",
-        "match": null,
-        "preview": "a Thiên Huế và dòng chữ “ Mẫu vật vụ Đỗ Văn Ph bắt ngày 30/4/2018 ”. Theo biên bản giao nhận vật chứng giữa Cơ quan cảnh sát điều tra công an thành phố Huế và Chi cục thi hành án dân sự thành phố Huế "
-      },
-      {
         "chunk_id": 249,
-        "score": 0.6445,
+        "score": 0.6182,
         "is_gold": true,
         "source": "vn/171_2018_HS-ST_HUE.pdf",
         "locator": "블록.2",
@@ -4991,7 +4981,7 @@
       },
       {
         "chunk_id": 248,
-        "score": 0.6305,
+        "score": 0.6176,
         "is_gold": false,
         "source": "vn/171_2018_HS-ST_HUE.pdf",
         "locator": "블록.1~2",
@@ -5000,24 +4990,34 @@
         "preview": "TOÀ ÁN NHÂN DÂN CỘNG HOÀ XÃ HỘI CHỦ NGHĨA VIỆT NAM THÀNH PHỐ HUẾ Độc lập - Tự do - Hạnh phúc. TỈNH THỪA THIÊN HUẾ Bản án số: 171/2018/HS- ST Ngày: 05- 10- 2018 NHÂN DANH NƯỚC CỘNG HOÀ XÃ HỘI CHỦ NGHĨA"
       },
       {
-        "chunk_id": 221,
-        "score": 0.6177,
+        "chunk_id": 254,
+        "score": 0.6035,
         "is_gold": false,
-        "source": "vn/04_2023_HSST_BRVT.pdf",
-        "locator": "블록.1~2",
-        "섹션": null,
+        "source": "vn/171_2018_HS-ST_HUE.pdf",
+        "locator": "블록.4~5",
+        "섹션": "2. Bà Nguyễn Thị Tuyết",
         "match": null,
-        "preview": ": Việt Nam; Dân tộc: Kinh. Trình độ văn hóa: 5/12; Nghề nghiệp: Không. Con ông Võ Văn X và bà Phạm Thị M. B/c có vợ Trương Thị Tâm L và 01 người con sinh năm 2017. Tiền sự: Không. Tiền án: Ngày 06-02-"
+        "preview": "a Thiên Huế và dòng chữ “ Mẫu vật vụ Đỗ Văn Ph bắt ngày 30/4/2018 ”. Theo biên bản giao nhận vật chứng giữa Cơ quan cảnh sát điều tra công an thành phố Huế và Chi cục thi hành án dân sự thành phố Huế "
       },
       {
         "chunk_id": 253,
-        "score": 0.6107,
+        "score": 0.5877,
         "is_gold": false,
         "source": "vn/171_2018_HS-ST_HUE.pdf",
         "locator": "블록.3~4",
         "섹션": "2. Bà Nguyễn Thị Tuyết",
         "match": null,
         "preview": "túy đã giám định được niêm phong kín bằng giấy trắng và băng keo trong, bên ngoài có hai chữ ký của Giám định viên Trần , hai chữ ký của Điều tra viên Trương Thanh M, hai dấu tròn đỏ của Phòng kỹ thuậ"
+      },
+      {
+        "chunk_id": 251,
+        "score": 0.5272,
+        "is_gold": false,
+        "source": "vn/171_2018_HS-ST_HUE.pdf",
+        "locator": "블록.2~3",
+        "섹션": null,
+        "match": null,
+        "preview": ". Tại phiên tòa đại diện Viện kiểm sát giữ nguyên quyết định truy tố và đề nghị Hội đồng xét xử tuyên bố bị cáo Đỗ Văn P phạm tội “ Tàng trữ trái phép chất ma túy”. Áp dụng điểm c khoản 1 Điều 249; đi"
       }
     ]
   },
@@ -5086,17 +5086,17 @@
   {
     "model": "kure-v1 [512]",
     "qid": "vn-13",
-    "question": "Hãy tìm tài sản mà Lâm Tuấn A đã ném bỏ ở khu vực rừng cây cách nhà 50m và không thu giữ được",
+    "question": "Hãy tìm tên và năm sinh của bị hại và của người có quyền lợi, nghĩa vụ liên quan trong vụ án Lâm Tuấn A",
     "n_gold": 1,
-    "Hit@1": 0.0,
+    "Hit@1": 1.0,
     "Hit@3": 1.0,
-    "MRR@3": 0.5,
-    "nDCG@3": 0.6309,
+    "MRR@3": 1.0,
+    "nDCG@3": 1.0,
     "top5": [
       {
         "chunk_id": 239,
-        "score": 0.6158,
-        "is_gold": false,
+        "score": 0.6121,
+        "is_gold": true,
         "source": "vn/132_2020_HS-ST_HCM.pdf",
         "locator": "블록.1~2",
         "섹션": null,
@@ -5104,18 +5104,28 @@
         "preview": "và tên: Lâm Tuấn A, sinh năm: 1984 tại Thành phố Hồ Chí Minh; nơi đăng ký hộ khẩu thường trú: Ấp P, xã P, huyện C, Thành phố Hồ Chí Minh; nghề nghiệp: Không; trình độ học vấn: 02/12; dân tộc: Kinh; gi"
       },
       {
-        "chunk_id": 240,
-        "score": 0.5961,
-        "is_gold": true,
+        "chunk_id": 238,
+        "score": 0.5909,
+        "is_gold": false,
         "source": "vn/132_2020_HS-ST_HCM.pdf",
-        "locator": "블록.2",
+        "locator": "블록.1",
+        "섹션": null,
+        "match": null,
+        "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM HUYỆN CỦ CHI Độc lập - Tự do - Hạnh phúc THÀNH PHỐ HỒ CHÍ MINH Bản án số: 132/2020/HS-ST Ngày: 27-7-2020 NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆ"
+      },
+      {
+        "chunk_id": 247,
+        "score": 0.561,
+        "is_gold": false,
+        "source": "vn/132_2020_HS-ST_HCM.pdf",
+        "locator": "블록.6",
         "섹션": "2. Ông Nguyễn Ngọc Cảnh;",
         "match": null,
-        "preview": "khiển xe đạp trên đường Tỉnh lộ 15, tổ 89, ấp Phú Bình, xã Phú Hòa Đông, huyện Củ Chi, Thành phố Hồ Chí Minh. Tại đây, Tuấn A phát hiện cửa sổ nhà ông P mở và trong nhà sáng đèn nên dừng lại quan sát."
+        "preview": "g khoản 2 Điều 173, điểm s khoản 1 Điều 51 và Điều 38 của Bộ luật Hình sự năm 2015, được sửa đổi bổ sung năm 2017. Xử phạt: Bị cáo Lâm Tuấn A 03 (ba) năm 06 (sáu) tháng tù, thời hạn tù tính từ ngày 08"
       },
       {
         "chunk_id": 246,
-        "score": 0.5755,
+        "score": 0.5196,
         "is_gold": false,
         "source": "vn/132_2020_HS-ST_HCM.pdf",
         "locator": "블록.5~6",
@@ -5124,18 +5134,8 @@
         "preview": "minh nhân dân, 01 giấy phép lái xe, 01 giấy đăng ký xe mô tô, 01 thẻ đoàn viên, 01 thẻ bảo hiểm y tế, 01 thẻ ATM của Ngân hàng Viettinbank, 01 thẻ ATM của Ngân hàng BIDV, Hội đồng xét xử không xem xét"
       },
       {
-        "chunk_id": 244,
-        "score": 0.5547,
-        "is_gold": false,
-        "source": "vn/132_2020_HS-ST_HCM.pdf",
-        "locator": "블록.4",
-        "섹션": "2. Ông Nguyễn Ngọc Cảnh;",
-        "match": null,
-        "preview": "truy tố đã thực hiện đúng về thẩm quyền, trình tự, thủ tục theo quy định của Bộ luật Tố tụng hình sự. Quá trình điều tra và tại phiên tòa, bị cáo bị hại, người có quyền lợi, nghĩa vụ liên quan đến vụ "
-      },
-      {
         "chunk_id": 242,
-        "score": 0.545,
+        "score": 0.5177,
         "is_gold": false,
         "source": "vn/132_2020_HS-ST_HCM.pdf",
         "locator": "블록.3",
@@ -13952,7 +13952,7 @@
   {
     "model": "kure-v1 [full]",
     "qid": "vn-06",
-    "question": "Hãy tìm loại chứng cứ hình ảnh thu được từ Nhà nghỉ T P dùng để chứng minh lời khai nhận tội của Lại Văn P",
+    "question": "Hãy tìm ngày ra quyết định, thời hạn và ngày chấp hành xong quyết định đưa bị cáo Lại Văn P vào Cơ sở giáo dục, trong vụ án tại quận Bình Tân",
     "n_gold": 1,
     "Hit@1": 1.0,
     "Hit@3": 1.0,
@@ -13961,7 +13961,7 @@
     "top5": [
       {
         "chunk_id": 47,
-        "score": 0.5455,
+        "score": 0.5636,
         "is_gold": true,
         "source": "vn/06_2023_HS-ST_HCM.pdf",
         "locator": "전체",
@@ -13970,18 +13970,8 @@
         "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM QUẬN BÌNH TÂN Độc lập – Tự do – Hạnh phúc THÀNH PHỐ HỒ CHÍ MINH Bản án số: 06/2023/HS-ST Ngày 13-01-2023 NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆ"
       },
       {
-        "chunk_id": 49,
-        "score": 0.4937,
-        "is_gold": false,
-        "source": "vn/171_2018_HS-ST_HUE.pdf",
-        "locator": "전체",
-        "섹션": null,
-        "match": null,
-        "preview": "TOÀ ÁN NHÂN DÂN CỘNG HOÀ XÃ HỘI CHỦ NGHĨA VIỆT NAM THÀNH PHỐ HUẾ Độc lập - Tự do - Hạnh phúc. TỈNH THỪA THIÊN HUẾ Bản án số: 171/2018/HS- ST Ngày: 05- 10- 2018 NHÂN DANH NƯỚC CỘNG HOÀ XÃ HỘI CHỦ NGHĨA"
-      },
-      {
         "chunk_id": 46,
-        "score": 0.4845,
+        "score": 0.493,
         "is_gold": false,
         "source": "vn/04_2023_HSST_BRVT.pdf",
         "locator": "전체",
@@ -13990,24 +13980,34 @@
         "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM HUYỆN Đ Độc lập – Tự do – Hạnh phúc TỈNH BÀ RỊA VŨNG TÀU Bản án số: 04/2023/HSST. Ngày: 16-02-2023. NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM"
       },
       {
-        "chunk_id": 50,
-        "score": 0.4767,
+        "chunk_id": 49,
+        "score": 0.4742,
         "is_gold": false,
-        "source": "vn/29_2018_HS-ST_THAI_NGUYEN[1].pdf",
+        "source": "vn/171_2018_HS-ST_HUE.pdf",
         "locator": "전체",
         "섹션": null,
         "match": null,
-        "preview": "TÒA ÁN NHÂN DÂN TP. SÔNG CÔNG CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM TỈNH THÁI NGUYÊN Độc lập - Tự do - Hạnh phúc ––––––––––––– ––––––––––––––––––– Bản án số: 29 /2018/HS-ST Ngày 19 - 6 - 2018 NHÂN DANH N"
+        "preview": "TOÀ ÁN NHÂN DÂN CỘNG HOÀ XÃ HỘI CHỦ NGHĨA VIỆT NAM THÀNH PHỐ HUẾ Độc lập - Tự do - Hạnh phúc. TỈNH THỪA THIÊN HUẾ Bản án số: 171/2018/HS- ST Ngày: 05- 10- 2018 NHÂN DANH NƯỚC CỘNG HOÀ XÃ HỘI CHỦ NGHĨA"
       },
       {
-        "chunk_id": 31,
-        "score": 0.4749,
+        "chunk_id": 48,
+        "score": 0.4734,
         "is_gold": false,
-        "source": "pil/judicialaffidavitfilipino.pdf",
+        "source": "vn/132_2020_HS-ST_HCM.pdf",
         "locator": "전체",
         "섹션": null,
         "match": null,
-        "preview": "REPUBLIC OF THE PHILIPPINES NATIONAL CAPITAL JUDICIAL REGION REGIONAL TRIAL COURT BRANCH 65, MAKATI CITY PEOPLE OF THE PHILIPPINES, Complainant, -versus- CASE NO.: ___________ For: Murder PO2 RAFFY MA"
+        "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM HUYỆN CỦ CHI Độc lập - Tự do - Hạnh phúc THÀNH PHỐ HỒ CHÍ MINH Bản án số: 132/2020/HS-ST Ngày: 27-7-2020 NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆ"
+      },
+      {
+        "chunk_id": 19,
+        "score": 0.4607,
+        "is_gold": false,
+        "source": "ko/2015노4675_판결문.pdf",
+        "locator": "전체",
+        "섹션": null,
+        "match": null,
+        "preview": "서울중앙지방법원 제50형사부 판결 사 건 2015노4675 건조물침입, 업무방해 피 고 인 A 항 소 인 피고인, 검사 검 사 이선혁(기소), 오기찬(공판) 원 심 판 결 서울중앙지방법원 2015. 11. 19. 선고 2015고정2384 판결 판결선고 2016.3.10. 주문 원심판결을 파기한다. 피고인을 벌금 300만 원에 처한다. 피고인이 위 벌금을 납"
       }
     ]
   },
@@ -14095,7 +14095,7 @@
       },
       {
         "chunk_id": 48,
-        "score": 0.5044,
+        "score": 0.5045,
         "is_gold": false,
         "source": "vn/132_2020_HS-ST_HCM.pdf",
         "locator": "전체",
@@ -14115,7 +14115,7 @@
       },
       {
         "chunk_id": 46,
-        "score": 0.498,
+        "score": 0.4981,
         "is_gold": false,
         "source": "vn/04_2023_HSST_BRVT.pdf",
         "locator": "전체",
@@ -14219,7 +14219,7 @@
       },
       {
         "chunk_id": 46,
-        "score": 0.4658,
+        "score": 0.4659,
         "is_gold": false,
         "source": "vn/04_2023_HSST_BRVT.pdf",
         "locator": "전체",
@@ -14229,7 +14229,7 @@
       },
       {
         "chunk_id": 50,
-        "score": 0.4508,
+        "score": 0.4509,
         "is_gold": false,
         "source": "vn/29_2018_HS-ST_THAI_NGUYEN[1].pdf",
         "locator": "전체",
@@ -14239,7 +14239,7 @@
       },
       {
         "chunk_id": 47,
-        "score": 0.444,
+        "score": 0.4441,
         "is_gold": false,
         "source": "vn/06_2023_HS-ST_HCM.pdf",
         "locator": "전체",
@@ -14248,21 +14248,21 @@
         "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM QUẬN BÌNH TÂN Độc lập – Tự do – Hạnh phúc THÀNH PHỐ HỒ CHÍ MINH Bản án số: 06/2023/HS-ST Ngày 13-01-2023 NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆ"
       },
       {
-        "chunk_id": 49,
-        "score": 0.4242,
+        "chunk_id": 33,
+        "score": 0.4243,
         "is_gold": false,
-        "source": "vn/171_2018_HS-ST_HUE.pdf",
+        "source": "pil/toazinfo-pinagsamang.pdf",
         "locator": "전체",
         "섹션": null,
         "match": null,
-        "preview": "TOÀ ÁN NHÂN DÂN CỘNG HOÀ XÃ HỘI CHỦ NGHĨA VIỆT NAM THÀNH PHỐ HUẾ Độc lập - Tự do - Hạnh phúc. TỈNH THỪA THIÊN HUẾ Bản án số: 171/2018/HS- ST Ngày: 05- 10- 2018 NHÂN DANH NƯỚC CỘNG HOÀ XÃ HỘI CHỦ NGHĨA"
+        "preview": "Republika ng Pilipinas ) Lungsod ng Quezon ) S.S. PINAGSAMANG SINUMPAANG-SALAYSAY Kami, sina JUVIC CADIAO at FERNADO ROLLAN ROMERO, kapwa nasa hustong gulang, Filipino, at nakatira sa Block 1 Lot 2 Br"
       }
     ]
   },
   {
     "model": "kure-v1 [full]",
     "qid": "vn-11",
-    "question": "Hãy tìm ngày, mức án và tội danh của ba bản án tiền án của bị cáo Đỗ Văn Ph, trú tại tỉnh Thừa Thiên Huế",
+    "question": "Hãy tìm tên, năm sinh và địa chỉ của hai người làm chứng trong vụ án Đỗ Văn Ph tại Thừa Thiên Huế",
     "n_gold": 1,
     "Hit@1": 1.0,
     "Hit@3": 1.0,
@@ -14271,7 +14271,7 @@
     "top5": [
       {
         "chunk_id": 49,
-        "score": 0.6044,
+        "score": 0.5846,
         "is_gold": true,
         "source": "vn/171_2018_HS-ST_HUE.pdf",
         "locator": "전체",
@@ -14280,8 +14280,18 @@
         "preview": "TOÀ ÁN NHÂN DÂN CỘNG HOÀ XÃ HỘI CHỦ NGHĨA VIỆT NAM THÀNH PHỐ HUẾ Độc lập - Tự do - Hạnh phúc. TỈNH THỪA THIÊN HUẾ Bản án số: 171/2018/HS- ST Ngày: 05- 10- 2018 NHÂN DANH NƯỚC CỘNG HOÀ XÃ HỘI CHỦ NGHĨA"
       },
       {
+        "chunk_id": 31,
+        "score": 0.4713,
+        "is_gold": false,
+        "source": "pil/judicialaffidavitfilipino.pdf",
+        "locator": "전체",
+        "섹션": null,
+        "match": null,
+        "preview": "REPUBLIC OF THE PHILIPPINES NATIONAL CAPITAL JUDICIAL REGION REGIONAL TRIAL COURT BRANCH 65, MAKATI CITY PEOPLE OF THE PHILIPPINES, Complainant, -versus- CASE NO.: ___________ For: Murder PO2 RAFFY MA"
+      },
+      {
         "chunk_id": 46,
-        "score": 0.5173,
+        "score": 0.4619,
         "is_gold": false,
         "source": "vn/04_2023_HSST_BRVT.pdf",
         "locator": "전체",
@@ -14290,34 +14300,24 @@
         "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM HUYỆN Đ Độc lập – Tự do – Hạnh phúc TỈNH BÀ RỊA VŨNG TÀU Bản án số: 04/2023/HSST. Ngày: 16-02-2023. NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM"
       },
       {
-        "chunk_id": 50,
-        "score": 0.5013,
+        "chunk_id": 33,
+        "score": 0.4596,
         "is_gold": false,
-        "source": "vn/29_2018_HS-ST_THAI_NGUYEN[1].pdf",
+        "source": "pil/toazinfo-pinagsamang.pdf",
         "locator": "전체",
         "섹션": null,
         "match": null,
-        "preview": "TÒA ÁN NHÂN DÂN TP. SÔNG CÔNG CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM TỈNH THÁI NGUYÊN Độc lập - Tự do - Hạnh phúc ––––––––––––– ––––––––––––––––––– Bản án số: 29 /2018/HS-ST Ngày 19 - 6 - 2018 NHÂN DANH N"
+        "preview": "Republika ng Pilipinas ) Lungsod ng Quezon ) S.S. PINAGSAMANG SINUMPAANG-SALAYSAY Kami, sina JUVIC CADIAO at FERNADO ROLLAN ROMERO, kapwa nasa hustong gulang, Filipino, at nakatira sa Block 1 Lot 2 Br"
       },
       {
-        "chunk_id": 47,
-        "score": 0.4805,
+        "chunk_id": 22,
+        "score": 0.4384,
         "is_gold": false,
-        "source": "vn/06_2023_HS-ST_HCM.pdf",
+        "source": "ko/2025고합394_판결문.pdf",
         "locator": "전체",
         "섹션": null,
         "match": null,
-        "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM QUẬN BÌNH TÂN Độc lập – Tự do – Hạnh phúc THÀNH PHỐ HỒ CHÍ MINH Bản án số: 06/2023/HS-ST Ngày 13-01-2023 NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆ"
-      },
-      {
-        "chunk_id": 48,
-        "score": 0.4759,
-        "is_gold": false,
-        "source": "vn/132_2020_HS-ST_HCM.pdf",
-        "locator": "전체",
-        "섹션": null,
-        "match": null,
-        "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM HUYỆN CỦ CHI Độc lập - Tự do - Hạnh phúc THÀNH PHỐ HỒ CHÍ MINH Bản án số: 132/2020/HS-ST Ngày: 27-7-2020 NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆ"
+        "preview": "본 판결문은 판결서 인터넷열람 사이트에서 열람·출력되었습니다. 본 판결문을 이용하여 사건관계인의 명예나 생활의 평온을 해하는 행위는 관련 법령에 따라 금지됩니다. 비실명처리일자 : 2026-04-29 제주지방법원 제 2 형 사 부 판결 사건 2025고합394 마약류관리에관한법률위반(향정) 피고인 A 검사 한상훈(기소), 유선문(공판) 변호인 법무법인 한원 "
       }
     ]
   },
@@ -14386,7 +14386,7 @@
   {
     "model": "kure-v1 [full]",
     "qid": "vn-13",
-    "question": "Hãy tìm tài sản mà Lâm Tuấn A đã ném bỏ ở khu vực rừng cây cách nhà 50m và không thu giữ được",
+    "question": "Hãy tìm tên và năm sinh của bị hại và của người có quyền lợi, nghĩa vụ liên quan trong vụ án Lâm Tuấn A",
     "n_gold": 1,
     "Hit@1": 1.0,
     "Hit@3": 1.0,
@@ -14395,7 +14395,7 @@
     "top5": [
       {
         "chunk_id": 48,
-        "score": 0.5536,
+        "score": 0.5566,
         "is_gold": true,
         "source": "vn/132_2020_HS-ST_HCM.pdf",
         "locator": "전체",
@@ -14405,7 +14405,7 @@
       },
       {
         "chunk_id": 50,
-        "score": 0.4962,
+        "score": 0.4933,
         "is_gold": false,
         "source": "vn/29_2018_HS-ST_THAI_NGUYEN[1].pdf",
         "locator": "전체",
@@ -14415,7 +14415,7 @@
       },
       {
         "chunk_id": 46,
-        "score": 0.4925,
+        "score": 0.4922,
         "is_gold": false,
         "source": "vn/04_2023_HSST_BRVT.pdf",
         "locator": "전체",
@@ -14425,7 +14425,7 @@
       },
       {
         "chunk_id": 47,
-        "score": 0.4799,
+        "score": 0.4858,
         "is_gold": false,
         "source": "vn/06_2023_HS-ST_HCM.pdf",
         "locator": "전체",
@@ -14434,14 +14434,14 @@
         "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM QUẬN BÌNH TÂN Độc lập – Tự do – Hạnh phúc THÀNH PHỐ HỒ CHÍ MINH Bản án số: 06/2023/HS-ST Ngày 13-01-2023 NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆ"
       },
       {
-        "chunk_id": 49,
-        "score": 0.4455,
+        "chunk_id": 31,
+        "score": 0.4849,
         "is_gold": false,
-        "source": "vn/171_2018_HS-ST_HUE.pdf",
+        "source": "pil/judicialaffidavitfilipino.pdf",
         "locator": "전체",
         "섹션": null,
         "match": null,
-        "preview": "TOÀ ÁN NHÂN DÂN CỘNG HOÀ XÃ HỘI CHỦ NGHĨA VIỆT NAM THÀNH PHỐ HUẾ Độc lập - Tự do - Hạnh phúc. TỈNH THỪA THIÊN HUẾ Bản án số: 171/2018/HS- ST Ngày: 05- 10- 2018 NHÂN DANH NƯỚC CỘNG HOÀ XÃ HỘI CHỦ NGHĨA"
+        "preview": "REPUBLIC OF THE PHILIPPINES NATIONAL CAPITAL JUDICIAL REGION REGIONAL TRIAL COURT BRANCH 65, MAKATI CITY PEOPLE OF THE PHILIPPINES, Complainant, -versus- CASE NO.: ___________ For: Murder PO2 RAFFY MA"
       }
     ]
   },
@@ -14705,7 +14705,7 @@
     "top5": [
       {
         "chunk_id": 50,
-        "score": 0.6596,
+        "score": 0.6598,
         "is_gold": true,
         "source": "vn/29_2018_HS-ST_THAI_NGUYEN[1].pdf",
         "locator": "전체",
@@ -14715,7 +14715,7 @@
       },
       {
         "chunk_id": 46,
-        "score": 0.5986,
+        "score": 0.5988,
         "is_gold": false,
         "source": "vn/04_2023_HSST_BRVT.pdf",
         "locator": "전체",
@@ -14725,7 +14725,7 @@
       },
       {
         "chunk_id": 49,
-        "score": 0.5421,
+        "score": 0.5423,
         "is_gold": false,
         "source": "vn/171_2018_HS-ST_HUE.pdf",
         "locator": "전체",
@@ -14735,7 +14735,7 @@
       },
       {
         "chunk_id": 48,
-        "score": 0.5366,
+        "score": 0.5368,
         "is_gold": false,
         "source": "vn/132_2020_HS-ST_HCM.pdf",
         "locator": "전체",
@@ -14745,7 +14745,7 @@
       },
       {
         "chunk_id": 47,
-        "score": 0.5276,
+        "score": 0.5277,
         "is_gold": false,
         "source": "vn/06_2023_HS-ST_HCM.pdf",
         "locator": "전체",
@@ -16027,7 +16027,7 @@
       },
       {
         "chunk_id": 44,
-        "score": 0.483,
+        "score": 0.4829,
         "is_gold": false,
         "source": "uz/ZDIF+0701.pdf",
         "locator": "전체",
@@ -16999,7 +16999,7 @@
     "top5": [
       {
         "chunk_id": 39,
-        "score": 0.6039,
+        "score": 0.604,
         "is_gold": true,
         "source": "ru/vsrfrulk2489670.pdf",
         "locator": "전체",
@@ -17123,7 +17123,7 @@
     "top5": [
       {
         "chunk_id": 40,
-        "score": 0.4825,
+        "score": 0.4824,
         "is_gold": true,
         "source": "ru/vsrfrulk2533930.pdf",
         "locator": "전체",
@@ -17133,7 +17133,7 @@
       },
       {
         "chunk_id": 5,
-        "score": 0.4652,
+        "score": 0.4651,
         "is_gold": false,
         "source": "ch/H2_AN202301191582160400_1.pdf",
         "locator": "전체",
@@ -17143,7 +17143,7 @@
       },
       {
         "chunk_id": 33,
-        "score": 0.4572,
+        "score": 0.4571,
         "is_gold": false,
         "source": "pil/toazinfo-pinagsamang.pdf",
         "locator": "전체",
@@ -17153,7 +17153,7 @@
       },
       {
         "chunk_id": 46,
-        "score": 0.4569,
+        "score": 0.4568,
         "is_gold": false,
         "source": "vn/04_2023_HSST_BRVT.pdf",
         "locator": "전체",
@@ -23252,7 +23252,7 @@
   {
     "model": "e5-large-instruct [512]",
     "qid": "vn-06",
-    "question": "Hãy tìm loại chứng cứ hình ảnh thu được từ Nhà nghỉ T P dùng để chứng minh lời khai nhận tội của Lại Văn P",
+    "question": "Hãy tìm ngày ra quyết định, thời hạn và ngày chấp hành xong quyết định đưa bị cáo Lại Văn P vào Cơ sở giáo dục, trong vụ án tại quận Bình Tân",
     "n_gold": 1,
     "Hit@1": 0.0,
     "Hit@3": 0.0,
@@ -23260,38 +23260,8 @@
     "nDCG@3": 0.0,
     "top5": [
       {
-        "chunk_id": 229,
-        "score": 0.8958,
-        "is_gold": false,
-        "source": "vn/06_2023_HS-ST_HCM.pdf",
-        "locator": "블록.1",
-        "섹션": null,
-        "match": null,
-        "preview": ": Lại Văn P (tên gọi khác: Lé); sinh năm: 1983, tại Thành phố Hồ Chí Minh. Nơi đăng ký hộ khẩu thường trú: Không có; nơi ở: Không ổn định; nghề nghiệp: Không có; trình độ văn hóa: 2/12; dân tộc: Kinh;"
-      },
-      {
-        "chunk_id": 231,
-        "score": 0.8949,
-        "is_gold": false,
-        "source": "vn/06_2023_HS-ST_HCM.pdf",
-        "locator": "블록.2",
-        "섹션": null,
-        "match": null,
-        "preview": "cửa phòng nghỉ của nhân viên tiếp tân phía sau bàn ra thì thấy có chiếc điện thoại di động hiệu Realme C2, màu xanh của anh Nguyễn Đình V đang để trên nệm sạc pin và trong phòng cũng không có người nà"
-      },
-      {
-        "chunk_id": 237,
-        "score": 0.8946,
-        "is_gold": false,
-        "source": "vn/06_2023_HS-ST_HCM.pdf",
-        "locator": "블록.4~5",
-        "섹션": null,
-        "match": null,
-        "preview": "cái điện thoại di động Realme C2, màu xanh (đã qua sử dụng). Tịch thu tiêu hủy 01 cái áo thun dài tay màu đỏ sọc xanh, phía trước áo có in dòng chữ màu trắng Rakuten (đã qua sử dụng) và 01 cái nón vải"
-      },
-      {
         "chunk_id": 228,
-        "score": 0.8901,
+        "score": 0.9159,
         "is_gold": false,
         "source": "vn/06_2023_HS-ST_HCM.pdf",
         "locator": "블록.1",
@@ -23300,14 +23270,44 @@
         "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM QUẬN BÌNH TÂN Độc lập – Tự do – Hạnh phúc THÀNH PHỐ HỒ CHÍ MINH Bản án số: 06/2023/HS-ST Ngày 13-01-2023 NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆ"
       },
       {
-        "chunk_id": 230,
-        "score": 0.8857,
+        "chunk_id": 229,
+        "score": 0.9141,
         "is_gold": false,
+        "source": "vn/06_2023_HS-ST_HCM.pdf",
+        "locator": "블록.1",
+        "섹션": null,
+        "match": null,
+        "preview": ": Lại Văn P (tên gọi khác: Lé); sinh năm: 1983, tại Thành phố Hồ Chí Minh. Nơi đăng ký hộ khẩu thường trú: Không có; nơi ở: Không ổn định; nghề nghiệp: Không có; trình độ văn hóa: 2/12; dân tộc: Kinh;"
+      },
+      {
+        "chunk_id": 237,
+        "score": 0.908,
+        "is_gold": false,
+        "source": "vn/06_2023_HS-ST_HCM.pdf",
+        "locator": "블록.4~5",
+        "섹션": null,
+        "match": null,
+        "preview": "cái điện thoại di động Realme C2, màu xanh (đã qua sử dụng). Tịch thu tiêu hủy 01 cái áo thun dài tay màu đỏ sọc xanh, phía trước áo có in dòng chữ màu trắng Rakuten (đã qua sử dụng) và 01 cái nón vải"
+      },
+      {
+        "chunk_id": 230,
+        "score": 0.9022,
+        "is_gold": true,
         "source": "vn/06_2023_HS-ST_HCM.pdf",
         "locator": "블록.1~2",
         "섹션": null,
         "match": null,
         "preview": "Quyết định xử phạt vi phạm hành chính 750.000 đồng về hành vi “say rượu, bia gây mất trật tự công cộng” (chưa chấp hành Quyết định nên chưa được coi là chưa bị xử phạt vi phạm hành chính); nhân thân: "
+      },
+      {
+        "chunk_id": 233,
+        "score": 0.8849,
+        "is_gold": false,
+        "source": "vn/06_2023_HS-ST_HCM.pdf",
+        "locator": "블록.3",
+        "섹션": null,
+        "match": null,
+        "preview": "sản”. Về trách nhiệm dân sự, do bị hại là anh V chỉ yêu cầu được nhận lại chiếc điện thoại bị chiếm đoạt mà không yêu cầu gì thêm nên không có ý kiến. Còn về vật chứng, đề nghị tịch thu sung quỹ Nhà n"
       }
     ]
   },
@@ -23562,7 +23562,7 @@
   {
     "model": "e5-large-instruct [512]",
     "qid": "vn-11",
-    "question": "Hãy tìm ngày, mức án và tội danh của ba bản án tiền án của bị cáo Đỗ Văn Ph, trú tại tỉnh Thừa Thiên Huế",
+    "question": "Hãy tìm tên, năm sinh và địa chỉ của hai người làm chứng trong vụ án Đỗ Văn Ph tại Thừa Thiên Huế",
     "n_gold": 1,
     "Hit@1": 0.0,
     "Hit@3": 1.0,
@@ -23571,7 +23571,7 @@
     "top5": [
       {
         "chunk_id": 254,
-        "score": 0.9278,
+        "score": 0.9183,
         "is_gold": false,
         "source": "vn/171_2018_HS-ST_HUE.pdf",
         "locator": "블록.4~5",
@@ -23581,7 +23581,7 @@
       },
       {
         "chunk_id": 248,
-        "score": 0.9262,
+        "score": 0.9143,
         "is_gold": false,
         "source": "vn/171_2018_HS-ST_HUE.pdf",
         "locator": "블록.1~2",
@@ -23591,7 +23591,7 @@
       },
       {
         "chunk_id": 249,
-        "score": 0.9162,
+        "score": 0.9066,
         "is_gold": true,
         "source": "vn/171_2018_HS-ST_HUE.pdf",
         "locator": "블록.2",
@@ -23601,7 +23601,7 @@
       },
       {
         "chunk_id": 253,
-        "score": 0.9157,
+        "score": 0.9043,
         "is_gold": false,
         "source": "vn/171_2018_HS-ST_HUE.pdf",
         "locator": "블록.3~4",
@@ -23610,14 +23610,14 @@
         "preview": "túy đã giám định được niêm phong kín bằng giấy trắng và băng keo trong, bên ngoài có hai chữ ký của Giám định viên Trần , hai chữ ký của Điều tra viên Trương Thanh M, hai dấu tròn đỏ của Phòng kỹ thuậ"
       },
       {
-        "chunk_id": 252,
-        "score": 0.909,
+        "chunk_id": 250,
+        "score": 0.8953,
         "is_gold": false,
         "source": "vn/171_2018_HS-ST_HUE.pdf",
-        "locator": "블록.3",
-        "섹션": "2. Bà Nguyễn Thị Tuyết",
+        "locator": "블록.2",
+        "섹션": null,
         "match": null,
-        "preview": "trạng số 157/CT- VKS ngày 08 tháng 8 năm 2018 là có căn cứ pháp luật. [2] Xét về tính chất, mức độ hành vi phạm tội của bị cáo: Bị cáo Ph là người có đầy đủ năng lực trách nhiệm hình sự, nhận thức đượ"
+        "preview": "vắng mặt”. NỘI DUNG VỤ ÁN: Theo các tài liệu có trong hồ sơ vụ án và diễn biến tại phiên toà, nội dung vụ án được tóm tắt như sau: Vào khoàng 8 giờ 30 phút ngày 30/4/2018 tại đường Đặng Huy T phường P"
       }
     ]
   },
@@ -23686,46 +23686,26 @@
   {
     "model": "e5-large-instruct [512]",
     "qid": "vn-13",
-    "question": "Hãy tìm tài sản mà Lâm Tuấn A đã ném bỏ ở khu vực rừng cây cách nhà 50m và không thu giữ được",
+    "question": "Hãy tìm tên và năm sinh của bị hại và của người có quyền lợi, nghĩa vụ liên quan trong vụ án Lâm Tuấn A",
     "n_gold": 1,
     "Hit@1": 0.0,
-    "Hit@3": 0.0,
-    "MRR@3": 0.0,
-    "nDCG@3": 0.0,
+    "Hit@3": 1.0,
+    "MRR@3": 0.3333,
+    "nDCG@3": 0.5,
     "top5": [
       {
-        "chunk_id": 246,
-        "score": 0.8824,
+        "chunk_id": 238,
+        "score": 0.9058,
         "is_gold": false,
         "source": "vn/132_2020_HS-ST_HCM.pdf",
-        "locator": "블록.5~6",
-        "섹션": "2. Ông Nguyễn Ngọc Cảnh;",
-        "match": null,
-        "preview": "minh nhân dân, 01 giấy phép lái xe, 01 giấy đăng ký xe mô tô, 01 thẻ đoàn viên, 01 thẻ bảo hiểm y tế, 01 thẻ ATM của Ngân hàng Viettinbank, 01 thẻ ATM của Ngân hàng BIDV, Hội đồng xét xử không xem xét"
-      },
-      {
-        "chunk_id": 241,
-        "score": 0.881,
-        "is_gold": false,
-        "source": "vn/132_2020_HS-ST_HCM.pdf",
-        "locator": "블록.2~3",
-        "섹션": "2. Ông Nguyễn Ngọc Cảnh;",
-        "match": null,
-        "preview": "màu đen, hiệu Việt Tiến; 01 cái bóp da màu đen, bên trong có 01 chứng minh nhân dân, 01 giấy phép lái xe, 01 giấy đăng ký xe mô tô, 01 thẻ đoàn viên, 01 thẻ bảo hiểm y tế, 01 thẻ ATM của Ngân hàng Vie"
-      },
-      {
-        "chunk_id": 239,
-        "score": 0.8789,
-        "is_gold": false,
-        "source": "vn/132_2020_HS-ST_HCM.pdf",
-        "locator": "블록.1~2",
+        "locator": "블록.1",
         "섹션": null,
         "match": null,
-        "preview": "và tên: Lâm Tuấn A, sinh năm: 1984 tại Thành phố Hồ Chí Minh; nơi đăng ký hộ khẩu thường trú: Ấp P, xã P, huyện C, Thành phố Hồ Chí Minh; nghề nghiệp: Không; trình độ học vấn: 02/12; dân tộc: Kinh; gi"
+        "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM HUYỆN CỦ CHI Độc lập - Tự do - Hạnh phúc THÀNH PHỐ HỒ CHÍ MINH Bản án số: 132/2020/HS-ST Ngày: 27-7-2020 NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆ"
       },
       {
         "chunk_id": 247,
-        "score": 0.8776,
+        "score": 0.9019,
         "is_gold": false,
         "source": "vn/132_2020_HS-ST_HCM.pdf",
         "locator": "블록.6",
@@ -23734,14 +23714,34 @@
         "preview": "g khoản 2 Điều 173, điểm s khoản 1 Điều 51 và Điều 38 của Bộ luật Hình sự năm 2015, được sửa đổi bổ sung năm 2017. Xử phạt: Bị cáo Lâm Tuấn A 03 (ba) năm 06 (sáu) tháng tù, thời hạn tù tính từ ngày 08"
       },
       {
-        "chunk_id": 237,
-        "score": 0.8755,
-        "is_gold": false,
-        "source": "vn/06_2023_HS-ST_HCM.pdf",
-        "locator": "블록.4~5",
+        "chunk_id": 239,
+        "score": 0.8966,
+        "is_gold": true,
+        "source": "vn/132_2020_HS-ST_HCM.pdf",
+        "locator": "블록.1~2",
         "섹션": null,
         "match": null,
-        "preview": "cái điện thoại di động Realme C2, màu xanh (đã qua sử dụng). Tịch thu tiêu hủy 01 cái áo thun dài tay màu đỏ sọc xanh, phía trước áo có in dòng chữ màu trắng Rakuten (đã qua sử dụng) và 01 cái nón vải"
+        "preview": "và tên: Lâm Tuấn A, sinh năm: 1984 tại Thành phố Hồ Chí Minh; nơi đăng ký hộ khẩu thường trú: Ấp P, xã P, huyện C, Thành phố Hồ Chí Minh; nghề nghiệp: Không; trình độ học vấn: 02/12; dân tộc: Kinh; gi"
+      },
+      {
+        "chunk_id": 255,
+        "score": 0.8933,
+        "is_gold": false,
+        "source": "vn/29_2018_HS-ST_THAI_NGUYEN[1].pdf",
+        "locator": "블록.1~2",
+        "섹션": null,
+        "match": null,
+        "preview": "TÒA ÁN NHÂN DÂN TP. SÔNG CÔNG CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM TỈNH THÁI NGUYÊN Độc lập - Tự do - Hạnh phúc ––––––––––––– ––––––––––––––––––– Bản án số: 29 /2018/HS-ST Ngày 19 - 6 - 2018 NHÂN DANH N"
+      },
+      {
+        "chunk_id": 229,
+        "score": 0.8932,
+        "is_gold": false,
+        "source": "vn/06_2023_HS-ST_HCM.pdf",
+        "locator": "블록.1",
+        "섹션": null,
+        "match": null,
+        "preview": ": Lại Văn P (tên gọi khác: Lé); sinh năm: 1983, tại Thành phố Hồ Chí Minh. Nơi đăng ký hộ khẩu thường trú: Không có; nơi ở: Không ổn định; nghề nghiệp: Không có; trình độ văn hóa: 2/12; dân tộc: Kinh;"
       }
     ]
   },
@@ -32552,16 +32552,26 @@
   {
     "model": "e5-small-ko [512]",
     "qid": "vn-06",
-    "question": "Hãy tìm loại chứng cứ hình ảnh thu được từ Nhà nghỉ T P dùng để chứng minh lời khai nhận tội của Lại Văn P",
+    "question": "Hãy tìm ngày ra quyết định, thời hạn và ngày chấp hành xong quyết định đưa bị cáo Lại Văn P vào Cơ sở giáo dục, trong vụ án tại quận Bình Tân",
     "n_gold": 1,
     "Hit@1": 0.0,
-    "Hit@3": 0.0,
-    "MRR@3": 0.0,
-    "nDCG@3": 0.0,
+    "Hit@3": 1.0,
+    "MRR@3": 0.3333,
+    "nDCG@3": 0.5,
     "top5": [
       {
+        "chunk_id": 237,
+        "score": 0.6346,
+        "is_gold": false,
+        "source": "vn/06_2023_HS-ST_HCM.pdf",
+        "locator": "블록.4~5",
+        "섹션": null,
+        "match": null,
+        "preview": "cái điện thoại di động Realme C2, màu xanh (đã qua sử dụng). Tịch thu tiêu hủy 01 cái áo thun dài tay màu đỏ sọc xanh, phía trước áo có in dòng chữ màu trắng Rakuten (đã qua sử dụng) và 01 cái nón vải"
+      },
+      {
         "chunk_id": 229,
-        "score": 0.5681,
+        "score": 0.6308,
         "is_gold": false,
         "source": "vn/06_2023_HS-ST_HCM.pdf",
         "locator": "블록.1",
@@ -32570,44 +32580,34 @@
         "preview": ": Lại Văn P (tên gọi khác: Lé); sinh năm: 1983, tại Thành phố Hồ Chí Minh. Nơi đăng ký hộ khẩu thường trú: Không có; nơi ở: Không ổn định; nghề nghiệp: Không có; trình độ văn hóa: 2/12; dân tộc: Kinh;"
       },
       {
-        "chunk_id": 236,
-        "score": 0.5659,
-        "is_gold": false,
+        "chunk_id": 230,
+        "score": 0.605,
+        "is_gold": true,
         "source": "vn/06_2023_HS-ST_HCM.pdf",
-        "locator": "블록.4~5",
+        "locator": "블록.1~2",
         "섹션": null,
         "match": null,
-        "preview": "xem xét giải quyết yêu cầu của anh V tại phần vật chứng. [7] Về vật chứng: Đối với 01 chiếc xe môtô biển số 49V5-2461 của bị cáo khai, xe do mua của người bạn (không rõ lai lịch) với giá 600.000 đồng "
+        "preview": "Quyết định xử phạt vi phạm hành chính 750.000 đồng về hành vi “say rượu, bia gây mất trật tự công cộng” (chưa chấp hành Quyết định nên chưa được coi là chưa bị xử phạt vi phạm hành chính); nhân thân: "
       },
       {
-        "chunk_id": 231,
-        "score": 0.5497,
+        "chunk_id": 233,
+        "score": 0.5762,
         "is_gold": false,
         "source": "vn/06_2023_HS-ST_HCM.pdf",
-        "locator": "블록.2",
+        "locator": "블록.3",
         "섹션": null,
         "match": null,
-        "preview": "cửa phòng nghỉ của nhân viên tiếp tân phía sau bàn ra thì thấy có chiếc điện thoại di động hiệu Realme C2, màu xanh của anh Nguyễn Đình V đang để trên nệm sạc pin và trong phòng cũng không có người nà"
+        "preview": "sản”. Về trách nhiệm dân sự, do bị hại là anh V chỉ yêu cầu được nhận lại chiếc điện thoại bị chiếm đoạt mà không yêu cầu gì thêm nên không có ý kiến. Còn về vật chứng, đề nghị tịch thu sung quỹ Nhà n"
       },
       {
-        "chunk_id": 253,
-        "score": 0.5295,
-        "is_gold": false,
-        "source": "vn/171_2018_HS-ST_HUE.pdf",
-        "locator": "블록.3~4",
-        "섹션": "2. Bà Nguyễn Thị Tuyết",
-        "match": null,
-        "preview": "túy đã giám định được niêm phong kín bằng giấy trắng và băng keo trong, bên ngoài có hai chữ ký của Giám định viên Trần , hai chữ ký của Điều tra viên Trương Thanh M, hai dấu tròn đỏ của Phòng kỹ thuậ"
-      },
-      {
-        "chunk_id": 237,
-        "score": 0.525,
+        "chunk_id": 228,
+        "score": 0.5686,
         "is_gold": false,
         "source": "vn/06_2023_HS-ST_HCM.pdf",
-        "locator": "블록.4~5",
+        "locator": "블록.1",
         "섹션": null,
         "match": null,
-        "preview": "cái điện thoại di động Realme C2, màu xanh (đã qua sử dụng). Tịch thu tiêu hủy 01 cái áo thun dài tay màu đỏ sọc xanh, phía trước áo có in dòng chữ màu trắng Rakuten (đã qua sử dụng) và 01 cái nón vải"
+        "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM QUẬN BÌNH TÂN Độc lập – Tự do – Hạnh phúc THÀNH PHỐ HỒ CHÍ MINH Bản án số: 06/2023/HS-ST Ngày 13-01-2023 NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆ"
       }
     ]
   },
@@ -32862,7 +32862,7 @@
   {
     "model": "e5-small-ko [512]",
     "qid": "vn-11",
-    "question": "Hãy tìm ngày, mức án và tội danh của ba bản án tiền án của bị cáo Đỗ Văn Ph, trú tại tỉnh Thừa Thiên Huế",
+    "question": "Hãy tìm tên, năm sinh và địa chỉ của hai người làm chứng trong vụ án Đỗ Văn Ph tại Thừa Thiên Huế",
     "n_gold": 1,
     "Hit@1": 0.0,
     "Hit@3": 0.0,
@@ -32871,7 +32871,7 @@
     "top5": [
       {
         "chunk_id": 254,
-        "score": 0.7628,
+        "score": 0.6695,
         "is_gold": false,
         "source": "vn/171_2018_HS-ST_HUE.pdf",
         "locator": "블록.4~5",
@@ -32880,18 +32880,8 @@
         "preview": "a Thiên Huế và dòng chữ “ Mẫu vật vụ Đỗ Văn Ph bắt ngày 30/4/2018 ”. Theo biên bản giao nhận vật chứng giữa Cơ quan cảnh sát điều tra công an thành phố Huế và Chi cục thi hành án dân sự thành phố Huế "
       },
       {
-        "chunk_id": 251,
-        "score": 0.6768,
-        "is_gold": false,
-        "source": "vn/171_2018_HS-ST_HUE.pdf",
-        "locator": "블록.2~3",
-        "섹션": null,
-        "match": null,
-        "preview": ". Tại phiên tòa đại diện Viện kiểm sát giữ nguyên quyết định truy tố và đề nghị Hội đồng xét xử tuyên bố bị cáo Đỗ Văn P phạm tội “ Tàng trữ trái phép chất ma túy”. Áp dụng điểm c khoản 1 Điều 249; đi"
-      },
-      {
         "chunk_id": 250,
-        "score": 0.6758,
+        "score": 0.6206,
         "is_gold": false,
         "source": "vn/171_2018_HS-ST_HUE.pdf",
         "locator": "블록.2",
@@ -32901,7 +32891,7 @@
       },
       {
         "chunk_id": 253,
-        "score": 0.661,
+        "score": 0.6173,
         "is_gold": false,
         "source": "vn/171_2018_HS-ST_HUE.pdf",
         "locator": "블록.3~4",
@@ -32910,14 +32900,24 @@
         "preview": "túy đã giám định được niêm phong kín bằng giấy trắng và băng keo trong, bên ngoài có hai chữ ký của Giám định viên Trần , hai chữ ký của Điều tra viên Trương Thanh M, hai dấu tròn đỏ của Phòng kỹ thuậ"
       },
       {
-        "chunk_id": 252,
-        "score": 0.6036,
+        "chunk_id": 248,
+        "score": 0.6057,
         "is_gold": false,
         "source": "vn/171_2018_HS-ST_HUE.pdf",
-        "locator": "블록.3",
-        "섹션": "2. Bà Nguyễn Thị Tuyết",
+        "locator": "블록.1~2",
+        "섹션": null,
         "match": null,
-        "preview": "trạng số 157/CT- VKS ngày 08 tháng 8 năm 2018 là có căn cứ pháp luật. [2] Xét về tính chất, mức độ hành vi phạm tội của bị cáo: Bị cáo Ph là người có đầy đủ năng lực trách nhiệm hình sự, nhận thức đượ"
+        "preview": "TOÀ ÁN NHÂN DÂN CỘNG HOÀ XÃ HỘI CHỦ NGHĨA VIỆT NAM THÀNH PHỐ HUẾ Độc lập - Tự do - Hạnh phúc. TỈNH THỪA THIÊN HUẾ Bản án số: 171/2018/HS- ST Ngày: 05- 10- 2018 NHÂN DANH NƯỚC CỘNG HOÀ XÃ HỘI CHỦ NGHĨA"
+      },
+      {
+        "chunk_id": 251,
+        "score": 0.5867,
+        "is_gold": false,
+        "source": "vn/171_2018_HS-ST_HUE.pdf",
+        "locator": "블록.2~3",
+        "섹션": null,
+        "match": null,
+        "preview": ". Tại phiên tòa đại diện Viện kiểm sát giữ nguyên quyết định truy tố và đề nghị Hội đồng xét xử tuyên bố bị cáo Đỗ Văn P phạm tội “ Tàng trữ trái phép chất ma túy”. Áp dụng điểm c khoản 1 Điều 249; đi"
       }
     ]
   },
@@ -32986,17 +32986,17 @@
   {
     "model": "e5-small-ko [512]",
     "qid": "vn-13",
-    "question": "Hãy tìm tài sản mà Lâm Tuấn A đã ném bỏ ở khu vực rừng cây cách nhà 50m và không thu giữ được",
+    "question": "Hãy tìm tên và năm sinh của bị hại và của người có quyền lợi, nghĩa vụ liên quan trong vụ án Lâm Tuấn A",
     "n_gold": 1,
-    "Hit@1": 0.0,
+    "Hit@1": 1.0,
     "Hit@3": 1.0,
-    "MRR@3": 0.5,
-    "nDCG@3": 0.6309,
+    "MRR@3": 1.0,
+    "nDCG@3": 1.0,
     "top5": [
       {
         "chunk_id": 239,
-        "score": 0.5946,
-        "is_gold": false,
+        "score": 0.596,
+        "is_gold": true,
         "source": "vn/132_2020_HS-ST_HCM.pdf",
         "locator": "블록.1~2",
         "섹션": null,
@@ -33004,28 +33004,18 @@
         "preview": "và tên: Lâm Tuấn A, sinh năm: 1984 tại Thành phố Hồ Chí Minh; nơi đăng ký hộ khẩu thường trú: Ấp P, xã P, huyện C, Thành phố Hồ Chí Minh; nghề nghiệp: Không; trình độ học vấn: 02/12; dân tộc: Kinh; gi"
       },
       {
-        "chunk_id": 240,
-        "score": 0.5727,
-        "is_gold": true,
-        "source": "vn/132_2020_HS-ST_HCM.pdf",
-        "locator": "블록.2",
-        "섹션": "2. Ông Nguyễn Ngọc Cảnh;",
-        "match": null,
-        "preview": "khiển xe đạp trên đường Tỉnh lộ 15, tổ 89, ấp Phú Bình, xã Phú Hòa Đông, huyện Củ Chi, Thành phố Hồ Chí Minh. Tại đây, Tuấn A phát hiện cửa sổ nhà ông P mở và trong nhà sáng đèn nên dừng lại quan sát."
-      },
-      {
-        "chunk_id": 244,
-        "score": 0.5368,
+        "chunk_id": 247,
+        "score": 0.5877,
         "is_gold": false,
         "source": "vn/132_2020_HS-ST_HCM.pdf",
-        "locator": "블록.4",
+        "locator": "블록.6",
         "섹션": "2. Ông Nguyễn Ngọc Cảnh;",
         "match": null,
-        "preview": "truy tố đã thực hiện đúng về thẩm quyền, trình tự, thủ tục theo quy định của Bộ luật Tố tụng hình sự. Quá trình điều tra và tại phiên tòa, bị cáo bị hại, người có quyền lợi, nghĩa vụ liên quan đến vụ "
+        "preview": "g khoản 2 Điều 173, điểm s khoản 1 Điều 51 và Điều 38 của Bộ luật Hình sự năm 2015, được sửa đổi bổ sung năm 2017. Xử phạt: Bị cáo Lâm Tuấn A 03 (ba) năm 06 (sáu) tháng tù, thời hạn tù tính từ ngày 08"
       },
       {
         "chunk_id": 242,
-        "score": 0.5308,
+        "score": 0.5356,
         "is_gold": false,
         "source": "vn/132_2020_HS-ST_HCM.pdf",
         "locator": "블록.3",
@@ -33034,14 +33024,24 @@
         "preview": "Chí Minh đã truy tố Lâm Tuấn A về tội “Trộm cắp tài sản” theo khoản 2 Điều 173 của Bộ luật Hình sự 2015 được sửa đổi, bổ sung năm 2017. Tại phiên tòa, đại diện Viện kiểm sát nhân dân huyện Củ Chi giữ "
       },
       {
-        "chunk_id": 246,
-        "score": 0.4923,
+        "chunk_id": 238,
+        "score": 0.5315,
         "is_gold": false,
         "source": "vn/132_2020_HS-ST_HCM.pdf",
-        "locator": "블록.5~6",
+        "locator": "블록.1",
+        "섹션": null,
+        "match": null,
+        "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM HUYỆN CỦ CHI Độc lập - Tự do - Hạnh phúc THÀNH PHỐ HỒ CHÍ MINH Bản án số: 132/2020/HS-ST Ngày: 27-7-2020 NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆ"
+      },
+      {
+        "chunk_id": 244,
+        "score": 0.5299,
+        "is_gold": false,
+        "source": "vn/132_2020_HS-ST_HCM.pdf",
+        "locator": "블록.4",
         "섹션": "2. Ông Nguyễn Ngọc Cảnh;",
         "match": null,
-        "preview": "minh nhân dân, 01 giấy phép lái xe, 01 giấy đăng ký xe mô tô, 01 thẻ đoàn viên, 01 thẻ bảo hiểm y tế, 01 thẻ ATM của Ngân hàng Viettinbank, 01 thẻ ATM của Ngân hàng BIDV, Hội đồng xét xử không xem xét"
+        "preview": "truy tố đã thực hiện đúng về thẩm quyền, trình tự, thủ tục theo quy định của Bộ luật Tố tụng hình sự. Quá trình điều tra và tại phiên tòa, bị cáo bị hại, người có quyền lợi, nghĩa vụ liên quan đến vụ "
       }
     ]
   },
@@ -41852,16 +41852,16 @@
   {
     "model": "bge-m3 [512]",
     "qid": "vn-06",
-    "question": "Hãy tìm loại chứng cứ hình ảnh thu được từ Nhà nghỉ T P dùng để chứng minh lời khai nhận tội của Lại Văn P",
+    "question": "Hãy tìm ngày ra quyết định, thời hạn và ngày chấp hành xong quyết định đưa bị cáo Lại Văn P vào Cơ sở giáo dục, trong vụ án tại quận Bình Tân",
     "n_gold": 1,
     "Hit@1": 0.0,
     "Hit@3": 1.0,
-    "MRR@3": 0.5,
-    "nDCG@3": 0.6309,
+    "MRR@3": 0.3333,
+    "nDCG@3": 0.5,
     "top5": [
       {
         "chunk_id": 229,
-        "score": 0.5697,
+        "score": 0.6554,
         "is_gold": false,
         "source": "vn/06_2023_HS-ST_HCM.pdf",
         "locator": "블록.1",
@@ -41870,44 +41870,44 @@
         "preview": ": Lại Văn P (tên gọi khác: Lé); sinh năm: 1983, tại Thành phố Hồ Chí Minh. Nơi đăng ký hộ khẩu thường trú: Không có; nơi ở: Không ổn định; nghề nghiệp: Không có; trình độ văn hóa: 2/12; dân tộc: Kinh;"
       },
       {
-        "chunk_id": 234,
-        "score": 0.5133,
+        "chunk_id": 228,
+        "score": 0.6007,
+        "is_gold": false,
+        "source": "vn/06_2023_HS-ST_HCM.pdf",
+        "locator": "블록.1",
+        "섹션": null,
+        "match": null,
+        "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM QUẬN BÌNH TÂN Độc lập – Tự do – Hạnh phúc THÀNH PHỐ HỒ CHÍ MINH Bản án số: 06/2023/HS-ST Ngày 13-01-2023 NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆ"
+      },
+      {
+        "chunk_id": 230,
+        "score": 0.5529,
         "is_gold": true,
         "source": "vn/06_2023_HS-ST_HCM.pdf",
-        "locator": "블록.3~4",
+        "locator": "블록.1~2",
         "섹션": null,
         "match": null,
-        "preview": "di động hiệu Realme C2, màu xanh của anh Nguyễn Đình V để tại Nhà nghỉ T P, số 26 Đường Số 3, Khu phố B, phường T T A, quận B T. Theo Kết luận định giá tài sản số: 270/KL- HĐĐGTS, ngày 30/5/2022 của H"
+        "preview": "Quyết định xử phạt vi phạm hành chính 750.000 đồng về hành vi “say rượu, bia gây mất trật tự công cộng” (chưa chấp hành Quyết định nên chưa được coi là chưa bị xử phạt vi phạm hành chính); nhân thân: "
       },
       {
-        "chunk_id": 233,
-        "score": 0.4885,
+        "chunk_id": 221,
+        "score": 0.5124,
         "is_gold": false,
-        "source": "vn/06_2023_HS-ST_HCM.pdf",
+        "source": "vn/04_2023_HSST_BRVT.pdf",
+        "locator": "블록.1~2",
+        "섹션": null,
+        "match": null,
+        "preview": ": Việt Nam; Dân tộc: Kinh. Trình độ văn hóa: 5/12; Nghề nghiệp: Không. Con ông Võ Văn X và bà Phạm Thị M. B/c có vợ Trương Thị Tâm L và 01 người con sinh năm 2017. Tiền sự: Không. Tiền án: Ngày 06-02-"
+      },
+      {
+        "chunk_id": 92,
+        "score": 0.5028,
+        "is_gold": false,
+        "source": "ko/2023고단2541_판결문_검수완료.pdf",
         "locator": "블록.3",
-        "섹션": null,
+        "섹션": "2. 판단",
         "match": null,
-        "preview": "sản”. Về trách nhiệm dân sự, do bị hại là anh V chỉ yêu cầu được nhận lại chiếc điện thoại bị chiếm đoạt mà không yêu cầu gì thêm nên không có ý kiến. Còn về vật chứng, đề nghị tịch thu sung quỹ Nhà n"
-      },
-      {
-        "chunk_id": 231,
-        "score": 0.4862,
-        "is_gold": false,
-        "source": "vn/06_2023_HS-ST_HCM.pdf",
-        "locator": "블록.2",
-        "섹션": null,
-        "match": null,
-        "preview": "cửa phòng nghỉ của nhân viên tiếp tân phía sau bàn ra thì thấy có chiếc điện thoại di động hiệu Realme C2, màu xanh của anh Nguyễn Đình V đang để trên nệm sạc pin và trong phòng cũng không có người nà"
-      },
-      {
-        "chunk_id": 253,
-        "score": 0.4841,
-        "is_gold": false,
-        "source": "vn/171_2018_HS-ST_HUE.pdf",
-        "locator": "블록.3~4",
-        "섹션": "2. Bà Nguyễn Thị Tuyết",
-        "match": null,
-        "preview": "túy đã giám định được niêm phong kín bằng giấy trắng và băng keo trong, bên ngoài có hai chữ ký của Giám định viên Trần , hai chữ ký của Điều tra viên Trương Thanh M, hai dấu tròn đỏ của Phòng kỹ thuậ"
+        "preview": "결과, 범행 - 5 - 본 판결서는 판결서 인터넷열람 사이트에서 열람·출력되었습니다. 본 판결서를 이용하여 사건관계 명예나 생활의 평온을 해하는 행위는 관련 법령에 따라 금지됩니다. 비실명처리일자 : 2023-11-17 후 정황 등 이 사건 기록 및 변론에 나타난 여러 양형조건들을 종합하여 위 양형기준 의 범위 내에서 주문과 같이 형을 정한다. 판사 최기원"
       }
     ]
   },
@@ -41985,7 +41985,7 @@
     "top5": [
       {
         "chunk_id": 237,
-        "score": 0.5749,
+        "score": 0.575,
         "is_gold": true,
         "source": "vn/06_2023_HS-ST_HCM.pdf",
         "locator": "블록.4~5",
@@ -42005,7 +42005,7 @@
       },
       {
         "chunk_id": 229,
-        "score": 0.5282,
+        "score": 0.5283,
         "is_gold": false,
         "source": "vn/06_2023_HS-ST_HCM.pdf",
         "locator": "블록.1",
@@ -42015,7 +42015,7 @@
       },
       {
         "chunk_id": 253,
-        "score": 0.5183,
+        "score": 0.5184,
         "is_gold": false,
         "source": "vn/171_2018_HS-ST_HUE.pdf",
         "locator": "블록.3~4",
@@ -42025,7 +42025,7 @@
       },
       {
         "chunk_id": 247,
-        "score": 0.5105,
+        "score": 0.5106,
         "is_gold": false,
         "source": "vn/132_2020_HS-ST_HCM.pdf",
         "locator": "블록.6",
@@ -42162,7 +42162,7 @@
   {
     "model": "bge-m3 [512]",
     "qid": "vn-11",
-    "question": "Hãy tìm ngày, mức án và tội danh của ba bản án tiền án của bị cáo Đỗ Văn Ph, trú tại tỉnh Thừa Thiên Huế",
+    "question": "Hãy tìm tên, năm sinh và địa chỉ của hai người làm chứng trong vụ án Đỗ Văn Ph tại Thừa Thiên Huế",
     "n_gold": 1,
     "Hit@1": 0.0,
     "Hit@3": 0.0,
@@ -42170,18 +42170,8 @@
     "nDCG@3": 0.0,
     "top5": [
       {
-        "chunk_id": 254,
-        "score": 0.6674,
-        "is_gold": false,
-        "source": "vn/171_2018_HS-ST_HUE.pdf",
-        "locator": "블록.4~5",
-        "섹션": "2. Bà Nguyễn Thị Tuyết",
-        "match": null,
-        "preview": "a Thiên Huế và dòng chữ “ Mẫu vật vụ Đỗ Văn Ph bắt ngày 30/4/2018 ”. Theo biên bản giao nhận vật chứng giữa Cơ quan cảnh sát điều tra công an thành phố Huế và Chi cục thi hành án dân sự thành phố Huế "
-      },
-      {
         "chunk_id": 248,
-        "score": 0.6257,
+        "score": 0.5984,
         "is_gold": false,
         "source": "vn/171_2018_HS-ST_HUE.pdf",
         "locator": "블록.1~2",
@@ -42190,8 +42180,18 @@
         "preview": "TOÀ ÁN NHÂN DÂN CỘNG HOÀ XÃ HỘI CHỦ NGHĨA VIỆT NAM THÀNH PHỐ HUẾ Độc lập - Tự do - Hạnh phúc. TỈNH THỪA THIÊN HUẾ Bản án số: 171/2018/HS- ST Ngày: 05- 10- 2018 NHÂN DANH NƯỚC CỘNG HOÀ XÃ HỘI CHỦ NGHĨA"
       },
       {
+        "chunk_id": 254,
+        "score": 0.5398,
+        "is_gold": false,
+        "source": "vn/171_2018_HS-ST_HUE.pdf",
+        "locator": "블록.4~5",
+        "섹션": "2. Bà Nguyễn Thị Tuyết",
+        "match": null,
+        "preview": "a Thiên Huế và dòng chữ “ Mẫu vật vụ Đỗ Văn Ph bắt ngày 30/4/2018 ”. Theo biên bản giao nhận vật chứng giữa Cơ quan cảnh sát điều tra công an thành phố Huế và Chi cục thi hành án dân sự thành phố Huế "
+      },
+      {
         "chunk_id": 253,
-        "score": 0.5623,
+        "score": 0.5324,
         "is_gold": false,
         "source": "vn/171_2018_HS-ST_HUE.pdf",
         "locator": "블록.3~4",
@@ -42201,7 +42201,7 @@
       },
       {
         "chunk_id": 249,
-        "score": 0.5622,
+        "score": 0.5099,
         "is_gold": true,
         "source": "vn/171_2018_HS-ST_HUE.pdf",
         "locator": "블록.2",
@@ -42210,14 +42210,14 @@
         "preview": "Huế; Giới tính: Nam; Nơi cư trú: Tổ 2, phường Thủy D, thị xã Hương T, tỉnh Thừa Thiên Huế; Nghề nghiệp: chạy xe thồ; Trình độ học vấn: không biết chữ; Quốc tịch: Việt Nam; Dân tộc: Kinh; Tôn giáo: Phậ"
       },
       {
-        "chunk_id": 221,
-        "score": 0.5509,
+        "chunk_id": 251,
+        "score": 0.4599,
         "is_gold": false,
-        "source": "vn/04_2023_HSST_BRVT.pdf",
-        "locator": "블록.1~2",
+        "source": "vn/171_2018_HS-ST_HUE.pdf",
+        "locator": "블록.2~3",
         "섹션": null,
         "match": null,
-        "preview": ": Việt Nam; Dân tộc: Kinh. Trình độ văn hóa: 5/12; Nghề nghiệp: Không. Con ông Võ Văn X và bà Phạm Thị M. B/c có vợ Trương Thị Tâm L và 01 người con sinh năm 2017. Tiền sự: Không. Tiền án: Ngày 06-02-"
+        "preview": ". Tại phiên tòa đại diện Viện kiểm sát giữ nguyên quyết định truy tố và đề nghị Hội đồng xét xử tuyên bố bị cáo Đỗ Văn P phạm tội “ Tàng trữ trái phép chất ma túy”. Áp dụng điểm c khoản 1 Điều 249; đi"
       }
     ]
   },
@@ -42286,17 +42286,27 @@
   {
     "model": "bge-m3 [512]",
     "qid": "vn-13",
-    "question": "Hãy tìm tài sản mà Lâm Tuấn A đã ném bỏ ở khu vực rừng cây cách nhà 50m và không thu giữ được",
+    "question": "Hãy tìm tên và năm sinh của bị hại và của người có quyền lợi, nghĩa vụ liên quan trong vụ án Lâm Tuấn A",
     "n_gold": 1,
     "Hit@1": 0.0,
     "Hit@3": 1.0,
-    "MRR@3": 0.3333,
-    "nDCG@3": 0.5,
+    "MRR@3": 0.5,
+    "nDCG@3": 0.6309,
     "top5": [
       {
-        "chunk_id": 239,
-        "score": 0.5513,
+        "chunk_id": 238,
+        "score": 0.5932,
         "is_gold": false,
+        "source": "vn/132_2020_HS-ST_HCM.pdf",
+        "locator": "블록.1",
+        "섹션": null,
+        "match": null,
+        "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM HUYỆN CỦ CHI Độc lập - Tự do - Hạnh phúc THÀNH PHỐ HỒ CHÍ MINH Bản án số: 132/2020/HS-ST Ngày: 27-7-2020 NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆ"
+      },
+      {
+        "chunk_id": 239,
+        "score": 0.5016,
+        "is_gold": true,
         "source": "vn/132_2020_HS-ST_HCM.pdf",
         "locator": "블록.1~2",
         "섹션": null,
@@ -42304,44 +42314,34 @@
         "preview": "và tên: Lâm Tuấn A, sinh năm: 1984 tại Thành phố Hồ Chí Minh; nơi đăng ký hộ khẩu thường trú: Ấp P, xã P, huyện C, Thành phố Hồ Chí Minh; nghề nghiệp: Không; trình độ học vấn: 02/12; dân tộc: Kinh; gi"
       },
       {
-        "chunk_id": 246,
-        "score": 0.5337,
+        "chunk_id": 247,
+        "score": 0.4915,
         "is_gold": false,
         "source": "vn/132_2020_HS-ST_HCM.pdf",
-        "locator": "블록.5~6",
+        "locator": "블록.6",
         "섹션": "2. Ông Nguyễn Ngọc Cảnh;",
         "match": null,
-        "preview": "minh nhân dân, 01 giấy phép lái xe, 01 giấy đăng ký xe mô tô, 01 thẻ đoàn viên, 01 thẻ bảo hiểm y tế, 01 thẻ ATM của Ngân hàng Viettinbank, 01 thẻ ATM của Ngân hàng BIDV, Hội đồng xét xử không xem xét"
+        "preview": "g khoản 2 Điều 173, điểm s khoản 1 Điều 51 và Điều 38 của Bộ luật Hình sự năm 2015, được sửa đổi bổ sung năm 2017. Xử phạt: Bị cáo Lâm Tuấn A 03 (ba) năm 06 (sáu) tháng tù, thời hạn tù tính từ ngày 08"
       },
       {
-        "chunk_id": 240,
-        "score": 0.5237,
-        "is_gold": true,
-        "source": "vn/132_2020_HS-ST_HCM.pdf",
-        "locator": "블록.2",
-        "섹션": "2. Ông Nguyễn Ngọc Cảnh;",
-        "match": null,
-        "preview": "khiển xe đạp trên đường Tỉnh lộ 15, tổ 89, ấp Phú Bình, xã Phú Hòa Đông, huyện Củ Chi, Thành phố Hồ Chí Minh. Tại đây, Tuấn A phát hiện cửa sổ nhà ông P mở và trong nhà sáng đèn nên dừng lại quan sát."
-      },
-      {
-        "chunk_id": 244,
-        "score": 0.5182,
+        "chunk_id": 228,
+        "score": 0.4908,
         "is_gold": false,
-        "source": "vn/132_2020_HS-ST_HCM.pdf",
-        "locator": "블록.4",
-        "섹션": "2. Ông Nguyễn Ngọc Cảnh;",
+        "source": "vn/06_2023_HS-ST_HCM.pdf",
+        "locator": "블록.1",
+        "섹션": null,
         "match": null,
-        "preview": "truy tố đã thực hiện đúng về thẩm quyền, trình tự, thủ tục theo quy định của Bộ luật Tố tụng hình sự. Quá trình điều tra và tại phiên tòa, bị cáo bị hại, người có quyền lợi, nghĩa vụ liên quan đến vụ "
+        "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM QUẬN BÌNH TÂN Độc lập – Tự do – Hạnh phúc THÀNH PHỐ HỒ CHÍ MINH Bản án số: 06/2023/HS-ST Ngày 13-01-2023 NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆ"
       },
       {
-        "chunk_id": 257,
-        "score": 0.5078,
+        "chunk_id": 112,
+        "score": 0.4853,
         "is_gold": false,
-        "source": "vn/29_2018_HS-ST_THAI_NGUYEN[1].pdf",
+        "source": "ko/250723_보도자료(유튜브_36주_태아_낙태살인_사건_구속_기소_등)-서울중앙지검.pdf",
         "locator": "블록.2~3",
         "섹션": null,
         "match": null,
-        "preview": ", sinh năm: 1947/ có mặt. Trú tại: Tổ dân phố T, phường Ph, thành phố S, tỉnh Thái Nguyên. 2. Ông Trần Văn C, sinh năm: 1967/ vắng mặt. Trú tại: Tổ dân phố T, phường Ph, thành phố S, tỉnh Thái Nguyên."
+        "preview": "범행 [살인] ’24. 6. 25. 임신 약 34∼36주차인 산모 C에 대해 제왕절개 수술을 하여 피해자(무명, 2024. 6. 25.생)를 출산시킨 뒤, 미리 준비한 사각포로 피해자를 덮고, 냉동고에 넣는 등의 방법으로 살해 2. 의사 A의 단독범행 [의료법위반, 허위진단서작성·행사] 가. 의료법위반 ’15. 2.∼’17. 10. 의원의 입원실·수술실·회"
       }
     ]
   },
@@ -42791,7 +42791,7 @@
     "top5": [
       {
         "chunk_id": 186,
-        "score": 0.5042,
+        "score": 0.5044,
         "is_gold": true,
         "source": "uz/964-966.pdf",
         "locator": "블록.1",
@@ -42821,7 +42821,7 @@
       },
       {
         "chunk_id": 193,
-        "score": 0.4388,
+        "score": 0.4389,
         "is_gold": false,
         "source": "uz/Abdug‘aniyev+Akobir+Akmaljon+o‘g‘li.pdf",
         "locator": "블록.1~2",
@@ -51152,16 +51152,16 @@
   {
     "model": "bge-m3 [512] [hybrid(dense+sparse)]",
     "qid": "vn-06",
-    "question": "Hãy tìm loại chứng cứ hình ảnh thu được từ Nhà nghỉ T P dùng để chứng minh lời khai nhận tội của Lại Văn P",
+    "question": "Hãy tìm ngày ra quyết định, thời hạn và ngày chấp hành xong quyết định đưa bị cáo Lại Văn P vào Cơ sở giáo dục, trong vụ án tại quận Bình Tân",
     "n_gold": 1,
     "Hit@1": 0.0,
     "Hit@3": 1.0,
-    "MRR@3": 0.5,
-    "nDCG@3": 0.6309,
+    "MRR@3": 0.3333,
+    "nDCG@3": 0.5,
     "top5": [
       {
         "chunk_id": 229,
-        "score": 0.613,
+        "score": 0.7344,
         "is_gold": false,
         "source": "vn/06_2023_HS-ST_HCM.pdf",
         "locator": "블록.1",
@@ -51170,28 +51170,8 @@
         "preview": ": Lại Văn P (tên gọi khác: Lé); sinh năm: 1983, tại Thành phố Hồ Chí Minh. Nơi đăng ký hộ khẩu thường trú: Không có; nơi ở: Không ổn định; nghề nghiệp: Không có; trình độ văn hóa: 2/12; dân tộc: Kinh;"
       },
       {
-        "chunk_id": 234,
-        "score": 0.5631,
-        "is_gold": true,
-        "source": "vn/06_2023_HS-ST_HCM.pdf",
-        "locator": "블록.3~4",
-        "섹션": null,
-        "match": null,
-        "preview": "di động hiệu Realme C2, màu xanh của anh Nguyễn Đình V để tại Nhà nghỉ T P, số 26 Đường Số 3, Khu phố B, phường T T A, quận B T. Theo Kết luận định giá tài sản số: 270/KL- HĐĐGTS, ngày 30/5/2022 của H"
-      },
-      {
-        "chunk_id": 233,
-        "score": 0.5504,
-        "is_gold": false,
-        "source": "vn/06_2023_HS-ST_HCM.pdf",
-        "locator": "블록.3",
-        "섹션": null,
-        "match": null,
-        "preview": "sản”. Về trách nhiệm dân sự, do bị hại là anh V chỉ yêu cầu được nhận lại chiếc điện thoại bị chiếm đoạt mà không yêu cầu gì thêm nên không có ý kiến. Còn về vật chứng, đề nghị tịch thu sung quỹ Nhà n"
-      },
-      {
         "chunk_id": 228,
-        "score": 0.535,
+        "score": 0.6752,
         "is_gold": false,
         "source": "vn/06_2023_HS-ST_HCM.pdf",
         "locator": "블록.1",
@@ -51200,14 +51180,34 @@
         "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM QUẬN BÌNH TÂN Độc lập – Tự do – Hạnh phúc THÀNH PHỐ HỒ CHÍ MINH Bản án số: 06/2023/HS-ST Ngày 13-01-2023 NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆ"
       },
       {
-        "chunk_id": 231,
-        "score": 0.5279,
-        "is_gold": false,
+        "chunk_id": 230,
+        "score": 0.6022,
+        "is_gold": true,
         "source": "vn/06_2023_HS-ST_HCM.pdf",
-        "locator": "블록.2",
+        "locator": "블록.1~2",
         "섹션": null,
         "match": null,
-        "preview": "cửa phòng nghỉ của nhân viên tiếp tân phía sau bàn ra thì thấy có chiếc điện thoại di động hiệu Realme C2, màu xanh của anh Nguyễn Đình V đang để trên nệm sạc pin và trong phòng cũng không có người nà"
+        "preview": "Quyết định xử phạt vi phạm hành chính 750.000 đồng về hành vi “say rượu, bia gây mất trật tự công cộng” (chưa chấp hành Quyết định nên chưa được coi là chưa bị xử phạt vi phạm hành chính); nhân thân: "
+      },
+      {
+        "chunk_id": 237,
+        "score": 0.5519,
+        "is_gold": false,
+        "source": "vn/06_2023_HS-ST_HCM.pdf",
+        "locator": "블록.4~5",
+        "섹션": null,
+        "match": null,
+        "preview": "cái điện thoại di động Realme C2, màu xanh (đã qua sử dụng). Tịch thu tiêu hủy 01 cái áo thun dài tay màu đỏ sọc xanh, phía trước áo có in dòng chữ màu trắng Rakuten (đã qua sử dụng) và 01 cái nón vải"
+      },
+      {
+        "chunk_id": 221,
+        "score": 0.5495,
+        "is_gold": false,
+        "source": "vn/04_2023_HSST_BRVT.pdf",
+        "locator": "블록.1~2",
+        "섹션": null,
+        "match": null,
+        "preview": ": Việt Nam; Dân tộc: Kinh. Trình độ văn hóa: 5/12; Nghề nghiệp: Không. Con ông Võ Văn X và bà Phạm Thị M. B/c có vợ Trương Thị Tâm L và 01 người con sinh năm 2017. Tiền sự: Không. Tiền án: Ngày 06-02-"
       }
     ]
   },
@@ -51285,7 +51285,7 @@
     "top5": [
       {
         "chunk_id": 237,
-        "score": 0.6652,
+        "score": 0.6653,
         "is_gold": true,
         "source": "vn/06_2023_HS-ST_HCM.pdf",
         "locator": "블록.4~5",
@@ -51295,7 +51295,7 @@
       },
       {
         "chunk_id": 236,
-        "score": 0.6502,
+        "score": 0.6503,
         "is_gold": false,
         "source": "vn/06_2023_HS-ST_HCM.pdf",
         "locator": "블록.4~5",
@@ -51305,7 +51305,7 @@
       },
       {
         "chunk_id": 229,
-        "score": 0.5697,
+        "score": 0.5698,
         "is_gold": false,
         "source": "vn/06_2023_HS-ST_HCM.pdf",
         "locator": "블록.1",
@@ -51315,7 +51315,7 @@
       },
       {
         "chunk_id": 253,
-        "score": 0.5624,
+        "score": 0.5625,
         "is_gold": false,
         "source": "vn/171_2018_HS-ST_HUE.pdf",
         "locator": "블록.3~4",
@@ -51325,7 +51325,7 @@
       },
       {
         "chunk_id": 247,
-        "score": 0.5541,
+        "score": 0.5542,
         "is_gold": false,
         "source": "vn/132_2020_HS-ST_HCM.pdf",
         "locator": "블록.6",
@@ -51462,7 +51462,7 @@
   {
     "model": "bge-m3 [512] [hybrid(dense+sparse)]",
     "qid": "vn-11",
-    "question": "Hãy tìm ngày, mức án và tội danh của ba bản án tiền án của bị cáo Đỗ Văn Ph, trú tại tỉnh Thừa Thiên Huế",
+    "question": "Hãy tìm tên, năm sinh và địa chỉ của hai người làm chứng trong vụ án Đỗ Văn Ph tại Thừa Thiên Huế",
     "n_gold": 1,
     "Hit@1": 0.0,
     "Hit@3": 0.0,
@@ -51470,18 +51470,8 @@
     "nDCG@3": 0.0,
     "top5": [
       {
-        "chunk_id": 254,
-        "score": 0.7602,
-        "is_gold": false,
-        "source": "vn/171_2018_HS-ST_HUE.pdf",
-        "locator": "블록.4~5",
-        "섹션": "2. Bà Nguyễn Thị Tuyết",
-        "match": null,
-        "preview": "a Thiên Huế và dòng chữ “ Mẫu vật vụ Đỗ Văn Ph bắt ngày 30/4/2018 ”. Theo biên bản giao nhận vật chứng giữa Cơ quan cảnh sát điều tra công an thành phố Huế và Chi cục thi hành án dân sự thành phố Huế "
-      },
-      {
         "chunk_id": 248,
-        "score": 0.7208,
+        "score": 0.6863,
         "is_gold": false,
         "source": "vn/171_2018_HS-ST_HUE.pdf",
         "locator": "블록.1~2",
@@ -51490,8 +51480,18 @@
         "preview": "TOÀ ÁN NHÂN DÂN CỘNG HOÀ XÃ HỘI CHỦ NGHĨA VIỆT NAM THÀNH PHỐ HUẾ Độc lập - Tự do - Hạnh phúc. TỈNH THỪA THIÊN HUẾ Bản án số: 171/2018/HS- ST Ngày: 05- 10- 2018 NHÂN DANH NƯỚC CỘNG HOÀ XÃ HỘI CHỦ NGHĨA"
       },
       {
+        "chunk_id": 254,
+        "score": 0.6325,
+        "is_gold": false,
+        "source": "vn/171_2018_HS-ST_HUE.pdf",
+        "locator": "블록.4~5",
+        "섹션": "2. Bà Nguyễn Thị Tuyết",
+        "match": null,
+        "preview": "a Thiên Huế và dòng chữ “ Mẫu vật vụ Đỗ Văn Ph bắt ngày 30/4/2018 ”. Theo biên bản giao nhận vật chứng giữa Cơ quan cảnh sát điều tra công an thành phố Huế và Chi cục thi hành án dân sự thành phố Huế "
+      },
+      {
         "chunk_id": 253,
-        "score": 0.6445,
+        "score": 0.6232,
         "is_gold": false,
         "source": "vn/171_2018_HS-ST_HUE.pdf",
         "locator": "블록.3~4",
@@ -51501,7 +51501,7 @@
       },
       {
         "chunk_id": 249,
-        "score": 0.6329,
+        "score": 0.595,
         "is_gold": true,
         "source": "vn/171_2018_HS-ST_HUE.pdf",
         "locator": "블록.2",
@@ -51510,14 +51510,14 @@
         "preview": "Huế; Giới tính: Nam; Nơi cư trú: Tổ 2, phường Thủy D, thị xã Hương T, tỉnh Thừa Thiên Huế; Nghề nghiệp: chạy xe thồ; Trình độ học vấn: không biết chữ; Quốc tịch: Việt Nam; Dân tộc: Kinh; Tôn giáo: Phậ"
       },
       {
-        "chunk_id": 252,
-        "score": 0.5952,
+        "chunk_id": 251,
+        "score": 0.5387,
         "is_gold": false,
         "source": "vn/171_2018_HS-ST_HUE.pdf",
-        "locator": "블록.3",
-        "섹션": "2. Bà Nguyễn Thị Tuyết",
+        "locator": "블록.2~3",
+        "섹션": null,
         "match": null,
-        "preview": "trạng số 157/CT- VKS ngày 08 tháng 8 năm 2018 là có căn cứ pháp luật. [2] Xét về tính chất, mức độ hành vi phạm tội của bị cáo: Bị cáo Ph là người có đầy đủ năng lực trách nhiệm hình sự, nhận thức đượ"
+        "preview": ". Tại phiên tòa đại diện Viện kiểm sát giữ nguyên quyết định truy tố và đề nghị Hội đồng xét xử tuyên bố bị cáo Đỗ Văn P phạm tội “ Tàng trữ trái phép chất ma túy”. Áp dụng điểm c khoản 1 Điều 249; đi"
       }
     ]
   },
@@ -51586,17 +51586,27 @@
   {
     "model": "bge-m3 [512] [hybrid(dense+sparse)]",
     "qid": "vn-13",
-    "question": "Hãy tìm tài sản mà Lâm Tuấn A đã ném bỏ ở khu vực rừng cây cách nhà 50m và không thu giữ được",
+    "question": "Hãy tìm tên và năm sinh của bị hại và của người có quyền lợi, nghĩa vụ liên quan trong vụ án Lâm Tuấn A",
     "n_gold": 1,
     "Hit@1": 0.0,
     "Hit@3": 1.0,
-    "MRR@3": 0.3333,
-    "nDCG@3": 0.5,
+    "MRR@3": 0.5,
+    "nDCG@3": 0.6309,
     "top5": [
       {
-        "chunk_id": 239,
-        "score": 0.62,
+        "chunk_id": 238,
+        "score": 0.662,
         "is_gold": false,
+        "source": "vn/132_2020_HS-ST_HCM.pdf",
+        "locator": "블록.1",
+        "섹션": null,
+        "match": null,
+        "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM HUYỆN CỦ CHI Độc lập - Tự do - Hạnh phúc THÀNH PHỐ HỒ CHÍ MINH Bản án số: 132/2020/HS-ST Ngày: 27-7-2020 NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆ"
+      },
+      {
+        "chunk_id": 239,
+        "score": 0.581,
+        "is_gold": true,
         "source": "vn/132_2020_HS-ST_HCM.pdf",
         "locator": "블록.1~2",
         "섹션": null,
@@ -51604,28 +51614,18 @@
         "preview": "và tên: Lâm Tuấn A, sinh năm: 1984 tại Thành phố Hồ Chí Minh; nơi đăng ký hộ khẩu thường trú: Ấp P, xã P, huyện C, Thành phố Hồ Chí Minh; nghề nghiệp: Không; trình độ học vấn: 02/12; dân tộc: Kinh; gi"
       },
       {
-        "chunk_id": 246,
-        "score": 0.5916,
+        "chunk_id": 247,
+        "score": 0.5584,
         "is_gold": false,
         "source": "vn/132_2020_HS-ST_HCM.pdf",
-        "locator": "블록.5~6",
+        "locator": "블록.6",
         "섹션": "2. Ông Nguyễn Ngọc Cảnh;",
         "match": null,
-        "preview": "minh nhân dân, 01 giấy phép lái xe, 01 giấy đăng ký xe mô tô, 01 thẻ đoàn viên, 01 thẻ bảo hiểm y tế, 01 thẻ ATM của Ngân hàng Viettinbank, 01 thẻ ATM của Ngân hàng BIDV, Hội đồng xét xử không xem xét"
-      },
-      {
-        "chunk_id": 240,
-        "score": 0.5913,
-        "is_gold": true,
-        "source": "vn/132_2020_HS-ST_HCM.pdf",
-        "locator": "블록.2",
-        "섹션": "2. Ông Nguyễn Ngọc Cảnh;",
-        "match": null,
-        "preview": "khiển xe đạp trên đường Tỉnh lộ 15, tổ 89, ấp Phú Bình, xã Phú Hòa Đông, huyện Củ Chi, Thành phố Hồ Chí Minh. Tại đây, Tuấn A phát hiện cửa sổ nhà ông P mở và trong nhà sáng đèn nên dừng lại quan sát."
+        "preview": "g khoản 2 Điều 173, điểm s khoản 1 Điều 51 và Điều 38 của Bộ luật Hình sự năm 2015, được sửa đổi bổ sung năm 2017. Xử phạt: Bị cáo Lâm Tuấn A 03 (ba) năm 06 (sáu) tháng tù, thời hạn tù tính từ ngày 08"
       },
       {
         "chunk_id": 244,
-        "score": 0.5848,
+        "score": 0.5315,
         "is_gold": false,
         "source": "vn/132_2020_HS-ST_HCM.pdf",
         "locator": "블록.4",
@@ -51634,14 +51634,14 @@
         "preview": "truy tố đã thực hiện đúng về thẩm quyền, trình tự, thủ tục theo quy định của Bộ luật Tố tụng hình sự. Quá trình điều tra và tại phiên tòa, bị cáo bị hại, người có quyền lợi, nghĩa vụ liên quan đến vụ "
       },
       {
-        "chunk_id": 242,
-        "score": 0.5433,
+        "chunk_id": 228,
+        "score": 0.5186,
         "is_gold": false,
-        "source": "vn/132_2020_HS-ST_HCM.pdf",
-        "locator": "블록.3",
-        "섹션": "2. Ông Nguyễn Ngọc Cảnh;",
+        "source": "vn/06_2023_HS-ST_HCM.pdf",
+        "locator": "블록.1",
+        "섹션": null,
         "match": null,
-        "preview": "Chí Minh đã truy tố Lâm Tuấn A về tội “Trộm cắp tài sản” theo khoản 2 Điều 173 của Bộ luật Hình sự 2015 được sửa đổi, bổ sung năm 2017. Tại phiên tòa, đại diện Viện kiểm sát nhân dân huyện Củ Chi giữ "
+        "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM QUẬN BÌNH TÂN Độc lập – Tự do – Hạnh phúc THÀNH PHỐ HỒ CHÍ MINH Bản án số: 06/2023/HS-ST Ngày 13-01-2023 NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆ"
       }
     ]
   },
@@ -52091,7 +52091,7 @@
     "top5": [
       {
         "chunk_id": 186,
-        "score": 0.5494,
+        "score": 0.5496,
         "is_gold": true,
         "source": "uz/964-966.pdf",
         "locator": "블록.1",
@@ -52101,7 +52101,7 @@
       },
       {
         "chunk_id": 192,
-        "score": 0.4981,
+        "score": 0.4982,
         "is_gold": false,
         "source": "uz/Abdug‘aniyev+Akobir+Akmaljon+o‘g‘li.pdf",
         "locator": "블록.1",
@@ -52121,7 +52121,7 @@
       },
       {
         "chunk_id": 193,
-        "score": 0.4461,
+        "score": 0.4462,
         "is_gold": false,
         "source": "uz/Abdug‘aniyev+Akobir+Akmaljon+o‘g‘li.pdf",
         "locator": "블록.1~2",
@@ -56069,7 +56069,7 @@
       },
       {
         "chunk_id": 22,
-        "score": 0.4913,
+        "score": 0.4912,
         "is_gold": false,
         "source": "ko/2025고합394_판결문.pdf",
         "locator": "전체",
@@ -56089,7 +56089,7 @@
       },
       {
         "chunk_id": 8,
-        "score": 0.486,
+        "score": 0.4859,
         "is_gold": false,
         "source": "en/249799.pdf",
         "locator": "전체",
@@ -56099,7 +56099,7 @@
       },
       {
         "chunk_id": 16,
-        "score": 0.4799,
+        "score": 0.4798,
         "is_gold": false,
         "source": "en/vae1_tetteh_0.pdf",
         "locator": "전체",
@@ -57257,7 +57257,7 @@
       },
       {
         "chunk_id": 48,
-        "score": 0.4663,
+        "score": 0.4662,
         "is_gold": false,
         "source": "vn/132_2020_HS-ST_HCM.pdf",
         "locator": "전체",
@@ -57443,7 +57443,7 @@
       },
       {
         "chunk_id": 25,
-        "score": 0.4501,
+        "score": 0.4502,
         "is_gold": false,
         "source": "ko/251223_보도자료(세계_1위_K반도체_국가핵심기술_유출사건_수사_결과)-서울중앙지검.pdf",
         "locator": "전체",
@@ -59035,7 +59035,7 @@
     "top5": [
       {
         "chunk_id": 1,
-        "score": 0.6571,
+        "score": 0.6572,
         "is_gold": true,
         "source": "ch/(2020)_0109_488.pdf",
         "locator": "전체",
@@ -59045,7 +59045,7 @@
       },
       {
         "chunk_id": 3,
-        "score": 0.549,
+        "score": 0.5491,
         "is_gold": false,
         "source": "ch/(2020)_1002_314_.pdf",
         "locator": "전체",
@@ -59055,7 +59055,7 @@
       },
       {
         "chunk_id": 2,
-        "score": 0.4977,
+        "score": 0.4978,
         "is_gold": false,
         "source": "ch/(2020)_0381_884.pdf",
         "locator": "전체",
@@ -59065,7 +59065,7 @@
       },
       {
         "chunk_id": 0,
-        "score": 0.4886,
+        "score": 0.4888,
         "is_gold": false,
         "source": "ch/(2019)0113_.pdf",
         "locator": "전체",
@@ -59075,7 +59075,7 @@
       },
       {
         "chunk_id": 6,
-        "score": 0.46,
+        "score": 0.4601,
         "is_gold": false,
         "source": "ch/四川省川谷坊酒业有限公司、曾庆芬非法吸收公众存款罪一审刑事判决书.pdf",
         "locator": "전체",
@@ -59241,7 +59241,7 @@
       },
       {
         "chunk_id": 48,
-        "score": 0.5553,
+        "score": 0.5552,
         "is_gold": false,
         "source": "vn/132_2020_HS-ST_HCM.pdf",
         "locator": "전체",
@@ -59261,7 +59261,7 @@
       },
       {
         "chunk_id": 22,
-        "score": 0.5336,
+        "score": 0.5335,
         "is_gold": false,
         "source": "ko/2025고합394_판결문.pdf",
         "locator": "전체",
@@ -59469,7 +59469,7 @@
     "top5": [
       {
         "chunk_id": 4,
-        "score": 0.6629,
+        "score": 0.663,
         "is_gold": true,
         "source": "ch/1767528250552_B264D298D87D4A329BAAEE4DE23DFB2D.pdf",
         "locator": "전체",
@@ -59499,7 +59499,7 @@
       },
       {
         "chunk_id": 50,
-        "score": 0.4648,
+        "score": 0.4647,
         "is_gold": false,
         "source": "vn/29_2018_HS-ST_THAI_NGUYEN[1].pdf",
         "locator": "전체",
@@ -59509,7 +59509,7 @@
       },
       {
         "chunk_id": 47,
-        "score": 0.4557,
+        "score": 0.4556,
         "is_gold": false,
         "source": "vn/06_2023_HS-ST_HCM.pdf",
         "locator": "전체",
@@ -59841,7 +59841,7 @@
     "top5": [
       {
         "chunk_id": 6,
-        "score": 0.7328,
+        "score": 0.7329,
         "is_gold": true,
         "source": "ch/四川省川谷坊酒业有限公司、曾庆芬非法吸收公众存款罪一审刑事判决书.pdf",
         "locator": "전체",
@@ -59871,7 +59871,7 @@
       },
       {
         "chunk_id": 22,
-        "score": 0.4679,
+        "score": 0.4678,
         "is_gold": false,
         "source": "ko/2025고합394_판결문.pdf",
         "locator": "전체",
@@ -60337,7 +60337,7 @@
     "top5": [
       {
         "chunk_id": 49,
-        "score": 0.5287,
+        "score": 0.5286,
         "is_gold": false,
         "source": "vn/171_2018_HS-ST_HUE.pdf",
         "locator": "전체",
@@ -60347,7 +60347,7 @@
       },
       {
         "chunk_id": 46,
-        "score": 0.5002,
+        "score": 0.5001,
         "is_gold": true,
         "source": "vn/04_2023_HSST_BRVT.pdf",
         "locator": "전체",
@@ -60357,7 +60357,7 @@
       },
       {
         "chunk_id": 47,
-        "score": 0.4827,
+        "score": 0.4826,
         "is_gold": false,
         "source": "vn/06_2023_HS-ST_HCM.pdf",
         "locator": "전체",
@@ -60452,7 +60452,7 @@
   {
     "model": "bge-m3 [full]",
     "qid": "vn-06",
-    "question": "Hãy tìm loại chứng cứ hình ảnh thu được từ Nhà nghỉ T P dùng để chứng minh lời khai nhận tội của Lại Văn P",
+    "question": "Hãy tìm ngày ra quyết định, thời hạn và ngày chấp hành xong quyết định đưa bị cáo Lại Văn P vào Cơ sở giáo dục, trong vụ án tại quận Bình Tân",
     "n_gold": 1,
     "Hit@1": 1.0,
     "Hit@3": 1.0,
@@ -60461,7 +60461,7 @@
     "top5": [
       {
         "chunk_id": 47,
-        "score": 0.551,
+        "score": 0.559,
         "is_gold": true,
         "source": "vn/06_2023_HS-ST_HCM.pdf",
         "locator": "전체",
@@ -60470,28 +60470,18 @@
         "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM QUẬN BÌNH TÂN Độc lập – Tự do – Hạnh phúc THÀNH PHỐ HỒ CHÍ MINH Bản án số: 06/2023/HS-ST Ngày 13-01-2023 NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆ"
       },
       {
-        "chunk_id": 50,
-        "score": 0.4812,
+        "chunk_id": 19,
+        "score": 0.4792,
         "is_gold": false,
-        "source": "vn/29_2018_HS-ST_THAI_NGUYEN[1].pdf",
+        "source": "ko/2015노4675_판결문.pdf",
         "locator": "전체",
         "섹션": null,
         "match": null,
-        "preview": "TÒA ÁN NHÂN DÂN TP. SÔNG CÔNG CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM TỈNH THÁI NGUYÊN Độc lập - Tự do - Hạnh phúc ––––––––––––– ––––––––––––––––––– Bản án số: 29 /2018/HS-ST Ngày 19 - 6 - 2018 NHÂN DANH N"
-      },
-      {
-        "chunk_id": 49,
-        "score": 0.4789,
-        "is_gold": false,
-        "source": "vn/171_2018_HS-ST_HUE.pdf",
-        "locator": "전체",
-        "섹션": null,
-        "match": null,
-        "preview": "TOÀ ÁN NHÂN DÂN CỘNG HOÀ XÃ HỘI CHỦ NGHĨA VIỆT NAM THÀNH PHỐ HUẾ Độc lập - Tự do - Hạnh phúc. TỈNH THỪA THIÊN HUẾ Bản án số: 171/2018/HS- ST Ngày: 05- 10- 2018 NHÂN DANH NƯỚC CỘNG HOÀ XÃ HỘI CHỦ NGHĨA"
+        "preview": "서울중앙지방법원 제50형사부 판결 사 건 2015노4675 건조물침입, 업무방해 피 고 인 A 항 소 인 피고인, 검사 검 사 이선혁(기소), 오기찬(공판) 원 심 판 결 서울중앙지방법원 2015. 11. 19. 선고 2015고정2384 판결 판결선고 2016.3.10. 주문 원심판결을 파기한다. 피고인을 벌금 300만 원에 처한다. 피고인이 위 벌금을 납"
       },
       {
         "chunk_id": 46,
-        "score": 0.4673,
+        "score": 0.4756,
         "is_gold": false,
         "source": "vn/04_2023_HSST_BRVT.pdf",
         "locator": "전체",
@@ -60500,14 +60490,24 @@
         "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM HUYỆN Đ Độc lập – Tự do – Hạnh phúc TỈNH BÀ RỊA VŨNG TÀU Bản án số: 04/2023/HSST. Ngày: 16-02-2023. NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM"
       },
       {
-        "chunk_id": 31,
-        "score": 0.4662,
+        "chunk_id": 20,
+        "score": 0.4661,
         "is_gold": false,
-        "source": "pil/judicialaffidavitfilipino.pdf",
+        "source": "ko/2023고단2541_판결문_검수완료.pdf",
         "locator": "전체",
         "섹션": null,
         "match": null,
-        "preview": "REPUBLIC OF THE PHILIPPINES NATIONAL CAPITAL JUDICIAL REGION REGIONAL TRIAL COURT BRANCH 65, MAKATI CITY PEOPLE OF THE PHILIPPINES, Complainant, -versus- CASE NO.: ___________ For: Murder PO2 RAFFY MA"
+        "preview": "본 판결서는 판결서 인터넷열람 사이트에서 열람·출력되었습니다. 본 판결서를 이용하여 사건관계인의 명예나 생활의 평온을 해하는 행위는 관련 법령에 따라 금지됩니다. 비실명처리일자 : 2023-11-17 서울북부지방법원 판 결 사 건 2023고단2541 횡령 피 고 인 A 검 사 정성현(기소), 이지륜(공판) 변 호 인 변호사 유무곤(국선) 판 결 선 고 20"
+      },
+      {
+        "chunk_id": 48,
+        "score": 0.464,
+        "is_gold": false,
+        "source": "vn/132_2020_HS-ST_HCM.pdf",
+        "locator": "전체",
+        "섹션": null,
+        "match": null,
+        "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM HUYỆN CỦ CHI Độc lập - Tự do - Hạnh phúc THÀNH PHỐ HỒ CHÍ MINH Bản án số: 132/2020/HS-ST Ngày: 27-7-2020 NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆ"
       }
     ]
   },
@@ -60585,7 +60585,7 @@
     "top5": [
       {
         "chunk_id": 47,
-        "score": 0.5531,
+        "score": 0.5532,
         "is_gold": true,
         "source": "vn/06_2023_HS-ST_HCM.pdf",
         "locator": "전체",
@@ -60615,7 +60615,7 @@
       },
       {
         "chunk_id": 22,
-        "score": 0.4861,
+        "score": 0.4862,
         "is_gold": false,
         "source": "ko/2025고합394_판결문.pdf",
         "locator": "전체",
@@ -60625,7 +60625,7 @@
       },
       {
         "chunk_id": 48,
-        "score": 0.485,
+        "score": 0.4851,
         "is_gold": false,
         "source": "vn/132_2020_HS-ST_HCM.pdf",
         "locator": "전체",
@@ -60762,7 +60762,7 @@
   {
     "model": "bge-m3 [full]",
     "qid": "vn-11",
-    "question": "Hãy tìm ngày, mức án và tội danh của ba bản án tiền án của bị cáo Đỗ Văn Ph, trú tại tỉnh Thừa Thiên Huế",
+    "question": "Hãy tìm tên, năm sinh và địa chỉ của hai người làm chứng trong vụ án Đỗ Văn Ph tại Thừa Thiên Huế",
     "n_gold": 1,
     "Hit@1": 1.0,
     "Hit@3": 1.0,
@@ -60771,7 +60771,7 @@
     "top5": [
       {
         "chunk_id": 49,
-        "score": 0.6192,
+        "score": 0.5656,
         "is_gold": true,
         "source": "vn/171_2018_HS-ST_HUE.pdf",
         "locator": "전체",
@@ -60780,28 +60780,18 @@
         "preview": "TOÀ ÁN NHÂN DÂN CỘNG HOÀ XÃ HỘI CHỦ NGHĨA VIỆT NAM THÀNH PHỐ HUẾ Độc lập - Tự do - Hạnh phúc. TỈNH THỪA THIÊN HUẾ Bản án số: 171/2018/HS- ST Ngày: 05- 10- 2018 NHÂN DANH NƯỚC CỘNG HOÀ XÃ HỘI CHỦ NGHĨA"
       },
       {
-        "chunk_id": 46,
-        "score": 0.5199,
+        "chunk_id": 31,
+        "score": 0.4824,
         "is_gold": false,
-        "source": "vn/04_2023_HSST_BRVT.pdf",
+        "source": "pil/judicialaffidavitfilipino.pdf",
         "locator": "전체",
         "섹션": null,
         "match": null,
-        "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM HUYỆN Đ Độc lập – Tự do – Hạnh phúc TỈNH BÀ RỊA VŨNG TÀU Bản án số: 04/2023/HSST. Ngày: 16-02-2023. NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM"
-      },
-      {
-        "chunk_id": 50,
-        "score": 0.5089,
-        "is_gold": false,
-        "source": "vn/29_2018_HS-ST_THAI_NGUYEN[1].pdf",
-        "locator": "전체",
-        "섹션": null,
-        "match": null,
-        "preview": "TÒA ÁN NHÂN DÂN TP. SÔNG CÔNG CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM TỈNH THÁI NGUYÊN Độc lập - Tự do - Hạnh phúc ––––––––––––– ––––––––––––––––––– Bản án số: 29 /2018/HS-ST Ngày 19 - 6 - 2018 NHÂN DANH N"
+        "preview": "REPUBLIC OF THE PHILIPPINES NATIONAL CAPITAL JUDICIAL REGION REGIONAL TRIAL COURT BRANCH 65, MAKATI CITY PEOPLE OF THE PHILIPPINES, Complainant, -versus- CASE NO.: ___________ For: Murder PO2 RAFFY MA"
       },
       {
         "chunk_id": 47,
-        "score": 0.5086,
+        "score": 0.4349,
         "is_gold": false,
         "source": "vn/06_2023_HS-ST_HCM.pdf",
         "locator": "전체",
@@ -60810,14 +60800,24 @@
         "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM QUẬN BÌNH TÂN Độc lập – Tự do – Hạnh phúc THÀNH PHỐ HỒ CHÍ MINH Bản án số: 06/2023/HS-ST Ngày 13-01-2023 NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆ"
       },
       {
-        "chunk_id": 48,
-        "score": 0.4864,
+        "chunk_id": 46,
+        "score": 0.4319,
         "is_gold": false,
-        "source": "vn/132_2020_HS-ST_HCM.pdf",
+        "source": "vn/04_2023_HSST_BRVT.pdf",
         "locator": "전체",
         "섹션": null,
         "match": null,
-        "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM HUYỆN CỦ CHI Độc lập - Tự do - Hạnh phúc THÀNH PHỐ HỒ CHÍ MINH Bản án số: 132/2020/HS-ST Ngày: 27-7-2020 NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆ"
+        "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM HUYỆN Đ Độc lập – Tự do – Hạnh phúc TỈNH BÀ RỊA VŨNG TÀU Bản án số: 04/2023/HSST. Ngày: 16-02-2023. NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM"
+      },
+      {
+        "chunk_id": 22,
+        "score": 0.4171,
+        "is_gold": false,
+        "source": "ko/2025고합394_판결문.pdf",
+        "locator": "전체",
+        "섹션": null,
+        "match": null,
+        "preview": "본 판결문은 판결서 인터넷열람 사이트에서 열람·출력되었습니다. 본 판결문을 이용하여 사건관계인의 명예나 생활의 평온을 해하는 행위는 관련 법령에 따라 금지됩니다. 비실명처리일자 : 2026-04-29 제주지방법원 제 2 형 사 부 판결 사건 2025고합394 마약류관리에관한법률위반(향정) 피고인 A 검사 한상훈(기소), 유선문(공판) 변호인 법무법인 한원 "
       }
     ]
   },
@@ -60886,7 +60886,7 @@
   {
     "model": "bge-m3 [full]",
     "qid": "vn-13",
-    "question": "Hãy tìm tài sản mà Lâm Tuấn A đã ném bỏ ở khu vực rừng cây cách nhà 50m và không thu giữ được",
+    "question": "Hãy tìm tên và năm sinh của bị hại và của người có quyền lợi, nghĩa vụ liên quan trong vụ án Lâm Tuấn A",
     "n_gold": 1,
     "Hit@1": 1.0,
     "Hit@3": 1.0,
@@ -60895,7 +60895,7 @@
     "top5": [
       {
         "chunk_id": 48,
-        "score": 0.5468,
+        "score": 0.5409,
         "is_gold": true,
         "source": "vn/132_2020_HS-ST_HCM.pdf",
         "locator": "전체",
@@ -60904,8 +60904,18 @@
         "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM HUYỆN CỦ CHI Độc lập - Tự do - Hạnh phúc THÀNH PHỐ HỒ CHÍ MINH Bản án số: 132/2020/HS-ST Ngày: 27-7-2020 NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆ"
       },
       {
+        "chunk_id": 24,
+        "score": 0.4796,
+        "is_gold": false,
+        "source": "ko/250723_보도자료(유튜브_36주_태아_낙태살인_사건_구속_기소_등)-서울중앙지검.pdf",
+        "locator": "전체",
+        "섹션": null,
+        "match": null,
+        "preview": "이 보도자료는 2025. 7. 23.(수) 14:00부터 보도하여 주시고, 공개되는 범죄사실은 재판에 의하여 확정된 사실이 아님을 유의하여 주시기 바랍니다. 서울중앙지방검찰청 보 도 자 료 전문공보관 이준호 2025. 7. 23.(수) 전화 02-530-4780 / 팩스 02-536-5410 유튜브 36주 태아 낙태살인 사건 구속 기소 등 공소제기 후 공개"
+      },
+      {
         "chunk_id": 50,
-        "score": 0.5048,
+        "score": 0.4793,
         "is_gold": false,
         "source": "vn/29_2018_HS-ST_THAI_NGUYEN[1].pdf",
         "locator": "전체",
@@ -60914,34 +60924,24 @@
         "preview": "TÒA ÁN NHÂN DÂN TP. SÔNG CÔNG CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM TỈNH THÁI NGUYÊN Độc lập - Tự do - Hạnh phúc ––––––––––––– ––––––––––––––––––– Bản án số: 29 /2018/HS-ST Ngày 19 - 6 - 2018 NHÂN DANH N"
       },
       {
-        "chunk_id": 47,
-        "score": 0.4713,
+        "chunk_id": 31,
+        "score": 0.4718,
         "is_gold": false,
-        "source": "vn/06_2023_HS-ST_HCM.pdf",
+        "source": "pil/judicialaffidavitfilipino.pdf",
         "locator": "전체",
         "섹션": null,
         "match": null,
-        "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM QUẬN BÌNH TÂN Độc lập – Tự do – Hạnh phúc THÀNH PHỐ HỒ CHÍ MINH Bản án số: 06/2023/HS-ST Ngày 13-01-2023 NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆ"
+        "preview": "REPUBLIC OF THE PHILIPPINES NATIONAL CAPITAL JUDICIAL REGION REGIONAL TRIAL COURT BRANCH 65, MAKATI CITY PEOPLE OF THE PHILIPPINES, Complainant, -versus- CASE NO.: ___________ For: Murder PO2 RAFFY MA"
       },
       {
-        "chunk_id": 46,
-        "score": 0.4684,
+        "chunk_id": 33,
+        "score": 0.4611,
         "is_gold": false,
-        "source": "vn/04_2023_HSST_BRVT.pdf",
+        "source": "pil/toazinfo-pinagsamang.pdf",
         "locator": "전체",
         "섹션": null,
         "match": null,
-        "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM HUYỆN Đ Độc lập – Tự do – Hạnh phúc TỈNH BÀ RỊA VŨNG TÀU Bản án số: 04/2023/HSST. Ngày: 16-02-2023. NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM"
-      },
-      {
-        "chunk_id": 23,
-        "score": 0.4557,
-        "is_gold": false,
-        "source": "ko/231201_보도자료(360억_원_대출을_알선하고_억대_수수료를_취득한_대출_브로커_및_은행지점장_구속_기소)-통영지청.pdf",
-        "locator": "전체",
-        "섹션": null,
-        "match": null,
-        "preview": "12. 3.(일) 12:00 이후 보도하여 주시고, 범죄사실은 재판에 의하여 확정된 사실이 아님을 유의 바랍니다. 창원지방검찰청 통영지청 보 도 자 료 전문공보담당자 부장검사 최성수 2023. 12. 3.(일) 전화 055-640-4324 / 팩스 055-640-4643 360억 원 대출을 알선하고 억대 수수료를 취득한 대출 브로커 및 은행지점장 구속 기소"
+        "preview": "Republika ng Pilipinas ) Lungsod ng Quezon ) S.S. PINAGSAMANG SINUMPAANG-SALAYSAY Kami, sina JUVIC CADIAO at FERNADO ROLLAN ROMERO, kapwa nasa hustong gulang, Filipino, at nakatira sa Block 1 Lot 2 Br"
       }
     ]
   },
@@ -62951,7 +62951,7 @@
       },
       {
         "chunk_id": 38,
-        "score": 0.5714,
+        "score": 0.5715,
         "is_gold": false,
         "source": "ru/voe12ehxmqpqsa3z1f3moe6e3fhfy14n.pdf",
         "locator": "전체",
@@ -62961,7 +62961,7 @@
       },
       {
         "chunk_id": 35,
-        "score": 0.5132,
+        "score": 0.5133,
         "is_gold": false,
         "source": "ru/acqyks51995vcas54buq9j8zjfcv52mq.pdf",
         "locator": "전체",
@@ -62971,7 +62971,7 @@
       },
       {
         "chunk_id": 37,
-        "score": 0.4896,
+        "score": 0.4897,
         "is_gold": false,
         "source": "ru/dvbffhvesi7atsug569xnrlpbgerzwcj.pdf",
         "locator": "전체",
@@ -63251,7 +63251,7 @@
     "top5": [
       {
         "chunk_id": 38,
-        "score": 0.5088,
+        "score": 0.5089,
         "is_gold": true,
         "source": "ru/voe12ehxmqpqsa3z1f3moe6e3fhfy14n.pdf",
         "locator": "전체",
@@ -63271,7 +63271,7 @@
       },
       {
         "chunk_id": 35,
-        "score": 0.5032,
+        "score": 0.5033,
         "is_gold": false,
         "source": "ru/acqyks51995vcas54buq9j8zjfcv52mq.pdf",
         "locator": "전체",
@@ -63313,7 +63313,7 @@
     "top5": [
       {
         "chunk_id": 35,
-        "score": 0.4483,
+        "score": 0.4484,
         "is_gold": false,
         "source": "ru/acqyks51995vcas54buq9j8zjfcv52mq.pdf",
         "locator": "전체",
@@ -63323,7 +63323,7 @@
       },
       {
         "chunk_id": 23,
-        "score": 0.4482,
+        "score": 0.4483,
         "is_gold": false,
         "source": "ko/231201_보도자료(360억_원_대출을_알선하고_억대_수수료를_취득한_대출_브로커_및_은행지점장_구속_기소)-통영지청.pdf",
         "locator": "전체",
@@ -63343,7 +63343,7 @@
       },
       {
         "chunk_id": 38,
-        "score": 0.4415,
+        "score": 0.4416,
         "is_gold": true,
         "source": "ru/voe12ehxmqpqsa3z1f3moe6e3fhfy14n.pdf",
         "locator": "전체",
@@ -63353,7 +63353,7 @@
       },
       {
         "chunk_id": 34,
-        "score": 0.4373,
+        "score": 0.4374,
         "is_gold": false,
         "source": "ru/72lj3fbo7i1h83uotfpw88vvhj0s5nm8.pdf",
         "locator": "전체",
@@ -63653,7 +63653,7 @@
       },
       {
         "chunk_id": 17,
-        "score": 0.4363,
+        "score": 0.4365,
         "is_gold": false,
         "source": "ko/140801_서부지검_보도자료.pdf",
         "locator": "전체",
@@ -65369,7 +65369,7 @@
       },
       {
         "chunk_id": 22,
-        "score": 0.5131,
+        "score": 0.513,
         "is_gold": false,
         "source": "ko/2025고합394_판결문.pdf",
         "locator": "전체",
@@ -65379,7 +65379,7 @@
       },
       {
         "chunk_id": 19,
-        "score": 0.4945,
+        "score": 0.4944,
         "is_gold": false,
         "source": "ko/2015노4675_판결문.pdf",
         "locator": "전체",
@@ -65389,7 +65389,7 @@
       },
       {
         "chunk_id": 26,
-        "score": 0.4932,
+        "score": 0.4931,
         "is_gold": false,
         "source": "ko/260120__보도자료(6776억_원_규모_한국전력공사_입찰_담합_사건_수사_결과)-서울중앙지검.pdf",
         "locator": "전체",
@@ -66557,7 +66557,7 @@
       },
       {
         "chunk_id": 22,
-        "score": 0.4959,
+        "score": 0.496,
         "is_gold": false,
         "source": "ko/2025고합394_판결문.pdf",
         "locator": "전체",
@@ -66753,7 +66753,7 @@
       },
       {
         "chunk_id": 18,
-        "score": 0.4661,
+        "score": 0.4662,
         "is_gold": false,
         "source": "ko/2015고단7004_판결문.pdf",
         "locator": "전체",
@@ -67559,7 +67559,7 @@
       },
       {
         "chunk_id": 31,
-        "score": 0.4606,
+        "score": 0.4607,
         "is_gold": false,
         "source": "pil/judicialaffidavitfilipino.pdf",
         "locator": "전체",
@@ -67569,7 +67569,7 @@
       },
       {
         "chunk_id": 9,
-        "score": 0.4445,
+        "score": 0.4446,
         "is_gold": false,
         "source": "en/25-524_0971.pdf",
         "locator": "전체",
@@ -68335,7 +68335,7 @@
     "top5": [
       {
         "chunk_id": 1,
-        "score": 0.7575,
+        "score": 0.7574,
         "is_gold": true,
         "source": "ch/(2020)_0109_488.pdf",
         "locator": "전체",
@@ -68345,7 +68345,7 @@
       },
       {
         "chunk_id": 3,
-        "score": 0.6047,
+        "score": 0.6049,
         "is_gold": false,
         "source": "ch/(2020)_1002_314_.pdf",
         "locator": "전체",
@@ -68355,7 +68355,7 @@
       },
       {
         "chunk_id": 2,
-        "score": 0.5119,
+        "score": 0.512,
         "is_gold": false,
         "source": "ch/(2020)_0381_884.pdf",
         "locator": "전체",
@@ -68365,7 +68365,7 @@
       },
       {
         "chunk_id": 0,
-        "score": 0.5016,
+        "score": 0.5018,
         "is_gold": false,
         "source": "ch/(2019)0113_.pdf",
         "locator": "전체",
@@ -68375,7 +68375,7 @@
       },
       {
         "chunk_id": 6,
-        "score": 0.4774,
+        "score": 0.4776,
         "is_gold": false,
         "source": "ch/四川省川谷坊酒业有限公司、曾庆芬非法吸收公众存款罪一审刑事判决书.pdf",
         "locator": "전체",
@@ -68769,7 +68769,7 @@
     "top5": [
       {
         "chunk_id": 4,
-        "score": 0.732,
+        "score": 0.7321,
         "is_gold": true,
         "source": "ch/1767528250552_B264D298D87D4A329BAAEE4DE23DFB2D.pdf",
         "locator": "전체",
@@ -68799,7 +68799,7 @@
       },
       {
         "chunk_id": 50,
-        "score": 0.4648,
+        "score": 0.4647,
         "is_gold": false,
         "source": "vn/29_2018_HS-ST_THAI_NGUYEN[1].pdf",
         "locator": "전체",
@@ -68809,7 +68809,7 @@
       },
       {
         "chunk_id": 47,
-        "score": 0.4557,
+        "score": 0.4556,
         "is_gold": false,
         "source": "vn/06_2023_HS-ST_HCM.pdf",
         "locator": "전체",
@@ -69141,7 +69141,7 @@
     "top5": [
       {
         "chunk_id": 6,
-        "score": 0.875,
+        "score": 0.8751,
         "is_gold": true,
         "source": "ch/四川省川谷坊酒业有限公司、曾庆芬非法吸收公众存款罪一审刑事判决书.pdf",
         "locator": "전체",
@@ -69151,7 +69151,7 @@
       },
       {
         "chunk_id": 5,
-        "score": 0.5277,
+        "score": 0.5278,
         "is_gold": false,
         "source": "ch/H2_AN202301191582160400_1.pdf",
         "locator": "전체",
@@ -69171,7 +69171,7 @@
       },
       {
         "chunk_id": 22,
-        "score": 0.468,
+        "score": 0.4679,
         "is_gold": false,
         "source": "ko/2025고합394_판결문.pdf",
         "locator": "전체",
@@ -69637,7 +69637,7 @@
     "top5": [
       {
         "chunk_id": 49,
-        "score": 0.5619,
+        "score": 0.5618,
         "is_gold": false,
         "source": "vn/171_2018_HS-ST_HUE.pdf",
         "locator": "전체",
@@ -69647,7 +69647,7 @@
       },
       {
         "chunk_id": 46,
-        "score": 0.5603,
+        "score": 0.5602,
         "is_gold": true,
         "source": "vn/04_2023_HSST_BRVT.pdf",
         "locator": "전체",
@@ -69752,7 +69752,7 @@
   {
     "model": "bge-m3 [full] [hybrid(dense+sparse)]",
     "qid": "vn-06",
-    "question": "Hãy tìm loại chứng cứ hình ảnh thu được từ Nhà nghỉ T P dùng để chứng minh lời khai nhận tội của Lại Văn P",
+    "question": "Hãy tìm ngày ra quyết định, thời hạn và ngày chấp hành xong quyết định đưa bị cáo Lại Văn P vào Cơ sở giáo dục, trong vụ án tại quận Bình Tân",
     "n_gold": 1,
     "Hit@1": 1.0,
     "Hit@3": 1.0,
@@ -69761,7 +69761,7 @@
     "top5": [
       {
         "chunk_id": 47,
-        "score": 0.6375,
+        "score": 0.6474,
         "is_gold": true,
         "source": "vn/06_2023_HS-ST_HCM.pdf",
         "locator": "전체",
@@ -69770,8 +69770,28 @@
         "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM QUẬN BÌNH TÂN Độc lập – Tự do – Hạnh phúc THÀNH PHỐ HỒ CHÍ MINH Bản án số: 06/2023/HS-ST Ngày 13-01-2023 NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆ"
       },
       {
+        "chunk_id": 48,
+        "score": 0.5229,
+        "is_gold": false,
+        "source": "vn/132_2020_HS-ST_HCM.pdf",
+        "locator": "전체",
+        "섹션": null,
+        "match": null,
+        "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM HUYỆN CỦ CHI Độc lập - Tự do - Hạnh phúc THÀNH PHỐ HỒ CHÍ MINH Bản án số: 132/2020/HS-ST Ngày: 27-7-2020 NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆ"
+      },
+      {
+        "chunk_id": 46,
+        "score": 0.5197,
+        "is_gold": false,
+        "source": "vn/04_2023_HSST_BRVT.pdf",
+        "locator": "전체",
+        "섹션": null,
+        "match": null,
+        "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM HUYỆN Đ Độc lập – Tự do – Hạnh phúc TỈNH BÀ RỊA VŨNG TÀU Bản án số: 04/2023/HSST. Ngày: 16-02-2023. NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM"
+      },
+      {
         "chunk_id": 49,
-        "score": 0.5326,
+        "score": 0.5008,
         "is_gold": false,
         "source": "vn/171_2018_HS-ST_HUE.pdf",
         "locator": "전체",
@@ -69781,33 +69801,13 @@
       },
       {
         "chunk_id": 50,
-        "score": 0.5271,
+        "score": 0.5005,
         "is_gold": false,
         "source": "vn/29_2018_HS-ST_THAI_NGUYEN[1].pdf",
         "locator": "전체",
         "섹션": null,
         "match": null,
         "preview": "TÒA ÁN NHÂN DÂN TP. SÔNG CÔNG CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM TỈNH THÁI NGUYÊN Độc lập - Tự do - Hạnh phúc ––––––––––––– ––––––––––––––––––– Bản án số: 29 /2018/HS-ST Ngày 19 - 6 - 2018 NHÂN DANH N"
-      },
-      {
-        "chunk_id": 46,
-        "score": 0.5079,
-        "is_gold": false,
-        "source": "vn/04_2023_HSST_BRVT.pdf",
-        "locator": "전체",
-        "섹션": null,
-        "match": null,
-        "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM HUYỆN Đ Độc lập – Tự do – Hạnh phúc TỈNH BÀ RỊA VŨNG TÀU Bản án số: 04/2023/HSST. Ngày: 16-02-2023. NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM"
-      },
-      {
-        "chunk_id": 48,
-        "score": 0.5064,
-        "is_gold": false,
-        "source": "vn/132_2020_HS-ST_HCM.pdf",
-        "locator": "전체",
-        "섹션": null,
-        "match": null,
-        "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM HUYỆN CỦ CHI Độc lập - Tự do - Hạnh phúc THÀNH PHỐ HỒ CHÍ MINH Bản án số: 132/2020/HS-ST Ngày: 27-7-2020 NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆ"
       }
     ]
   },
@@ -69885,7 +69885,7 @@
     "top5": [
       {
         "chunk_id": 47,
-        "score": 0.6389,
+        "score": 0.639,
         "is_gold": true,
         "source": "vn/06_2023_HS-ST_HCM.pdf",
         "locator": "전체",
@@ -69905,7 +69905,7 @@
       },
       {
         "chunk_id": 48,
-        "score": 0.5326,
+        "score": 0.5327,
         "is_gold": false,
         "source": "vn/132_2020_HS-ST_HCM.pdf",
         "locator": "전체",
@@ -70062,7 +70062,7 @@
   {
     "model": "bge-m3 [full] [hybrid(dense+sparse)]",
     "qid": "vn-11",
-    "question": "Hãy tìm ngày, mức án và tội danh của ba bản án tiền án của bị cáo Đỗ Văn Ph, trú tại tỉnh Thừa Thiên Huế",
+    "question": "Hãy tìm tên, năm sinh và địa chỉ của hai người làm chứng trong vụ án Đỗ Văn Ph tại Thừa Thiên Huế",
     "n_gold": 1,
     "Hit@1": 1.0,
     "Hit@3": 1.0,
@@ -70071,7 +70071,7 @@
     "top5": [
       {
         "chunk_id": 49,
-        "score": 0.7213,
+        "score": 0.6693,
         "is_gold": true,
         "source": "vn/171_2018_HS-ST_HUE.pdf",
         "locator": "전체",
@@ -70080,8 +70080,28 @@
         "preview": "TOÀ ÁN NHÂN DÂN CỘNG HOÀ XÃ HỘI CHỦ NGHĨA VIỆT NAM THÀNH PHỐ HUẾ Độc lập - Tự do - Hạnh phúc. TỈNH THỪA THIÊN HUẾ Bản án số: 171/2018/HS- ST Ngày: 05- 10- 2018 NHÂN DANH NƯỚC CỘNG HOÀ XÃ HỘI CHỦ NGHĨA"
       },
       {
+        "chunk_id": 31,
+        "score": 0.4824,
+        "is_gold": false,
+        "source": "pil/judicialaffidavitfilipino.pdf",
+        "locator": "전체",
+        "섹션": null,
+        "match": null,
+        "preview": "REPUBLIC OF THE PHILIPPINES NATIONAL CAPITAL JUDICIAL REGION REGIONAL TRIAL COURT BRANCH 65, MAKATI CITY PEOPLE OF THE PHILIPPINES, Complainant, -versus- CASE NO.: ___________ For: Murder PO2 RAFFY MA"
+      },
+      {
+        "chunk_id": 47,
+        "score": 0.4802,
+        "is_gold": false,
+        "source": "vn/06_2023_HS-ST_HCM.pdf",
+        "locator": "전체",
+        "섹션": null,
+        "match": null,
+        "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM QUẬN BÌNH TÂN Độc lập – Tự do – Hạnh phúc THÀNH PHỐ HỒ CHÍ MINH Bản án số: 06/2023/HS-ST Ngày 13-01-2023 NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆ"
+      },
+      {
         "chunk_id": 46,
-        "score": 0.5597,
+        "score": 0.4722,
         "is_gold": false,
         "source": "vn/04_2023_HSST_BRVT.pdf",
         "locator": "전체",
@@ -70091,33 +70111,13 @@
       },
       {
         "chunk_id": 50,
-        "score": 0.5575,
+        "score": 0.4687,
         "is_gold": false,
         "source": "vn/29_2018_HS-ST_THAI_NGUYEN[1].pdf",
         "locator": "전체",
         "섹션": null,
         "match": null,
         "preview": "TÒA ÁN NHÂN DÂN TP. SÔNG CÔNG CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM TỈNH THÁI NGUYÊN Độc lập - Tự do - Hạnh phúc ––––––––––––– ––––––––––––––––––– Bản án số: 29 /2018/HS-ST Ngày 19 - 6 - 2018 NHÂN DANH N"
-      },
-      {
-        "chunk_id": 47,
-        "score": 0.5479,
-        "is_gold": false,
-        "source": "vn/06_2023_HS-ST_HCM.pdf",
-        "locator": "전체",
-        "섹션": null,
-        "match": null,
-        "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM QUẬN BÌNH TÂN Độc lập – Tự do – Hạnh phúc THÀNH PHỐ HỒ CHÍ MINH Bản án số: 06/2023/HS-ST Ngày 13-01-2023 NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆ"
-      },
-      {
-        "chunk_id": 48,
-        "score": 0.5269,
-        "is_gold": false,
-        "source": "vn/132_2020_HS-ST_HCM.pdf",
-        "locator": "전체",
-        "섹션": null,
-        "match": null,
-        "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM HUYỆN CỦ CHI Độc lập - Tự do - Hạnh phúc THÀNH PHỐ HỒ CHÍ MINH Bản án số: 132/2020/HS-ST Ngày: 27-7-2020 NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆ"
       }
     ]
   },
@@ -70186,7 +70186,7 @@
   {
     "model": "bge-m3 [full] [hybrid(dense+sparse)]",
     "qid": "vn-13",
-    "question": "Hãy tìm tài sản mà Lâm Tuấn A đã ném bỏ ở khu vực rừng cây cách nhà 50m và không thu giữ được",
+    "question": "Hãy tìm tên và năm sinh của bị hại và của người có quyền lợi, nghĩa vụ liên quan trong vụ án Lâm Tuấn A",
     "n_gold": 1,
     "Hit@1": 1.0,
     "Hit@3": 1.0,
@@ -70195,7 +70195,7 @@
     "top5": [
       {
         "chunk_id": 48,
-        "score": 0.6308,
+        "score": 0.6314,
         "is_gold": true,
         "source": "vn/132_2020_HS-ST_HCM.pdf",
         "locator": "전체",
@@ -70205,7 +70205,7 @@
       },
       {
         "chunk_id": 50,
-        "score": 0.5427,
+        "score": 0.5057,
         "is_gold": false,
         "source": "vn/29_2018_HS-ST_THAI_NGUYEN[1].pdf",
         "locator": "전체",
@@ -70215,7 +70215,7 @@
       },
       {
         "chunk_id": 47,
-        "score": 0.5114,
+        "score": 0.5009,
         "is_gold": false,
         "source": "vn/06_2023_HS-ST_HCM.pdf",
         "locator": "전체",
@@ -70225,7 +70225,7 @@
       },
       {
         "chunk_id": 46,
-        "score": 0.494,
+        "score": 0.4858,
         "is_gold": false,
         "source": "vn/04_2023_HSST_BRVT.pdf",
         "locator": "전체",
@@ -70234,14 +70234,14 @@
         "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM HUYỆN Đ Độc lập – Tự do – Hạnh phúc TỈNH BÀ RỊA VŨNG TÀU Bản án số: 04/2023/HSST. Ngày: 16-02-2023. NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM"
       },
       {
-        "chunk_id": 49,
-        "score": 0.4741,
+        "chunk_id": 24,
+        "score": 0.484,
         "is_gold": false,
-        "source": "vn/171_2018_HS-ST_HUE.pdf",
+        "source": "ko/250723_보도자료(유튜브_36주_태아_낙태살인_사건_구속_기소_등)-서울중앙지검.pdf",
         "locator": "전체",
         "섹션": null,
         "match": null,
-        "preview": "TOÀ ÁN NHÂN DÂN CỘNG HOÀ XÃ HỘI CHỦ NGHĨA VIỆT NAM THÀNH PHỐ HUẾ Độc lập - Tự do - Hạnh phúc. TỈNH THỪA THIÊN HUẾ Bản án số: 171/2018/HS- ST Ngày: 05- 10- 2018 NHÂN DANH NƯỚC CỘNG HOÀ XÃ HỘI CHỦ NGHĨA"
+        "preview": "이 보도자료는 2025. 7. 23.(수) 14:00부터 보도하여 주시고, 공개되는 범죄사실은 재판에 의하여 확정된 사실이 아님을 유의하여 주시기 바랍니다. 서울중앙지방검찰청 보 도 자 료 전문공보관 이준호 2025. 7. 23.(수) 전화 02-530-4780 / 팩스 02-536-5410 유튜브 36주 태아 낙태살인 사건 구속 기소 등 공소제기 후 공개"
       }
     ]
   },
@@ -70691,7 +70691,7 @@
     "top5": [
       {
         "chunk_id": 42,
-        "score": 0.4746,
+        "score": 0.4745,
         "is_gold": false,
         "source": "uz/Abdug‘aniyev+Akobir+Akmaljon+o‘g‘li.pdf",
         "locator": "전체",
@@ -72251,7 +72251,7 @@
       },
       {
         "chunk_id": 38,
-        "score": 0.5934,
+        "score": 0.5935,
         "is_gold": false,
         "source": "ru/voe12ehxmqpqsa3z1f3moe6e3fhfy14n.pdf",
         "locator": "전체",
@@ -72261,7 +72261,7 @@
       },
       {
         "chunk_id": 35,
-        "score": 0.5271,
+        "score": 0.5272,
         "is_gold": false,
         "source": "ru/acqyks51995vcas54buq9j8zjfcv52mq.pdf",
         "locator": "전체",
@@ -72281,7 +72281,7 @@
       },
       {
         "chunk_id": 34,
-        "score": 0.4566,
+        "score": 0.4567,
         "is_gold": false,
         "source": "ru/72lj3fbo7i1h83uotfpw88vvhj0s5nm8.pdf",
         "locator": "전체",
@@ -72561,7 +72561,7 @@
       },
       {
         "chunk_id": 35,
-        "score": 0.5218,
+        "score": 0.5219,
         "is_gold": false,
         "source": "ru/acqyks51995vcas54buq9j8zjfcv52mq.pdf",
         "locator": "전체",
@@ -72591,7 +72591,7 @@
       },
       {
         "chunk_id": 36,
-        "score": 0.5029,
+        "score": 0.503,
         "is_gold": false,
         "source": "ru/c0bt6babub0mr9twu45skop5uqhh5ogk.pdf",
         "locator": "전체",
@@ -72613,7 +72613,7 @@
     "top5": [
       {
         "chunk_id": 38,
-        "score": 0.5084,
+        "score": 0.5085,
         "is_gold": true,
         "source": "ru/voe12ehxmqpqsa3z1f3moe6e3fhfy14n.pdf",
         "locator": "전체",
@@ -72633,7 +72633,7 @@
       },
       {
         "chunk_id": 34,
-        "score": 0.4617,
+        "score": 0.4618,
         "is_gold": false,
         "source": "ru/72lj3fbo7i1h83uotfpw88vvhj0s5nm8.pdf",
         "locator": "전체",
@@ -72643,7 +72643,7 @@
       },
       {
         "chunk_id": 23,
-        "score": 0.4507,
+        "score": 0.4508,
         "is_gold": false,
         "source": "ko/231201_보도자료(360억_원_대출을_알선하고_억대_수수료를_취득한_대출_브로커_및_은행지점장_구속_기소)-통영지청.pdf",
         "locator": "전체",
@@ -72953,7 +72953,7 @@
       },
       {
         "chunk_id": 17,
-        "score": 0.4363,
+        "score": 0.4365,
         "is_gold": false,
         "source": "ko/140801_서부지검_보도자료.pdf",
         "locator": "전체",
@@ -76271,7 +76271,7 @@
     "top5": [
       {
         "chunk_id": 35,
-        "score": 0.7028,
+        "score": 0.7043,
         "is_gold": true,
         "source": "en/24-7435_5if6.pdf",
         "locator": "블록.1~2",
@@ -76281,7 +76281,7 @@
       },
       {
         "chunk_id": 34,
-        "score": 0.6084,
+        "score": 0.6093,
         "is_gold": true,
         "source": "en/24-7435_5if6.pdf",
         "locator": "블록.1",
@@ -76291,7 +76291,7 @@
       },
       {
         "chunk_id": 36,
-        "score": 0.575,
+        "score": 0.5763,
         "is_gold": false,
         "source": "en/24-7435_5if6.pdf",
         "locator": "블록.2~3",
@@ -76301,7 +76301,7 @@
       },
       {
         "chunk_id": 37,
-        "score": 0.5275,
+        "score": 0.5285,
         "is_gold": false,
         "source": "en/24-7435_5if6.pdf",
         "locator": "블록.3",
@@ -76311,7 +76311,7 @@
       },
       {
         "chunk_id": 56,
-        "score": 0.5257,
+        "score": 0.5262,
         "is_gold": false,
         "source": "en/USCOURTS-caed-6_25-mj-00015-1.pdf",
         "locator": "블록.3",
@@ -79052,62 +79052,62 @@
   {
     "model": "harrier-0.6b [512]",
     "qid": "vn-06",
-    "question": "Hãy tìm loại chứng cứ hình ảnh thu được từ Nhà nghỉ T P dùng để chứng minh lời khai nhận tội của Lại Văn P",
+    "question": "Hãy tìm ngày ra quyết định, thời hạn và ngày chấp hành xong quyết định đưa bị cáo Lại Văn P vào Cơ sở giáo dục, trong vụ án tại quận Bình Tân",
     "n_gold": 1,
-    "Hit@1": 1.0,
+    "Hit@1": 0.0,
     "Hit@3": 1.0,
-    "MRR@3": 1.0,
-    "nDCG@3": 1.0,
+    "MRR@3": 0.5,
+    "nDCG@3": 0.6309,
     "top5": [
       {
-        "chunk_id": 234,
-        "score": 0.6478,
+        "chunk_id": 228,
+        "score": 0.6773,
+        "is_gold": false,
+        "source": "vn/06_2023_HS-ST_HCM.pdf",
+        "locator": "블록.1",
+        "섹션": null,
+        "match": null,
+        "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM QUẬN BÌNH TÂN Độc lập – Tự do – Hạnh phúc THÀNH PHỐ HỒ CHÍ MINH Bản án số: 06/2023/HS-ST Ngày 13-01-2023 NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆ"
+      },
+      {
+        "chunk_id": 230,
+        "score": 0.6664,
         "is_gold": true,
         "source": "vn/06_2023_HS-ST_HCM.pdf",
-        "locator": "블록.3~4",
+        "locator": "블록.1~2",
         "섹션": null,
         "match": null,
-        "preview": "di động hiệu Realme C2, màu xanh của anh Nguyễn Đình V để tại Nhà nghỉ T P, số 26 Đường Số 3, Khu phố B, phường T T A, quận B T. Theo Kết luận định giá tài sản số: 270/KL- HĐĐGTS, ngày 30/5/2022 của H"
+        "preview": "Quyết định xử phạt vi phạm hành chính 750.000 đồng về hành vi “say rượu, bia gây mất trật tự công cộng” (chưa chấp hành Quyết định nên chưa được coi là chưa bị xử phạt vi phạm hành chính); nhân thân: "
       },
       {
-        "chunk_id": 253,
-        "score": 0.6299,
+        "chunk_id": 227,
+        "score": 0.6646,
         "is_gold": false,
-        "source": "vn/171_2018_HS-ST_HUE.pdf",
-        "locator": "블록.3~4",
-        "섹션": "2. Bà Nguyễn Thị Tuyết",
+        "source": "vn/04_2023_HSST_BRVT.pdf",
+        "locator": "블록.5",
+        "섹션": null,
         "match": null,
-        "preview": "túy đã giám định được niêm phong kín bằng giấy trắng và băng keo trong, bên ngoài có hai chữ ký của Giám định viên Trần , hai chữ ký của Điều tra viên Trương Thanh M, hai dấu tròn đỏ của Phòng kỹ thuậ"
+        "preview": "Bà Rịa - Vũng Tàu xét xử phúc thẩm. Trường hợp bản án, quyết định được thi hành theo quy định tại Điều 2 Luật thi hành án dân sự thì người được thi hành án dân sự, người phải thi hành án dân sự có quy"
       },
       {
-        "chunk_id": 236,
-        "score": 0.6293,
+        "chunk_id": 229,
+        "score": 0.6437,
         "is_gold": false,
         "source": "vn/06_2023_HS-ST_HCM.pdf",
-        "locator": "블록.4~5",
+        "locator": "블록.1",
         "섹션": null,
         "match": null,
-        "preview": "xem xét giải quyết yêu cầu của anh V tại phần vật chứng. [7] Về vật chứng: Đối với 01 chiếc xe môtô biển số 49V5-2461 của bị cáo khai, xe do mua của người bạn (không rõ lai lịch) với giá 600.000 đồng "
+        "preview": ": Lại Văn P (tên gọi khác: Lé); sinh năm: 1983, tại Thành phố Hồ Chí Minh. Nơi đăng ký hộ khẩu thường trú: Không có; nơi ở: Không ổn định; nghề nghiệp: Không có; trình độ văn hóa: 2/12; dân tộc: Kinh;"
       },
       {
-        "chunk_id": 242,
-        "score": 0.6186,
+        "chunk_id": 263,
+        "score": 0.6317,
         "is_gold": false,
-        "source": "vn/132_2020_HS-ST_HCM.pdf",
-        "locator": "블록.3",
-        "섹션": "2. Ông Nguyễn Ngọc Cảnh;",
-        "match": null,
-        "preview": "Chí Minh đã truy tố Lâm Tuấn A về tội “Trộm cắp tài sản” theo khoản 2 Điều 173 của Bộ luật Hình sự 2015 được sửa đổi, bổ sung năm 2017. Tại phiên tòa, đại diện Viện kiểm sát nhân dân huyện Củ Chi giữ "
-      },
-      {
-        "chunk_id": 233,
-        "score": 0.6173,
-        "is_gold": false,
-        "source": "vn/06_2023_HS-ST_HCM.pdf",
-        "locator": "블록.3",
+        "source": "vn/29_2018_HS-ST_THAI_NGUYEN[1].pdf",
+        "locator": "블록.6",
         "섹션": null,
         "match": null,
-        "preview": "sản”. Về trách nhiệm dân sự, do bị hại là anh V chỉ yêu cầu được nhận lại chiếc điện thoại bị chiếm đoạt mà không yêu cầu gì thêm nên không có ý kiến. Còn về vật chứng, đề nghị tịch thu sung quỹ Nhà n"
+        "preview": "quyền kháng cáo bản án trong hạn 15 (mười lăm) ngày, kể từ ngày tuyên án. Người bị hại vắng mặt có quyền kháng cáo bản án trong hạn 15 (mười lăm) ngày, kể từ ngày nhận được bản án hoặc bản án được niê"
       }
     ]
   },
@@ -79362,26 +79362,16 @@
   {
     "model": "harrier-0.6b [512]",
     "qid": "vn-11",
-    "question": "Hãy tìm ngày, mức án và tội danh của ba bản án tiền án của bị cáo Đỗ Văn Ph, trú tại tỉnh Thừa Thiên Huế",
+    "question": "Hãy tìm tên, năm sinh và địa chỉ của hai người làm chứng trong vụ án Đỗ Văn Ph tại Thừa Thiên Huế",
     "n_gold": 1,
-    "Hit@1": 0.0,
+    "Hit@1": 1.0,
     "Hit@3": 1.0,
-    "MRR@3": 0.5,
-    "nDCG@3": 0.6309,
+    "MRR@3": 1.0,
+    "nDCG@3": 1.0,
     "top5": [
       {
-        "chunk_id": 248,
-        "score": 0.7469,
-        "is_gold": false,
-        "source": "vn/171_2018_HS-ST_HUE.pdf",
-        "locator": "블록.1~2",
-        "섹션": null,
-        "match": null,
-        "preview": "TOÀ ÁN NHÂN DÂN CỘNG HOÀ XÃ HỘI CHỦ NGHĨA VIỆT NAM THÀNH PHỐ HUẾ Độc lập - Tự do - Hạnh phúc. TỈNH THỪA THIÊN HUẾ Bản án số: 171/2018/HS- ST Ngày: 05- 10- 2018 NHÂN DANH NƯỚC CỘNG HOÀ XÃ HỘI CHỦ NGHĨA"
-      },
-      {
         "chunk_id": 249,
-        "score": 0.7391,
+        "score": 0.7414,
         "is_gold": true,
         "source": "vn/171_2018_HS-ST_HUE.pdf",
         "locator": "블록.2",
@@ -79390,8 +79380,18 @@
         "preview": "Huế; Giới tính: Nam; Nơi cư trú: Tổ 2, phường Thủy D, thị xã Hương T, tỉnh Thừa Thiên Huế; Nghề nghiệp: chạy xe thồ; Trình độ học vấn: không biết chữ; Quốc tịch: Việt Nam; Dân tộc: Kinh; Tôn giáo: Phậ"
       },
       {
+        "chunk_id": 248,
+        "score": 0.7137,
+        "is_gold": false,
+        "source": "vn/171_2018_HS-ST_HUE.pdf",
+        "locator": "블록.1~2",
+        "섹션": null,
+        "match": null,
+        "preview": "TOÀ ÁN NHÂN DÂN CỘNG HOÀ XÃ HỘI CHỦ NGHĨA VIỆT NAM THÀNH PHỐ HUẾ Độc lập - Tự do - Hạnh phúc. TỈNH THỪA THIÊN HUẾ Bản án số: 171/2018/HS- ST Ngày: 05- 10- 2018 NHÂN DANH NƯỚC CỘNG HOÀ XÃ HỘI CHỦ NGHĨA"
+      },
+      {
         "chunk_id": 254,
-        "score": 0.7367,
+        "score": 0.6981,
         "is_gold": false,
         "source": "vn/171_2018_HS-ST_HUE.pdf",
         "locator": "블록.4~5",
@@ -79400,24 +79400,24 @@
         "preview": "a Thiên Huế và dòng chữ “ Mẫu vật vụ Đỗ Văn Ph bắt ngày 30/4/2018 ”. Theo biên bản giao nhận vật chứng giữa Cơ quan cảnh sát điều tra công an thành phố Huế và Chi cục thi hành án dân sự thành phố Huế "
       },
       {
-        "chunk_id": 251,
-        "score": 0.7272,
-        "is_gold": false,
-        "source": "vn/171_2018_HS-ST_HUE.pdf",
-        "locator": "블록.2~3",
-        "섹션": null,
-        "match": null,
-        "preview": ". Tại phiên tòa đại diện Viện kiểm sát giữ nguyên quyết định truy tố và đề nghị Hội đồng xét xử tuyên bố bị cáo Đỗ Văn P phạm tội “ Tàng trữ trái phép chất ma túy”. Áp dụng điểm c khoản 1 Điều 249; đi"
-      },
-      {
         "chunk_id": 253,
-        "score": 0.7185,
+        "score": 0.6864,
         "is_gold": false,
         "source": "vn/171_2018_HS-ST_HUE.pdf",
         "locator": "블록.3~4",
         "섹션": "2. Bà Nguyễn Thị Tuyết",
         "match": null,
         "preview": "túy đã giám định được niêm phong kín bằng giấy trắng và băng keo trong, bên ngoài có hai chữ ký của Giám định viên Trần , hai chữ ký của Điều tra viên Trương Thanh M, hai dấu tròn đỏ của Phòng kỹ thuậ"
+      },
+      {
+        "chunk_id": 251,
+        "score": 0.6675,
+        "is_gold": false,
+        "source": "vn/171_2018_HS-ST_HUE.pdf",
+        "locator": "블록.2~3",
+        "섹션": null,
+        "match": null,
+        "preview": ". Tại phiên tòa đại diện Viện kiểm sát giữ nguyên quyết định truy tố và đề nghị Hội đồng xét xử tuyên bố bị cáo Đỗ Văn P phạm tội “ Tàng trữ trái phép chất ma túy”. Áp dụng điểm c khoản 1 Điều 249; đi"
       }
     ]
   },
@@ -79486,16 +79486,26 @@
   {
     "model": "harrier-0.6b [512]",
     "qid": "vn-13",
-    "question": "Hãy tìm tài sản mà Lâm Tuấn A đã ném bỏ ở khu vực rừng cây cách nhà 50m và không thu giữ được",
+    "question": "Hãy tìm tên và năm sinh của bị hại và của người có quyền lợi, nghĩa vụ liên quan trong vụ án Lâm Tuấn A",
     "n_gold": 1,
-    "Hit@1": 0.0,
+    "Hit@1": 1.0,
     "Hit@3": 1.0,
-    "MRR@3": 0.3333,
-    "nDCG@3": 0.5,
+    "MRR@3": 1.0,
+    "nDCG@3": 1.0,
     "top5": [
       {
+        "chunk_id": 239,
+        "score": 0.7291,
+        "is_gold": true,
+        "source": "vn/132_2020_HS-ST_HCM.pdf",
+        "locator": "블록.1~2",
+        "섹션": null,
+        "match": null,
+        "preview": "và tên: Lâm Tuấn A, sinh năm: 1984 tại Thành phố Hồ Chí Minh; nơi đăng ký hộ khẩu thường trú: Ấp P, xã P, huyện C, Thành phố Hồ Chí Minh; nghề nghiệp: Không; trình độ học vấn: 02/12; dân tộc: Kinh; gi"
+      },
+      {
         "chunk_id": 242,
-        "score": 0.6791,
+        "score": 0.7011,
         "is_gold": false,
         "source": "vn/132_2020_HS-ST_HCM.pdf",
         "locator": "블록.3",
@@ -79504,38 +79514,28 @@
         "preview": "Chí Minh đã truy tố Lâm Tuấn A về tội “Trộm cắp tài sản” theo khoản 2 Điều 173 của Bộ luật Hình sự 2015 được sửa đổi, bổ sung năm 2017. Tại phiên tòa, đại diện Viện kiểm sát nhân dân huyện Củ Chi giữ "
       },
       {
-        "chunk_id": 239,
-        "score": 0.6655,
+        "chunk_id": 238,
+        "score": 0.6792,
         "is_gold": false,
         "source": "vn/132_2020_HS-ST_HCM.pdf",
-        "locator": "블록.1~2",
+        "locator": "블록.1",
         "섹션": null,
         "match": null,
-        "preview": "và tên: Lâm Tuấn A, sinh năm: 1984 tại Thành phố Hồ Chí Minh; nơi đăng ký hộ khẩu thường trú: Ấp P, xã P, huyện C, Thành phố Hồ Chí Minh; nghề nghiệp: Không; trình độ học vấn: 02/12; dân tộc: Kinh; gi"
+        "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM HUYỆN CỦ CHI Độc lập - Tự do - Hạnh phúc THÀNH PHỐ HỒ CHÍ MINH Bản án số: 132/2020/HS-ST Ngày: 27-7-2020 NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆ"
       },
       {
-        "chunk_id": 240,
-        "score": 0.6514,
-        "is_gold": true,
-        "source": "vn/132_2020_HS-ST_HCM.pdf",
-        "locator": "블록.2",
-        "섹션": "2. Ông Nguyễn Ngọc Cảnh;",
-        "match": null,
-        "preview": "khiển xe đạp trên đường Tỉnh lộ 15, tổ 89, ấp Phú Bình, xã Phú Hòa Đông, huyện Củ Chi, Thành phố Hồ Chí Minh. Tại đây, Tuấn A phát hiện cửa sổ nhà ông P mở và trong nhà sáng đèn nên dừng lại quan sát."
-      },
-      {
-        "chunk_id": 241,
-        "score": 0.6067,
+        "chunk_id": 256,
+        "score": 0.6497,
         "is_gold": false,
-        "source": "vn/132_2020_HS-ST_HCM.pdf",
-        "locator": "블록.2~3",
-        "섹션": "2. Ông Nguyễn Ngọc Cảnh;",
+        "source": "vn/29_2018_HS-ST_THAI_NGUYEN[1].pdf",
+        "locator": "블록.2",
+        "섹션": null,
         "match": null,
-        "preview": "màu đen, hiệu Việt Tiến; 01 cái bóp da màu đen, bên trong có 01 chứng minh nhân dân, 01 giấy phép lái xe, 01 giấy đăng ký xe mô tô, 01 thẻ đoàn viên, 01 thẻ bảo hiểm y tế, 01 thẻ ATM của Ngân hàng Vie"
+        "preview": ": Trần Xuân H, sinh ngày 30/8/ 1982 tại thành phố S, tỉnh Thái Nguyên. Tên gọi khác: Không. Nơi cư trú: Tổ dân phố T, phường Ph, thành phố S, tỉnh Thái Nguyên; nghề nghiệp: Lao động tự do; trình độ vă"
       },
       {
         "chunk_id": 246,
-        "score": 0.606,
+        "score": 0.6374,
         "is_gold": false,
         "source": "vn/132_2020_HS-ST_HCM.pdf",
         "locator": "블록.5~6",
@@ -85633,7 +85633,7 @@
     "top5": [
       {
         "chunk_id": 7,
-        "score": 0.6342,
+        "score": 0.6361,
         "is_gold": true,
         "source": "en/24-7435_5if6.pdf",
         "locator": "전체",
@@ -85643,7 +85643,7 @@
       },
       {
         "chunk_id": 14,
-        "score": 0.5363,
+        "score": 0.538,
         "is_gold": false,
         "source": "en/USCOURTS-mnd-0_06-cr-00130-1.pdf",
         "locator": "전체",
@@ -85653,7 +85653,7 @@
       },
       {
         "chunk_id": 13,
-        "score": 0.5025,
+        "score": 0.5046,
         "is_gold": false,
         "source": "en/USCOURTS-caed-6_25-mj-00015-1.pdf",
         "locator": "전체",
@@ -85663,7 +85663,7 @@
       },
       {
         "chunk_id": 12,
-        "score": 0.492,
+        "score": 0.4934,
         "is_gold": false,
         "source": "en/25-885_5h26.pdf",
         "locator": "전체",
@@ -85673,7 +85673,7 @@
       },
       {
         "chunk_id": 9,
-        "score": 0.4755,
+        "score": 0.4766,
         "is_gold": false,
         "source": "en/25-524_0971.pdf",
         "locator": "전체",
@@ -85757,7 +85757,7 @@
     "top5": [
       {
         "chunk_id": 8,
-        "score": 0.6985,
+        "score": 0.6972,
         "is_gold": true,
         "source": "en/249799.pdf",
         "locator": "전체",
@@ -85767,7 +85767,7 @@
       },
       {
         "chunk_id": 15,
-        "score": 0.5155,
+        "score": 0.5152,
         "is_gold": false,
         "source": "en/gomez_albertocortes.pdf",
         "locator": "전체",
@@ -85777,7 +85777,7 @@
       },
       {
         "chunk_id": 16,
-        "score": 0.5105,
+        "score": 0.51,
         "is_gold": false,
         "source": "en/vae1_tetteh_0.pdf",
         "locator": "전체",
@@ -85787,7 +85787,7 @@
       },
       {
         "chunk_id": 28,
-        "score": 0.4679,
+        "score": 0.4675,
         "is_gold": false,
         "source": "pil/Government Imposter Scams poster_TL.pdf",
         "locator": "전체",
@@ -85797,7 +85797,7 @@
       },
       {
         "chunk_id": 11,
-        "score": 0.4504,
+        "score": 0.4501,
         "is_gold": false,
         "source": "en/25-851_ed9f.pdf",
         "locator": "전체",
@@ -85881,7 +85881,7 @@
     "top5": [
       {
         "chunk_id": 9,
-        "score": 0.5801,
+        "score": 0.5798,
         "is_gold": true,
         "source": "en/25-524_0971.pdf",
         "locator": "전체",
@@ -85891,7 +85891,7 @@
       },
       {
         "chunk_id": 15,
-        "score": 0.5389,
+        "score": 0.5382,
         "is_gold": false,
         "source": "en/gomez_albertocortes.pdf",
         "locator": "전체",
@@ -85901,7 +85901,7 @@
       },
       {
         "chunk_id": 16,
-        "score": 0.5208,
+        "score": 0.5199,
         "is_gold": false,
         "source": "en/vae1_tetteh_0.pdf",
         "locator": "전체",
@@ -85911,7 +85911,7 @@
       },
       {
         "chunk_id": 8,
-        "score": 0.5155,
+        "score": 0.5144,
         "is_gold": false,
         "source": "en/249799.pdf",
         "locator": "전체",
@@ -85921,7 +85921,7 @@
       },
       {
         "chunk_id": 10,
-        "score": 0.5133,
+        "score": 0.5131,
         "is_gold": false,
         "source": "en/25-821_e29g.pdf",
         "locator": "전체",
@@ -85943,7 +85943,7 @@
     "top5": [
       {
         "chunk_id": 9,
-        "score": 0.6895,
+        "score": 0.6869,
         "is_gold": true,
         "source": "en/25-524_0971.pdf",
         "locator": "전체",
@@ -85953,7 +85953,7 @@
       },
       {
         "chunk_id": 10,
-        "score": 0.5202,
+        "score": 0.5183,
         "is_gold": false,
         "source": "en/25-821_e29g.pdf",
         "locator": "전체",
@@ -85963,7 +85963,7 @@
       },
       {
         "chunk_id": 7,
-        "score": 0.4911,
+        "score": 0.4891,
         "is_gold": false,
         "source": "en/24-7435_5if6.pdf",
         "locator": "전체",
@@ -85973,7 +85973,7 @@
       },
       {
         "chunk_id": 11,
-        "score": 0.4888,
+        "score": 0.4868,
         "is_gold": false,
         "source": "en/25-851_ed9f.pdf",
         "locator": "전체",
@@ -85983,7 +85983,7 @@
       },
       {
         "chunk_id": 14,
-        "score": 0.485,
+        "score": 0.4836,
         "is_gold": false,
         "source": "en/USCOURTS-mnd-0_06-cr-00130-1.pdf",
         "locator": "전체",
@@ -86005,7 +86005,7 @@
     "top5": [
       {
         "chunk_id": 9,
-        "score": 0.6885,
+        "score": 0.6855,
         "is_gold": true,
         "source": "en/25-524_0971.pdf",
         "locator": "전체",
@@ -86015,7 +86015,7 @@
       },
       {
         "chunk_id": 10,
-        "score": 0.5359,
+        "score": 0.5334,
         "is_gold": false,
         "source": "en/25-821_e29g.pdf",
         "locator": "전체",
@@ -86025,7 +86025,7 @@
       },
       {
         "chunk_id": 11,
-        "score": 0.4968,
+        "score": 0.4947,
         "is_gold": false,
         "source": "en/25-851_ed9f.pdf",
         "locator": "전체",
@@ -86035,7 +86035,7 @@
       },
       {
         "chunk_id": 12,
-        "score": 0.4936,
+        "score": 0.4913,
         "is_gold": false,
         "source": "en/25-885_5h26.pdf",
         "locator": "전체",
@@ -86045,7 +86045,7 @@
       },
       {
         "chunk_id": 7,
-        "score": 0.4925,
+        "score": 0.4903,
         "is_gold": false,
         "source": "en/24-7435_5if6.pdf",
         "locator": "전체",
@@ -86067,7 +86067,7 @@
     "top5": [
       {
         "chunk_id": 10,
-        "score": 0.7052,
+        "score": 0.7031,
         "is_gold": true,
         "source": "en/25-821_e29g.pdf",
         "locator": "전체",
@@ -86077,7 +86077,7 @@
       },
       {
         "chunk_id": 9,
-        "score": 0.501,
+        "score": 0.4999,
         "is_gold": false,
         "source": "en/25-524_0971.pdf",
         "locator": "전체",
@@ -86086,18 +86086,8 @@
         "preview": "Cite as: 609 U. S. ____ (2026) 1 Statement of SOTOMAYOR, J. SUPREME COURT OF THE UNITED STATES CEDRIC RAY JONES v. UNITED STATES ON PETITION FOR WRIT OF CERTIORARI TO THE UNITED STATES COURT OF APPEAL"
       },
       {
-        "chunk_id": 12,
-        "score": 0.4916,
-        "is_gold": false,
-        "source": "en/25-885_5h26.pdf",
-        "locator": "전체",
-        "섹션": null,
-        "match": null,
-        "preview": "Cite as: 608 U. S. ____ (2026) 1 ALITO, J., dissenting SUPREME COURT OF THE UNITED STATES UNITED STATES v. DONTE J. CARTER ON PETITION FOR WRIT OF CERTIORARI TO THE DISTRICT OF COLUMBIA COURT OF APPEA"
-      },
-      {
         "chunk_id": 11,
-        "score": 0.4911,
+        "score": 0.4899,
         "is_gold": false,
         "source": "en/25-851_ed9f.pdf",
         "locator": "전체",
@@ -86106,8 +86096,18 @@
         "preview": "Cite as: 608 U. S. ____ (2026) 1 ALITO, J., dissenting SUPREME COURT OF THE UNITED STATES ASHLEY GRAYSON v. UNITED STATES ON PETITION FOR WRIT OF CERTIORARI TO THE UNITED STATES COURT OF APPEALS FOR T"
       },
       {
+        "chunk_id": 12,
+        "score": 0.4899,
+        "is_gold": false,
+        "source": "en/25-885_5h26.pdf",
+        "locator": "전체",
+        "섹션": null,
+        "match": null,
+        "preview": "Cite as: 608 U. S. ____ (2026) 1 ALITO, J., dissenting SUPREME COURT OF THE UNITED STATES UNITED STATES v. DONTE J. CARTER ON PETITION FOR WRIT OF CERTIORARI TO THE DISTRICT OF COLUMBIA COURT OF APPEA"
+      },
+      {
         "chunk_id": 7,
-        "score": 0.489,
+        "score": 0.4878,
         "is_gold": false,
         "source": "en/24-7435_5if6.pdf",
         "locator": "전체",
@@ -86129,7 +86129,7 @@
     "top5": [
       {
         "chunk_id": 11,
-        "score": 0.6859,
+        "score": 0.6867,
         "is_gold": true,
         "source": "en/25-851_ed9f.pdf",
         "locator": "전체",
@@ -86149,7 +86149,7 @@
       },
       {
         "chunk_id": 13,
-        "score": 0.4787,
+        "score": 0.4786,
         "is_gold": false,
         "source": "en/USCOURTS-caed-6_25-mj-00015-1.pdf",
         "locator": "전체",
@@ -86159,7 +86159,7 @@
       },
       {
         "chunk_id": 15,
-        "score": 0.4629,
+        "score": 0.463,
         "is_gold": false,
         "source": "en/gomez_albertocortes.pdf",
         "locator": "전체",
@@ -86169,7 +86169,7 @@
       },
       {
         "chunk_id": 31,
-        "score": 0.4598,
+        "score": 0.4594,
         "is_gold": false,
         "source": "pil/judicialaffidavitfilipino.pdf",
         "locator": "전체",
@@ -88237,7 +88237,7 @@
     "top5": [
       {
         "chunk_id": 46,
-        "score": 0.6395,
+        "score": 0.6376,
         "is_gold": true,
         "source": "vn/04_2023_HSST_BRVT.pdf",
         "locator": "전체",
@@ -88247,7 +88247,7 @@
       },
       {
         "chunk_id": 49,
-        "score": 0.6312,
+        "score": 0.6297,
         "is_gold": false,
         "source": "vn/171_2018_HS-ST_HUE.pdf",
         "locator": "전체",
@@ -88257,7 +88257,7 @@
       },
       {
         "chunk_id": 48,
-        "score": 0.6056,
+        "score": 0.6043,
         "is_gold": false,
         "source": "vn/132_2020_HS-ST_HCM.pdf",
         "locator": "전체",
@@ -88267,7 +88267,7 @@
       },
       {
         "chunk_id": 47,
-        "score": 0.5865,
+        "score": 0.5847,
         "is_gold": false,
         "source": "vn/06_2023_HS-ST_HCM.pdf",
         "locator": "전체",
@@ -88277,7 +88277,7 @@
       },
       {
         "chunk_id": 50,
-        "score": 0.5699,
+        "score": 0.5687,
         "is_gold": false,
         "source": "vn/29_2018_HS-ST_THAI_NGUYEN[1].pdf",
         "locator": "전체",
@@ -88352,7 +88352,7 @@
   {
     "model": "harrier-0.6b [full]",
     "qid": "vn-06",
-    "question": "Hãy tìm loại chứng cứ hình ảnh thu được từ Nhà nghỉ T P dùng để chứng minh lời khai nhận tội của Lại Văn P",
+    "question": "Hãy tìm ngày ra quyết định, thời hạn và ngày chấp hành xong quyết định đưa bị cáo Lại Văn P vào Cơ sở giáo dục, trong vụ án tại quận Bình Tân",
     "n_gold": 1,
     "Hit@1": 1.0,
     "Hit@3": 1.0,
@@ -88361,7 +88361,7 @@
     "top5": [
       {
         "chunk_id": 47,
-        "score": 0.6224,
+        "score": 0.6617,
         "is_gold": true,
         "source": "vn/06_2023_HS-ST_HCM.pdf",
         "locator": "전체",
@@ -88371,7 +88371,7 @@
       },
       {
         "chunk_id": 49,
-        "score": 0.5908,
+        "score": 0.5971,
         "is_gold": false,
         "source": "vn/171_2018_HS-ST_HUE.pdf",
         "locator": "전체",
@@ -88380,18 +88380,8 @@
         "preview": "TOÀ ÁN NHÂN DÂN CỘNG HOÀ XÃ HỘI CHỦ NGHĨA VIỆT NAM THÀNH PHỐ HUẾ Độc lập - Tự do - Hạnh phúc. TỈNH THỪA THIÊN HUẾ Bản án số: 171/2018/HS- ST Ngày: 05- 10- 2018 NHÂN DANH NƯỚC CỘNG HOÀ XÃ HỘI CHỦ NGHĨA"
       },
       {
-        "chunk_id": 46,
-        "score": 0.5764,
-        "is_gold": false,
-        "source": "vn/04_2023_HSST_BRVT.pdf",
-        "locator": "전체",
-        "섹션": null,
-        "match": null,
-        "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM HUYỆN Đ Độc lập – Tự do – Hạnh phúc TỈNH BÀ RỊA VŨNG TÀU Bản án số: 04/2023/HSST. Ngày: 16-02-2023. NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM"
-      },
-      {
         "chunk_id": 48,
-        "score": 0.5681,
+        "score": 0.5922,
         "is_gold": false,
         "source": "vn/132_2020_HS-ST_HCM.pdf",
         "locator": "전체",
@@ -88400,8 +88390,18 @@
         "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM HUYỆN CỦ CHI Độc lập - Tự do - Hạnh phúc THÀNH PHỐ HỒ CHÍ MINH Bản án số: 132/2020/HS-ST Ngày: 27-7-2020 NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆ"
       },
       {
+        "chunk_id": 46,
+        "score": 0.5874,
+        "is_gold": false,
+        "source": "vn/04_2023_HSST_BRVT.pdf",
+        "locator": "전체",
+        "섹션": null,
+        "match": null,
+        "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM HUYỆN Đ Độc lập – Tự do – Hạnh phúc TỈNH BÀ RỊA VŨNG TÀU Bản án số: 04/2023/HSST. Ngày: 16-02-2023. NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM"
+      },
+      {
         "chunk_id": 50,
-        "score": 0.5678,
+        "score": 0.5827,
         "is_gold": false,
         "source": "vn/29_2018_HS-ST_THAI_NGUYEN[1].pdf",
         "locator": "전체",
@@ -88662,7 +88662,7 @@
   {
     "model": "harrier-0.6b [full]",
     "qid": "vn-11",
-    "question": "Hãy tìm ngày, mức án và tội danh của ba bản án tiền án của bị cáo Đỗ Văn Ph, trú tại tỉnh Thừa Thiên Huế",
+    "question": "Hãy tìm tên, năm sinh và địa chỉ của hai người làm chứng trong vụ án Đỗ Văn Ph tại Thừa Thiên Huế",
     "n_gold": 1,
     "Hit@1": 1.0,
     "Hit@3": 1.0,
@@ -88671,7 +88671,7 @@
     "top5": [
       {
         "chunk_id": 49,
-        "score": 0.7526,
+        "score": 0.6967,
         "is_gold": true,
         "source": "vn/171_2018_HS-ST_HUE.pdf",
         "locator": "전체",
@@ -88680,18 +88680,8 @@
         "preview": "TOÀ ÁN NHÂN DÂN CỘNG HOÀ XÃ HỘI CHỦ NGHĨA VIỆT NAM THÀNH PHỐ HUẾ Độc lập - Tự do - Hạnh phúc. TỈNH THỪA THIÊN HUẾ Bản án số: 171/2018/HS- ST Ngày: 05- 10- 2018 NHÂN DANH NƯỚC CỘNG HOÀ XÃ HỘI CHỦ NGHĨA"
       },
       {
-        "chunk_id": 50,
-        "score": 0.6452,
-        "is_gold": false,
-        "source": "vn/29_2018_HS-ST_THAI_NGUYEN[1].pdf",
-        "locator": "전체",
-        "섹션": null,
-        "match": null,
-        "preview": "TÒA ÁN NHÂN DÂN TP. SÔNG CÔNG CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM TỈNH THÁI NGUYÊN Độc lập - Tự do - Hạnh phúc ––––––––––––– ––––––––––––––––––– Bản án số: 29 /2018/HS-ST Ngày 19 - 6 - 2018 NHÂN DANH N"
-      },
-      {
         "chunk_id": 46,
-        "score": 0.6444,
+        "score": 0.5738,
         "is_gold": false,
         "source": "vn/04_2023_HSST_BRVT.pdf",
         "locator": "전체",
@@ -88701,7 +88691,7 @@
       },
       {
         "chunk_id": 47,
-        "score": 0.6399,
+        "score": 0.5729,
         "is_gold": false,
         "source": "vn/06_2023_HS-ST_HCM.pdf",
         "locator": "전체",
@@ -88711,13 +88701,23 @@
       },
       {
         "chunk_id": 48,
-        "score": 0.6327,
+        "score": 0.5657,
         "is_gold": false,
         "source": "vn/132_2020_HS-ST_HCM.pdf",
         "locator": "전체",
         "섹션": null,
         "match": null,
         "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM HUYỆN CỦ CHI Độc lập - Tự do - Hạnh phúc THÀNH PHỐ HỒ CHÍ MINH Bản án số: 132/2020/HS-ST Ngày: 27-7-2020 NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆ"
+      },
+      {
+        "chunk_id": 50,
+        "score": 0.5598,
+        "is_gold": false,
+        "source": "vn/29_2018_HS-ST_THAI_NGUYEN[1].pdf",
+        "locator": "전체",
+        "섹션": null,
+        "match": null,
+        "preview": "TÒA ÁN NHÂN DÂN TP. SÔNG CÔNG CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM TỈNH THÁI NGUYÊN Độc lập - Tự do - Hạnh phúc ––––––––––––– ––––––––––––––––––– Bản án số: 29 /2018/HS-ST Ngày 19 - 6 - 2018 NHÂN DANH N"
       }
     ]
   },
@@ -88786,7 +88786,7 @@
   {
     "model": "harrier-0.6b [full]",
     "qid": "vn-13",
-    "question": "Hãy tìm tài sản mà Lâm Tuấn A đã ném bỏ ở khu vực rừng cây cách nhà 50m và không thu giữ được",
+    "question": "Hãy tìm tên và năm sinh của bị hại và của người có quyền lợi, nghĩa vụ liên quan trong vụ án Lâm Tuấn A",
     "n_gold": 1,
     "Hit@1": 1.0,
     "Hit@3": 1.0,
@@ -88795,7 +88795,7 @@
     "top5": [
       {
         "chunk_id": 48,
-        "score": 0.6413,
+        "score": 0.6565,
         "is_gold": true,
         "source": "vn/132_2020_HS-ST_HCM.pdf",
         "locator": "전체",
@@ -88804,18 +88804,8 @@
         "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM HUYỆN CỦ CHI Độc lập - Tự do - Hạnh phúc THÀNH PHỐ HỒ CHÍ MINH Bản án số: 132/2020/HS-ST Ngày: 27-7-2020 NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆ"
       },
       {
-        "chunk_id": 50,
-        "score": 0.564,
-        "is_gold": false,
-        "source": "vn/29_2018_HS-ST_THAI_NGUYEN[1].pdf",
-        "locator": "전체",
-        "섹션": null,
-        "match": null,
-        "preview": "TÒA ÁN NHÂN DÂN TP. SÔNG CÔNG CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM TỈNH THÁI NGUYÊN Độc lập - Tự do - Hạnh phúc ––––––––––––– ––––––––––––––––––– Bản án số: 29 /2018/HS-ST Ngày 19 - 6 - 2018 NHÂN DANH N"
-      },
-      {
         "chunk_id": 47,
-        "score": 0.5497,
+        "score": 0.5816,
         "is_gold": false,
         "source": "vn/06_2023_HS-ST_HCM.pdf",
         "locator": "전체",
@@ -88824,24 +88814,34 @@
         "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM QUẬN BÌNH TÂN Độc lập – Tự do – Hạnh phúc THÀNH PHỐ HỒ CHÍ MINH Bản án số: 06/2023/HS-ST Ngày 13-01-2023 NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆ"
       },
       {
-        "chunk_id": 46,
-        "score": 0.5462,
-        "is_gold": false,
-        "source": "vn/04_2023_HSST_BRVT.pdf",
-        "locator": "전체",
-        "섹션": null,
-        "match": null,
-        "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM HUYỆN Đ Độc lập – Tự do – Hạnh phúc TỈNH BÀ RỊA VŨNG TÀU Bản án số: 04/2023/HSST. Ngày: 16-02-2023. NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM"
-      },
-      {
         "chunk_id": 49,
-        "score": 0.5377,
+        "score": 0.5774,
         "is_gold": false,
         "source": "vn/171_2018_HS-ST_HUE.pdf",
         "locator": "전체",
         "섹션": null,
         "match": null,
         "preview": "TOÀ ÁN NHÂN DÂN CỘNG HOÀ XÃ HỘI CHỦ NGHĨA VIỆT NAM THÀNH PHỐ HUẾ Độc lập - Tự do - Hạnh phúc. TỈNH THỪA THIÊN HUẾ Bản án số: 171/2018/HS- ST Ngày: 05- 10- 2018 NHÂN DANH NƯỚC CỘNG HOÀ XÃ HỘI CHỦ NGHĨA"
+      },
+      {
+        "chunk_id": 50,
+        "score": 0.5724,
+        "is_gold": false,
+        "source": "vn/29_2018_HS-ST_THAI_NGUYEN[1].pdf",
+        "locator": "전체",
+        "섹션": null,
+        "match": null,
+        "preview": "TÒA ÁN NHÂN DÂN TP. SÔNG CÔNG CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM TỈNH THÁI NGUYÊN Độc lập - Tự do - Hạnh phúc ––––––––––––– ––––––––––––––––––– Bản án số: 29 /2018/HS-ST Ngày 19 - 6 - 2018 NHÂN DANH N"
+      },
+      {
+        "chunk_id": 46,
+        "score": 0.5669,
+        "is_gold": false,
+        "source": "vn/04_2023_HSST_BRVT.pdf",
+        "locator": "전체",
+        "섹션": null,
+        "match": null,
+        "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM HUYỆN Đ Độc lập – Tự do – Hạnh phúc TỈNH BÀ RỊA VŨNG TÀU Bản án số: 04/2023/HSST. Ngày: 16-02-2023. NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM"
       }
     ]
   },
@@ -91027,7 +91027,7 @@
     "top5": [
       {
         "chunk_id": 38,
-        "score": 0.6224,
+        "score": 0.6189,
         "is_gold": true,
         "source": "ru/voe12ehxmqpqsa3z1f3moe6e3fhfy14n.pdf",
         "locator": "전체",
@@ -91037,7 +91037,7 @@
       },
       {
         "chunk_id": 37,
-        "score": 0.5197,
+        "score": 0.5176,
         "is_gold": false,
         "source": "ru/dvbffhvesi7atsug569xnrlpbgerzwcj.pdf",
         "locator": "전체",
@@ -91047,7 +91047,7 @@
       },
       {
         "chunk_id": 40,
-        "score": 0.5056,
+        "score": 0.503,
         "is_gold": false,
         "source": "ru/vsrfrulk2533930.pdf",
         "locator": "전체",
@@ -91057,7 +91057,7 @@
       },
       {
         "chunk_id": 39,
-        "score": 0.4927,
+        "score": 0.4905,
         "is_gold": false,
         "source": "ru/vsrfrulk2489670.pdf",
         "locator": "전체",
@@ -91067,7 +91067,7 @@
       },
       {
         "chunk_id": 35,
-        "score": 0.4926,
+        "score": 0.4897,
         "is_gold": false,
         "source": "ru/acqyks51995vcas54buq9j8zjfcv52mq.pdf",
         "locator": "전체",
@@ -91523,7 +91523,7 @@
     "top5": [
       {
         "chunk_id": 40,
-        "score": 0.5782,
+        "score": 0.5785,
         "is_gold": true,
         "source": "ru/vsrfrulk2533930.pdf",
         "locator": "전체",
@@ -91533,7 +91533,7 @@
       },
       {
         "chunk_id": 39,
-        "score": 0.4435,
+        "score": 0.4432,
         "is_gold": false,
         "source": "ru/vsrfrulk2489670.pdf",
         "locator": "전체",
@@ -91543,7 +91543,7 @@
       },
       {
         "chunk_id": 37,
-        "score": 0.4293,
+        "score": 0.4299,
         "is_gold": false,
         "source": "ru/dvbffhvesi7atsug569xnrlpbgerzwcj.pdf",
         "locator": "전체",
@@ -91553,7 +91553,7 @@
       },
       {
         "chunk_id": 35,
-        "score": 0.4164,
+        "score": 0.4171,
         "is_gold": false,
         "source": "ru/acqyks51995vcas54buq9j8zjfcv52mq.pdf",
         "locator": "전체",
@@ -91563,7 +91563,7 @@
       },
       {
         "chunk_id": 16,
-        "score": 0.4054,
+        "score": 0.4057,
         "is_gold": false,
         "source": "en/vae1_tetteh_0.pdf",
         "locator": "전체",
@@ -92391,7 +92391,7 @@
     "top5": [
       {
         "chunk_id": 31,
-        "score": 0.6806,
+        "score": 0.6799,
         "is_gold": true,
         "source": "pil/judicialaffidavitfilipino.pdf",
         "locator": "전체",
@@ -92401,7 +92401,7 @@
       },
       {
         "chunk_id": 33,
-        "score": 0.5505,
+        "score": 0.5506,
         "is_gold": false,
         "source": "pil/toazinfo-pinagsamang.pdf",
         "locator": "전체",
@@ -92411,7 +92411,7 @@
       },
       {
         "chunk_id": 28,
-        "score": 0.4745,
+        "score": 0.4736,
         "is_gold": false,
         "source": "pil/Government Imposter Scams poster_TL.pdf",
         "locator": "전체",
@@ -92421,7 +92421,7 @@
       },
       {
         "chunk_id": 14,
-        "score": 0.4727,
+        "score": 0.4723,
         "is_gold": false,
         "source": "en/USCOURTS-mnd-0_06-cr-00130-1.pdf",
         "locator": "전체",
@@ -92431,7 +92431,7 @@
       },
       {
         "chunk_id": 30,
-        "score": 0.458,
+        "score": 0.4574,
         "is_gold": false,
         "source": "pil/empower-yourself-against-utility-scams_tl-508ftclogo.pdf",
         "locator": "전체",
@@ -92453,7 +92453,7 @@
     "top5": [
       {
         "chunk_id": 31,
-        "score": 0.6893,
+        "score": 0.688,
         "is_gold": true,
         "source": "pil/judicialaffidavitfilipino.pdf",
         "locator": "전체",
@@ -92463,7 +92463,7 @@
       },
       {
         "chunk_id": 33,
-        "score": 0.6386,
+        "score": 0.638,
         "is_gold": false,
         "source": "pil/toazinfo-pinagsamang.pdf",
         "locator": "전체",
@@ -92483,7 +92483,7 @@
       },
       {
         "chunk_id": 13,
-        "score": 0.4959,
+        "score": 0.496,
         "is_gold": false,
         "source": "en/USCOURTS-caed-6_25-mj-00015-1.pdf",
         "locator": "전체",
@@ -92493,7 +92493,7 @@
       },
       {
         "chunk_id": 27,
-        "score": 0.4849,
+        "score": 0.4843,
         "is_gold": false,
         "source": "pil/AvoidImmigrationScamsGetHelp_Tagalog-508.pdf",
         "locator": "전체",
@@ -94871,7 +94871,7 @@
     "top5": [
       {
         "chunk_id": 35,
-        "score": 0.6479,
+        "score": 0.6482,
         "is_gold": true,
         "source": "en/24-7435_5if6.pdf",
         "locator": "블록.1~2",
@@ -94881,7 +94881,7 @@
       },
       {
         "chunk_id": 34,
-        "score": 0.6099,
+        "score": 0.6102,
         "is_gold": true,
         "source": "en/24-7435_5if6.pdf",
         "locator": "블록.1",
@@ -94901,7 +94901,7 @@
       },
       {
         "chunk_id": 37,
-        "score": 0.5182,
+        "score": 0.5179,
         "is_gold": false,
         "source": "en/24-7435_5if6.pdf",
         "locator": "블록.3",
@@ -94911,7 +94911,7 @@
       },
       {
         "chunk_id": 52,
-        "score": 0.5176,
+        "score": 0.5174,
         "is_gold": false,
         "source": "en/USCOURTS-caed-6_25-mj-00015-1.pdf",
         "locator": "블록.1~3",
@@ -97652,27 +97652,37 @@
   {
     "model": "harrier-270m [512]",
     "qid": "vn-06",
-    "question": "Hãy tìm loại chứng cứ hình ảnh thu được từ Nhà nghỉ T P dùng để chứng minh lời khai nhận tội của Lại Văn P",
+    "question": "Hãy tìm ngày ra quyết định, thời hạn và ngày chấp hành xong quyết định đưa bị cáo Lại Văn P vào Cơ sở giáo dục, trong vụ án tại quận Bình Tân",
     "n_gold": 1,
-    "Hit@1": 1.0,
+    "Hit@1": 0.0,
     "Hit@3": 1.0,
-    "MRR@3": 1.0,
-    "nDCG@3": 1.0,
+    "MRR@3": 0.3333,
+    "nDCG@3": 0.5,
     "top5": [
       {
-        "chunk_id": 234,
-        "score": 0.6298,
-        "is_gold": true,
+        "chunk_id": 229,
+        "score": 0.6639,
+        "is_gold": false,
         "source": "vn/06_2023_HS-ST_HCM.pdf",
-        "locator": "블록.3~4",
+        "locator": "블록.1",
         "섹션": null,
         "match": null,
-        "preview": "di động hiệu Realme C2, màu xanh của anh Nguyễn Đình V để tại Nhà nghỉ T P, số 26 Đường Số 3, Khu phố B, phường T T A, quận B T. Theo Kết luận định giá tài sản số: 270/KL- HĐĐGTS, ngày 30/5/2022 của H"
+        "preview": ": Lại Văn P (tên gọi khác: Lé); sinh năm: 1983, tại Thành phố Hồ Chí Minh. Nơi đăng ký hộ khẩu thường trú: Không có; nơi ở: Không ổn định; nghề nghiệp: Không có; trình độ văn hóa: 2/12; dân tộc: Kinh;"
+      },
+      {
+        "chunk_id": 228,
+        "score": 0.6518,
+        "is_gold": false,
+        "source": "vn/06_2023_HS-ST_HCM.pdf",
+        "locator": "블록.1",
+        "섹션": null,
+        "match": null,
+        "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM QUẬN BÌNH TÂN Độc lập – Tự do – Hạnh phúc THÀNH PHỐ HỒ CHÍ MINH Bản án số: 06/2023/HS-ST Ngày 13-01-2023 NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆ"
       },
       {
         "chunk_id": 230,
-        "score": 0.6147,
-        "is_gold": false,
+        "score": 0.6259,
+        "is_gold": true,
         "source": "vn/06_2023_HS-ST_HCM.pdf",
         "locator": "블록.1~2",
         "섹션": null,
@@ -97680,34 +97690,24 @@
         "preview": "Quyết định xử phạt vi phạm hành chính 750.000 đồng về hành vi “say rượu, bia gây mất trật tự công cộng” (chưa chấp hành Quyết định nên chưa được coi là chưa bị xử phạt vi phạm hành chính); nhân thân: "
       },
       {
-        "chunk_id": 249,
-        "score": 0.6119,
-        "is_gold": false,
-        "source": "vn/171_2018_HS-ST_HUE.pdf",
-        "locator": "블록.2",
-        "섹션": null,
-        "match": null,
-        "preview": "Huế; Giới tính: Nam; Nơi cư trú: Tổ 2, phường Thủy D, thị xã Hương T, tỉnh Thừa Thiên Huế; Nghề nghiệp: chạy xe thồ; Trình độ học vấn: không biết chữ; Quốc tịch: Việt Nam; Dân tộc: Kinh; Tôn giáo: Phậ"
-      },
-      {
-        "chunk_id": 254,
-        "score": 0.6036,
-        "is_gold": false,
-        "source": "vn/171_2018_HS-ST_HUE.pdf",
-        "locator": "블록.4~5",
-        "섹션": "2. Bà Nguyễn Thị Tuyết",
-        "match": null,
-        "preview": "a Thiên Huế và dòng chữ “ Mẫu vật vụ Đỗ Văn Ph bắt ngày 30/4/2018 ”. Theo biên bản giao nhận vật chứng giữa Cơ quan cảnh sát điều tra công an thành phố Huế và Chi cục thi hành án dân sự thành phố Huế "
-      },
-      {
         "chunk_id": 239,
-        "score": 0.6024,
+        "score": 0.6116,
         "is_gold": false,
         "source": "vn/132_2020_HS-ST_HCM.pdf",
         "locator": "블록.1~2",
         "섹션": null,
         "match": null,
         "preview": "và tên: Lâm Tuấn A, sinh năm: 1984 tại Thành phố Hồ Chí Minh; nơi đăng ký hộ khẩu thường trú: Ấp P, xã P, huyện C, Thành phố Hồ Chí Minh; nghề nghiệp: Không; trình độ học vấn: 02/12; dân tộc: Kinh; gi"
+      },
+      {
+        "chunk_id": 249,
+        "score": 0.59,
+        "is_gold": false,
+        "source": "vn/171_2018_HS-ST_HUE.pdf",
+        "locator": "블록.2",
+        "섹션": null,
+        "match": null,
+        "preview": "Huế; Giới tính: Nam; Nơi cư trú: Tổ 2, phường Thủy D, thị xã Hương T, tỉnh Thừa Thiên Huế; Nghề nghiệp: chạy xe thồ; Trình độ học vấn: không biết chữ; Quốc tịch: Việt Nam; Dân tộc: Kinh; Tôn giáo: Phậ"
       }
     ]
   },
@@ -97962,7 +97962,7 @@
   {
     "model": "harrier-270m [512]",
     "qid": "vn-11",
-    "question": "Hãy tìm ngày, mức án và tội danh của ba bản án tiền án của bị cáo Đỗ Văn Ph, trú tại tỉnh Thừa Thiên Huế",
+    "question": "Hãy tìm tên, năm sinh và địa chỉ của hai người làm chứng trong vụ án Đỗ Văn Ph tại Thừa Thiên Huế",
     "n_gold": 1,
     "Hit@1": 1.0,
     "Hit@3": 1.0,
@@ -97971,7 +97971,7 @@
     "top5": [
       {
         "chunk_id": 249,
-        "score": 0.7508,
+        "score": 0.7192,
         "is_gold": true,
         "source": "vn/171_2018_HS-ST_HUE.pdf",
         "locator": "블록.2",
@@ -97981,7 +97981,7 @@
       },
       {
         "chunk_id": 254,
-        "score": 0.7329,
+        "score": 0.6846,
         "is_gold": false,
         "source": "vn/171_2018_HS-ST_HUE.pdf",
         "locator": "블록.4~5",
@@ -97990,18 +97990,8 @@
         "preview": "a Thiên Huế và dòng chữ “ Mẫu vật vụ Đỗ Văn Ph bắt ngày 30/4/2018 ”. Theo biên bản giao nhận vật chứng giữa Cơ quan cảnh sát điều tra công an thành phố Huế và Chi cục thi hành án dân sự thành phố Huế "
       },
       {
-        "chunk_id": 251,
-        "score": 0.7057,
-        "is_gold": false,
-        "source": "vn/171_2018_HS-ST_HUE.pdf",
-        "locator": "블록.2~3",
-        "섹션": null,
-        "match": null,
-        "preview": ". Tại phiên tòa đại diện Viện kiểm sát giữ nguyên quyết định truy tố và đề nghị Hội đồng xét xử tuyên bố bị cáo Đỗ Văn P phạm tội “ Tàng trữ trái phép chất ma túy”. Áp dụng điểm c khoản 1 Điều 249; đi"
-      },
-      {
         "chunk_id": 248,
-        "score": 0.7044,
+        "score": 0.6752,
         "is_gold": false,
         "source": "vn/171_2018_HS-ST_HUE.pdf",
         "locator": "블록.1~2",
@@ -98010,8 +98000,18 @@
         "preview": "TOÀ ÁN NHÂN DÂN CỘNG HOÀ XÃ HỘI CHỦ NGHĨA VIỆT NAM THÀNH PHỐ HUẾ Độc lập - Tự do - Hạnh phúc. TỈNH THỪA THIÊN HUẾ Bản án số: 171/2018/HS- ST Ngày: 05- 10- 2018 NHÂN DANH NƯỚC CỘNG HOÀ XÃ HỘI CHỦ NGHĨA"
       },
       {
+        "chunk_id": 251,
+        "score": 0.6405,
+        "is_gold": false,
+        "source": "vn/171_2018_HS-ST_HUE.pdf",
+        "locator": "블록.2~3",
+        "섹션": null,
+        "match": null,
+        "preview": ". Tại phiên tòa đại diện Viện kiểm sát giữ nguyên quyết định truy tố và đề nghị Hội đồng xét xử tuyên bố bị cáo Đỗ Văn P phạm tội “ Tàng trữ trái phép chất ma túy”. Áp dụng điểm c khoản 1 Điều 249; đi"
+      },
+      {
         "chunk_id": 250,
-        "score": 0.6677,
+        "score": 0.6254,
         "is_gold": false,
         "source": "vn/171_2018_HS-ST_HUE.pdf",
         "locator": "블록.2",
@@ -98086,17 +98086,17 @@
   {
     "model": "harrier-270m [512]",
     "qid": "vn-13",
-    "question": "Hãy tìm tài sản mà Lâm Tuấn A đã ném bỏ ở khu vực rừng cây cách nhà 50m và không thu giữ được",
+    "question": "Hãy tìm tên và năm sinh của bị hại và của người có quyền lợi, nghĩa vụ liên quan trong vụ án Lâm Tuấn A",
     "n_gold": 1,
-    "Hit@1": 0.0,
-    "Hit@3": 0.0,
-    "MRR@3": 0.0,
-    "nDCG@3": 0.0,
+    "Hit@1": 1.0,
+    "Hit@3": 1.0,
+    "MRR@3": 1.0,
+    "nDCG@3": 1.0,
     "top5": [
       {
         "chunk_id": 239,
-        "score": 0.6046,
-        "is_gold": false,
+        "score": 0.7028,
+        "is_gold": true,
         "source": "vn/132_2020_HS-ST_HCM.pdf",
         "locator": "블록.1~2",
         "섹션": null,
@@ -98105,7 +98105,7 @@
       },
       {
         "chunk_id": 242,
-        "score": 0.5833,
+        "score": 0.6769,
         "is_gold": false,
         "source": "vn/132_2020_HS-ST_HCM.pdf",
         "locator": "블록.3",
@@ -98114,34 +98114,34 @@
         "preview": "Chí Minh đã truy tố Lâm Tuấn A về tội “Trộm cắp tài sản” theo khoản 2 Điều 173 của Bộ luật Hình sự 2015 được sửa đổi, bổ sung năm 2017. Tại phiên tòa, đại diện Viện kiểm sát nhân dân huyện Củ Chi giữ "
       },
       {
+        "chunk_id": 247,
+        "score": 0.6324,
+        "is_gold": false,
+        "source": "vn/132_2020_HS-ST_HCM.pdf",
+        "locator": "블록.6",
+        "섹션": "2. Ông Nguyễn Ngọc Cảnh;",
+        "match": null,
+        "preview": "g khoản 2 Điều 173, điểm s khoản 1 Điều 51 và Điều 38 của Bộ luật Hình sự năm 2015, được sửa đổi bổ sung năm 2017. Xử phạt: Bị cáo Lâm Tuấn A 03 (ba) năm 06 (sáu) tháng tù, thời hạn tù tính từ ngày 08"
+      },
+      {
+        "chunk_id": 249,
+        "score": 0.6204,
+        "is_gold": false,
+        "source": "vn/171_2018_HS-ST_HUE.pdf",
+        "locator": "블록.2",
+        "섹션": null,
+        "match": null,
+        "preview": "Huế; Giới tính: Nam; Nơi cư trú: Tổ 2, phường Thủy D, thị xã Hương T, tỉnh Thừa Thiên Huế; Nghề nghiệp: chạy xe thồ; Trình độ học vấn: không biết chữ; Quốc tịch: Việt Nam; Dân tộc: Kinh; Tôn giáo: Phậ"
+      },
+      {
         "chunk_id": 244,
-        "score": 0.5317,
+        "score": 0.6135,
         "is_gold": false,
         "source": "vn/132_2020_HS-ST_HCM.pdf",
         "locator": "블록.4",
         "섹션": "2. Ông Nguyễn Ngọc Cảnh;",
         "match": null,
         "preview": "truy tố đã thực hiện đúng về thẩm quyền, trình tự, thủ tục theo quy định của Bộ luật Tố tụng hình sự. Quá trình điều tra và tại phiên tòa, bị cáo bị hại, người có quyền lợi, nghĩa vụ liên quan đến vụ "
-      },
-      {
-        "chunk_id": 240,
-        "score": 0.5302,
-        "is_gold": true,
-        "source": "vn/132_2020_HS-ST_HCM.pdf",
-        "locator": "블록.2",
-        "섹션": "2. Ông Nguyễn Ngọc Cảnh;",
-        "match": null,
-        "preview": "khiển xe đạp trên đường Tỉnh lộ 15, tổ 89, ấp Phú Bình, xã Phú Hòa Đông, huyện Củ Chi, Thành phố Hồ Chí Minh. Tại đây, Tuấn A phát hiện cửa sổ nhà ông P mở và trong nhà sáng đèn nên dừng lại quan sát."
-      },
-      {
-        "chunk_id": 246,
-        "score": 0.5278,
-        "is_gold": false,
-        "source": "vn/132_2020_HS-ST_HCM.pdf",
-        "locator": "블록.5~6",
-        "섹션": "2. Ông Nguyễn Ngọc Cảnh;",
-        "match": null,
-        "preview": "minh nhân dân, 01 giấy phép lái xe, 01 giấy đăng ký xe mô tô, 01 thẻ đoàn viên, 01 thẻ bảo hiểm y tế, 01 thẻ ATM của Ngân hàng Viettinbank, 01 thẻ ATM của Ngân hàng BIDV, Hội đồng xét xử không xem xét"
       }
     ]
   },
@@ -104357,7 +104357,7 @@
     "top5": [
       {
         "chunk_id": 8,
-        "score": 0.7242,
+        "score": 0.7221,
         "is_gold": true,
         "source": "en/249799.pdf",
         "locator": "전체",
@@ -104367,7 +104367,7 @@
       },
       {
         "chunk_id": 15,
-        "score": 0.5608,
+        "score": 0.5594,
         "is_gold": false,
         "source": "en/gomez_albertocortes.pdf",
         "locator": "전체",
@@ -104377,7 +104377,7 @@
       },
       {
         "chunk_id": 16,
-        "score": 0.5587,
+        "score": 0.5576,
         "is_gold": false,
         "source": "en/vae1_tetteh_0.pdf",
         "locator": "전체",
@@ -104387,7 +104387,7 @@
       },
       {
         "chunk_id": 13,
-        "score": 0.4389,
+        "score": 0.4377,
         "is_gold": false,
         "source": "en/USCOURTS-caed-6_25-mj-00015-1.pdf",
         "locator": "전체",
@@ -104397,7 +104397,7 @@
       },
       {
         "chunk_id": 11,
-        "score": 0.4365,
+        "score": 0.4354,
         "is_gold": false,
         "source": "en/25-851_ed9f.pdf",
         "locator": "전체",
@@ -104481,7 +104481,7 @@
     "top5": [
       {
         "chunk_id": 9,
-        "score": 0.5865,
+        "score": 0.5876,
         "is_gold": true,
         "source": "en/25-524_0971.pdf",
         "locator": "전체",
@@ -104491,7 +104491,7 @@
       },
       {
         "chunk_id": 10,
-        "score": 0.5376,
+        "score": 0.5393,
         "is_gold": false,
         "source": "en/25-821_e29g.pdf",
         "locator": "전체",
@@ -104501,7 +104501,7 @@
       },
       {
         "chunk_id": 15,
-        "score": 0.5201,
+        "score": 0.5214,
         "is_gold": false,
         "source": "en/gomez_albertocortes.pdf",
         "locator": "전체",
@@ -104511,7 +104511,7 @@
       },
       {
         "chunk_id": 13,
-        "score": 0.5109,
+        "score": 0.512,
         "is_gold": false,
         "source": "en/USCOURTS-caed-6_25-mj-00015-1.pdf",
         "locator": "전체",
@@ -104521,7 +104521,7 @@
       },
       {
         "chunk_id": 7,
-        "score": 0.5078,
+        "score": 0.5087,
         "is_gold": false,
         "source": "en/24-7435_5if6.pdf",
         "locator": "전체",
@@ -106837,7 +106837,7 @@
     "top5": [
       {
         "chunk_id": 49,
-        "score": 0.5986,
+        "score": 0.5982,
         "is_gold": false,
         "source": "vn/171_2018_HS-ST_HUE.pdf",
         "locator": "전체",
@@ -106857,7 +106857,7 @@
       },
       {
         "chunk_id": 48,
-        "score": 0.5467,
+        "score": 0.5461,
         "is_gold": false,
         "source": "vn/132_2020_HS-ST_HCM.pdf",
         "locator": "전체",
@@ -106867,7 +106867,7 @@
       },
       {
         "chunk_id": 50,
-        "score": 0.5256,
+        "score": 0.5254,
         "is_gold": false,
         "source": "vn/29_2018_HS-ST_THAI_NGUYEN[1].pdf",
         "locator": "전체",
@@ -106877,7 +106877,7 @@
       },
       {
         "chunk_id": 47,
-        "score": 0.5233,
+        "score": 0.5231,
         "is_gold": false,
         "source": "vn/06_2023_HS-ST_HCM.pdf",
         "locator": "전체",
@@ -106952,7 +106952,7 @@
   {
     "model": "harrier-270m [full]",
     "qid": "vn-06",
-    "question": "Hãy tìm loại chứng cứ hình ảnh thu được từ Nhà nghỉ T P dùng để chứng minh lời khai nhận tội của Lại Văn P",
+    "question": "Hãy tìm ngày ra quyết định, thời hạn và ngày chấp hành xong quyết định đưa bị cáo Lại Văn P vào Cơ sở giáo dục, trong vụ án tại quận Bình Tân",
     "n_gold": 1,
     "Hit@1": 1.0,
     "Hit@3": 1.0,
@@ -106961,7 +106961,7 @@
     "top5": [
       {
         "chunk_id": 47,
-        "score": 0.5789,
+        "score": 0.5862,
         "is_gold": true,
         "source": "vn/06_2023_HS-ST_HCM.pdf",
         "locator": "전체",
@@ -106970,18 +106970,8 @@
         "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM QUẬN BÌNH TÂN Độc lập – Tự do – Hạnh phúc THÀNH PHỐ HỒ CHÍ MINH Bản án số: 06/2023/HS-ST Ngày 13-01-2023 NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆ"
       },
       {
-        "chunk_id": 50,
-        "score": 0.563,
-        "is_gold": false,
-        "source": "vn/29_2018_HS-ST_THAI_NGUYEN[1].pdf",
-        "locator": "전체",
-        "섹션": null,
-        "match": null,
-        "preview": "TÒA ÁN NHÂN DÂN TP. SÔNG CÔNG CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM TỈNH THÁI NGUYÊN Độc lập - Tự do - Hạnh phúc ––––––––––––– ––––––––––––––––––– Bản án số: 29 /2018/HS-ST Ngày 19 - 6 - 2018 NHÂN DANH N"
-      },
-      {
         "chunk_id": 49,
-        "score": 0.543,
+        "score": 0.5395,
         "is_gold": false,
         "source": "vn/171_2018_HS-ST_HUE.pdf",
         "locator": "전체",
@@ -106990,24 +106980,34 @@
         "preview": "TOÀ ÁN NHÂN DÂN CỘNG HOÀ XÃ HỘI CHỦ NGHĨA VIỆT NAM THÀNH PHỐ HUẾ Độc lập - Tự do - Hạnh phúc. TỈNH THỪA THIÊN HUẾ Bản án số: 171/2018/HS- ST Ngày: 05- 10- 2018 NHÂN DANH NƯỚC CỘNG HOÀ XÃ HỘI CHỦ NGHĨA"
       },
       {
-        "chunk_id": 48,
-        "score": 0.5421,
+        "chunk_id": 50,
+        "score": 0.5115,
         "is_gold": false,
-        "source": "vn/132_2020_HS-ST_HCM.pdf",
+        "source": "vn/29_2018_HS-ST_THAI_NGUYEN[1].pdf",
         "locator": "전체",
         "섹션": null,
         "match": null,
-        "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM HUYỆN CỦ CHI Độc lập - Tự do - Hạnh phúc THÀNH PHỐ HỒ CHÍ MINH Bản án số: 132/2020/HS-ST Ngày: 27-7-2020 NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆ"
+        "preview": "TÒA ÁN NHÂN DÂN TP. SÔNG CÔNG CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM TỈNH THÁI NGUYÊN Độc lập - Tự do - Hạnh phúc ––––––––––––– ––––––––––––––––––– Bản án số: 29 /2018/HS-ST Ngày 19 - 6 - 2018 NHÂN DANH N"
       },
       {
         "chunk_id": 46,
-        "score": 0.5358,
+        "score": 0.509,
         "is_gold": false,
         "source": "vn/04_2023_HSST_BRVT.pdf",
         "locator": "전체",
         "섹션": null,
         "match": null,
         "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM HUYỆN Đ Độc lập – Tự do – Hạnh phúc TỈNH BÀ RỊA VŨNG TÀU Bản án số: 04/2023/HSST. Ngày: 16-02-2023. NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM"
+      },
+      {
+        "chunk_id": 48,
+        "score": 0.5081,
+        "is_gold": false,
+        "source": "vn/132_2020_HS-ST_HCM.pdf",
+        "locator": "전체",
+        "섹션": null,
+        "match": null,
+        "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM HUYỆN CỦ CHI Độc lập - Tự do - Hạnh phúc THÀNH PHỐ HỒ CHÍ MINH Bản án số: 132/2020/HS-ST Ngày: 27-7-2020 NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆ"
       }
     ]
   },
@@ -107262,7 +107262,7 @@
   {
     "model": "harrier-270m [full]",
     "qid": "vn-11",
-    "question": "Hãy tìm ngày, mức án và tội danh của ba bản án tiền án của bị cáo Đỗ Văn Ph, trú tại tỉnh Thừa Thiên Huế",
+    "question": "Hãy tìm tên, năm sinh và địa chỉ của hai người làm chứng trong vụ án Đỗ Văn Ph tại Thừa Thiên Huế",
     "n_gold": 1,
     "Hit@1": 1.0,
     "Hit@3": 1.0,
@@ -107271,7 +107271,7 @@
     "top5": [
       {
         "chunk_id": 49,
-        "score": 0.6986,
+        "score": 0.6405,
         "is_gold": true,
         "source": "vn/171_2018_HS-ST_HUE.pdf",
         "locator": "전체",
@@ -107281,7 +107281,7 @@
       },
       {
         "chunk_id": 50,
-        "score": 0.6242,
+        "score": 0.5368,
         "is_gold": false,
         "source": "vn/29_2018_HS-ST_THAI_NGUYEN[1].pdf",
         "locator": "전체",
@@ -107290,18 +107290,8 @@
         "preview": "TÒA ÁN NHÂN DÂN TP. SÔNG CÔNG CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM TỈNH THÁI NGUYÊN Độc lập - Tự do - Hạnh phúc ––––––––––––– ––––––––––––––––––– Bản án số: 29 /2018/HS-ST Ngày 19 - 6 - 2018 NHÂN DANH N"
       },
       {
-        "chunk_id": 46,
-        "score": 0.5861,
-        "is_gold": false,
-        "source": "vn/04_2023_HSST_BRVT.pdf",
-        "locator": "전체",
-        "섹션": null,
-        "match": null,
-        "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM HUYỆN Đ Độc lập – Tự do – Hạnh phúc TỈNH BÀ RỊA VŨNG TÀU Bản án số: 04/2023/HSST. Ngày: 16-02-2023. NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM"
-      },
-      {
         "chunk_id": 48,
-        "score": 0.5821,
+        "score": 0.5055,
         "is_gold": false,
         "source": "vn/132_2020_HS-ST_HCM.pdf",
         "locator": "전체",
@@ -107310,14 +107300,24 @@
         "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM HUYỆN CỦ CHI Độc lập - Tự do - Hạnh phúc THÀNH PHỐ HỒ CHÍ MINH Bản án số: 132/2020/HS-ST Ngày: 27-7-2020 NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆ"
       },
       {
-        "chunk_id": 47,
-        "score": 0.5434,
+        "chunk_id": 46,
+        "score": 0.4981,
         "is_gold": false,
-        "source": "vn/06_2023_HS-ST_HCM.pdf",
+        "source": "vn/04_2023_HSST_BRVT.pdf",
         "locator": "전체",
         "섹션": null,
         "match": null,
-        "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM QUẬN BÌNH TÂN Độc lập – Tự do – Hạnh phúc THÀNH PHỐ HỒ CHÍ MINH Bản án số: 06/2023/HS-ST Ngày 13-01-2023 NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆ"
+        "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM HUYỆN Đ Độc lập – Tự do – Hạnh phúc TỈNH BÀ RỊA VŨNG TÀU Bản án số: 04/2023/HSST. Ngày: 16-02-2023. NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM"
+      },
+      {
+        "chunk_id": 22,
+        "score": 0.4731,
+        "is_gold": false,
+        "source": "ko/2025고합394_판결문.pdf",
+        "locator": "전체",
+        "섹션": null,
+        "match": null,
+        "preview": "본 판결문은 판결서 인터넷열람 사이트에서 열람·출력되었습니다. 본 판결문을 이용하여 사건관계인의 명예나 생활의 평온을 해하는 행위는 관련 법령에 따라 금지됩니다. 비실명처리일자 : 2026-04-29 제주지방법원 제 2 형 사 부 판결 사건 2025고합394 마약류관리에관한법률위반(향정) 피고인 A 검사 한상훈(기소), 유선문(공판) 변호인 법무법인 한원 "
       }
     ]
   },
@@ -107386,7 +107386,7 @@
   {
     "model": "harrier-270m [full]",
     "qid": "vn-13",
-    "question": "Hãy tìm tài sản mà Lâm Tuấn A đã ném bỏ ở khu vực rừng cây cách nhà 50m và không thu giữ được",
+    "question": "Hãy tìm tên và năm sinh của bị hại và của người có quyền lợi, nghĩa vụ liên quan trong vụ án Lâm Tuấn A",
     "n_gold": 1,
     "Hit@1": 1.0,
     "Hit@3": 1.0,
@@ -107395,7 +107395,7 @@
     "top5": [
       {
         "chunk_id": 48,
-        "score": 0.5544,
+        "score": 0.5886,
         "is_gold": true,
         "source": "vn/132_2020_HS-ST_HCM.pdf",
         "locator": "전체",
@@ -107405,7 +107405,7 @@
       },
       {
         "chunk_id": 50,
-        "score": 0.495,
+        "score": 0.5429,
         "is_gold": false,
         "source": "vn/29_2018_HS-ST_THAI_NGUYEN[1].pdf",
         "locator": "전체",
@@ -107414,8 +107414,18 @@
         "preview": "TÒA ÁN NHÂN DÂN TP. SÔNG CÔNG CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM TỈNH THÁI NGUYÊN Độc lập - Tự do - Hạnh phúc ––––––––––––– ––––––––––––––––––– Bản án số: 29 /2018/HS-ST Ngày 19 - 6 - 2018 NHÂN DANH N"
       },
       {
+        "chunk_id": 49,
+        "score": 0.5408,
+        "is_gold": false,
+        "source": "vn/171_2018_HS-ST_HUE.pdf",
+        "locator": "전체",
+        "섹션": null,
+        "match": null,
+        "preview": "TOÀ ÁN NHÂN DÂN CỘNG HOÀ XÃ HỘI CHỦ NGHĨA VIỆT NAM THÀNH PHỐ HUẾ Độc lập - Tự do - Hạnh phúc. TỈNH THỪA THIÊN HUẾ Bản án số: 171/2018/HS- ST Ngày: 05- 10- 2018 NHÂN DANH NƯỚC CỘNG HOÀ XÃ HỘI CHỦ NGHĨA"
+      },
+      {
         "chunk_id": 46,
-        "score": 0.4708,
+        "score": 0.5271,
         "is_gold": false,
         "source": "vn/04_2023_HSST_BRVT.pdf",
         "locator": "전체",
@@ -107425,23 +107435,13 @@
       },
       {
         "chunk_id": 47,
-        "score": 0.4671,
+        "score": 0.5223,
         "is_gold": false,
         "source": "vn/06_2023_HS-ST_HCM.pdf",
         "locator": "전체",
         "섹션": null,
         "match": null,
         "preview": "TÒA ÁN NHÂN DÂN CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM QUẬN BÌNH TÂN Độc lập – Tự do – Hạnh phúc THÀNH PHỐ HỒ CHÍ MINH Bản án số: 06/2023/HS-ST Ngày 13-01-2023 NHÂN DANH NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆ"
-      },
-      {
-        "chunk_id": 49,
-        "score": 0.4653,
-        "is_gold": false,
-        "source": "vn/171_2018_HS-ST_HUE.pdf",
-        "locator": "전체",
-        "섹션": null,
-        "match": null,
-        "preview": "TOÀ ÁN NHÂN DÂN CỘNG HOÀ XÃ HỘI CHỦ NGHĨA VIỆT NAM THÀNH PHỐ HUẾ Độc lập - Tự do - Hạnh phúc. TỈNH THỪA THIÊN HUẾ Bản án số: 171/2018/HS- ST Ngày: 05- 10- 2018 NHÂN DANH NƯỚC CỘNG HOÀ XÃ HỘI CHỦ NGHĨA"
       }
     ]
   },
@@ -110123,7 +110123,7 @@
     "top5": [
       {
         "chunk_id": 40,
-        "score": 0.5478,
+        "score": 0.5475,
         "is_gold": true,
         "source": "ru/vsrfrulk2533930.pdf",
         "locator": "전체",
@@ -110133,7 +110133,7 @@
       },
       {
         "chunk_id": 39,
-        "score": 0.4291,
+        "score": 0.4286,
         "is_gold": false,
         "source": "ru/vsrfrulk2489670.pdf",
         "locator": "전체",
@@ -110143,7 +110143,7 @@
       },
       {
         "chunk_id": 37,
-        "score": 0.4136,
+        "score": 0.4134,
         "is_gold": false,
         "source": "ru/dvbffhvesi7atsug569xnrlpbgerzwcj.pdf",
         "locator": "전체",
@@ -110153,7 +110153,7 @@
       },
       {
         "chunk_id": 38,
-        "score": 0.4044,
+        "score": 0.4039,
         "is_gold": false,
         "source": "ru/voe12ehxmqpqsa3z1f3moe6e3fhfy14n.pdf",
         "locator": "전체",
@@ -110991,7 +110991,7 @@
     "top5": [
       {
         "chunk_id": 31,
-        "score": 0.681,
+        "score": 0.6798,
         "is_gold": true,
         "source": "pil/judicialaffidavitfilipino.pdf",
         "locator": "전체",
@@ -111001,7 +111001,7 @@
       },
       {
         "chunk_id": 33,
-        "score": 0.5627,
+        "score": 0.5619,
         "is_gold": false,
         "source": "pil/toazinfo-pinagsamang.pdf",
         "locator": "전체",
@@ -111011,7 +111011,7 @@
       },
       {
         "chunk_id": 27,
-        "score": 0.4772,
+        "score": 0.4762,
         "is_gold": false,
         "source": "pil/AvoidImmigrationScamsGetHelp_Tagalog-508.pdf",
         "locator": "전체",
@@ -111021,7 +111021,7 @@
       },
       {
         "chunk_id": 14,
-        "score": 0.4707,
+        "score": 0.4705,
         "is_gold": false,
         "source": "en/USCOURTS-mnd-0_06-cr-00130-1.pdf",
         "locator": "전체",
@@ -111031,7 +111031,7 @@
       },
       {
         "chunk_id": 32,
-        "score": 0.4613,
+        "score": 0.4604,
         "is_gold": false,
         "source": "pil/scammers-intl-students-money_tl-508ftclogo.pdf",
         "locator": "전체",
