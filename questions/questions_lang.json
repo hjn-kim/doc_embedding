@@ -714,21 +714,21 @@
   },
   {
    "id": "vn-06",
-   "question": "Hãy tìm mức án và ngày bắt đầu tính thời hạn tù đối với bị cáo Lại Văn P trong vụ trộm chiếc điện thoại Realme C2",
+   "question": "Hãy tìm loại chứng cứ hình ảnh thu được từ Nhà nghỉ T P dùng để chứng minh lời khai nhận tội của Lại Văn P",
    "source": "vn/06_2023_HS-ST_HCM.pdf",
    "gold_chunks": [
-    236
+    234
    ],
-   "note": "정답: 01 (một) năm 03 (ba) tháng tù, thời hạn tù tính từ ngày 26-5-2022"
+   "note": "정답: hình ảnh trích xuất từ camera của Nhà nghỉ T P (được bị cáo thừa nhận)"
   },
   {
    "id": "vn-07",
-   "question": "Hãy tìm tên tổ công tác đã đưa Lại Văn P về trụ sở làm việc, sau khi P tẩu thoát bằng xe môtô biển số 49V5-2461",
-   "source": "vn/06_2023_HS-ST_HCM.pdf",
+   "question": "Hãy tìm tên hai Hội thẩm nhân dân và Thư ký phiên toà của Bản án số 171/2018/HS-ST",
+   "source": "vn/171_2018_HS-ST_HUE.pdf",
    "gold_chunks": [
-    231
+    248
    ],
-   "note": "정답: Tổ tuần tra - Công an phường Tân Tạo A"
+   "note": "정답: Hội thẩm nhân dân: Ông Hồ Đình Ghi, Bà Nguyễn Thị Tuyết / Thư ký: Bà Dương Thanh Huế"
   },
   {
    "id": "vn-08",
@@ -759,12 +759,12 @@
   },
   {
    "id": "vn-11",
-   "question": "Hãy tìm khoảng mức án mà đại diện Viện kiểm sát đề nghị áp dụng đối với bị cáo Lâm Tuấn A",
-   "source": "vn/132_2020_HS-ST_HCM.pdf",
+   "question": "Hãy tìm ngày, mức án và tội danh của ba bản án tiền án của bị cáo Đỗ Văn Ph, trú tại tỉnh Thừa Thiên Huế",
+   "source": "vn/171_2018_HS-ST_HUE.pdf",
    "gold_chunks": [
-    242
+    249
    ],
-   "note": "정답: từ 03 (ba) năm đến 03 (ba) năm 06 (sáu) tháng tù"
+   "note": "정답: 16/7/2002 15 tháng tù (Trộm cắp tài sản) / 24/4/2014 02 năm tù (Cưỡng đoạt tài sản) / 24/3/2017 06 tháng tù (Trộm cắp tài sản)"
   },
   {
    "id": "vn-12",
@@ -777,12 +777,12 @@
   },
   {
    "id": "vn-13",
-   "question": "Hãy tìm nơi Lâm Tuấn A vứt bỏ 03 chiếc đồng hồ đeo tay đã trộm được",
+   "question": "Hãy tìm tài sản mà Lâm Tuấn A đã ném bỏ ở khu vực rừng cây cách nhà 50m và không thu giữ được",
    "source": "vn/132_2020_HS-ST_HCM.pdf",
    "gold_chunks": [
     240
    ],
-   "note": "정답: khu vực rừng cây cách nhà 50m (không thu giữ được)"
+   "note": "정답: 03 chiếc đồng hồ đeo tay"
   },
   {
    "id": "vn-14",
@@ -833,12 +833,12 @@
   },
   {
    "id": "vn-19",
-   "question": "Hãy tìm ngày và mức án của ba bản án về tội trộm cắp tài sản mà Trần Xuân H đã phải chịu",
+   "question": "Hãy tìm tên Thẩm phán - Chủ tọa phiên tòa và Thư ký phiên tòa của Bản án số 29/2018/HS-ST",
    "source": "vn/29_2018_HS-ST_THAI_NGUYEN[1].pdf",
    "gold_chunks": [
-    256
+    255
    ],
-   "note": "정답: 30/7/2008 (15 tháng tù) / 15/6/2010 (12 tháng tù) / 03/8/2010 (12 tháng tù, tổng hợp hai bản án là 24 tháng tù)"
+   "note": "정답: Thẩm phán - Chủ tọa: Ông Đỗ Hữu Nhường / Thư ký: Ông Hoàng Xuân Lộc"
   },
   {
    "id": "vn-20",

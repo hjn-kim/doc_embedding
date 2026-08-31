@@ -714,21 +714,21 @@
   },
   {
    "id": "vn-06",
-   "question": "Realme C2 를 훔친 Lại Văn P 에게 선고된 형량과 형기 기산일을 찾아주세요",
+   "question": "Lại Văn P 의 자백을 뒷받침하는 증거로 Nhà nghỉ T P 에서 확보한 영상 자료가 무엇인지 찾아주세요",
    "source": "vn/06_2023_HS-ST_HCM.pdf",
    "gold_chunks": [
-    236
+    234
    ],
-   "note": "정답: 01 (một) năm 03 (ba) tháng tù, thời hạn tù tính từ ngày 26-5-2022"
+   "note": "정답: hình ảnh trích xuất từ camera của Nhà nghỉ T P (được bị cáo thừa nhận)"
   },
   {
    "id": "vn-07",
-   "question": "오토바이 49V5-2461 로 달아났던 Lại Văn P 를 며칠 뒤 지구대로 데려간 순찰 조직의 이름을 찾아주세요",
-   "source": "vn/06_2023_HS-ST_HCM.pdf",
+   "question": "Bản án số 171/2018/HS-ST 를 심리한 참심원(Hội thẩm nhân dân) 두 명과 서기의 이름을 찾아주세요",
+   "source": "vn/171_2018_HS-ST_HUE.pdf",
    "gold_chunks": [
-    231
+    248
    ],
-   "note": "정답: Tổ tuần tra - Công an phường Tân Tạo A"
+   "note": "정답: Hội thẩm nhân dân: Ông Hồ Đình Ghi, Bà Nguyễn Thị Tuyết / Thư ký: Bà Dương Thanh Huế"
   },
   {
    "id": "vn-08",
@@ -759,12 +759,12 @@
   },
   {
    "id": "vn-11",
-   "question": "검사가 Lâm Tuấn A 에게 구형한 형량의 범위를 찾아주세요",
-   "source": "vn/132_2020_HS-ST_HCM.pdf",
+   "question": "Thừa Thiên Huế 에 사는 Đỗ Văn Ph 의 전과(tiền án) 판결 세 건의 날짜와 각 형량·죄명을 찾아주세요",
+   "source": "vn/171_2018_HS-ST_HUE.pdf",
    "gold_chunks": [
-    242
+    249
    ],
-   "note": "정답: từ 03 (ba) năm đến 03 (ba) năm 06 (sáu) tháng tù"
+   "note": "정답: 16/7/2002 15 tháng tù (Trộm cắp tài sản) / 24/4/2014 02 năm tù (Cưỡng đoạt tài sản) / 24/3/2017 06 tháng tù (Trộm cắp tài sản)"
   },
   {
    "id": "vn-12",
@@ -777,12 +777,12 @@
   },
   {
    "id": "vn-13",
-   "question": "Lâm Tuấn A 가 훔친 손목시계 3개를 어디에 버렸는지 찾아주세요",
+   "question": "Lâm Tuấn A 가 훔친 물건 가운데 집에서 50m 떨어진 숲(rừng cây)에 버려 회수하지 못한 것이 무엇인지 찾아주세요",
    "source": "vn/132_2020_HS-ST_HCM.pdf",
    "gold_chunks": [
     240
    ],
-   "note": "정답: khu vực rừng cây cách nhà 50m (không thu giữ được)"
+   "note": "정답: 03 chiếc đồng hồ đeo tay"
   },
   {
    "id": "vn-14",
@@ -833,12 +833,12 @@
   },
   {
    "id": "vn-19",
-   "question": "Trần Xuân H 이 절도죄로 처벌받은 세 건의 판결 날짜와 각 형량을 찾아주세요",
+   "question": "Bản án số 29/2018/HS-ST 를 심리한 판사(Thẩm phán - Chủ tọa)와 서기의 이름을 찾아주세요",
    "source": "vn/29_2018_HS-ST_THAI_NGUYEN[1].pdf",
    "gold_chunks": [
-    256
+    255
    ],
-   "note": "정답: 30/7/2008 (15 tháng tù) / 15/6/2010 (12 tháng tù) / 03/8/2010 (12 tháng tù, tổng hợp hai bản án là 24 tháng tù)"
+   "note": "정답: Thẩm phán - Chủ tọa: Ông Đỗ Hữu Nhường / Thư ký: Ông Hoàng Xuân Lộc"
   },
   {
    "id": "vn-20",
