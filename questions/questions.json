@@ -714,30 +714,30 @@
   },
   {
    "id": "vn-06",
-   "question": "Realme C2 휴대폰을 도둑맞은 피해자 Nguyễn Đình V 의 출생연도와 상주 등록 주소를 찾아주세요",
+   "question": "Realme C2 를 훔친 Lại Văn P 에게 선고된 형량과 형기 기산일을 찾아주세요",
    "source": "vn/06_2023_HS-ST_HCM.pdf",
    "gold_chunks": [
-    230
+    236
    ],
-   "note": "정답: sinh năm 1995 / Nhà số 44/119G, đường T T, Phường MB, Quận MM, Thành phố Hồ Chí Minh"
+   "note": "정답: 01 (một) năm 03 (ba) tháng tù, thời hạn tù tính từ ngày 26-5-2022"
   },
   {
    "id": "vn-07",
-   "question": "Lại Văn P 가 훔친 Realme C2 를 계속 쓰다가 연행된 날짜와, 그를 데려간 순찰조 및 당시의 혐의를 찾아주세요",
+   "question": "오토바이 49V5-2461 로 달아났던 Lại Văn P 를 며칠 뒤 지구대로 데려간 순찰 조직의 이름을 찾아주세요",
    "source": "vn/06_2023_HS-ST_HCM.pdf",
    "gold_chunks": [
     231
    ],
-   "note": "정답: ngày 25/5/2022 / Tổ tuần tra - Công an phường Tân Tạo A / nghi vấn “hành vi sử dụng trái phép chất ma túy”"
+   "note": "정답: Tổ tuần tra - Công an phường Tân Tạo A"
   },
   {
    "id": "vn-08",
-   "question": "Cáo trạng số 261/CT-VKS 로 기소된 Lại Văn P 에게 Kiểm sát viên 이 구형한 형량의 하한과 상한을 찾아주세요",
+   "question": "Rakuten 티셔츠를 비롯한 Lại Văn P 사건 증거물의 입고 전표 번호와 날짜를 찾아주세요",
    "source": "vn/06_2023_HS-ST_HCM.pdf",
    "gold_chunks": [
-    232
+    237
    ],
-   "note": "정답: từ 01 năm 03 tháng đến 01 năm 09 tháng tù"
+   "note": "정답: Phiếu nhập kho số NK23/39TAM, ngày 23/11/2022"
   },
   {
    "id": "vn-09",
@@ -759,12 +759,12 @@
   },
   {
    "id": "vn-11",
-   "question": "Trần Hà T 가 Lâm Tuấn A 에게서 Iphone X 를 사들이며 지불한 금액을 찾아주세요",
+   "question": "검사가 Lâm Tuấn A 에게 구형한 형량의 범위를 찾아주세요",
    "source": "vn/132_2020_HS-ST_HCM.pdf",
    "gold_chunks": [
-    246
+    242
    ],
-   "note": "정답: 3.000.000 đồng"
+   "note": "정답: từ 03 (ba) năm đến 03 (ba) năm 06 (sáu) tháng tù"
   },
   {
    "id": "vn-12",
@@ -777,12 +777,12 @@
   },
   {
    "id": "vn-13",
-   "question": "Lâm Tuấn A 가 훔친 뒤 버린 지갑(bóp)과 손목시계 3개를 각각 어디에 버렸는지 찾아주세요",
+   "question": "Lâm Tuấn A 가 훔친 손목시계 3개를 어디에 버렸는지 찾아주세요",
    "source": "vn/132_2020_HS-ST_HCM.pdf",
    "gold_chunks": [
     240
    ],
-   "note": "정답: bóp — phía sau nhà (thu giữ được) / 03 chiếc đồng hồ — khu vực rừng cây cách nhà 50m (không thu giữ được)"
+   "note": "정답: khu vực rừng cây cách nhà 50m (không thu giữ được)"
   },
   {
    "id": "vn-14",
@@ -833,12 +833,12 @@
   },
   {
    "id": "vn-19",
-   "question": "Trần Xuân H 의 배우자 이름과 혼인 상태, 그리고 자녀 수를 찾아주세요",
+   "question": "Trần Xuân H 이 절도죄로 처벌받은 세 건의 판결 날짜와 각 형량을 찾아주세요",
    "source": "vn/29_2018_HS-ST_THAI_NGUYEN[1].pdf",
    "gold_chunks": [
     256
    ],
-   "note": "정답: có vợ Hà Thị Nh (đã ly hôn) và có 01 con"
+   "note": "정답: 30/7/2008 (15 tháng tù) / 15/6/2010 (12 tháng tù) / 03/8/2010 (12 tháng tù, tổng hợp hai bản án là 24 tháng tù)"
   },
   {
    "id": "vn-20",

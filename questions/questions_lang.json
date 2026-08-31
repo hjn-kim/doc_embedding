@@ -714,30 +714,30 @@
   },
   {
    "id": "vn-06",
-   "question": "Hãy tìm năm sinh và nơi đăng ký hộ khẩu thường trú của bị hại Nguyễn Đình V trong vụ mất chiếc điện thoại Realme C2",
+   "question": "Hãy tìm mức án và ngày bắt đầu tính thời hạn tù đối với bị cáo Lại Văn P trong vụ trộm chiếc điện thoại Realme C2",
    "source": "vn/06_2023_HS-ST_HCM.pdf",
    "gold_chunks": [
-    230
+    236
    ],
-   "note": "정답: sinh năm 1995 / Nhà số 44/119G, đường T T, Phường MB, Quận MM, Thành phố Hồ Chí Minh"
+   "note": "정답: 01 (một) năm 03 (ba) tháng tù, thời hạn tù tính từ ngày 26-5-2022"
   },
   {
    "id": "vn-07",
-   "question": "Hãy tìm ngày Lại Văn P bị đưa về trụ sở khi vẫn đang sử dụng chiếc Realme C2 trộm được, tổ công tác đã đưa P về và lý do nghi vấn lúc đó",
+   "question": "Hãy tìm tên tổ công tác đã đưa Lại Văn P về trụ sở làm việc, sau khi P tẩu thoát bằng xe môtô biển số 49V5-2461",
    "source": "vn/06_2023_HS-ST_HCM.pdf",
    "gold_chunks": [
     231
    ],
-   "note": "정답: ngày 25/5/2022 / Tổ tuần tra - Công an phường Tân Tạo A / nghi vấn “hành vi sử dụng trái phép chất ma túy”"
+   "note": "정답: Tổ tuần tra - Công an phường Tân Tạo A"
   },
   {
    "id": "vn-08",
-   "question": "Hãy tìm mức án thấp nhất và cao nhất mà đại diện Viện kiểm sát đề nghị áp dụng đối với bị cáo Lại Văn P bị truy tố theo Cáo trạng số 261/CT-VKS",
+   "question": "Hãy tìm số và ngày của phiếu nhập kho vật chứng trong vụ án Lại Văn P, gồm cả chiếc áo thun in chữ Rakuten",
    "source": "vn/06_2023_HS-ST_HCM.pdf",
    "gold_chunks": [
-    232
+    237
    ],
-   "note": "정답: từ 01 năm 03 tháng đến 01 năm 09 tháng tù"
+   "note": "정답: Phiếu nhập kho số NK23/39TAM, ngày 23/11/2022"
   },
   {
    "id": "vn-09",
@@ -759,12 +759,12 @@
   },
   {
    "id": "vn-11",
-   "question": "Hãy tìm số tiền ông Trần Hà T đã trả để mua chiếc điện thoại Iphone X từ bị cáo Lâm Tuấn A",
+   "question": "Hãy tìm khoảng mức án mà đại diện Viện kiểm sát đề nghị áp dụng đối với bị cáo Lâm Tuấn A",
    "source": "vn/132_2020_HS-ST_HCM.pdf",
    "gold_chunks": [
-    246
+    242
    ],
-   "note": "정답: 3.000.000 đồng"
+   "note": "정답: từ 03 (ba) năm đến 03 (ba) năm 06 (sáu) tháng tù"
   },
   {
    "id": "vn-12",
@@ -777,12 +777,12 @@
   },
   {
    "id": "vn-13",
-   "question": "Hãy tìm nơi Lâm Tuấn A vứt bỏ cái bóp và nơi vứt bỏ 03 chiếc đồng hồ đeo tay sau khi trộm",
+   "question": "Hãy tìm nơi Lâm Tuấn A vứt bỏ 03 chiếc đồng hồ đeo tay đã trộm được",
    "source": "vn/132_2020_HS-ST_HCM.pdf",
    "gold_chunks": [
     240
    ],
-   "note": "정답: bóp — phía sau nhà (thu giữ được) / 03 chiếc đồng hồ — khu vực rừng cây cách nhà 50m (không thu giữ được)"
+   "note": "정답: khu vực rừng cây cách nhà 50m (không thu giữ được)"
   },
   {
    "id": "vn-14",
@@ -833,12 +833,12 @@
   },
   {
    "id": "vn-19",
-   "question": "Hãy tìm tên vợ, tình trạng hôn nhân và số con của bị cáo Trần Xuân H",
+   "question": "Hãy tìm ngày và mức án của ba bản án về tội trộm cắp tài sản mà Trần Xuân H đã phải chịu",
    "source": "vn/29_2018_HS-ST_THAI_NGUYEN[1].pdf",
    "gold_chunks": [
     256
    ],
-   "note": "정답: có vợ Hà Thị Nh (đã ly hôn) và có 01 con"
+   "note": "정답: 30/7/2008 (15 tháng tù) / 15/6/2010 (12 tháng tù) / 03/8/2010 (12 tháng tù, tổng hợp hai bản án là 24 tháng tù)"
   },
   {
    "id": "vn-20",
